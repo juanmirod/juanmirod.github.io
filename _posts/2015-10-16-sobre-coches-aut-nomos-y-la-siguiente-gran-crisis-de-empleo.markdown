@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Sobre coches autónomos y la siguiente gran crisis de empleo
 layout: post
 ---
