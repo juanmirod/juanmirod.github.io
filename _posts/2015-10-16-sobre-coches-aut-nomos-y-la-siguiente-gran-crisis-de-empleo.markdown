@@ -15,4 +15,4 @@ Conforme los coches autónomos se conviertan en la norma, las carreteras podrán
 
 Que los coches se conduzcan solos no es sólo una comodidad que hará que todo siga igual pero sin que tengamos que sacarnos el carnet de conducir, poco a poco cambiará la sociedad, seguro que afectando a otros muchos ámbitos que no se me han ocurrido a mi.
 
-¿Se te ocurren otras formas de aprovechar los coches autónomos en el futuro? ¿Crees que estoy totalmente equivocado? Este blog está alojado en github, puedes contribuir con tus comentarios, correcciones y modificaciones sobre el artículo. ¡Gracias por colaborar!
+¿Se te ocurren otras formas de aprovechar los coches autónomos en el futuro? ¿Crees que estoy totalmente equivocado? [Este post está alojado en github](https://github.com/juanmirod/juanmirod.github.io/blob/master/_posts/2015-10-16-sobre-coches-aut-nomos-y-la-siguiente-gran-crisis-de-empleo.markdown), puedes contribuir con tus comentarios, correcciones y modificaciones sobre el artículo. ¡Gracias por colaborar!
