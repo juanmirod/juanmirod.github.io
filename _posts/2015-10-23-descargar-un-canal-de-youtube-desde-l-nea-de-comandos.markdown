@@ -10,11 +10,13 @@ Los comandos que personalmente he encontrado más últiles de las cientos de opc
 ```shell
 youtube --list-formats url-del-video
 ```
+
 Lista los formatos disponibles para descargar de ese video en concreto. Luego con la opción -f podemos indicar el identificador numérico del fomato que deseamos descargar. Por defecto siempre será el mejor disponible, pero a lo mejor solo nos interesa el audio o queremos que el video pese algo menos. Así, por ejemplo:
 
 ```shell
 youtube-dl -f 43 url-del-video
 ```
+
 Descargará el video en el formato 43.
 
 Para descargar listas de reproducción vasta con copiar la url de la lista de reproducción y youtube-dl comprobará automáticamente que es una lista y tratará de descargar todos los videos. Podemos filtrar los videos por tamaño, por el orden de la lista o por número de visitas. También es muy útil la opción --download-archive que guarda en un fichero los videos descargados y si vuelves a ejecutar el mismo comando se descargará sólamente los videos del canal que no se haya descargado. Muy útil para obtener los videos nuevos o para descargar un canal en varios pasos.
@@ -35,6 +37,7 @@ Nota para aficionados a los gestores de paquetes: Si descargas youtube-dl con ap
 sudo wget https://yt-dl.org/downloads/2015.10.23/youtube-dl -O /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl
 ```
+
 y luego actualizar cuando se desee haciendo simplemente ``youtube-dl -u``
 
 ¿Tienes alguna duda, comentario o corrección? Este post está en [github](https://github.com/juanmirod/juanmirod.github.io/blob/master/_posts/2015-10-16-sobre-coches-aut-nomos-y-la-siguiente-gran-crisis-de-empleo.markdown) y puedes contribuir a hacerlo más grande y mejor.
