@@ -1,9 +1,9 @@
 ---
-published: false
+published: true
 title: Descargar un canal de youtube desde línea de comandos
 layout: post
 ---
-(Youtube-dl)[https://rg3.github.io/youtube-dl/] es un programa de línea de comandos que sirve para descargar videos, listas de reproducción e incluso canales completos de youtube. De esta forma puedes verlos cuando quieras, offline, sin anuncios y sin cortes por pérdidas de conexión. Algo que es especialmente útil cuando tus hijas pequeñas ven decenas de veces a la semana las mismas canciones y cuentos o cuando quieres ver tus videos favoritos de youtube en un televisor "tonto" de los de antes.
+[Youtube-dl](https://rg3.github.io/youtube-dl/) es un programa de línea de comandos que sirve para descargar videos, listas de reproducción e incluso canales completos de youtube. De esta forma puedes verlos cuando quieras, offline, sin anuncios y sin cortes por pérdidas de conexión. Algo que es especialmente útil cuando tus hijas pequeñas ven decenas de veces a la semana las mismas canciones y cuentos o cuando quieres ver tus videos favoritos de youtube en un televisor "tonto" de los de antes.
 
 Los comandos que personalmente he encontrado más últiles de las cientos de opciones que permite youtube-dl:
 
@@ -29,7 +29,7 @@ Y se descargará de la lista aquellos videos que no estén ya descargados y teng
 
 Para descargar un canal completo sólo hay que ir a la lista de los videos subidos del canal.
 
-Nota para aficionados a los gestores de paquetes: Si descargas youtube-dl con apt-get o otro gestor de paquetes, seguramente obtengas una versión bastante antigua y obsoleta que da un error al tratar de descargar listas de reproducción. Es mejor instalar la última versión directamente desde la web siguiendo sus instrucciones:
+Nota para aficionados a los gestores de paquetes: Si descargas youtube-dl con apt-get, yum o otro gestor de paquetes, seguramente obtengas una versión bastante antigua y obsoleta que da un error al tratar de descargar listas de reproducción. Es mejor instalar la última versión directamente desde la web siguiendo sus instrucciones:
 
 ```shell
 sudo wget https://yt-dl.org/downloads/2015.10.23/youtube-dl -O /usr/local/bin/youtube-dl
@@ -37,4 +37,4 @@ sudo chmod a+rx /usr/local/bin/youtube-dl
 ```
 y luego actualizar cuando se desee haciendo simplemente ``youtube-dl -u``
 
-```
+¿Tienes alguna duda, comentario o corrección? Este post está en [github](https://github.com/juanmirod/juanmirod.github.io/blob/master/_posts/2015-10-16-sobre-coches-aut-nomos-y-la-siguiente-gran-crisis-de-empleo.markdown) y puedes contribuir a hacerlo más grande y mejor.
