@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Por qué el voto electrónico es una mala idea
 layout: post
 ---
