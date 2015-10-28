@@ -7,13 +7,13 @@ layout: post
 
 Los comandos que personalmente he encontrado más útiles de las cientos de opciones que permite youtube-dl:
 
-```shell
+```
 youtube --list-formats url-del-video
 ```
 
 Lista los formatos disponibles para descargar de ese vídeo en concreto. Luego con la opción -f podemos indicar el identificador numérico del formato que deseamos descargar. Por defecto siempre será el mejor disponible, pero a lo mejor solo nos interesa el audio o queremos que el vídeo pese algo menos. Así, por ejemplo:
 
-```shell
+```
 youtube-dl -f 43 url-del-video
 ```
 
@@ -23,7 +23,7 @@ Para descargar listas de reproducción vasta con copiar la url de la lista de re
 
 Así, para descargar una lista el comando podría ser:
 
-```shell
+```
 youtube-dl -f 43 --download-archive .downloaded --max-filesize 30m url-de-la-lista
 ```
 
@@ -34,11 +34,11 @@ Para descargar un canal completo sólo hay que ir a la lista de los vídeos subi
 ###Nota para aficionados a los gestores de paquetes: 
 Si descargas youtube-dl con apt-get, yum o otro gestor de paquetes, seguramente obtengas una versión bastante antigua y obsoleta que da un error al tratar de descargar listas de reproducción. **Es mejor instalar la última versión directamente desde la web siguiendo sus instrucciones:**
 
-```shell
+```
 sudo wget https://yt-dl.org/downloads/2015.10.23/youtube-dl -O /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl
 ```
 
 y luego, actualizar cuando se desee haciendo simplemente ``youtube-dl -u``
 
-¿Tienes alguna duda, comentario o corrección? Este post está en [github](https://github.com/juanmirod/juanmirod.github.io/blob/master/_posts/2015-10-16-sobre-coches-aut-nomos-y-la-siguiente-gran-crisis-de-empleo.markdown) y puedes contribuir a hacerlo más grande y mejor.
+¿Tienes alguna duda, comentario o corrección? Este post está en [github](https://github.com/juanmirod/juanmirod.github.io/blob/master/_posts/2015-10-23-descargar-un-canal-de-youtube-desde-l-nea-de-comandos.markdown) y puedes contribuir a hacerlo más grande y mejor.
