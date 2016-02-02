@@ -15,17 +15,18 @@ A continuación dejo una lista con los videos y audios que me han gustado más y
 
 ## Videos de ciencia con acento británico:
 
-- Los videos de [Sixty Symbols](https://www.youtube.com/user/sixtysymbols) y Nottinghan Science son entrevistas a profesores de la universidad de Nottinghan sobre curiosidades ciéntíficas y explicaciones de fenómenos físicos y astronómicos principalmente. Los profesores tienen diferentes procedencias y acentos y es un buen entrenamiento para el oído a la par que interesante para todo científico o curioso en general. Otros canales como Numberphile o Computerphile siguen la misma línea pero en otros temas, en este caso matemáticas y informática respectivamente.
+- Los videos de [Sixty Symbols](https://www.youtube.com/user/sixtysymbols) y [Nottinghan Science](https://www.youtube.com/user/nottinghamscience) son entrevistas a profesores de la universidad de Nottinghan sobre curiosidades ciéntíficas y explicaciones de fenómenos físicos y astronómicos principalmente. Los profesores tienen diferentes procedencias y acentos y es un buen entrenamiento para el oído a la par que interesante para todo científico o curioso en general. Otros canales como [Numberphile](https://www.youtube.com/user/numberphile) o [Computerphile](https://www.youtube.com/user/Computerphile) siguen la misma línea pero en otros temas, en este caso matemáticas y informática respectivamente.
 
-- Otro canal de curiosidades, este más general, científicas, históricas, sociológicas... es el canal de Tom Scott, también interesante, británico y un poco excéntrico.
+- Otro canal de curiosidades, éste más general (científicas, históricas, sociológicas...) es el canal de [Tom Scott](https://www.youtube.com/channel/UCBa659QWEk1AI4Tg--mrJ2A), también interesante, británico y un poco excéntrico.
 
 ## Lecturas y charlas que te dejarán marca:
 
-- Shaking hands with death, by Terry Pratchett. Esta lectura es, como todas los textos de Terry Pratchett, inteligente, divertida, satírica y llena de reflexión. Podrás escuchar un poco al propio Pratchett aunque la lectura está espectacularmente ejecutada por Tony Robinson.
+- [Shaking hands with death, by Terry Pratchett](https://youtu.be/90b1MBwnEHM). Esta lectura es, como todas los textos de Terry Pratchett, inteligente, divertida, satírica y llena de reflexión. Podrás escuchar un poco al propio Pratchett aunque la lectura está espectacularmente ejecutada por Tony Robinson.
 
-- A Christmas Carol read by Neil Gaiman. Neil Gaiman leyó en honor a Dickens su cuento de Navidad, obra que el propio Dickens interpretó decenas de veces haciendo un tour por Estados Unidos.
+- [A Christmas Carol read by Neil Gaiman](https://soundcloud.com/nypl/neil-gaiman-reads-a-christmas-carol). Neil Gaiman leyó en honor a Dickens su cuento de Navidad, obra que el propio Dickens interpretó decenas de veces haciendo un tour por Estados Unidos.
 
-- On how stories last by Neil Gaiman. Lectura de Gaiman sobre las historias y como perduran y se transforman con el tiempo, sin desperdicio.
+- [How stories last](https://soundcloud.com/brainpicker/neil-gaiman-how-stories-last). Lectura de Gaiman sobre las historias y como perduran y se transforman con el tiempo. Sin desperdicio.
 
-- The man who forgot Ray Bradbury. Lectura de Neil Gaiman de un relato corto del propio Gaiman.
+- [The man who forgot Ray Bradbury](https://soundcloud.com/neilgaiman/the-man-who-forgot-ray-bradbury). Lectura de Neil Gaiman de un relato corto del propio Gaiman.
 
+- [The Fringe benefits of failure by J.K. Rowling](http://www.ted.com/talks/jk_rowling_the_fringe_benefits_of_failure). Discurso de la escritora en un acto de graduación de la Universidad de Harvard. Si no has leído Harry Potter, siempre lo recomiendo como lectura sencilla y muy entretenida para todos los públicos.  
