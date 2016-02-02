@@ -29,4 +29,4 @@ A continuación dejo una lista con los videos y audios que me han gustado más y
 
 - [The man who forgot Ray Bradbury](https://soundcloud.com/neilgaiman/the-man-who-forgot-ray-bradbury). Lectura de Neil Gaiman de un relato corto del propio Gaiman.
 
-- [The Fringe benefits of failure by J.K. Rowling](http://www.ted.com/talks/jk_rowling_the_fringe_benefits_of_failure). Discurso de la escritora en un acto de graduación de la Universidad de Harvard. Si no has leído Harry Potter, siempre lo recomiendo como lectura sencilla y muy entretenida para todos los públicos.
+- [The Fringe benefits of failure by J.K. Rowling](http://www.ted.com/talks/jk_rowling_the_fringe_benefits_of_failure). Discurso de la escritora en un acto de graduación de la Universidad de Harvard. Si no has leído Harry Potter, siempre lo recomiendo en versión original como lectura sencilla y muy entretenida para todos los públicos.
