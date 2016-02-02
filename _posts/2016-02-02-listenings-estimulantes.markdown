@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Listenings estimulantes
 layout: post
 tags: [english, british, science, listenings, languages]
@@ -15,7 +15,7 @@ A continuación dejo una lista con los videos y audios que me han gustado más y
 
 ## Videos de ciencia con acento británico:
 
-- Los videos de Sixty Symbols y Nottinghan Science son entrevistas a profesores de la universidad de Nottinghan sobre curiosidades ciéntíficas y explicaciones de fenómenos físicos y astronómicos principalmente. Los profesores tienen diferentes procedencias y acentos y es un buen entrenamiento para el oído a la par que interesante para todo científico o curioso en general. Otros canales como Numberphile o Computerphile siguen la misma línea pero en otros temas, en este caso matemáticas y informática respectivamente.
+- Los videos de [Sixty Symbols](https://www.youtube.com/user/sixtysymbols) y Nottinghan Science son entrevistas a profesores de la universidad de Nottinghan sobre curiosidades ciéntíficas y explicaciones de fenómenos físicos y astronómicos principalmente. Los profesores tienen diferentes procedencias y acentos y es un buen entrenamiento para el oído a la par que interesante para todo científico o curioso en general. Otros canales como Numberphile o Computerphile siguen la misma línea pero en otros temas, en este caso matemáticas y informática respectivamente.
 
 - Otro canal de curiosidades, este más general, científicas, históricas, sociológicas... es el canal de Tom Scott, también interesante, británico y un poco excéntrico.
 
@@ -27,7 +27,5 @@ A continuación dejo una lista con los videos y audios que me han gustado más y
 
 - On how stories last by Neil Gaiman. Lectura de Gaiman sobre las historias y como perduran y se transforman con el tiempo, sin desperdicio.
 
-- The man who forgot Ray Bradbury.
-
- 
+- The man who forgot Ray Bradbury. Lectura de Neil Gaiman de un relato corto del propio Gaiman.
 
