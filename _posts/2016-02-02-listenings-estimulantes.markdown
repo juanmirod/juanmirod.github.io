@@ -11,7 +11,7 @@ Pero los listenings son aburridos, todos acabamos hartos tarde o temprano de esc
 
 Por suerte hoy en día tenemos internet, que es una fuente infinita de videos y que además de gatos y bebés tiene miles de vídeos interesantes, edificantes y educativos para mejorar el idioma mientras nos entretenemos. 
 
-A continuación dejo una lista con los videos y audios que me han gustado más y considero más interesantes para escuchar inglés británico (ese encantador British accent ;)) Iré añadiendo vídeos a la lista conforme vaya encontrando más y si sabes de algunos que podrían añadirse puedes escribirme en github o en twitter: @juanmirod ¡Gracias!
+A continuación dejo una lista con los videos y audios que me han gustado más y considero más interesantes para escuchar inglés británico (ese encantador British accent ;)) Iré añadiendo vídeos a la lista conforme vaya encontrando más y si sabes de algunos que podrían añadirse puedes escribirme en [github](https://github.com/juanmirod/juanmirod.github.io/blob/master/_posts/2016-02-02-listenings-estimulantes.markdown) o en [twitter](https://twitter.com/juanmirod). ¡Gracias!
 
 ## Videos de ciencia con acento británico:
 
@@ -29,4 +29,4 @@ A continuación dejo una lista con los videos y audios que me han gustado más y
 
 - [The man who forgot Ray Bradbury](https://soundcloud.com/neilgaiman/the-man-who-forgot-ray-bradbury). Lectura de Neil Gaiman de un relato corto del propio Gaiman.
 
-- [The Fringe benefits of failure by J.K. Rowling](http://www.ted.com/talks/jk_rowling_the_fringe_benefits_of_failure). Discurso de la escritora en un acto de graduación de la Universidad de Harvard. Si no has leído Harry Potter, siempre lo recomiendo como lectura sencilla y muy entretenida para todos los públicos.  
+- [The Fringe benefits of failure by J.K. Rowling](http://www.ted.com/talks/jk_rowling_the_fringe_benefits_of_failure). Discurso de la escritora en un acto de graduación de la Universidad de Harvard. Si no has leído Harry Potter, siempre lo recomiendo como lectura sencilla y muy entretenida para todos los públicos.
