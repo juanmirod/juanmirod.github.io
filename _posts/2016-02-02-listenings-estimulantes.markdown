@@ -13,5 +13,21 @@ Por suerte hoy en día tenemos internet, que es una fuente infinita de videos y 
 
 A continuación dejo una lista con los videos y audios que me han gustado más y considero más interesantes para escuchar inglés británico (ese encantador British accent ;)) Iré añadiendo vídeos a la lista conforme vaya encontrando más y si sabes de algunos que podrían añadirse puedes escribirme en github o en twitter: @juanmirod ¡Gracias!
 
-Videos de ciencia con acento británico:
-Los videos de Sixty Symbols y Nottinghan Science son entrevistas a profesores de la universidad de Nottinghan sobre curiosidades ciéntíficas y explicaciones de fenómenos físicos y astronómicos principalmente. 
+## Videos de ciencia con acento británico:
+
+- Los videos de Sixty Symbols y Nottinghan Science son entrevistas a profesores de la universidad de Nottinghan sobre curiosidades ciéntíficas y explicaciones de fenómenos físicos y astronómicos principalmente. Los profesores tienen diferentes procedencias y acentos y es un buen entrenamiento para el oído a la par que interesante para todo científico o curioso en general. Otros canales como Numberphile o Computerphile siguen la misma línea pero en otros temas, en este caso matemáticas y informática respectivamente.
+
+- Otro canal de curiosidades, este más general, científicas, históricas, sociológicas... es el canal de Tom Scott, también interesante, británico y un poco excéntrico.
+
+## Lecturas y charlas que te dejarán marca:
+
+- Shaking hands with death, by Terry Pratchett. Esta lectura es, como todas los textos de Terry Pratchett, inteligente, divertida, satírica y llena de reflexión. Podrás escuchar un poco al propio Pratchett aunque la lectura está espectacularmente ejecutada por Tony Robinson.
+
+- A Christmas Carol read by Neil Gaiman. Neil Gaiman leyó en honor a Dickens su cuento de Navidad, obra que el propio Dickens interpretó decenas de veces haciendo un tour por Estados Unidos.
+
+- On how stories last by Neil Gaiman. Lectura de Gaiman sobre las historias y como perduran y se transforman con el tiempo, sin desperdicio.
+
+- The man who forgot Ray Bradbury.
+
+ 
+
