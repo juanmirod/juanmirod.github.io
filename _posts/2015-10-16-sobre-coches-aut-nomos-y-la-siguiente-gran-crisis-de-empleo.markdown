@@ -19,4 +19,8 @@ Conforme los coches autónomos se conviertan en la norma, las carreteras podrán
 
 Que los coches se conduzcan solos no es sólo una comodidad que hará que todo siga igual pero sin que tengamos que sacarnos el carné de conducir. Poco a poco cambiará la sociedad, seguro que afectando a otros muchos ámbitos que no se me han ocurrido a mi.
 
+Sobre este tema, aunque en un sentido más amplio, es muy interesante la charla de Jeremy Howard en Ted. Tras hacer un repaso de los últimos avances en inteligencia artificial JH lanza una advertencia: las IAs son capaces de realizar cada vez más tareas que considerábamos púramente humanas, pero además lo hacen mejor y con un coste mucho menor. La revolución de la Inteligencia artifical está llegando y será mucho más drástica que la revolución industrial, debemos empezar a prepararnos. 
+
+<iframe src="https://embed-ssl.ted.com/talks/jeremy_howard_the_wonderful_and_terrifying_implications_of_computers_that_can_learn.html" width="560" height="315" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
 ¿Se te ocurren otras formas de aprovechar los coches autónomos en el futuro? ¿Crees que estoy totalmente equivocado? [Este post está alojado en github](https://github.com/juanmirod/juanmirod.github.io/blob/master/_posts/2015-10-16-sobre-coches-aut-nomos-y-la-siguiente-gran-crisis-de-empleo.markdown), puedes contribuir con tus comentarios, correcciones y modificaciones sobre el artículo. ¡Gracias por colaborar!
