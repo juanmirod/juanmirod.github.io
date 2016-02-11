@@ -5,7 +5,11 @@ layout: post
 ---
 El Aprendizaje Profundo (AP) está demostrando ser de utilidad en múltiples campos e incluso ha conseguido hitos de la inteligencia artificial (IA) que se pensaba que aún estaban lejos en el futuro de la computación. 
 
-El más reciente ejemplo fue la victoria de AlphaGo sobre un jugador profesional de Go. El Go era, hasta ahora un juego donde los humanos no podían ser vencidos por las máquinas. Un tablero de gran tamaño y reglas sencillas hacen que la cantidad de movimientos posibles en cada turno de un jugador de Go sea altísima. La combinatoria explota y los árboles de búsqueda se vuelven totalmente ineficientes en este juego. Pero, tras décadas tratando de encontrar la solución a este juego, AlphaGo ha aprendido a jugar semi autónomamente, básicamente jugando partidas contra si mismo y aprendiendo de los jugadores profesionales. Para saber más sobre este avance puedes ver algunos videos y enlaces en la página oficial de (AlphaGo)[http://www.deepmind.com/alpha-go.html]. 
+El más reciente ejemplo fue la victoria de AlphaGo sobre un jugador profesional de Go. El Go era, hasta ahora un juego donde los humanos no podían ser vencidos por las máquinas. Un tablero de gran tamaño y reglas sencillas hacen que la cantidad de movimientos posibles en cada turno de un jugador de Go sea altísima. La combinatoria explota y los árboles de búsqueda se vuelven totalmente ineficientes en este juego. Pero, tras décadas tratando de encontrar la solución a este juego, AlphaGo ha aprendido a jugar semi autónomamente, básicamente jugando partidas contra si mismo y aprendiendo de los jugadores profesionales. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/g-dKXOlsf98" frameborder="0" allowfullscreen></iframe>
+
+Para saber más sobre este avance puedes ver algunos videos y enlaces en la página oficial de (AlphaGo)[http://www.deepmind.com/alpha-go.html]. 
 
 Otros campos en los que destaca el AP es en el reconocimiento y etiquetado de imágenes, reconocimiento del lenguaje y la clasificación de datos, como motores de búsquedas y recomendaciones. La charla de Jeremy Howard en TED es un buen repaso del estado del arte de la IA en la actualidad y de lo que eso puede suponer para la humanidad:
 
