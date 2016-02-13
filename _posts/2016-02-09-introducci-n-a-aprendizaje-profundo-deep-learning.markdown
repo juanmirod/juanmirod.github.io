@@ -20,3 +20,7 @@ El AP es una rama del aprendizaje automático que supone un gran avance cualitat
 En la actualidad me parece un área de la ingeniería informática muy interesante y me gustaría contribuir a este campo como buenamente pueda, comenzando por esta introducción en español para todo el que pueda estar interesado en comenzar a entender qué es y cómo funcionan estas ténicas de inteligencia artificial.  
 
 En esta introducción utilizaré Tensorflow, la librería de computación de código abierto creada por Google. Para poder seguir los ejemplos y comprender el código presente en el texto es necesario tener conocimientos de programación, álgebra y métodos numéricos y estar familiarizado con el lenguaje de programación Python.
+
+Tal y como se hace en la mayoría del material didáctico sobre aprendizaje automático, utilizaré la librería de imágenes MNIST como base de datos sobre la que trabajar en los ejemplos. MNIST es una base de datos de imágenes de cifras escritas a mano, centratas y normalizadas para facilitar su uso como entrada de algoritmos de aprendizaje. Esta librería es ampliamente conocida y hay una gran cantidad de datos sobre qué porcentaje de error se puede obtener utilizando gran variedad de algoritmos de aprendizaje. Esto hace que sea un perfecto margen de referencia y de estudio. Para más información y para descargar la bbdd: (MNIST)[http://yann.lecun.com/exdb/mnist/].
+
+
