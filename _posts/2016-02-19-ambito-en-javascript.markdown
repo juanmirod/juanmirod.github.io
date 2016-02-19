@@ -20,4 +20,4 @@ La mejor forma de ver cómo funcionan estas reglas es probándolas en directo:
 
 <iframe width="100%" height="600" src="//jsfiddle.net/juanmirod/zgsgqz2j/embedded/js,result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-Es interesante jugar un poco con el script, mover las declaraciones de sitio y ver que pasa. Espero que sirva a alguien de ayuda, para cualquier duda o aportación, este post está alojado en (github)[https://github.com/juanmirod/juanmirod.github.io/master/_posts/2016-02-19-ambito-en-javascript.markdown]
+Es interesante jugar un poco con el script, mover las declaraciones de sitio y ver que pasa. Espero que sirva a alguien de ayuda, para cualquier duda o aportación, este post está alojado en  [github](https://github.com/juanmirod/juanmirod.github.io/master/_posts/2016-02-19-ambito-en-javascript.markdown)
