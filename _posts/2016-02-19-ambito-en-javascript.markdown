@@ -13,4 +13,4 @@ El ámbito de las variables en JavaScript puede ser un poco confuso a veces, per
 
 La mejor forma de ver cómo funcionan estas reglas es probándolas en directo:
 
-<iframe><script async src="//jsfiddle.net/juanmirod/zgsgqz2j/embed/js,result/"></script></iframe>
+<iframe width="100%" height="300" src="//jsfiddle.net/juanmirod/zgsgqz2j/embedded/js,result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
