@@ -4,8 +4,6 @@ title: Palabras más comunes del español
 layout: post
 ---
 
-# Palabras más comunes del español
-
 Hoy quería añadir un fichero con palabras en español a Klavaro para ejercitar un poco con palabras españolas y no he encontrado a primera vista ningún texto que se adecuara a lo que quería. Normalmente estaban pareadas con su traducción a otro idioma o metidas en una tabla. 
 
 Así que he tomado las dos primeras listas que aparecen [en la wikipedia](https://es.wiktionary.org/wiki/Ap%C3%A9ndice:Palabras_m%C3%A1s_frecuentes_del_espa%C3%B1ol) y en un minuto las he reformateado con sublime en un montón de palabras separadas por espacios que es lo que yo buscaba. Dejo aquí la lista para mi yo futuro o por si a alguien más le puede servir de utilidad:

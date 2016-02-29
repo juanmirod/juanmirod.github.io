@@ -3,7 +3,6 @@ published: true
 title: Ámbito en JavaScript
 layout: post
 ---
-# Ámbito en JavaScript
 
 El ámbito de las variables en JavaScript puede ser un poco confuso a veces, pero en realidad sólo hay que seguir un par de reglas para saber a qué ámbito pertenece una variable.
 
