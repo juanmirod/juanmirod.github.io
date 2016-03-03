@@ -17,6 +17,8 @@ A continuación dejo una lista con los videos y audios que me han gustado más y
 
 - Los videos de [Sixty Symbols](https://www.youtube.com/user/sixtysymbols) y [Nottinghan Science](https://www.youtube.com/user/nottinghamscience) son entrevistas a profesores de la universidad de Nottinghan sobre curiosidades ciéntíficas y explicaciones de fenómenos físicos y astronómicos principalmente. Los profesores tienen diferentes procedencias y acentos y es un buen entrenamiento para el oído a la par que interesante para todo científico o curioso en general. Otros canales como [Numberphile](https://www.youtube.com/user/numberphile) o [Computerphile](https://www.youtube.com/user/Computerphile) siguen la misma línea pero en otros temas, en este caso matemáticas y informática respectivamente.
 
+- Más curiosidades científicas, con un perfecto inglés de la BBC es [Brit Lab](https://www.youtube.com/channel/UCdsOTr6SmDrxuWE7sJFrkhQ). Muy entretenido y muy British.
+
 - Otro canal de curiosidades, éste más general (científicas, históricas, sociológicas...) es el canal de [Tom Scott](https://www.youtube.com/channel/UCBa659QWEk1AI4Tg--mrJ2A), también interesante, británico y un poco excéntrico.
 
 ## Lecturas y charlas que te dejarán marca:
