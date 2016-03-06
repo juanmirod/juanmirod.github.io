@@ -17,7 +17,7 @@ El ámbito de las variables en JavaScript puede ser un poco confuso a veces, per
 
 La mejor forma de ver cómo funcionan estas reglas es probándolas en directo:
 
-´´´javascript
+```javascript
 var hi = 'Global: I am global. ';
 var ObjectWithPrivateVariables = function ObjectDefinition() {
 
@@ -44,7 +44,7 @@ document.write(hi); // Accede a la variable Global
 document.write(newObject.sayBye());
 document.write(bye); // Esta variable se ha declarado como global y podemos acceder a ella, cuidado!!
 document.write(sayHi); // error sayHi is undefined
-´´´
+```
 [Edit in jsfiddle](https://jsfiddle.net/juanmirod/zgsgqz2j/)
 
 Es interesante jugar un poco con el script, mover las declaraciones de sitio y ver que pasa. Espero que sirva a alguien de ayuda, para cualquier duda o aportación, este post está alojado en  [github](https://github.com/juanmirod/juanmirod.github.io/blob/master/_posts/2016-02-19-ambito-en-javascript.markdown)
