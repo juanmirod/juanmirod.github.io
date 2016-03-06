@@ -17,6 +17,34 @@ El ámbito de las variables en JavaScript puede ser un poco confuso a veces, per
 
 La mejor forma de ver cómo funcionan estas reglas es probándolas en directo:
 
-<iframe width="100%" height="600" src="//jsfiddle.net/juanmirod/zgsgqz2j/embedded/js,result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+´´´javascript
+var hi = 'Global: I am global. ';
+var ObjectWithPrivateVariables = function ObjectDefinition() {
+
+  // Esta variable está definida dentro del ámbito de la functión ObjectDefinition
+  var hi = 'Object: Hello. ';
+  //var bye; // descomentar para arreglar la fuga de la variable bye al ámbito global
+
+  return {
+    sayHi: function returnsAGreeting() {
+      // El ámbito de esta función está dentro del ámbito de OnjectDefinition
+      return hi;
+    },
+    
+    sayBye: function byes() {
+      bye = "Good bye!";
+      return bye;
+    }
+  }
+};
+
+var newObject = new ObjectWithPrivateVariables();
+document.write(newObject.sayHi());
+document.write(hi); // Accede a la variable Global
+document.write(newObject.sayBye());
+document.write(bye); // Esta variable se ha declarado como global y podemos acceder a ella, cuidado!!
+document.write(sayHi); // error sayHi is undefined
+´´´
+[Edit in jsfiddle](https://jsfiddle.net/juanmirod/zgsgqz2j/)
 
 Es interesante jugar un poco con el script, mover las declaraciones de sitio y ver que pasa. Espero que sirva a alguien de ayuda, para cualquier duda o aportación, este post está alojado en  [github](https://github.com/juanmirod/juanmirod.github.io/blob/master/_posts/2016-02-19-ambito-en-javascript.markdown)
