@@ -2,8 +2,7 @@
 published: true
 title: Listenings estimulantes
 layout: post
-tags: [english, british, science, listenings, languages]
-categories: [english]
+tags: [english, british, ciencia, listenings]
 ---
 La mejor forma de asimilar y reforzar un idioma es escuchándolo y leyéndolo. Siempre que alguien que quiere mejorar en inglés me pregunta digo lo mismo: leer y escuchar todo lo que puedas, cualquier exposición al idioma es buena, hace a nuestro cerebro familiarizarse con los sonidos y palabras, con las construcciones sintácticas y con el ritmo del discurso, aunque no se entienda todo o se tengan que leer los subtítulos (pero úsalos sólo si realmente los necesitas; si no, es mucho mejor sin ellos, podemos centrarnos en escuchar y no en leer).
 

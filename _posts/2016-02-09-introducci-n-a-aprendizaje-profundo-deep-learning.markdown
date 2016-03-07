@@ -2,6 +2,7 @@
 published: false
 title: Introducción a Aprendizaje profundo (Deep Learning)
 layout: post
+tags: [Inteligencia Artifical]
 ---
 El Aprendizaje Profundo (AP) está demostrando ser de utilidad en múltiples campos e incluso ha conseguido hitos de la inteligencia artificial (IA) que se pensaba que aún estaban lejos en el futuro de la computación. 
 

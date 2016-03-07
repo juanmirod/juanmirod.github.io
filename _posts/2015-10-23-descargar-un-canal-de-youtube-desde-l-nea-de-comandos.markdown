@@ -2,6 +2,7 @@
 published: true
 title: Descargar un canal de youtube desde línea de comandos
 layout: post
+tags: [scripts, linea de comandos, youtube]
 ---
 [Youtube-dl](https://rg3.github.io/youtube-dl/) es un programa de línea de comandos que sirve para descargar videos, listas de reproducción e incluso canales completos de youtube. **De esta forma puedes verlos cuando quieras, offline, sin anuncios y sin cortes por pérdidas de conexión.** Algo que es especialmente útil cuando tus hijas pequeñas ven decenas de veces a la semana las mismas canciones y cuentos. O cuando quieres ver tus vídeos favoritos de youtube en un televisor "tonto" de los de antes.
 

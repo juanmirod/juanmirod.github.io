@@ -2,6 +2,7 @@
 published: false
 title: Automatización de tareas con npm
 layout: post
+tags: [automatización]
 ---
 Hoy en día existen un montón de formas de automatizar tareas, compilaciones, tests y builds. Los desarrolladores de front en particular suelen utilizar Bower y npm para la gestión de paquetes, Grunt y Gulp para automatizaciones, Karma, Jasmine, Selenium y otras para test automáticos...
 

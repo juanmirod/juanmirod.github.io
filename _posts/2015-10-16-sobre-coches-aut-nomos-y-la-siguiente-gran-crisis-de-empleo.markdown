@@ -2,6 +2,7 @@
 published: true
 title: Sobre coches autónomos y la siguiente gran crisis de empleo
 layout: post
+tags: [opinión, Inteligencia Artifical] 
 ---
 Últimamente se habla mucho de los coches autónomos en el mundo de la tecnología. Los avances son cada vez más palpables: Google ya lleva más de un millón de kilómetros recorridos, [Apple](http://iphone.appleinsider.com/articles/15/10/19/electric-motorcycle-startup-shutters-after-losing-top-talent-to-apple) ha anunciado sus planes para poner un coche autónomo en las calles, [Uber](http://www.theguardian.com/technology/2015/feb/03/are-driverless-cars-the-future-of-uber) también ha invertido en esta tecnología en desarrollo y las empresas de automoción están también investigando y poniéndose las pilas, aunque desde un punto de vista más inmediato, con sistemas de asistencia en carretera, coches que aparcan solos, te avisan o directamente giran si ven que te vas a salir de la carretera, frenan si detentan un obstáculo, etc.
 

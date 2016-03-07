@@ -2,6 +2,7 @@
 published: true
 title: Palabras más comunes del español
 layout: post
+tags: [scripts]
 ---
 
 Hoy quería añadir un fichero con palabras en español a Klavaro para ejercitar un poco con palabras españolas. No he encontrado a primera vista ningún texto que se adecuara a lo que quería. Normalmente estaban pareadas con su traducción a otro idioma o metidas en una tabla. Yo sólo quería un montón de palabras frecuentes seguidas, de forma que luego Klavaro las toma al azar para los ejercicios de velocidad.
