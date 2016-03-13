@@ -26,7 +26,7 @@ A continuación dejo una lista con los videos y audios que me han gustado más y
 
 - [A Christmas Carol read by Neil Gaiman](https://soundcloud.com/nypl/neil-gaiman-reads-a-christmas-carol). Neil Gaiman leyó en honor a Dickens su cuento de Navidad, obra que el propio Dickens interpretó decenas de veces haciendo un tour por Estados Unidos.
 
-- [How stories last](https://soundcloud.com/brainpicker/neil-gaiman-how-stories-last). Lectura de Gaiman sobre las historias y como perduran y se transforman con el tiempo. Sin desperdicio.
+- [How stories last](http://longnow.org/seminars/02015/jun/09/how-stories-last/). Lectura de Gaiman sobre las historias y como perduran y se transforman con el tiempo. Sin desperdicio.
 
 - [The man who forgot Ray Bradbury](https://soundcloud.com/neilgaiman/the-man-who-forgot-ray-bradbury). Lectura de Neil Gaiman de un relato corto del propio Gaiman.
 

@@ -40,3 +40,28 @@ La desventaja por supuesto es que grunt/gulp son más sencillos suponinedo que n
 
 Pero si la idea de tener tus propios scripts en tu proyecto aprovechando los paquetes de npm te llama la atención, veamos cómo podemos hacer algunas cosas:
 
+## Paquetes interesantes para desarrollo front
+
+Los scripts que defino a continuación utilizan algunos paquetes de npm. Si los añadimos como dependencias de desarrollo podremos obviarlos en usuarios nuevos al proyecto o en según que condiciones en el deploy. Para los siguientes ejemplos la propiedad devDependencies quedaría así:
+
+```json
+  "devDependencies": {
+    "clean-css": "^3.2.9",
+    "jasmine-core": "^2.2.0",
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.5",
+    "less": "^2.5.0",
+    "parallelshell": "^1.1.1",
+    "uglify-js": "^2.4.20",
+    "watch": "^0.16.0"
+  }
+```
+
+## Compilar css
+
+## Compilar js
+
+## Ejecutar un script externo 
+
+## Escuchar por cambios y compilar/testear:
