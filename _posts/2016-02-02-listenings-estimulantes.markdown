@@ -34,4 +34,10 @@ A continuación dejo una lista con los videos y audios que me han gustado más y
 
 - [Do schools kill creativity?](http://www.ted.com/talks/ken_robinson_says_schools_kill_creativity) Una de las charlas más conocidas de TED, Sir Ken Robinson se pregunta si la escuela está limitando más que educando a los niños.  
 
+- [Everything you think to know addictions is wrong](http://www.ted.com/talks/johann_hari_everything_you_think_you_know_about_addiction_is_wrong) Otra charla de TED, esta vez sobre el verdadero causante de las addicciones.
+
+- [A book from every country](http://www.ted.com/talks/ann_morgan_my_year_reading_a_book_from_every_country_in_the_world) Charla de TED sobre la diversidad del planeta y las pequeñas burbujas en las que vivimos. En ese sentido creo que traducir libros de otras culturas es genial pero aprender idiomas para leerlos en su lengua original es aun mejor.
+
 Si te gustaron estos listenings vuelve en algún tiempo para escuchar más y si conoces otras lecturas o charlas en inglés británico que sean interesantes puedes puedes escribirme en [github](https://github.com/juanmirod/juanmirod.github.io/blob/master/_posts/2016-02-02-listenings-estimulantes.markdown) o en [twitter](https://twitter.com/juanmirod).
+
+ 
