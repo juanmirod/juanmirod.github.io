@@ -5,7 +5,7 @@ layout: post
 tags: [Inteligencia Artifical]
 ---
 
-![Demis Hassabis]({{ site.url }}/public/img/demis-hassabis-640x360.jpg)
+![Demis Hassabis](/public/img/demis-hassabis-640x360.jpg)
 
 Demis Hassabis es un genio que me ha fascinado desde antes incluso de saber su nombre. Ya cuando Lionhead publicó Back and White, Peter Molineux hablaba en sus entrevistas de un prodigio de la programación que había sido el propiciante de Theme Park y que lo era de Black and White. De la boca de Peter Molineoux todo suena siempre pretencioso, pero si miramos los dos juegos de los que estamos hablando y el momento en el que aparecieron, veremos que los dos son juegos de relevancia histórica por la misma razón: son hitos en la inteligencia artificial aplicada a videojuegos. B&W podría resultar vacío de contenido o un poco tonto en cuanto a reto para el jugador, pero ver cómo se comportaban las criaturas y aprendían de tus actos y respondían al propio feedback de los aldeanos era genial. Theme park era más sencillo, pero si tenemos en cuenta que Demis Hassabis tenía 17 años y que inventó un género de los videojuegos con su creación, vendió millones de copias y ganó el Golden Joystick Award, ya no parece ninguna tontería.
 
