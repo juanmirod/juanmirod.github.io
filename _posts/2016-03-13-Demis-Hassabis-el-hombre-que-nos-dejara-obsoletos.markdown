@@ -13,7 +13,7 @@ Ya cuando Lionhead publicó Back and White, Peter Molineux hablaba en sus entrev
 
 B&W podría resultar vacío de contenido o un poco tonto en cuanto a reto para el jugador, pero ver cómo se comportaban las criaturas y aprendían de tus actos y respondían al propio feedback de los aldeanos era genial. Theme park era más sencillo, pero si tenemos en cuenta que Demis Hassabis tenía 17 años y que inventó un género de los videojuegos con su creación, vendió millones de copias y ganó el Golden Joystick Award, ya no parece ninguna tontería.
 
-Yo no conocía su nombre, pero sabía que la persona detrás de aquellas invenciones no era una persona normal. 
+Yo no conocía su nombre y tampoco tenía más información que esa. Solo daba la casualidad de que había leído las entrevistas de Molineux y que tenía curiosidad por el desarrollo de videojuegos. Pero sabía que la persona detrás de aquellas invenciones no era una persona normal. 
 
 Efectivamente, DH se enseñó a leer él solo a los 2 años, a los 4 jugaba al ajedrez y a los 13 adquirió el rango de gran maestro. Es un genio histórico, como lo fueron Einstein, Mozart o Ramanujan. Solo el tiempo nos mostrará los frutos de su trabajo, porque los humanos comunes no podemos imaginar lo que una mente como la suya está tramando o lo que conseguirá hacer a lo largo de su vida.
 
