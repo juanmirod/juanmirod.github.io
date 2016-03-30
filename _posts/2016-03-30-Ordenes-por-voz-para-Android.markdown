@@ -14,30 +14,30 @@ Si tenemos la barra de búsqueda en la portada de nuestro móvil Android, simple
 
 A continuación, listo algunas de las órdenes que podemos decirle a Google y si queréis saber más sobre como configurar esta aplicación en móvil o pc podéis verlo [aquí](https://support.google.com/websearch/answer/2940021?hl=es)
 
-###Alarmas, calendario, recordatorios:
-Simplemente dilo: "Alarma para las siete de la tarde" o "Alarma en 20 minutos" y el móvil creará una alarma para ese momento, sin tener que hacer click en el reloj, rellenar horas ni confirmar nada. Lo dices, lo tienes, bum!
+### Alarmas, calendario, recordatorios:
+Simplemente dilo: *"Alarma para las siete de la tarde"* o *"alarma en 20 minutos"* y el móvil creará una alarma para ese momento, sin tener que hacer click en el reloj, rellenar horas ni confirmar nada. Lo dices, lo tienes, bum!
 
 ### Llamadas, mensajes, correos:
-También puedes decir "Llamar a Paco" y listo, comenzará la llamada. "Enviar un mensaje a Mamá que diga: llego tarde para la cena" y listo, no hay que navegar por los menús del móvil ni escribir nada.
+También puedes decir *"Llamar a Paco"* y listo, comenzará la llamada. *"Enviar un mensaje a Mamá que diga: llego tarde para la cena"* y listo, no hay que navegar por los menús del móvil ni escribir nada.
 
 ### Indicaciones de maps:
-"Indicaciones para Logroño" nos abrirá maps y nos responderá en voz alta con el tiempo del viaje, el estado de la carretera y la hora estimada de llegada.
+*"Indicaciones para Logroño"* nos abrirá maps y nos responderá en voz alta con el tiempo del viaje, el estado de la carretera y la hora estimada de llegada.
 
 ### Búsquedas, fórmulas matemáticas, respuestas rápidas:
 
-- Averiguar la hora: “¿Qué hora es en Londres?”
+- Averiguar la hora: *“¿Qué hora es en Londres?”*
 
-- Comprobar el tiempo: "¿Necesito una chaqueta para hoy?" o "¿qué tiempo va a hacer mañana por la mañana?"
+- Comprobar el tiempo: *"¿Necesito una chaqueta para hoy?"* o +"¿qué tiempo va a hacer mañana por la mañana?"*
 
-- Responder a preguntas triviales: “¿Dónde nació Albert Einstein?” o "¿Qué edad tiene Beyoncé?"
+- Responder a preguntas triviales: *“¿Dónde nació Albert Einstein?”* o *"¿qué edad tiene Beyoncé?"*
 
-- Traducir palabras o frases: "¿Cómo se dice 'pepino' en inglés?"
+- Traducir palabras o frases: *"¿Cómo se dice 'pepino' en inglés?"*
 
-- Definir una palabra: "¿Qué significa 'gula'?"
+- Definir una palabra: *"¿Qué significa 'gula'?"*
 
-- Convertir unidades: "¿Cuántos kilos son 16 onzas?"
+- Convertir unidades: *"¿Cuántos kilos son 16 onzas?"*
 
-- Resolver problemas matemáticos: "¿Cuál es la raíz cuadrada de 2.209?"
+- Resolver problemas matemáticos: *"¿Cuál es la raíz cuadrada de 2.209?"*
 
 Las preguntas de respuesta única serán respondidas en voz alta, mientras que las que devuelvan una búsqueda de internet nos mostrará los mismos resultados que si hubieramos escrito la pregunta en el cajetín de búsqueda.
 
