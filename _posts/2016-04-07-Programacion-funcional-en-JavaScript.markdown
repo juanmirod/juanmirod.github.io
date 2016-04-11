@@ -1,0 +1,82 @@
+---
+published: false
+title: Programación Funcional en Javascript
+layout: post
+tags: [JavaScript, programación funcional]
+---
+
+La programación funcional parece que por fin va ganando más y más adeptos gracias a nuevos lenguajes como Scala o Clojure y a nuevos frameworks y librerías como lodash, React o Redux, que aunque no son puramente declarativos, sí que utilizan herramientas de la programación funcional y aprovechan la característica de JavaScript de tener las funciones con un tratamiento de "primera clase" o de primitiva. Además ES6 añade algunas nuevas funcionalidades muy interesantes para el desarrollo funcional como la notación que expande elementos iterables con `...` o las funciones con la flecha `=>`
+
+Si eres desarrollador de JavaScript y has visto algún ejemplo de código usando estas nuevas herramientas puede que te resultase totalmente extraterrestre, voy a tratar de plasmarlo en un ejemplo de código, primero escrito para ES5 y de forma imperativa y luego de forma funcional y utilizando las herramientas de ES6.
+
+Esto es un código "típico" en JS:
+
+
+var books = [
+  { 
+    title: "Fuzzy Nation",
+    content: "At the time ZaraCorp started mining Mount Isabel, Holloway had idly wondered how an area could be restored to a pristine state once ZaraCorp had mined everything of value out of it, but this was not the same thing as him exhibiting actual concern.",
+    price: "10.99"
+  },
+  { 
+    title: "The time machine",
+    content: "Overhead it was simply black, except where a gap of remote blue sky shone down upon us here and there. I struck none of my matches because I had no hand free.",
+    price: "8.99"
+  },
+  { 
+    title: "Brave new world",
+    content: "He felt the hot tears welling up behind his eyelids as he recalled the words and Linda’s voice as she repeated them. And then the reading lessons: The tot is in the pot, the cat is on the mat; and the Elementary Instructions for Beta Workers in the Embryo Store. And long evenings by the fire or, in summertime, on the roof of the little house, when she told him those stories about the Other Place, outside the Reservation: that beautiful, beautiful Other Place, whose memory, as of a heaven, a paradise of goodness and loveliness, he still kept whole and intact, undefiled by contact with the reality of this real London, these actual civilized men and women.",
+    price: "15.99"
+  },
+  { 
+    title: "Time Salvager",
+    content: "Levin let the bouncer go. The fewer ripples the better, though he didn’t worry much about that here. The odds of a time chronostream self-healing in this cesspool of an inn were high. Still, best not to take chances. That boy had already made enough ripples for both of them, running away from the present. The poor fool knew better. No one ever escaped the auditors.",
+    price: "12"
+  }
+];
+
+function addTaxes(price) {
+  return price + price*8/100;
+}
+
+function showBooks(books, id) {
+  
+  var elem = document.getElementById(id);
+  for(var i = 0; i < books.length; i++) {
+    elem.appendChild("<h2>" + books[i].title + "</h2>");
+    elem.appendChild("<p>" + books[i].content + "</p>");
+    elem.appendChild("<p>Price: " + addTaxes(books[i].price) + "</p>"); 
+  }
+
+}
+
+showBooks("imperative");
+
+
+Este código escribe una lista de elementos que podemos haber tomado de una petición al servidor.
+
+El mismo código, haciendo uso de lodash y ES6 podría quedar así:
+
+const addTaxes = (price) => parseFloat(price) + (price*10)/100;
+
+const buildElem = (elem, content) => 
+  "<" + elem + ">" + content + "</" + elem + ">";
+
+const showBook = (id, book) => {
+
+  var elem = document.getElementById(id);
+  elem.innerHTML = elem.innerHTML + buildElem("h2", book.title);
+  elem.innerHTML = elem.innerHTML + buildElem("p", book.content); 
+  elem.innerHTML = elem.innerHTML + buildElem("p", "Price: " + addTaxes(book.price));
+
+}
+
+const showBooks = (list, id) => {
+  
+  let showBookInId = (book) => { return showBook(id, book); } 
+  list.map(showBookInId);
+
+}
+
+showBooks(books, "functional");
+Lodash es sólo una librería. Si además, no te importa tener que compilar el código (hoy en día seguramente ya estés haciéndolo de todas formas) y quieres más *pureza* Puedes echar un ojo a ClojureScript, Elm, ElixirScript o a cualquier lenguage funcional que te guste básicamente, porque [hay compiladores para todos](https://github.com/jashkenas/coffeescript/wiki/List-of-languages-that-compile-to-JS).

@@ -15,10 +15,10 @@ Si tenemos la barra de búsqueda en la portada de nuestro móvil Android, simple
 A continuación, listo algunas de las órdenes que podemos decirle a Google y si queréis saber más sobre como configurar esta aplicación en móvil o pc podéis verlo [aquí](https://support.google.com/websearch/answer/2940021?hl=es)
 
 ### Alarmas, calendario, recordatorios:
-Simplemente dilo: *"Alarma para las siete de la tarde"* o *"alarma en 20 minutos"* y el móvil creará una alarma para ese momento, sin tener que hacer click en el reloj, rellenar horas ni confirmar nada. Lo dices, lo tienes, bum!
+Simplemente dilo: *"Alarma para las siete de la tarde"* o *"temporizador en 10 minutos"* y el móvil creará una alarma para ese momento, sin tener que hacer click en el reloj, rellenar horas ni confirmar nada. Lo dices, lo tienes, bum!
 
 ### Llamadas, mensajes, correos:
-También puedes decir *"Llamar a Paco"* y listo, comenzará la llamada. *"Enviar un mensaje a Mamá que diga: llego tarde para la cena"* y listo, no hay que navegar por los menús del móvil ni escribir nada.
+También puedes decir *"Llamar a Paco"* y listo, comenzará la llamada. *"Enviar un mensaje a Mamá que diga: llego tarde para la cena"* y listo, no hay que navegar por los menús del móvil ni escribir nada. Puedes decir *"Email para Ana"* y el móvil te preguntará en voz alta cuál es el mensaje y continuará interactuando mediante la voz para enviar el mensaje o cancelarlo.
 
 ### Indicaciones de maps:
 *"Indicaciones para Logroño"* nos abrirá maps y nos responderá en voz alta con el tiempo del viaje, el estado de la carretera y la hora estimada de llegada.
