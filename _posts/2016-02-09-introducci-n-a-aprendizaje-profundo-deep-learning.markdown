@@ -4,7 +4,7 @@ title: Introducción a Aprendizaje profundo (Deep Learning)
 layout: post
 tags: [Inteligencia Artifical]
 ---
-El Aprendizaje Profundo (AP) está demostrando ser de utilidad en múltiples campos e incluso ha conseguido hitos de la inteligencia artificial (IA) que se pensaba que aún estaban lejos en el futuro de la computación. 
+El Aprendizaje Profundo (AP) está demostrando ser de utilidad en múltiples campos, e incluso ha conseguido hitos de la inteligencia artificial (IA) que se pensaba que aún estaban lejos en el futuro de la computación. 
 
 El más reciente ejemplo fue la victoria de AlphaGo sobre un jugador profesional de Go. El Go era, hasta ahora un juego donde los humanos no podían ser vencidos por las máquinas. Un tablero de gran tamaño y reglas sencillas hacen que la cantidad de movimientos posibles en cada turno de un jugador de Go sea altísima. La combinatoria explota y los árboles de búsqueda se vuelven totalmente ineficientes en este juego. Pero, tras décadas tratando de encontrar la solución a este juego, AlphaGo ha aprendido a jugar semi autónomamente, básicamente jugando partidas contra si mismo y aprendiendo de los jugadores profesionales. 
 
@@ -18,7 +18,7 @@ Otros campos en los que destaca el AP es en el reconocimiento y etiquetado de im
 
 El AP es una rama del aprendizaje automático que supone un gran avance cualitativo en estas áreas y se perfila prometedor para otras muchas en las que se cuente con una gran cantidad de datos a clasificar y optimizar.
 
-En la actualidad me parece un área de la ingeniería informática muy interesante y me gustaría contribuir a este campo como buenamente pueda, comenzando por esta introducción en español para todo el que pueda estar interesado en comenzar a entender qué es y cómo funcionan estas ténicas de inteligencia artificial.  
+En la actualidad me parece un área de la ingeniería informática muy interesante y me gustaría contribuir a este campo como buenamente pueda, comenzando por esta introducción en español para todo el que pueda estar interesado en comenzar a entender qué es y cómo funcionan estas técnicas de inteligencia artificial.  
 
 En esta introducción utilizaré Tensorflow, la librería de computación de código abierto creada por Google. Para poder seguir los ejemplos y comprender el código presente en el texto es necesario tener conocimientos de programación, álgebra y métodos numéricos y estar familiarizado con el lenguaje de programación Python.
 
