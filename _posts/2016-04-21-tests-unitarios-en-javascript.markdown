@@ -36,6 +36,7 @@ En problemas fáciles como este de la calculadora, es fácil verse tentado a pon
 Por eso es por lo que en esta ocasión vamos a usar TDD y vamos a escribir primero unos tests de lo que queremos que nuestra calculadora haga:
 
 ```javascript
+// Calculator.spec.js
 describe('Calculator', function() {
 
   it('should have a storeAction function', function() {
@@ -77,9 +78,39 @@ Bien, ya sabemos lo que queremos, una calculadora que sume y multiplique, y que 
 
 Estos tests están bien para comenzar, pero si nos fijamos veremos que hay muchos más casos que controlar, como ¿qué pasa si añado dos números seguidos? ¿y si añado dos operaciones? ¿Donde está el test para la función de *RESET*? Todos estos test deberán ir añadiendose y satisfaciéndose en el código.
 
-Si solo tenemos los tests y los ejecutamos en la línea de comandos o en el navegador, veremos que fallan. Para satisfacerlos deberemos crear el módulo **Calculator** y añadir la función **storeAction** con la funcionalidad suficiente para que satisfaga los tests:
+Si solo tenemos los tests y los ejecutamos en la línea de comandos o en el navegador, veremos que fallan. Para ejecutarlos lo más sencillo es crear un fichero *html* en el que añadiremos los scripts de jasmine que están alojados en el CDN de jsdeliver. A continuación añadimos los ficheros js de nuestra aplicación y los ficheros que contienen los tests para los diferentes módulos:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sample Unit tests runner</title>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/jasmine/2.4.1/jasmine.css">
+
+  <script src="https://cdn.jsdelivr.net/jasmine/2.4.1/jasmine.js"></script>
+  <script src="https://cdn.jsdelivr.net/jasmine/2.4.1/jasmine-html.js"></script>
+  <script src="https://cdn.jsdelivr.net/jasmine/2.4.1/boot.js"></script>
+  
+  <script src="calculator.js"></script>
+  <script src="calculator.spec.js"></script>
+  
+</head>
+<body>
+
+  
+</body>
+</html>
+```
+
+Al abrir este fichero en el navegador, Jasmine creará un pequeño interface y listará los tests junto con los resultados y los errores que hayan ocurrido. En este caso, si sólo tenemos el fichero de especificaciones, todos los tests fallarán.
+
+Para satisfacerlos, deberemos crear el módulo **Calculator** y añadir la función **storeAction** con la funcionalidad suficiente para que satisfaga los tests:
 
 ```javascript
+// Calculator.js
 var Calculator = (function(){
   'strict mode';
   
@@ -151,4 +182,4 @@ var Calculator = (function(){
 
 Este código satisface los tests de arriba y algunos más. Aún nos quedaría añadir la funcionalidad para restar, dividir, limpiar el input, etc. Puedes ver el ejemplo algo más completo en [este thimble](https://thimbleprojects.org/juanmirod/56250/). Para ver el resulado de los tests haz click en el fichero 'test.html'.
 
-Si te fijas, en este projecto no hay tests para la parte del interface. Hay funciones del interface que no tiene mucho sentido testar, el markup puede cambiar sin alterar la funcionalidad y no tiene mucho sentido escribir tests para algo así. Pero sí que podemos escribir tests que verifiquen que cuando hago click en un botón o pulso una tecla, se llama a la función adecuada. Estos tests son algo más complicados porque necesitamos una herramienta que cree un DOM sobre el que podamos operar en nuestros tests. En el siguiente artículo me centraré en cómo añadir karma a nuestro proyecto y utilizarlo para escribir tests de interface. 
+Si te fijas, en ese projecto no hay tests para la parte del interface. Hay funciones del interface que no tiene mucho sentido testar, el markup puede cambiar sin alterar la funcionalidad y no tiene mucho sentido escribir tests para algo así. Pero sí que podemos escribir tests que verifiquen que cuando hago click en un botón o pulso una tecla, se llama a la función adecuada. Estos tests son algo más complicados porque necesitamos una herramienta que cree un DOM sobre el que podamos operar en nuestros tests. En el siguiente artículo me centraré en cómo añadir [Karma](https://karma-runner.github.io/0.13/index.html) a nuestro proyecto y utilizarlo para escribir tests de interface. 
