@@ -11,7 +11,7 @@ Como decía en el artículo anterior, una de las herramientas imprescindibles pa
 
 Lo ideal sería tener dos monitores para poder tener uno sólo con el editor y el otro para la ventana de los tests, la de la aplicación o la documentación que estemos consultando en ese momento. Si no tenemos dos monitores pues tendremos que hacer el mejor uso que podamos del que tenemos y ponerlo a pantalla partida, utilizar varios escritorios virtuales o lo que más nos guste.
 
-Una vez dicho esto, ¿Cómo hago para que la ventana del navegador o la consola estén comprobando si guardo cambios en el código y se actualicen? Hoy voy a mostrar como hacer esto con Karma, que me parece una de las opciones más rápidas y sencillas. Aunque hay muchas otras opciones para esto.
+Una vez dicho esto, ¿Cómo hago, trabajando con javascript, para que la ventana del navegador o la consola estén comprobando si guardo cambios en el código y se actualicen? Hoy voy a mostrar como hacer esto con Karma, que me parece una de las opciones más rápidas y sencillas. Aunque hay muchas otras opciones para esto.
 
 [Karma](https://karma-runner.github.io/0.13/index.html) es un entorno que monitoriza los archivos del código y cuando comprueba que ha habido cambios ejecuta nuestra suite de tests, es justo lo que necesitamos ahora mismo, ni más ni menos. Lo creo el equipo de AngularJS y es una herramienta fiable y que goza de buena salud en cuanto a mantenimiento.
 
@@ -48,3 +48,11 @@ $> karma init
 
 Del mismo modo que con npm se nos preguntarán ciertas cosas sobre el proyecto. Decimos que navegador queremos ejecutar, el framework de tests, que en este caso es Jasmine y luego indicamos, por orden o mediante comodines, los scripts que queremos que karma monitorize y cargue en el entorno de test. Es importante aquí que si necesitamos que los archivos se carguen en un orden concreto porque no utilizamos un gestor de módulos, los pongamos en ese orden en el fichero de configuración de karma. En nuestro projecto de ejemplo estos serían los ficheros:
 
+```html
+```
+
+Una vez añadidos los ficheros, podemos volver a ejecutar `karma start` y esta vez deberíamos ver el resultado de ejecutar los tests en la consola.
+
+A partir de aquí ya sólo tenemos que poner la consola en un lugar visible y seguir desarrollando. Cada vez que modifiquemos un fichero Karma volverá a ejecutar la suite de tests y veremos el resultado actualizado. De esta forma podemos refactorizar el código sin miedo porque veremos rápidamente si rompemos alguno de los tests. De la misma forma podremos trabajar utilizando TDD: Creamos un nuevo test que especifique un requerimiento o historia, vemos como falla, implementamos el código que lo satisface y comprobamos que así es y vuelta a empezar.
+
+Aprender a trabajar realizando los tests por adelantado es difícil al principio, hay que resistir la tentación de escribir el código directamente y al principio nos cuesta pensar en cómo escribir los tests, pero los beneficios de esta práctica están demostrados y merece la pena invertir un poco de esfuerzo extra en aprenderla.

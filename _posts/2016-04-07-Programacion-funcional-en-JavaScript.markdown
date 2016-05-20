@@ -9,9 +9,9 @@ La programación funcional parece que por fin va ganando más y más adeptos gra
 
 Si eres desarrollador de JavaScript y has visto algún ejemplo de código usando estas nuevas herramientas puede que te resultase totalmente extraterrestre, voy a tratar de plasmarlo en un ejemplo de código, primero escrito para ES5 y de forma imperativa y luego de forma funcional y utilizando las herramientas de ES6.
 
-Esto es un código "típico" en JS:
+Este ejemplo muy (MUY) sencillo podría ser una función "típica" en JS:
 
-
+```javascript
 var books = [
   { 
     title: "Fuzzy Nation",
@@ -36,7 +36,7 @@ var books = [
 ];
 
 function addTaxes(price) {
-  return price + price*8/100;
+  return parseFloat(price) + price*8/100;
 }
 
 function showBooks(books, id) {
@@ -50,13 +50,39 @@ function showBooks(books, id) {
 
 }
 
-showBooks("imperative");
+showBooks(books, "imperative");
+```
+
+El código escribe una lista de elementos que podemos haber tomado de una petición al servidor.
+
+Reorganizando ún poco el código, podemos eliminar el bucle `for` utilizando la función map en su lugar haciendo uso de un poco de la nueva sintaxis introducida por ES2015 podría quedar así:
+
+```javascript
+//TODO
+```
+
+Para más claridad, en lugar de utilizar una función anónima, sacaremos la función fuera y la nombraremos, así ahora tendremos un componente más independiente que simplemente añade un libro al elemento que le digamos. 
+
+```javascript
+//TODO
+```
+
+También podemos simplificar esta función a su vez sacando la sintaxis html de la función, para ello creamos una pequeña función auxiliar que crea el html para un elemento.
+
+```javascript
+//TODO
+```
+
+Por último, también podemos eliminar la función anónima que muestra todos los libros:
+
+```javascript
+//TODO
+```
 
 
-Este código escribe una lista de elementos que podemos haber tomado de una petición al servidor.
+El código final quedaría así:
 
-El mismo código, haciendo uso de lodash y ES6 podría quedar así:
-
+```javascript
 const addTaxes = (price) => parseFloat(price) + (price*10)/100;
 
 const buildElem = (elem, content) => 
@@ -79,4 +105,10 @@ const showBooks = (list, id) => {
 }
 
 showBooks(books, "functional");
-Lodash es sólo una librería. Si además, no te importa tener que compilar el código (hoy en día seguramente ya estés haciéndolo de todas formas) y quieres más *pureza* Puedes echar un ojo a ClojureScript, Elm, ElixirScript o a cualquier lenguage funcional que te guste básicamente, porque [hay compiladores para todos](https://github.com/jashkenas/coffeescript/wiki/List-of-languages-that-compile-to-JS).
+```
+
+Hemos tomado nuestra primera aproximación y la hemos depurado de forma que ahora las funciones están mejor definidas, es más fácil de modificar y testar y más sencilla de leer. Esta es una forma de utilizar la programación funcional dentro de JavaScript. Lo bueno de esto es que no necesitas cambiar de lenguage ni saber todo sobre programación funcional. Puedes empezar a usar estos conceptos en tus proyectos e ir familiarizándote con ellos y seguir usando el estilo imperativo en las partes donde lo necesites. Nuevas librerías como React y Redux promueven la utilización de estas técnicas para hacer el código más modular y manejable, así como otras muchos paradigmas de la programación funcional como la inmutabilidad de los datos o la composición de funciones. 
+
+Una buena introducción a la programación funcional que sigue también esta filosofía es [Mostly adecuate guide to functional programming](https://drboolean.gitbooks.io/mostly-adequate-guide/content/index.html) Está escrito en JavaScript y te permite ir introducciendo conceptos cada vez más complejos poco a poco. 
+
+Si quieres más *pureza* Puedes echar un ojo a ClojureScript, Elm, ElixirScript o a cualquier lenguage funcional que te guste básicamente, porque [hay compiladores para todos](https://github.com/jashkenas/coffeescript/wiki/List-of-languages-that-compile-to-JS).
