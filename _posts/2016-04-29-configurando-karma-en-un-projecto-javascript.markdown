@@ -1,6 +1,6 @@
 ---
 published: true
-title: Configurando Karma en un projecto JavaScript
+title: Configurando Karma en un proyecto JavaScript
 layout: post
 tags: [javascript, test]
 ---

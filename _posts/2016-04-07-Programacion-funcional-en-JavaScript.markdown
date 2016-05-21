@@ -85,22 +85,22 @@ El código final quedaría así:
 ```javascript
 const addTaxes = (price) => parseFloat(price) + (price*10)/100;
 
-const buildElem = (elem, content) => 
-  "<" + elem + ">" + content + "</" + elem + ">";
-
-const showBook = (id, book) => {
+const appendBook = (id, book) => {
 
   var elem = document.getElementById(id);
-  elem.innerHTML = elem.innerHTML + buildElem("h2", book.title);
-  elem.innerHTML = elem.innerHTML + buildElem("p", book.content); 
-  elem.innerHTML = elem.innerHTML + buildElem("p", "Price: " + addTaxes(book.price));
+
+  elem.innerHTML += 
+  '<h2>${ book.title }</h2>
+   <p>${ book.content }</p>
+   <p>Price: ${ addTaxes(book.price) }</p>';
 
 }
 
 const showBooks = (list, id) => {
   
-  let showBookInId = (book) => { return showBook(id, book); } 
-  list.map(showBookInId);
+  let appendBookInId = (book) => { return appendBook(id, book); } 
+  
+  list.map(appendBookInId);
 
 }
 
