@@ -48,7 +48,7 @@ $> karma init
 
 Del mismo modo que con npm se nos preguntarán ciertas cosas sobre el proyecto. Decimos que navegador queremos ejecutar, el framework de tests, que en este caso es Jasmine y luego indicamos, por orden o mediante comodines, los scripts que queremos que karma monitorize y cargue en el entorno de test. Es importante aquí que si necesitamos que los archivos se carguen en un orden concreto porque no utilizamos un gestor de módulos, los pongamos en ese orden en el fichero de configuración de karma. En nuestro projecto de ejemplo, como sólo tenemos tests para el módulo de la lógica, podemos añadir sólo ese módulo y su fichero de tests, estos serían los ficheros:
 
-```json
+```javascript
 ...
     files: [
       'calculator.js',
