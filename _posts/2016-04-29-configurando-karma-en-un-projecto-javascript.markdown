@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Configurando Karma en un projecto JavaScript
 layout: post
 tags: [javascript, test]
@@ -44,15 +44,22 @@ Pero si hacemos `karma start` veremos que no pasa nada. Una vez instalado, tendr
 
 ```shell
 $> karma init
-```  
-
-Del mismo modo que con npm se nos preguntarán ciertas cosas sobre el proyecto. Decimos que navegador queremos ejecutar, el framework de tests, que en este caso es Jasmine y luego indicamos, por orden o mediante comodines, los scripts que queremos que karma monitorize y cargue en el entorno de test. Es importante aquí que si necesitamos que los archivos se carguen en un orden concreto porque no utilizamos un gestor de módulos, los pongamos en ese orden en el fichero de configuración de karma. En nuestro projecto de ejemplo estos serían los ficheros:
-
-```html
 ```
 
-Una vez añadidos los ficheros, podemos volver a ejecutar `karma start` y esta vez deberíamos ver el resultado de ejecutar los tests en la consola.
+Del mismo modo que con npm se nos preguntarán ciertas cosas sobre el proyecto. Decimos que navegador queremos ejecutar, el framework de tests, que en este caso es Jasmine y luego indicamos, por orden o mediante comodines, los scripts que queremos que karma monitorize y cargue en el entorno de test. Es importante aquí que si necesitamos que los archivos se carguen en un orden concreto porque no utilizamos un gestor de módulos, los pongamos en ese orden en el fichero de configuración de karma. En nuestro projecto de ejemplo, como sólo tenemos tests para el módulo de la lógica, podemos añadir sólo ese módulo y su fichero de tests, estos serían los ficheros:
 
-A partir de aquí ya sólo tenemos que poner la consola en un lugar visible y seguir desarrollando. Cada vez que modifiquemos un fichero Karma volverá a ejecutar la suite de tests y veremos el resultado actualizado. De esta forma podemos refactorizar el código sin miedo porque veremos rápidamente si rompemos alguno de los tests. De la misma forma podremos trabajar utilizando TDD: Creamos un nuevo test que especifique un requerimiento o historia, vemos como falla, implementamos el código que lo satisface y comprobamos que así es y vuelta a empezar.
+```json
+...
+    files: [
+      'calculator.js',
+      'calculator.spec.js'
+    ],
+...
+```
 
-Aprender a trabajar realizando los tests por adelantado es difícil al principio, hay que resistir la tentación de escribir el código directamente y al principio nos cuesta pensar en cómo escribir los tests, pero los beneficios de esta práctica están demostrados y merece la pena invertir un poco de esfuerzo extra en aprenderla.
+Una vez añadidos los ficheros, podemos volver a ejecutar `karma start` y esta vez deberíamos ver el resultado de ejecutar los tests en la consola. Conforme vayamos ampliando el proyecto podemos añadir más ficheros o patrones concretos, Karma permite más opciones en cómo y dónde cargar los ficheros, pero por ahora nos valdrá con esto.
+
+A partir de aquí ya sólo tenemos que poner la consola en un lugar visible y seguir desarrollando. Cada vez que modifiquemos un fichero Karma volverá a ejecutar los tests y veremos el resultado actualizado. De esta forma podemos refactorizar el código sin miedo porque veremos rápidamente si rompemos alguno de los tests. De la misma forma podremos trabajar utilizando TDD: Creamos un nuevo test que especifique un requerimiento o historia, vemos como falla, implementamos el código que lo satisface y comprobamos que así es y vuelta a empezar.
+
+Aprender a trabajar realizando los tests por adelantado es difícil al principio, hay que resistir la tentación de escribir el código directamente y al principio nos cuesta pensar en cómo escribir los tests, pero los beneficios de esta práctica están demostrados y merece la pena invertir un poco de esfuerzo extra en aprenderla. Una herramienta como Karma es fundamental para poder ver inmediatamente el resultado de los tests y no convertir esta metodología en un suplicio.
+
