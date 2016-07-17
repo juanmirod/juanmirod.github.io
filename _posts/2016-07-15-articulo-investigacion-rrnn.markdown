@@ -11,4 +11,4 @@ Es muy viejo, lo publiqué durante mi proyecto de fin de carrera y realmente lo 
 
 Pero al final publicamos este artículo, sobre los tres algoritmos principales que implementé durante el proyecto de fin de carrera. Lo dejo aquí para guardarlo en algún sitio fácil de encontrar y mantener una reseña a él también a nivel personal.
 
-[A self-organizing elastic map to measure the contour of skin pressure ulcers in digital images - Veredas and Rodriguez](veredas_and_rodriguez_070206.pdf)
+[A self-organizing elastic map to measure the contour of skin pressure ulcers in digital images - Veredas and Rodriguez](/public/veredas_and_rodriguez_070206.pdf)
