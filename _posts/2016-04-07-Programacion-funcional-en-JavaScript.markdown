@@ -5,7 +5,7 @@ layout: post
 tags: [JavaScript, programación funcional]
 ---
 
-La programación funcional parece que por fin va ganando más y más adeptos gracias a nuevos lenguajes como Scala o Clojure y a nuevos frameworks y librerías como lodash, React o Redux, que aunque no son puramente declarativos, sí que utilizan herramientas de la programación funcional y aprovechan la característica de JavaScript de tener las funciones con un tratamiento de "primera clase" o de primitiva. Además ES6 añade algunas nuevas funcionalidades muy interesantes para el desarrollo funcional como la notación que expande elementos iterables con `...` o las funciones con la flecha `=>`
+La programación funcional parece que por fin va ganando más y más adeptos gracias a nuevos lenguajes como Scala, Clojure o Elm y a nuevos frameworks y librerías como Lodash, Ramda, React o Redux, que aunque no son puramente declarativos, sí que utilizan herramientas de la programación funcional y aprovechan la característica de JavaScript de tener las funciones con un tratamiento de "primera clase" o de primitiva. Además ES6 añade algunas nuevas funcionalidades muy interesantes para el desarrollo funcional como la notación que expande elementos iterables con `...` o las funciones con la flecha gruesa `=>`
 
 Si eres desarrollador de JavaScript y has visto algún ejemplo de código usando estas nuevas herramientas puede que te resultase totalmente extraterrestre, voy a tratar de plasmarlo en un ejemplo de código, primero escrito para ES5 y de forma imperativa y luego de forma funcional y utilizando las herramientas de ES6.
 
@@ -61,7 +61,7 @@ Reorganizando ún poco el código, podemos eliminar el bucle `for` utilizando la
 //TODO
 ```
 
-Para más claridad, en lugar de utilizar una función anónima, sacaremos la función fuera y la nombraremos, así ahora tendremos un componente más independiente que simplemente añade un libro al elemento que le digamos. 
+Para más claridad, en lugar de utilizar una función anónima, sacaremos la función fuera y la nombraremos, así ahora tendremos una función que simplemente añade un libro al elemento que le digamos. De hecho, esta nueva función se parece mucho a un componente sin estado de React.
 
 ```javascript
 //TODO
@@ -84,23 +84,18 @@ El código final quedaría así:
 
 ```javascript
 const addTaxes = (price) => parseFloat(price) + (price*10)/100;
+const htmlElem = (type, textNode) => '<${type}>${textNode}</{$type}>';
 
 const appendBook = (id, book) => {
 
   var elem = document.getElementById(id);
-
-  elem.innerHTML += 
-  '<h2>${ book.title }</h2>
-   <p>${ book.content }</p>
-   <p>Price: ${ addTaxes(book.price) }</p>';
-
+  elem.innerHTML += htmlElem('h2', book.title) + htmlElem('p', book.content) + htmlElem('p', addTaxes(book.price));
+  
 }
 
 const showBooks = (list, id) => {
   
-  let appendBookInId = (book) => { return appendBook(id, book); } 
-  
-  list.map(appendBookInId);
+  list.map((book) => appendBook(id, book));
 
 }
 
