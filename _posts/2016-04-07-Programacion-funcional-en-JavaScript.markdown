@@ -7,7 +7,7 @@ tags: [JavaScript, programación funcional]
 
 La programación funcional parece que por fin va ganando más y más adeptos gracias a nuevos lenguajes como Scala, Clojure o Elm y a nuevos frameworks y librerías como Lodash, Ramda, React o Redux, que aunque no son puramente declarativos, sí que utilizan herramientas de la programación funcional y aprovechan la característica de JavaScript de tener las funciones con un tratamiento de "primera clase" o de primitiva. Además ES6 añade algunas nuevas funcionalidades muy interesantes para el desarrollo funcional como la notación que expande elementos iterables con `...` o las funciones con la flecha gruesa `=>`
 
-Si eres desarrollador de JavaScript y has visto algún ejemplo de código usando estas nuevas herramientas puede que te resultase totalmente extraterrestre, voy a tratar de plasmarlo en un ejemplo de código, primero escrito para ES5 y de forma imperativa y luego de forma funcional y utilizando las herramientas de ES6.
+Si eres desarrollador de JavaScript y has visto algún ejemplo de código usando estas nuevas herramientas puede que te resultase totalmente extraterrestre, es casi como si fuera un lenguage diferente, pero el lenguage es el mismo, sólo cambian algunas palabras y lo que es más importante, la forma de escribirlo y leerlo. Voy a tratar de plasmarlo en un ejemplo de código, primero escrito para ES5 y de forma imperativa y luego de forma funcional y utilizando las herramientas de ES6.
 
 Este ejemplo muy (MUY) sencillo podría ser una función "típica" en JS:
 
