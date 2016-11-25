@@ -43,6 +43,7 @@ Vamos a ver varios ejemplos prácticos y su implementación para aclarar concept
 
 El ejemplo típico de utilización de una promesa es una llamada AJAX, si has usado jQuery la sintaxis es muy similar, y de hecho en jQuery 3.0 han modificado el código para que se comporte como una Promesa, ya que antes había algunas diferencias.
 
+```javascript
     $.get('http://...')
       .done(function(data) {
         // do something with the data
@@ -50,9 +51,11 @@ El ejemplo típico de utilización de una promesa es una llamada AJAX, si has us
       .fail(function(error) {
         // do something with the error
       });
+```javascript
 
 Pero si no necesitamos jQuery para nada más a lo mejor no queremos incluirlo sólo para esto. Eso sí, la API de XMLHttp no utiliza promesas, sino eventos, y es bastante más complicada de usar. Por suerte los navegadores ya comienzan a soportar la función 'fetch', que devuelve una promesa y funciona de forma parecida a la función ajax de jQuery:
 
+```javascript
     fetch('http://...')
       .then(function(response) {
         // do something with the response
@@ -60,11 +63,13 @@ Pero si no necesitamos jQuery para nada más a lo mejor no queremos incluirlo s�
       .catch(function(error) {
         // do something with the error
       })
+```
 
 Estas funciones sólo són válidas para peticiones AJAX, las promesas no se restringen solo a esto, podemos usarlas para cualquier operación no síncrona, como vimos en el primer ejemplo de la función que se ejecuta tras 10 segundos, para encapsular la ejecución de eventos, controlar procesos que tardan cierto tiempo en ejecutarse, peticiones a la cache, etc.
 
 Un ejemplo diferente de cómo utilizar una promesa es utilizarlas para ejecutar nuestra aplicación cuando el DOM se ha cargado y está listo.
 
+```javascript
     function ready() {
       
       return new Promise(function(resolve, reject) {
@@ -83,24 +88,28 @@ Un ejemplo diferente de cómo utilizar una promesa es utilizarlas para ejecutar 
     ready().then(function() {
       // Do stuff with the DOM
     });
+```
 
 Otra de las grandes ventajas de las promesas que aún no hemos probado es la de encadenarlas. Decimos que las promesas son 'thenables', es decir que se les puede poner un 'then' detrás y pasarán el resultado con el que se han resuelto a la función que le pasemos al then. De esta forma podemos hacer que la ejecución de una promesa dependa del resultado de otra, sin necesidad de anidarlas:
 
-
+```javascript
     fetch('http://search')
       .then(function getFirstVideo(results) {
         // Do something with the results
         return fetch('http://...')
       })
-      .then(function showVideoData(result) {      
+      .then(function showVideoData(result) {
         //This results depend on the first search and the code structure is flat!!
       })
+```
 
 También podemos hacer que una promesa dependa de que se terminen varias promesas que se ejecutaron paralelamente:
 
+```javascript
     Promise.all([promise1, promise2, promise3]).then(function(arrayOfResults) {
 
     })
+```
 
 La función all, además de devolver todos los resultados en orden independientemente de cuándo se resuelvan las promesas, fallará si alguna de ellas falla, con lo que nuestro código sólo se ejecutará si tenemos los resultados de todas las promesas.
 
@@ -108,6 +117,7 @@ La función all, además de devolver todos los resultados en orden independiente
 
 Además de .all, las promesas de ES6 incluyen la función .race. Race ejecuta un array de promesas como .all pero el then se ejecutará en el momento en el que la primera promesa se resuelva, sin esperar a las demás. Como su nombre indica, .race es un una carrera para quedarnos con la promesa que resuelva más rápido. Esto nos puede servir para consultar varios servicios a la vez y quedarnos con el primer resultado que llegue. En el ejemplo del tiempo, podríamos consultar el tiempo para la misma cuidad en diferentes APIs y devolver al usuario el primer resultado, obteniendo así el resultado más rápido posible.
 
+```javascript
     var p1 = new Promise(function(resolve, reject) { 
         setTimeout(resolve, 500, "one"); 
     });
@@ -119,9 +129,11 @@ Además de .all, las promesas de ES6 incluyen la función .race. Race ejecuta un
       console.log(value); // "two"
       // Both resolve, but p2 is faster
     });
+```
 
 Pero si queremos realizar una secuencia de promesas (por ejemplo si queremos hacer un gráfico con mis amigos de facebook y los amigos de mis amigos y así sucesivamente...) podemos hacerlo encadenándolas de forma dinámica:
 
+```javascript
     var results = [1,2,3,4,5];
 
     var getResultDoubled = function(num){
@@ -139,6 +151,7 @@ Pero si queremos realizar una secuencia de promesas (por ejemplo si queremos hac
         return getResultDoubled(result);
       }).then(console.log);
     });
+```
  
 Este es un script pequeño pero muy interesante. getResultDoubled devuelve una promesa que se resolverá pasados 2 segundos. Utilizando una promesa y la función forEach lo que hacemos es crear una cadena de promesas que dependen de que la anterior se resuelva para continuar. Si ejecutas este código verás que los resultados se muestran en orden en la consola y cada promesa espera a que la anterior termine para ejecutarse. A diferencia de .all y .race, que ejecuta todas las promesas en paralelo, nuestro código las ejecuta en serie. Este código no es tan habitual ya que implica una gran dependencia entre las llamadas, pero es un buen ejercicio para entender como encadenar las promesas y además no hay una función en ES6 que nos de esta funcionalidad como sucede con .all.
 
