@@ -15,6 +15,7 @@ Hablando de metáforas, una promesa es un futurible. Como un recibo que nos dan 
 
 Poniéndonos algo más técnicos, una promesa es un objeto que encapsula una operación asíncrona. La operación asíncrona (una llamada AJAX, un evento, una llamada a una functión programada para el futuro) tiene una duración indeterminada, pero al crear una promesa obtenemos inmediatamente un objeto con el que podemos trabajar. Es decir:
 
+```javascript
     var promise = new Promise(function(resolve, reject) {
       
       function sayHello() {
@@ -26,12 +27,15 @@ Poniéndonos algo más técnicos, una promesa es un objeto que encapsula una ope
     });
 
     console.log(promise); // promise is an object, we don't have to wait for 10000ms yeah!
+```
 
 En este punto la variable promise es un objecto y podemos operar con él. Hasta dentro de 10 segundos no se establecerá su valor y no contendrá la cadena 'Hello world!' pero podemos seguir trabajando con ella como si si que fuera así.
 
+```javascript
     promise.then(function(message){
       console.log(message); // outputs 'Hello World!'
     });
+```
 
 Así dicho parece que lo que estamos haciendo es complicar las cosas, pero las promesas tienen dos ventajas principales: 
 
@@ -51,7 +55,7 @@ El ejemplo típico de utilización de una promesa es una llamada AJAX, si has us
       .fail(function(error) {
         // do something with the error
       });
-```javascript
+```
 
 Pero si no necesitamos jQuery para nada más a lo mejor no queremos incluirlo sólo para esto. Eso sí, la API de XMLHttp no utiliza promesas, sino eventos, y es bastante más complicada de usar. Por suerte los navegadores ya comienzan a soportar la función 'fetch', que devuelve una promesa y funciona de forma parecida a la función ajax de jQuery:
 
