@@ -159,4 +159,9 @@ Pero si queremos realizar una secuencia de promesas (por ejemplo si queremos hac
  
 Este es un script pequeño pero muy interesante. getResultDoubled devuelve una promesa que se resolverá pasados 2 segundos. Utilizando una promesa y la función forEach lo que hacemos es crear una cadena de promesas que dependen de que la anterior se resuelva para continuar. Si ejecutas este código verás que los resultados se muestran en orden en la consola y cada promesa espera a que la anterior termine para ejecutarse. A diferencia de .all y .race, que ejecuta todas las promesas en paralelo, nuestro código las ejecuta en serie. Este código no es tan habitual ya que implica una gran dependencia entre las llamadas, pero es un buen ejercicio para entender como encadenar las promesas y además no hay una función en ES6 que nos de esta funcionalidad como sucede con .all.
 
+# Anti-patrones al utilizar promesas
+
+http://bluebirdjs.com/docs/anti-patterns.html
+http://taoofcode.net/promise-anti-patterns/
+
 (Este artículo todavía está en desarrollo, seguiré añadiendo ejemplos de uso, así como anti-patrones y libros y artículos de referencia muy pronto.)
