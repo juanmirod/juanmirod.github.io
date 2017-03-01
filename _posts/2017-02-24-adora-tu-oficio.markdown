@@ -7,7 +7,7 @@ tags: [programación, opinión]
 
 Ultimamente he estado reflexionando sobre lo que hace que me sienta bien en el trabajo y me interese más cada día en aprender y en seguir mejorando.
 
-*Por un lado el trabajo de desarrollador es un trabajo realmente privilegiado*: trabajo de oficina en lugares normalmente bien acondicionados, a veces incluso con café o una cocina a nuestra disposición, donde el mayor riesgo que corremos es el de la tendinitis del ratón o la vista cansada. Pero eso no hace el trabajo divertido, sí, puedes sentirte afortunado, pero no emociona.
+**Por un lado el trabajo de desarrollador es un trabajo realmente privilegiado:** trabajo de oficina en lugares normalmente bien acondicionados, a veces incluso con café o una cocina a nuestra disposición, donde el mayor riesgo que corremos es el de la tendinitis del ratón o la vista cansada. Pero eso no hace el trabajo divertido, sí, puedes sentirte afortunado, pero no emociona.
 
 En realidad, el día a día es bastante estático. Estás ocho horas diarias sentado delante del ordenador, probablemente más. De vez en cuando tienes alguna reunión o conferencia y puedes interactuar con otras personas. Pero si no, solo eres tú, el código y la documentación de las X herramientas, frameworks, lenguages, bases de datos y demás software y/o hardware que estés utilizando.
 
@@ -19,7 +19,7 @@ No digo que todas esas quejas sean inventadas o ilegítimas. Pero si lo piensas 
 
 Si cada día te pones delante del código/software/producto y te planteas ¿Cómo podría hacerlo mejor? ¿Cómo podría hacerlo más rápido/legible/seguro/automático? entonces todo lo demás empieza a parecer menos importante. 
 
-Tenemos delante un problema que podemos y debemos atacar sin depender de nadie: *nuestro código*. Muchas veces no podemos elegir el lenguaje, las APIs que usamos o la base de datos con la que interactuamos. Pero sí tenemos control sobre el código que escribimos y mantenemos, ese es nuestro trabajo y es ahí donde podemos centrarnos en mejorar. 
+Tenemos delante un problema que podemos y debemos atacar sin depender de nadie: **nuestro código**. Muchas veces no podemos elegir el lenguaje, las APIs que usamos o la base de datos con la que interactuamos. Pero sí tenemos control sobre el código que escribimos y mantenemos, ese es nuestro trabajo y es ahí donde podemos centrarnos en mejorar. 
 
 ¿Probar tu código es lento porque tienes que pasar por X pasos hasta llegar a lo que tú has escrito? Tal vez si el código estuviera en un módulo independiente y pudieras escribir unos tests la experiencia sería completamente diferente. 
 
@@ -29,4 +29,4 @@ Tenemos delante un problema que podemos y debemos atacar sin depender de nadie: 
 
 ¿Te da pánico cada vez que tienes que cambiar algo en el código porque no sabes si estás rompiendo otra cosa? Toca escribir unas pruebas de regresión...
 
-En definitiva: ataca los problemas que están a tu alcance, convierte las incomodidades en retos. *Reduce la fricción en tu trabajo día a día. ¡Automatiza todo lo que puedas!* Estarás más motivado, mejorarás como desarrollador y serás más productivo. Es muy fácil caer en la tentación de hacer lo justo para que funcione, de meter unas cuantas líneas de código con calzador aquí y allí para arreglar el bug o para añadir esa funcionalidad que corre tanta prisa. Pero cuando eso ocurra, piensa de nuevo en los problemas de arriba. Nosotros creamos o reducimos nuestra deuda técnica con cada día de desarrollo. Está en tu mano convertir tu código en un placer o en un martírio para ti y para los demás desarrolladores de tu equipo. Ten valor y toma el control de tu oficio, haz de tu trabajo un placer.
+En definitiva: ataca los problemas que están a tu alcance, convierte las incomodidades en retos. **Reduce la fricción en tu trabajo día a día. ¡Automatiza todo lo que puedas!** Estarás más motivado, mejorarás como desarrollador y serás más productivo. Es muy fácil caer en la tentación de hacer lo justo para que funcione, de meter unas cuantas líneas de código con calzador aquí y allí para arreglar el bug o para añadir esa funcionalidad que corre tanta prisa. Pero cuando eso ocurra, piensa de nuevo en los problemas de arriba. Nosotros creamos o reducimos nuestra deuda técnica con cada día de desarrollo. Está en tu mano convertir tu código en un placer o en un martírio para ti y para los demás desarrolladores de tu equipo. Ten valor y toma el control de tu oficio, haz de tu trabajo un placer.
