@@ -17,7 +17,7 @@ Muchas páginas se han escrito sobre la frustración del programador. La frustra
 
 No digo que todas esas quejas sean inventadas o ilegítimas. Pero si lo piensas son cosas sin importancia, no deberían preocuparnos porque además normalmente no está en nuestra mano cambiarlas. Siempre habrá aspectos que mejorar y cosas que se podrían haber hecho diferente. Pero creo que en lugar de centrarnos en el último framework de moda debemos centrarnos en mejorar nuestro código y nuestro trabajo cada día.
 
-> Si cada día te pones delante del código/software/producto y te planteas ¿Cómo podría hacerlo mejor? ¿Cómo podría hacerlo más rápido/legible/seguro/automático? entonces todo lo demás empieza a parecer menos importante. 
+**Si cada día te pones delante del código/software/producto y te planteas ¿Cómo podría hacerlo mejor? ¿Cómo podría hacerlo más rápido/legible/seguro/automático? entonces todo lo demás empieza a parecer menos importante.** 
 
 Tenemos delante un problema que podemos y debemos atacar sin depender de nadie: **nuestro código**. Muchas veces no podemos elegir el lenguaje, las APIs que usamos o la base de datos con la que interactuamos. Pero sí tenemos control sobre el código que escribimos y mantenemos, ese es nuestro trabajo y es ahí donde podemos centrarnos en mejorar. 
 
