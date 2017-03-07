@@ -13,7 +13,7 @@ Aunque eso no hace el trabajo divertido. Sí, puedes sentirte afortunado, pero n
 
 En realidad, el día a día es bastante estático: Estás ocho horas diarias sentado delante del ordenador, probablemente más, de vez en cuando tienes alguna reunión o conferencia y puedes interactuar con otras personas, pero la mayor parte del tiempo solo eres tú, el código y la documentación de las X herramientas, frameworks, lenguages, bases de datos y demás software y/o hardware que estés utilizando.
 
-Por otro lado es habitual escuchar a los desarrolladores quejarse. Nos quejamos de los jefes, de la gestión del proyecto, de los clientes, de los diseñadores, de QA, de los demás desarrolladores, etc.
+Por otro lado, es habitual escuchar a los desarrolladores quejarse. Nos quejamos de los jefes, de la gestión del proyecto, de los clientes, de los diseñadores, de QA, de los demás desarrolladores, etc.
 
 Muchas páginas se han escrito sobre la frustración del programador. La frustración con las herramientas, con el lenguage, con la metodología en cascada, con las metodologías ágiles... Que si en mi empresa usamos Ángular y a mi me gustaría usar React, que si trabajamos con Java y a mi me gusta Python, que si indentar con tabs o con spacios, que si SCRUM no vale para nada, que si este código no hay quien lo entienda. Parece que nada nos vale. O bien somos muy exigentes o no lo estamos enfocando bien, y yo me decantaría por lo segundo.
 
