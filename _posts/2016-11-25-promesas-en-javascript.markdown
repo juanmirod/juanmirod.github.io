@@ -9,7 +9,7 @@ El objecto Promise es ya un [standard de ES2015](http://www.ecma-international.o
 
 En esos enlaces puedes encontrar todo lo que es una Promesa y cómo funciona, pero las especificaciones no son precisamente fáciles de leer. Están bien para las personas que sufren de insomnio, pero personalmente, encuentro mucho más útil aprender con metáforas y ejemplos que muestren cómo se utiliza un concepto concreto. 
 
-##¿Qué es una promesa y cómo se utiliza? 
+## ¿Qué es una promesa y cómo se utiliza? 
 
 Hablando de metáforas, una promesa es un futurible. Como un recibo que nos dan de un pedido que hemos hecho a una tienda online. Sabemos que va a tardar y que no lo tendremos justo al pagar, pero el recibo y su localizador nos aseguran que tendremos el producto en el futuro. 
 
@@ -39,13 +39,13 @@ En este punto la variable promise es un objecto y podemos operar con él. Hasta 
 
 Así dicho parece que lo que estamos haciendo es complicar las cosas, pero las promesas tienen dos ventajas principales: 
 
-1. Nos devuelven el control. Gracias a las promesas, mantenemos control sobre la ejecución de nuestro programa, que antes delegábamos en una llamada asíncrona que podía o no terminar. Ahora con las promesas podemos operar independientemente de lo que pase con la llamada asíncrona.
+1. Nos devuelven el control. Gracias a las promesas, mantenemos control sobre la ejecución de nuestro programa, que antes delegábamos en una llamada asíncrona que podía o no terminar. Ahora con las promesas podemos operar independientemente de lo que pase con la llamada asíncrona. Además las promesas tienen la gran ventaja de que si el código lanza una excepción dentro de la Promesa, ésta la capturará y la devolverá convenientemente con la función 'catch'.
 
 2. Las promesas se pueden encadenar. Podemos hacer que la ejecución de una promesa dependa de otra, o esperar a que todo un grupo de promesas se resuelvan. Esto hace que el código sea mucho menos engorroso y mucho más fácil de leer y mantener. 
 
-Vamos a ver varios ejemplos prácticos y su implementación para aclarar conceptos.
+## Vamos a ver varios ejemplos prácticos y su implementación para aclarar conceptos.
 
-El ejemplo típico de utilización de una promesa es una llamada AJAX, si has usado jQuery la sintaxis es muy similar, y de hecho en jQuery 3.0 han modificado el código para que se comporte como una Promesa, ya que antes había algunas diferencias.
+El ejemplo típico de utilización de una promesa es una llamada AJAX. Si has usado jQuery, la sintaxis es muy similar, y de hecho en jQuery 3.0 han modificado el código para que se comporte como una Promesa, ya que antes había algunas diferencias.
 
 ```javascript
     $.get('http://...')
@@ -57,7 +57,7 @@ El ejemplo típico de utilización de una promesa es una llamada AJAX, si has us
       });
 ```
 
-Pero si no necesitamos jQuery para nada más a lo mejor no queremos incluirlo sólo para esto. Eso sí, la API de XMLHttp no utiliza promesas, sino eventos, y es bastante más complicada de usar. Por suerte los navegadores ya comienzan a soportar la función 'fetch', que devuelve una promesa y funciona de forma parecida a la función ajax de jQuery:
+Pero si no necesitamos jQuery para nada más a lo mejor no queremos incluirlo sólo para esto. Eso sí, la API de XMLHttp no utiliza promesas, sino eventos, y es bastante más complicada de usar. Por suerte los navegadores ya comienzan a soportar la función ['fetch'](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), que devuelve una promesa y funciona de forma parecida a la función ajax de jQuery, pero usando la terminología estandard:
 
 ```javascript
     fetch('http://...')
@@ -69,7 +69,7 @@ Pero si no necesitamos jQuery para nada más a lo mejor no queremos incluirlo s�
       })
 ```
 
-Estas funciones sólo són válidas para peticiones AJAX, las promesas no se restringen solo a esto, podemos usarlas para cualquier operación no síncrona, como vimos en el primer ejemplo de la función que se ejecuta tras 10 segundos, para encapsular la ejecución de eventos, controlar procesos que tardan cierto tiempo en ejecutarse, peticiones a la cache, etc.
+Estas funciones sólo són válidas para peticiones AJAX, las promesas no se restringen solo a esto, podemos usarlas para cualquier operación no síncrona. Como vimos en el primer ejemplo de la función que se ejecuta tras 10 segundos, para encapsular la ejecución de eventos, controlar procesos que tardan cierto tiempo en ejecutarse, peticiones a la cache, etc.
 
 Un ejemplo diferente de cómo utilizar una promesa es utilizarlas para ejecutar nuestra aplicación cuando el DOM se ha cargado y está listo.
 
@@ -94,7 +94,55 @@ Un ejemplo diferente de cómo utilizar una promesa es utilizarlas para ejecutar 
     });
 ```
 
-Otra de las grandes ventajas de las promesas que aún no hemos probado es la de encadenarlas. Decimos que las promesas son 'thenables', es decir que se les puede poner un 'then' detrás y pasarán el resultado con el que se han resuelto a la función que le pasemos al then. De esta forma podemos hacer que la ejecución de una promesa dependa del resultado de otra, sin necesidad de anidarlas:
+Además de 'resolverse' las promesas pueden 'denegarse', una promesa una vez tome un valor no se modificará, es decir, si se resuelve y algo más tarde tratamos de denegarla la promesa ignorará la llamada a reject y mantendrá el valor con el que se resolvió. Esto hace que podamos añadir un tiempo de expiración a nuestras promesas, por ejemplo para una petición o un evento que esperamos que se ejecute antes de un tiempo determinado, podríamos añadir un tiempo máximo por el que esperar a que se descargue una imagen o un script y si se supera ese tiempo, tomarlo como un error:
+
+```javascript
+    function ready(element) {
+      
+      return new Promise(function(resolve, reject) {
+        
+        element.addEventListener('onload', function() {
+          resolve();
+        });
+
+        element.addEventListener('onerror', function(err) {
+          reject('There was an error');
+        });
+
+        // timeout in 1s
+        setTimeout(function(){
+          reject('Something must be wrong, try again or fallback to something else');
+        }, 1000)
+
+      });
+    };
+
+    ready(image)
+      .then(function() {
+        // Do stuff 
+      })
+      .catch(function() {
+        // try downloading alternative image, showing error message...
+      })
+```
+
+Lo importante en este ejemplo es que hemos encapsulado todo el manejo de los eventos del elemento dentro de la promesa, y de cara al exterior ahora solo tenemos una función que devuelve una promesa, lo que simplifica enormente el código y mejora su reusabilidad y legibilidad.
+
+En el ejemplo anterior estamos denegando la promesa ante errores o expiración del tiempo de espera. Pero en lugar de denegar la promesa podríamos lanzar una excepción y el resultado sería el mismo: la promesa capturaría la excepción y se denegaría. Esto puede usarse con funciones que puedan causar excepciones, como lectura de ficheros o de base de datos. Hay un buen ejemplo de esto en [la documentación de Bluebird](http://bluebirdjs.com/docs/why-promises.html):
+
+```
+fs.readFileAsync("file.json").then(JSON.parse).then(function (val) {
+    console.log(val.success);
+})
+.catch(SyntaxError, function (e) {
+    console.error("invalid json in file");
+})
+.catch(function (e) {
+    console.error("unable to read file");
+});
+```
+
+Otra de las grandes ventajas de las promesas que aún no hemos probado, es la de encadenarlas. Decimos que las promesas son 'thenables', es decir que se les puede poner un 'then' detrás y pasarán el resultado con el que se han resuelto a la función que le pasemos al then. De esta forma podemos hacer que la ejecución de una promesa dependa del resultado de otra, sin necesidad de anidarlas:
 
 ```javascript
     fetch('http://search')
@@ -106,6 +154,9 @@ Otra de las grandes ventajas de las promesas que aún no hemos probado es la de 
         //This results depend on the first search and the code structure is flat!!
       })
 ```
+
+Esto también ayuda a simplificar el código y sobre todo a librarnos de la terrible pirámide de callbacks que se genera al tener que anidar las llamadas asíncronas en javascript para poder acceder al valor de la llamada anterior.
+
 
 También podemos hacer que una promesa dependa de que se terminen varias promesas que se ejecutaron paralelamente:
 
@@ -135,7 +186,15 @@ Además de .all, las promesas de ES6 incluyen la función .race. Race ejecuta un
     });
 ```
 
-Pero si queremos realizar una secuencia de promesas (por ejemplo si queremos hacer un gráfico con mis amigos de facebook y los amigos de mis amigos y así sucesivamente...) podemos hacerlo encadenándolas de forma dinámica:
+Estas funciones pueden crearse gracias a que, como comentaba antes, las Promesas encapsulan operaciones asíncronas devolviéndonos siempre el mismo interface y por tanto creando una forma fácil de manipularlas y agruparlas. Tanto es así que las promesas cumplen una serie de [propiedades matemáticas](https://medium.com/@jamiedixon/promises-and-arrays-are-the-same-5ea68a4d769b#.ogdbn4l4s) que hacen que podamos usarlas con operaciones como map/filter/reduce, esto es lo que hace [Bluebird](http://bluebirdjs.com/docs/api-reference.html), dándonos todo el repertorio de operaciones que podemos hacer con promesas, lo que resulta muy útil cuando todas nuestras librerías devuelven promesas y podemos manejarlas a alto nivel. Además, si nuestra librería no está escrita con promesas, sino con el estilo de callbacks de node, pero queremos aprovechar las ventajas de las promesas, Bluebird nos da una función para convertir las funciones que usan callbacks a promesas: [promisify](http://bluebirdjs.com/docs/api/promise.promisify.html)
+
+## Anti-patrones al utilizar promesas
+
+A la hora de usar promesas también hay que tener cuidado de no caer en algunas malas prácticas que harán que perdamos las ventajas de las promesas por el camino. Seguiré editando el artículo y añadiéndo ejemplos en cuanto pueda, pero mientras dejo un par de artículos sobre el tema: [Bluebird - Anti-patterns](http://bluebirdjs.com/docs/anti-patterns.html) y [Promises anti-patterns en taoofcode](http://taoofcode.net/promise-anti-patterns/)
+
+## Encadenando promesas de forma dinámica
+
+Como último apunte y curiosidad sobre uso de las promesas quiero proponer un pequeño ejercicio. Imaginemos que queremos realizar una secuencia de promesas de forma dinámica (por ejemplo si queremos hacer un gráfico con mis amigos de facebook y los amigos de mis amigos y así sucesivamente...) es decir, no sabemos a priori, cuántos pasos o qué camino implicará el cálculo, con lo que no podemos escribir la secuencia. Esto puede hacerse de forma más fácil y legible con las funciones de Bluebir, pero como ejercicio probemos a hacerlo sólo con ES6. Podemos hacerlo encadenándolas de forma dinámica:
 
 ```javascript
     var results = [1,2,3,4,5];
@@ -157,11 +216,10 @@ Pero si queremos realizar una secuencia de promesas (por ejemplo si queremos hac
     });
 ```
  
-Este es un script pequeño pero muy interesante. getResultDoubled devuelve una promesa que se resolverá pasados 2 segundos. Utilizando una promesa y la función forEach lo que hacemos es crear una cadena de promesas que dependen de que la anterior se resuelva para continuar. Si ejecutas este código verás que los resultados se muestran en orden en la consola y cada promesa espera a que la anterior termine para ejecutarse. A diferencia de .all y .race, que ejecuta todas las promesas en paralelo, nuestro código las ejecuta en serie. Este código no es tan habitual ya que implica una gran dependencia entre las llamadas, pero es un buen ejercicio para entender como encadenar las promesas y además no hay una función en ES6 que nos de esta funcionalidad como sucede con .all.
+Este es un script pequeño pero muy interesante. getResultDoubled devuelve una promesa que se resolverá pasados 2 segundos. Utilizando una promesa y la función forEach lo que hacemos es crear una cadena de promesas que dependen de que la anterior se resuelva para continuar. Si ejecutas este código verás que los resultados se muestran en orden en la consola y cada promesa espera a que la anterior termine para ejecutarse. A diferencia de .all y .race, que ejecuta todas las promesas en paralelo, nuestro código las ejecuta en serie. Este código no es nada habitual ya que implica una gran dependencia muy directa entre las llamadas, sin ningún tipo de tratamiento intermedio, normalmente aunque tengas que crear promesas de forma dinámica el código no será tan conciso como este. Pero es un ejercicio interesante para ver cómo se pueden encadenar las promesas de forma dinámica.
 
-# Anti-patrones al utilizar promesas
+## Conclusiones
 
-http://bluebirdjs.com/docs/anti-patterns.html
-http://taoofcode.net/promise-anti-patterns/
+La conslusión a todo esto: utiliza promesas para mejorar la legibilidad y fiabilidad de tu código y recuperar el control de la ejecución del código asíncrono. Este es un artículo largo, pero solo he dado un repaso superficial a las propiedades y usos de las promesas, es importante aprender a usarlas correctamente, pero son una herramienta muy poderosa para mejorar tu código en JavaScript.
 
-(Este artículo todavía está en desarrollo, seguiré añadiendo ejemplos de uso, así como anti-patrones y libros y artículos de referencia muy pronto.)
+(Este artículo todavía está en desarrollo, seguiré añadiendo ejemplos de uso, así como anti-patrones y libros y artículos de referencia muy pronto. Si encuentras una errata o quiere hacer alguna aportación, estaré encantado de recibir tus comentarios o PRs en [Github](https://github.com/juanmirod/juanmirod.github.io/blob/master/_posts/2016-11-25-promesas-en-javascript.markdown))
