@@ -192,7 +192,7 @@ Estas funciones pueden crearse gracias a que, como comentaba antes, las Promesas
 
 A la hora de usar promesas también hay que tener cuidado de no caer en algunas malas prácticas que harán que perdamos las ventajas de las promesas por el camino. Un ejemplo (fuente: taoofcode,ver algo más abajo) de un código que puede parecer correcto e incluso más legible según al tipo de código que estemos acostumbrado sería:
 
-```
+```javascript
 function anAsyncCall() {
   var promise = doSomethingAsync();
   promise.then(function() {
@@ -205,7 +205,7 @@ function anAsyncCall() {
 
 Parece que lo estamos haciendo bien, pero en realidad estamos devolviendo la primera promesa en lugar del resultado del then, con lo que las excepciones que puedan provocarse y el propio resultado del then se perderán, esto puede comprobarse con el siguiente ejemplo ([jsfiddle](https://jsfiddle.net/juanmirod/gscxwmcn/)):
 
-```
+```javascript
 doSomethingAsync = function() {
   return Promise.resolve(5);
 }
@@ -237,7 +237,7 @@ El catch no captura la excepción, además, si no se produjera la excepción, el
 
 Veamos el ejemplo corregido ([jsfiddle](https://jsfiddle.net/juanmirod/wp5981sz/)):
 
-```
+```javascript
 doSomethingAsync = function() {
   return Promise.resolve(5);
 }
