@@ -190,7 +190,82 @@ Estas funciones pueden crearse gracias a que, como comentaba antes, las Promesas
 
 ## Anti-patrones al utilizar promesas
 
-A la hora de usar promesas también hay que tener cuidado de no caer en algunas malas prácticas que harán que perdamos las ventajas de las promesas por el camino. Seguiré editando el artículo y añadiéndo ejemplos en cuanto pueda, pero mientras dejo un par de artículos sobre el tema: [Bluebird - Anti-patterns](http://bluebirdjs.com/docs/anti-patterns.html) y [Promises anti-patterns en taoofcode](http://taoofcode.net/promise-anti-patterns/)
+A la hora de usar promesas también hay que tener cuidado de no caer en algunas malas prácticas que harán que perdamos las ventajas de las promesas por el camino. Un ejemplo (fuente: taoofcode,ver algo más abajo) de un código que puede parecer correcto e incluso más legible según al tipo de código que estemos acostumbrado sería:
+
+```
+function anAsyncCall() {
+  var promise = doSomethingAsync();
+  promise.then(function() {
+    somethingComplicated();
+  });
+  
+  return promise;
+}
+```
+
+Parece que lo estamos haciendo bien, pero en realidad estamos devolviendo la primera promesa en lugar del resultado del then, con lo que las excepciones que puedan provocarse y el propio resultado del then se perderán, esto puede comprobarse con el siguiente ejemplo ([jsfiddle](https://jsfiddle.net/juanmirod/gscxwmcn/)):
+
+```
+doSomethingAsync = function() {
+  return Promise.resolve(5);
+}
+
+somethingComplicated = function(num) {
+  throw 'Error, too much complexity';
+  return num * 2; 
+}
+
+function anAsyncCall() {
+  var promise = doSomethingAsync();
+  promise.then(function(res) {
+    somethingComplicated(res);
+  });
+  
+  return promise;
+}
+
+anAsyncCall()
+  .then(function(res) {
+    console.log(res);
+  })
+  .catch(function(err) {
+    console.error(err);
+  })
+```
+
+El catch no captura la excepción, además, si no se produjera la excepción, el resultado de 'somethingComplicated' se pierde porque no lo estamos devolviendo en el then.
+
+Veamos el ejemplo corregido ([jsfiddle](https://jsfiddle.net/juanmirod/wp5981sz/)):
+
+```
+doSomethingAsync = function() {
+  return Promise.resolve(5);
+}
+
+somethingComplicated = function(num) {
+  throw 'Error, too much complexity';
+  return num * 2; 
+}
+
+function anAsyncCall() {
+  var promise = doSomethingAsync();
+  return promise.then(function(res) {
+    return somethingComplicated(res);
+  });
+}
+
+anAsyncCall()
+  .then(function(res) {
+    console.log(res);
+  })
+  .catch(function(err) {
+    console.error(err);
+  })
+```
+
+Con el nuevo código sí se captura la excepción. Además, si comentamos la línea del throw, el resultado por consola es 10 en lugar de 5, porque estamos obteniendo el resultado de ejecutar 'somethingComplicated' lo que, seguramente, era la intención de escribir el código de esta manera.
+
+Seguiré editando el artículo y añadiéndo ejemplos en cuanto pueda, pero mientras dejo un par de artículos sobre el tema: [Bluebird - Anti-patterns](http://bluebirdjs.com/docs/anti-patterns.html) y [Promises anti-patterns en taoofcode](http://taoofcode.net/promise-anti-patterns/)
 
 ## Encadenando promesas de forma dinámica
 
@@ -220,6 +295,6 @@ Este es un script pequeño pero muy interesante. getResultDoubled devuelve una p
 
 ## Conclusiones
 
-La conslusión a todo esto: utiliza promesas para mejorar la legibilidad y fiabilidad de tu código y recuperar el control de la ejecución del código asíncrono. Este es un artículo largo, pero solo he dado un repaso superficial a las propiedades y usos de las promesas, es importante aprender a usarlas correctamente, pero son una herramienta muy poderosa para mejorar tu código en JavaScript.
+La conclusión a todo esto: utiliza promesas para mejorar la legibilidad y fiabilidad de tu código y recuperar el control de la ejecución del código asíncrono. Este es un artículo largo, pero solo he dado un repaso superficial a las propiedades y usos de las promesas. Es importante aprender a usarlas correctamente, pero son una herramienta muy poderosa para mejorar tu código en JavaScript.
 
 (Este artículo todavía está en desarrollo, seguiré añadiendo ejemplos de uso, así como anti-patrones y libros y artículos de referencia muy pronto. Si encuentras una errata o quiere hacer alguna aportación, estaré encantado de recibir tus comentarios o PRs en [Github](https://github.com/juanmirod/juanmirod.github.io/blob/master/_posts/2016-11-25-promesas-en-javascript.markdown))
