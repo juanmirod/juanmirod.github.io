@@ -17,19 +17,19 @@ Muchas veces la automatización es útil y tiene un uso claro: los toldos con se
 Pero muchas veces veo repetido otro patrón, el de cuando le hablas a alguien las "ventajas" del internet de las cosas y surgen más pegas que emoción:
 
 > ¡Podrás hacer la lista de la compra en el frigoríco!
-> ¿Eso no es un poco incómodo?¿No puedo hacerla en el móvil y ya está? 
+> - ¿Eso no es un poco incómodo?¿No puedo hacerla en el móvil y ya está? 
 
 > No necesitarás llaves porque la puerta de casa te reconocerá.
-> ¿Y si un día va un familiar a mi casa y yo no estoy? ¿Cómo le digo a mi puerta que lo deje entrar?
+> - ¿Y si un día va un familiar a mi casa y yo no estoy? ¿Cómo le digo a mi puerta que lo deje entrar?
 
 > Puedes hablarle a tu móvil.
-> Pero si es mucho más rápido darle yo a llamar.
+> - Pero si es mucho más rápido darle yo a llamar.
 
 > Con este dispositivo y esta app puedes encender y apagar cualquier luz de la casa desde el móvil.
-> Ah, ¿Y eso para qué?
+> - Ah, ¿Y eso para qué?
 
 > Podrás programar la cafetera para que te prepare el café justo antes de levantarte.
-> ¿Pero antes me tendré que preocupar de dejarla con el depósito de café y el de agua llenos no...?
+> - ¿Pero antes me tendré que preocupar de dejarla con el depósito de café y el de agua llenos no...?
 
 Un ejemplo muy palpable del fracaso del Iot antes de empezar son las luces con detector de movimiento. En realidad el invento no es un fracaso en sí, es un sistema muy útil y que permite ahorrar mucha energía. **El fracaso del Iot es el de su implantación.** Me trataré de explicar con un ejemplo: 
 
