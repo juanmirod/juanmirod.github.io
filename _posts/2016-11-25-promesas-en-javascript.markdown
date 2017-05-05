@@ -45,7 +45,7 @@ Así dicho parece que lo que estamos haciendo es complicar las cosas, pero las p
 
 ## Vamos a ver varios ejemplos prácticos y su implementación para aclarar conceptos.
 
-El ejemplo típico de utilización de una promesa es una llamada AJAX. Si has usado jQuery, la sintaxis es muy similar, y de hecho en jQuery 3.0 han modificado el código para que se comporte como una Promesa, ya que antes había algunas diferencias.
+El ejemplo típico de utilización de una promesa es una llamada AJAX. Si has usado jQuery, la sintaxis es muy similar, y de hecho en jQuery 3.0 han modificado el código para que se comporte como una Promesa, ya que antes [había algunas diferencias](https://blog.domenic.me/youre-missing-the-point-of-promises/).
 
 ```javascript
     $.get('http://...')
