@@ -46,3 +46,7 @@ Con un par de ejemplos más de andar por casa:
 Y es que ese es el problema del Iot, un montón de problemas de usabilidad que ya estaban resueltos cambian y hay que volver a pensarlos y diseñarlos, y como es normal, no sale bien a la primera.
 
 Estoy convencido de que poco a poco asistentes como Alexa o facilidades a la hora de hacer la lista de la compra o controlar la economía doméstica irán implantándose de forma general, pero el iot es un problema tan difícil de solventar como la robótica: intentar que un dispositivo electrónico se adapte al mundo real y a todas sus variaciones no es fácil, y todavía nos quedan muchos años de quedarnos a oscuras en mitad de una escalera.
+
+Un divertido video sobre esta problemática com muchos más ejemplos de los quebraderos de cabeza del Iot:
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/S7JUMT66VXo?rel=0" frameborder="0" allowfullscreen></iframe
