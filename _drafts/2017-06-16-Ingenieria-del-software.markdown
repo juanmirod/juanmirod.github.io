@@ -45,9 +45,12 @@ Dicho todo esto sigo pensando que el diseño y el análisis tienen su lugar en e
 
 Esto no es algo que diga yo aquí, es algo que han dicho otros ingenieros y divulgadores mucho más sabios y experimentados que yo, solo repito sus palabras a modo de resumen personal y por si alguien ahí sigue pensando que la arquitectura en cascada es una buena idea. Termino con algunos enlaces mucho más interesantes e instructivos que mi opinión personal:
 
-[Martin Fowler: Who needs architects](https://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf) 
-[Martin Fowler: Is Design Dead?](https://www.martinfowler.com/articles/designDead.html) 
+[Martin Fowler: Who needs architects](https://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf)
+
+[Martin Fowler: Is Design Dead?](https://www.martinfowler.com/articles/designDead.html)
+
 [Neal Ford: Investigating Architecture and design](https://www.ibm.com/developerworks/java/library/j-eaed1/index.html)
-[Michael Feathers](Emergent Optimization in Test Driven Design)
+
+[Michael Feathers: Emergent Optimization in Test Driven Design](https://drive.google.com/file/d/0B8ZX1RoWHuiJandXOHRSSG1BV1U/view)
 
 
