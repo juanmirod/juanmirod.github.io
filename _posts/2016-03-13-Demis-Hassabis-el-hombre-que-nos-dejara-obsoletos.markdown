@@ -5,7 +5,7 @@ layout: post
 tags: [Inteligencia Artifical]
 ---
 
-![Demis Hassabis](/public/img/demis-hassabis-640x360.jpg)
+![Primer plano de Demis Hassabis mirándo a la cámara con una media sonrisa](/public/img/demis-hassabis-640x360.jpg)
 
 Demis Hassabis es un genio que me ha fascinado desde antes incluso de saber su nombre. 
 
@@ -19,7 +19,7 @@ Efectivamente, DH se enseñó a leer él solo a los 2 años, a los 4 jugaba al a
 
 El desarrollo de videojuegos se ve que se le quedó corto rápido. Después de algunos juegos más sobre IA, gestión y política, se pasó a la investigación en neurociencia. Estaba interesado en conocer mejor cómo funcionan los centros de la memoria y la imaginación en el cerebro humano. 
 
-El razonamiento, el análisis y la estructura del lenguage, la percepción de los sentidos: todo eso está bastante bien modelado hoy en día en los ordenadores. Los algoritmos de hoy en día, son capaces de transcribir al vuelo un dictado, de clasificar imágenes y de identificar en ellas a una persona y su estado de ánimo en el momento de la fotografía. Pueden analizar un texto y señalar errores ortográficos o gramaticales, en el caso de lenguages de programación, las herramientas de sintaxis son mucho más rápidas y precisas, gestión de dependencias, covertura de los tests, test automáticos etc. Tenemos herramientas que nos ayudan a escribir mejores programas y a saber donde están los puntos débiles. Herramientas para distribuir, actualizar y testar los programas de forma automática. Todas estas herramientas no solo hacen nuestro trabajo más fácil, sino que hacen que hoy en día sea posible que sea escalable y que páginas como Facebook o Google tengan un alcance global y miles de millones de usuarios. 
+El razonamiento, el análisis y la estructura del lenguage, la percepción de los sentidos: todo eso está bastante bien modelado hoy en día en los ordenadores. Los algoritmos de hoy en día, son capaces de transcribir al vuelo un dictado, de clasificar imágenes y de identificar en ellas a una persona y su estado de ánimo en el momento de la fotografía. Pueden analizar un texto y señalar errores ortográficos o gramaticales, en el caso de lenguages de programación, las herramientas de sintaxis son mucho más rápidas y precisas, gestión de dependencias, covertura de los tests, test automáticos etc. Tenemos herramientas que nos ayudan a escribir mejores programas y a saber donde están los puntos débiles. Herramientas para distribuir, actualizar y testar los programas de forma automática. Todas estas herramientas no solo hacen nuestro trabajo más fácil, sino que hacen que hoy en día sea posible que páginas como Facebook o Google tengan un alcance global y miles de millones de usuarios. 
 
 Pero la forma en la que el cerebro almacena los recuerdos y es capaz de aprender de ellos, de combinarlos y de recuperarlos sigue siendo poco menos que un misterio. DH de nuevo destacó en este campo publicando algunos artículos que le dieron renombre y que fueron a la vez muy discutidos. Su hipótesis aún tiene sus detractores, pero no cabe duda de que fue una gran aportación al campo. La revista Science la incluyó en su listado de los [10 hayazgos científicos más importantes de 2007](http://science.sciencemag.org/content/318/5858/1844.1.full) (es la 9 en el enlace, por los títulos cuesta encontrarla).
 
