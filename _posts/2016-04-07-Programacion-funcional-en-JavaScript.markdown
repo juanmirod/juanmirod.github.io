@@ -12,7 +12,25 @@ Si eres desarrollador de JavaScript y has visto algún ejemplo de código usando
 Este ejemplo muy (MUY) sencillo podría ser una función "típica" en JS:
 
 ```javascript
-var books = [
+
+  function addTaxes(price) {
+    return parseFloat(price) + price*8/100;
+  }
+
+  function showBooks(books, id) {
+    
+    var elem = document.getElementById(id);
+    for(var i = 0; i < books.length; i++) {
+      elem.appendChild("<h2>" + books[i].title + "</h2>");
+      elem.appendChild("<p>" + books[i].content + "</p>");
+      elem.appendChild("<p>Price: " + addTaxes(books[i].price) + "</p>"); 
+    }
+
+  }
+
+  showBooks(books, "imperative");
+
+  var books = [
   { 
     title: "Fuzzy Nation",
     content: "At the time ZaraCorp started mining Mount Isabel, Holloway had idly wondered how an area could be restored to a pristine state once ZaraCorp had mined everything of value out of it, but this was not the same thing as him exhibiting actual concern.",
@@ -34,23 +52,6 @@ var books = [
     price: "12"
   }
 ];
-
-function addTaxes(price) {
-  return parseFloat(price) + price*8/100;
-}
-
-function showBooks(books, id) {
-  
-  var elem = document.getElementById(id);
-  for(var i = 0; i < books.length; i++) {
-    elem.appendChild("<h2>" + books[i].title + "</h2>");
-    elem.appendChild("<p>" + books[i].content + "</p>");
-    elem.appendChild("<p>Price: " + addTaxes(books[i].price) + "</p>"); 
-  }
-
-}
-
-showBooks(books, "imperative");
 ```
 
 El código escribe una lista de elementos que podemos haber tomado de una petición al servidor.

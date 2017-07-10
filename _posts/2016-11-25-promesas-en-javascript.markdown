@@ -7,11 +7,11 @@ tags: [Inteligencia Artifical]
 
 El objecto Promise es ya un [standard de ES2015](http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects) y puede utilizarse en la mayoría de los navegadores. Para poder utilizarlo y seguir soportando IE (esa carga que todos los desarrolladores web llevamos a cuestas) existe un [polyfill](https://github.com/taylorhakes/promise-polyfill) que apenas ocupa 1kb.
 
-En esos enlaces puedes encontrar todo lo que es una Promesa y cómo funciona, pero las especificaciones no son precisamente fáciles de leer. Están bien para las personas que sufren de insomnio, pero personalmente, encuentro mucho más útil aprender con metáforas y ejemplos que muestren cómo se utiliza un concepto concreto. 
+En esos enlaces puedes encontrar todo lo que es una Promesa y cómo funciona, pero las especificaciones no son precisamente fáciles de leer. Personalmente encuentro mucho más útil aprender con metáforas y ejemplos que muestren cómo se utiliza un concepto concreto. 
 
 ## ¿Qué es una promesa y cómo se utiliza? 
 
-Hablando de metáforas, una promesa es un futurible. Como un recibo que nos dan de un pedido que hemos hecho a una tienda online. Sabemos que va a tardar y que no lo tendremos justo al pagar, pero el recibo y su localizador nos aseguran que tendremos el producto en el futuro. 
+Una promesa es un futurible. El símil es un recibo que nos dan de un pedido a una tienda online. Sabemos que va a tardar X y que no lo tendremos justo al pagar, pero el recibo y su localizador nos aseguran que tendremos el producto en el futuro. 
 
 Poniéndonos algo más técnicos, una promesa es un objeto que encapsula una operación asíncrona. La operación asíncrona (una llamada AJAX, un evento, una llamada a una functión programada para el futuro) tiene una duración indeterminada, pero al crear una promesa obtenemos inmediatamente un objeto con el que podemos trabajar. Es decir:
 
@@ -57,7 +57,7 @@ El ejemplo típico de utilización de una promesa es una llamada AJAX. Si has us
       });
 ```
 
-Pero si no necesitamos jQuery para nada más a lo mejor no queremos incluirlo sólo para esto. Eso sí, la API de XMLHttp no utiliza promesas, sino eventos, y es bastante más complicada de usar. Por suerte los navegadores ya comienzan a soportar la función ['fetch'](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), que devuelve una promesa y funciona de forma parecida a la función ajax de jQuery, pero usando la terminología estandard:
+Pero si no necesitamos jQuery para nada más a lo mejor no queremos incluirlo sólo para esto. Por suerte los navegadores ya comienzan a soportar la función ['fetch'](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), que devuelve una promesa y funciona de forma parecida a la función ajax de jQuery, pero usando la terminología estandard:
 
 ```javascript
     fetch('http://...')
@@ -94,7 +94,9 @@ Un ejemplo diferente de cómo utilizar una promesa es utilizarlas para ejecutar 
     });
 ```
 
-Además de 'resolverse' las promesas pueden 'denegarse', una promesa una vez tome un valor no se modificará, es decir, si se resuelve y algo más tarde tratamos de denegarla la promesa ignorará la llamada a reject y mantendrá el valor con el que se resolvió. Esto hace que podamos añadir un tiempo de expiración a nuestras promesas, por ejemplo para una petición o un evento que esperamos que se ejecute antes de un tiempo determinado, podríamos añadir un tiempo máximo por el que esperar a que se descargue una imagen o un script y si se supera ese tiempo, tomarlo como un error:
+Ese es un ejemplo de un evento que sabemos que ocurrirá solo una vez y que podemos capturar en una promesa. Y lo de solo una vez es importante porque una vez la promesa toma un valor, no se modificará, se dice que la promesa se ha cumplido, resuelto o establecido.
+
+Además de 'resolverse' las promesas pueden 'denegarse', pero como una promesa una vez tome un valor no se modificará, si se resuelve y algo más tarde tratamos de denegarla la promesa ignorará la llamada a 'reject' y mantendrá el valor con el que se resolvió. Esto hace que podamos añadir un tiempo de expiración a nuestras promesas, por ejemplo para una petición o un evento que esperamos que se ejecute antes de un tiempo determinado, podríamos añadir un tiempo máximo por el que esperar a que se descargue una imagen o un script y si se supera ese tiempo, tomarlo como un error:
 
 ```javascript
     function ready(element) {
