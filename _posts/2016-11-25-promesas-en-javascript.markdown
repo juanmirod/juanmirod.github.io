@@ -190,6 +190,77 @@ Además de .all, las promesas de ES6 incluyen la función .race. Race ejecuta un
 
 Estas funciones pueden crearse gracias a que, como comentaba antes, las Promesas encapsulan operaciones asíncronas devolviéndonos siempre el mismo interface y por tanto creando una forma fácil de manipularlas y agruparlas. Tanto es así que las promesas cumplen una serie de [propiedades matemáticas](https://medium.com/@jamiedixon/promises-and-arrays-are-the-same-5ea68a4d769b#.ogdbn4l4s) que hacen que podamos usarlas con operaciones como map/filter/reduce, esto es lo que hace [Bluebird](http://bluebirdjs.com/docs/api-reference.html), dándonos todo el repertorio de operaciones que podemos hacer con promesas, lo que resulta muy útil cuando todas nuestras librerías devuelven promesas y podemos manejarlas a alto nivel. Además, si nuestra librería no está escrita con promesas, sino con el estilo de callbacks de node, pero queremos aprovechar las ventajas de las promesas, Bluebird nos da una función para convertir las funciones que usan callbacks a promesas: [promisify](http://bluebirdjs.com/docs/api/promise.promisify.html)
 
+## Patrones útiles
+
+Cuando llevas un tiempo usando promesas de forma regular te das cuenta de que hay ciertos patrones de código que se repiten. El problema más común con las promesas es el mismo que con los callbacks, en lugar de un "árbol de navidad" de callbacks podemos acabar creando un árbol de promesas.
+
+```javascript
+  promiseA()
+    .then(resultA => {
+        return functionB(resultA)
+          .then(resultB => {
+            return doSomethingFancy(resultA, resultB)
+          })
+      })
+``` 
+
+Esto ocurre porque la función 'doSomethingFancy' necesita los valores devueltos por las dos promesas y functionB también necesita el valor de la primera promesa. Si estamos usando Bluebird, 'join' puede ayudarnos con esto, pero si no queremos aprender otro API más o añadir otra dependencia a nuestro proyecto, hay varias formas de solucionar el problema con las promesas nativas de **es6**:
+
+**Utilizando variables en el ámbito superior.** 
+
+```javascript
+  function sample() {
+    var resultA
+    return promiseA()
+      .then(res => resultA = res)
+      .then(() => functionB(resultA))
+      .then(resultB => doSomethingFancy(resultA, resultB))
+  }
+```
+
+Simplemente copiamos los resultados de las promesas en variables accesibles por todas las funciones por estar en un ámbito superior. El código vuelve a ser lineal y solo hemos tenido que añadir una variable, bastante limpio y fácil de leer, suele ser mi primera opción para este problema.
+
+**Otra solución utilizando '.all':**
+
+```javascript
+  promiseA()
+    .then(resultA => Promise.all([resultA, functionB(resultA)]))
+    .then(([resultA, resultB]) => {
+      return doSomethingFancy(resultA, resultB)
+    })
+```
+
+De esta forma no necesitamos crear una variable externa, la funcion '.all' acepta valores y promesas y nos devuelve un array con todos los resultados. La sintaxis gracias a **es6** es bastante legible aunque algo menos que la anterior.
+
+**Utilizando una función auxiliar:**
+
+```javascript
+  function joinPromises(functionA, functionAB) {
+    return (resultA) => {
+      return functionA(resultA).then(resultB => functionAB(resultA, resultB))
+    }
+  }
+
+  promiseA()
+    .then(resultA => {
+      return joinPromises(functionB, doSomethingFancy)(resultA)
+    })
+```
+
+En este caso hemos creado una pequeña función que nos ayuda a pasar los parámetros, se podría generalizar para N argumentos, pero así queda más fácil de leer y se entiende mejor el ejemplo (ver el final del artículo para una generalización parecida). De hecho, utilizando la notación 'pointFree' podemos dejar el ejemplo incluso más conciso:
+
+```javascript
+  function joinPromises(functionA, functionAB) {
+    return (resultA) => {
+      return functionA(resultA).then(resultB => functionAB(resultA, resultB))
+    }
+  }
+
+  promiseA().then(joinPromises(functionB, doSomethingFancy))
+```
+
+Aunque este último ejemplo puede despistar si no estás acostumbrado a este tipo de sintaxis.
+
 ## Anti-patrones al utilizar promesas
 
 A la hora de usar promesas también hay que tener cuidado de no caer en algunas malas prácticas que harán que perdamos las ventajas de las promesas por el camino. Un ejemplo (fuente: taoofcode,ver algo más abajo) de un código que puede parecer correcto e incluso más legible según al tipo de código que estemos acostumbrado sería:
@@ -298,5 +369,17 @@ Este es un script pequeño pero muy interesante. getResultDoubled devuelve una p
 ## Conclusiones
 
 La conclusión a todo esto: utiliza promesas para mejorar la legibilidad y fiabilidad de tu código y recuperar el control de la ejecución del código asíncrono. Este es un artículo largo, pero solo he dado un repaso superficial a las propiedades y usos de las promesas. Es importante aprender a usarlas correctamente, pero son una herramienta muy poderosa para mejorar tu código en JavaScript.
+
+## Material para ampliar
+
+Hay mucha documentación de calidad en Inglés y online sobre promesas, algunos enlaces de referencia son:
+
+[Curso sobre promesas en Udacity](https://www.udacity.com/course/javascript-promises--ud898) Muy buen material y ejercicios para fijar los conocimientos, los cursos de Udacity son de los mejores cursos online que he probado.
+
+[Javascript's Promises: An Introduction](https://developers.google.com/web/fundamentals/getting-started/primers/promises#events_arent_always_the_best_way) Fantástica y extensa introducción a las promesas por Jake Archibald.
+
+[Capítulo You don't know JS](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch3.md) @getify tiene todo un capítulo de uno de sus libros dedicado a las promesas. Como siempre contenido en profundidad e impecable, estos libros son de obligada referencia para cualquier desarrollador de JavaScript.
+
+[Articulo en MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) La documentación de MDN sobre promesas, también en español.
 
 (Este artículo todavía está en desarrollo, seguiré añadiendo ejemplos de uso, así como anti-patrones y libros y artículos de referencia muy pronto. Si encuentras una errata o quiere hacer alguna aportación, estaré encantado de recibir tus comentarios o PRs en [Github](https://github.com/juanmirod/juanmirod.github.io/blob/master/_posts/2016-11-25-promesas-en-javascript.markdown))
