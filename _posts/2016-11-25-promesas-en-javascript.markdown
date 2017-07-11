@@ -192,7 +192,7 @@ Estas funciones pueden crearse gracias a que, como comentaba antes, las Promesas
 
 ## Patrones útiles
 
-Cuando llevas un tiempo usando promesas de forma regular te das cuenta de que hay ciertos patrones de código que se repiten. El problema más común con las promesas es el mismo que con los callbacks, en lugar de un "árbol de navidad" de callbacks podemos acabar creando un árbol de promesas.
+Cuando llevas un tiempo usando promesas de forma regular, te das cuenta de que hay ciertos patrones de código que se repiten. El problema más común con las promesas es el mismo que con los callbacks: en lugar de un "árbol de navidad" de callbacks podemos acabar creando un árbol de navidad de promesas.
 
 ```javascript
   promiseA()
@@ -237,7 +237,7 @@ De esta forma no necesitamos crear una variable externa, la funcion '.all' acept
 ```javascript
   function joinPromises(functionA, functionAB) {
     return (resultA) => {
-      return functionA(resultA).then(resultB => functionAB(resultA, resultB))
+      return functionB(resultA).then(resultB => functionAB(resultA, resultB))
     }
   }
 
@@ -252,7 +252,7 @@ En este caso hemos creado una pequeña función que nos ayuda a pasar los parám
 ```javascript
   function joinPromises(functionA, functionAB) {
     return (resultA) => {
-      return functionA(resultA).then(resultB => functionAB(resultA, resultB))
+      return functionB(resultA).then(resultB => functionAB(resultA, resultB))
     }
   }
 
