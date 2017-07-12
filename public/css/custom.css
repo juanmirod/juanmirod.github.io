@@ -9,3 +9,41 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   color: #313131;
 }
+
+.masthead {
+  background-color: #00bcd4;
+}
+
+.masthead-title a {
+  color: black;
+}
+
+.masthead-title small {
+  color: black;
+}
+
+a {
+  color: #00b8d4;
+}
+
+.sidebar {
+  color: white;
+}
+
+.sidebar-toggle {
+  background-color: #006064;
+  color: white;
+}
+
+.sidebar-toggle:active, #sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color: #00838f;
+  color: white;
+}
+
+.sidebar-item .sidebar-nav-item {
+  background-color: #006064;
+}
+
+.sidebar-nav-item.active, a.sidebar-nav-item:hover, a.sidebar-nav-item:focus {
+  background-color: #00838f;
+}

@@ -378,7 +378,7 @@ Hay mucha documentación de calidad en Inglés y online sobre promesas, algunos 
 
 [Javascript's Promises: An Introduction](https://developers.google.com/web/fundamentals/getting-started/primers/promises#events_arent_always_the_best_way) Fantástica y extensa introducción a las promesas por Jake Archibald.
 
-[Capítulo You don't know JS](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch3.md) @getify tiene todo un capítulo de uno de sus libros dedicado a las promesas. Como siempre contenido en profundidad e impecable, estos libros son de obligada referencia para cualquier desarrollador de JavaScript.
+[Capítulo You don't know JS](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch3.md) [@getify](https://twitter.com/getify) tiene todo un capítulo de uno de sus libros dedicado a las promesas. Como siempre contenido en profundidad e impecable, estos libros son de obligada referencia para cualquier desarrollador de JavaScript.
 
 [Articulo en MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) La documentación de MDN sobre promesas, también en español.
 
