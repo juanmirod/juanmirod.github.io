@@ -37,3 +37,91 @@ Sobre el tema de crear un nucleo de funciones puras y una serie de plugins o mó
 
 ## Herramientas de desarrollo funcional en JavaScript
 
+Vamos a hacer un repaso por las herramientas del lenguaje que podemos usar para escribir utilizar funciones puras como base principal para nuestro código. Intentaré ir desde las funcionalidades más fáciles o conocidas a las más ajenas a la mayoría.
+
+En el código de los ejemplos seguiré algunas convenciones de código y herramientas de ES6 para ser más conciso y conseguir una notación más parecida a lenguages como Haskell o Erlang. 
+
+Este es el estilo del que comentaba que tal vez parezca un poco extraño, como guía inicial para aquellos que no estén familiarizados con ES6:
+
+```javascript
+// funciones con flecha 
+
+(x, y) => { /* aquí el código */ } == function(x, y) { /* aquí el código */ }
+
+// Si la función sólo tiene un argumento, se puede prescindir de los paréntesis:
+
+x => { /* aquí el código */ } == function(x) { /* aquí el código */ }
+
+// Si la función sólo contiene una expresión que se retorna se puede prescindir de las llaves:
+
+x => 2*x == function(x) { return 2*x; }
+```
+
+Además, aunque no es muy común en según qué círculos, en JavaScript se puede no usar el ´;´ como delimitador de expresiones. Una de las funcionalidades del lenguaje, llamada ASI (Automatic Semicolon Insertion) hace que sean innecesarios, básicamente al ponerlos estamos haciendo el trabajo del compilador. Si queréis leer más sobre el tema os recomiendo [este artículo de Isaac Z. Schlueter, el creador de npm](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding)
+
+Todo esto era para decir que no habrá puntos y coma en el código :)
+
+La descomposición de objectos y arrays, una nueva sintáxis de es6, nos permite hacer cosas como estas:
+
+```javascript
+
+var a, b, rest;
+[a, b] = [10, 20];
+console.log(a); // 10
+console.log(b); // 20
+
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+console.log(a); // 10
+console.log(b); // 20
+console.log(rest); // [30, 40, 50]
+
+({a, b} = {a: 10, b: 20});
+console.log(a); // 10
+console.log(b); // 20
+```
+
+Estas mismas transformaciones se pueden usar como parámetros en las funciones. Más sobre este tema [aquí](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+
+### Bucles
+
+Un primer paso bastante común es deshacerse de los bucles y utilizar las funciones .map/.filter/.reduce/.splice en su lugar. Estas funciones son parte de la librería estándar de JavaScript para Iterables y tienen una serie de propiedades muy interesantes. Usándolas no necesitaremos escribir contadores, con lo que reducimos una posible fuente de erratas (¿quién no se ha equivocado al anidar dos bucles for y ha usado el contador que no debía?), son funciones que se pueden componer y ganamos en brevedad y simplicidad al ofrecer comportamientos más variados que los de un bucle normal.
+
+Además, estas cuatro funciones se caracterizan porque no alteran el array de entrada, sino que devuelven un nuevo array siempre, lo cual nos asegura que estamos trabajando de forma funcional, sin crear efectos colaterales.
+
+**.map**
+
+Map es la más básica de todas, además `.map` es una función omnipresente en la programación funcional que se utiliza no solo en iterables, sino también en promesas, streams y otros muchos tipos de datos.
+
+La función de map es tomar un array y una función y aplicar la función a cada uno de los elementos del array:
+
+```javascript
+
+[1,2,3].map(f) == [f(1), f(2), f(3)]
+
+```
+
+Por ejemplo:
+
+```javascript
+
+[1,2,3].map(x => 2*x)
+
+// [2,4,6]
+
+```
+
+Otra notación que es muy concisa es la __programación tácita__ o __pointfree notation__ que quiere decir que, cuando una función toma un parámetro de entrada y se usa como argumento a otra función, podemos omitir el parámetro y la llamada de esta forma:
+
+```javascript
+
+const double = x => 2*x
+
+[1,2,3].map(double) 
+
+// [2,4,6]
+
+
+```
+
+Espera un momento, ¿qué está pasando ahí? Lo que ocurre es que la función map espera una función y la llamará una vez por cada elemento del array, pasándole el elemento, como veíamos arriba. Así que es lo mismo pasarle la referencia `double` que la función anónima, map tomará la función y la invocará de la misma forma. Aquí empezamos a ver la potencia de JavaScript como lenguaje funcional, no todos los lenguajes permiten usar las funciones como argumentos de otras funciones de forma tan sencilla.
+

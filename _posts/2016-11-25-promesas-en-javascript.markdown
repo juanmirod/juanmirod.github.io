@@ -5,7 +5,7 @@ layout: post
 tags: [Inteligencia Artifical]
 ---
 
-El objecto Promise es ya un [standard de ES2015](http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects) y puede utilizarse en la mayoría de los navegadores. Para poder utilizarlo y seguir soportando IE (esa carga que todos los desarrolladores web llevamos a cuestas) existe un [polyfill](https://github.com/taylorhakes/promise-polyfill) que apenas ocupa 1kb.
+El objeto Promise es ya un [standard de ES2015](http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects) y puede utilizarse en la mayoría de los navegadores. Para poder utilizarlo y seguir soportando IE (esa carga que todos los desarrolladores web llevamos a cuestas) existe un [polyfill](https://github.com/taylorhakes/promise-polyfill) que apenas ocupa 1kb.
 
 En esos enlaces puedes encontrar todo lo que es una Promesa y cómo funciona, pero las especificaciones no son precisamente fáciles de leer. Personalmente encuentro mucho más útil aprender con metáforas y ejemplos que muestren cómo se utiliza un concepto concreto. 
 
