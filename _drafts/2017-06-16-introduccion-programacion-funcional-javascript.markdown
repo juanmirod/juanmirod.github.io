@@ -44,6 +44,7 @@ En el código de los ejemplos seguiré algunas convenciones de código y herrami
 Este es el estilo del que comentaba que tal vez parezca un poco extraño, como guía inicial para aquellos que no estén familiarizados con ES6:
 
 ```javascript
+
 // funciones con flecha 
 
 (x, y) => { /* aquí el código */ } == function(x, y) { /* aquí el código */ }
@@ -55,13 +56,14 @@ x => { /* aquí el código */ } == function(x) { /* aquí el código */ }
 // Si la función sólo contiene una expresión que se retorna se puede prescindir de las llaves:
 
 x => 2*x == function(x) { return 2*x; }
+
 ```
 
 Además, aunque no es muy común en según qué círculos, en JavaScript se puede no usar el ´;´ como delimitador de expresiones. Una de las funcionalidades del lenguaje, llamada ASI (Automatic Semicolon Insertion) hace que sean innecesarios, básicamente al ponerlos estamos haciendo el trabajo del compilador. Si queréis leer más sobre el tema os recomiendo [este artículo de Isaac Z. Schlueter, el creador de npm](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding)
 
 Todo esto era para decir que no habrá puntos y coma en el código :)
 
-La descomposición de objectos y arrays, una nueva sintáxis de es6, nos permite hacer cosas como estas:
+La descomposición de objectos y arrays, una nueva sintáxis de **ES6**, nos permite hacer cosas como estas:
 
 ```javascript
 
@@ -78,13 +80,25 @@ console.log(rest); // [30, 40, 50]
 ({a, b} = {a: 10, b: 20});
 console.log(a); // 10
 console.log(b); // 20
+
 ```
 
 Estas mismas transformaciones se pueden usar como parámetros en las funciones. Más sobre este tema [aquí](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
+Como ejemplo de las convenciones de estilo y referencia rápida he creado [un gist]().
+
+Cómo probar los ejemplos. La forma más fácil de probar los ejemplos, modificarlos y crear alternativas es mediante el REPL de node. Estamos usando ES6, con lo que en el navegador podríamos necesitar usar babel y configurar el proyecto y demás son incomodidades necesarias para un proyecto real, pero son solo un estorbo para el proceso de aprendizaje y de ensayo y error. Node soporta ES6 y todos los ejemplos se podr´an correr en el REPL de node 6.9 o superior. Para poder usarlo instalamos node y luego en el terminal escribimos:
+
+```shell
+
+$> node
+> // a partir de aquí código :)
+
+```
+
 ### Bucles
 
-Un primer paso bastante común es deshacerse de los bucles y utilizar las funciones .map/.filter/.reduce/.splice en su lugar. Estas funciones son parte de la librería estándar de JavaScript para Iterables y tienen una serie de propiedades muy interesantes. Usándolas no necesitaremos escribir contadores, con lo que reducimos una posible fuente de erratas (¿quién no se ha equivocado al anidar dos bucles for y ha usado el contador que no debía?), son funciones que se pueden componer y ganamos en brevedad y simplicidad al ofrecer comportamientos más variados que los de un bucle normal.
+Un primer paso bastante común es deshacerse de los bucles y utilizar las funciones .map/.filter/.reduce en su lugar. Estas funciones son parte de la librería estándar de JavaScript para Iterables y tienen una serie de propiedades muy interesantes. Usándolas no necesitaremos escribir contadores, con lo que reducimos una posible fuente de erratas (¿quién no se ha equivocado al anidar dos bucles for y ha usado el contador que no debía?), son funciones que se pueden componer y ganamos en brevedad y simplicidad al ofrecer comportamientos más variados que los de un bucle normal.
 
 Además, estas cuatro funciones se caracterizan porque no alteran el array de entrada, sino que devuelven un nuevo array siempre, lo cual nos asegura que estamos trabajando de forma funcional, sin crear efectos colaterales.
 
@@ -125,3 +139,61 @@ const double = x => 2*x
 
 Espera un momento, ¿qué está pasando ahí? Lo que ocurre es que la función map espera una función y la llamará una vez por cada elemento del array, pasándole el elemento, como veíamos arriba. Así que es lo mismo pasarle la referencia `double` que la función anónima, map tomará la función y la invocará de la misma forma. Aquí empezamos a ver la potencia de JavaScript como lenguaje funcional, no todos los lenguajes permiten usar las funciones como argumentos de otras funciones de forma tan sencilla.
 
+Sigamos con las funciones de Iteradores.
+
+**filter**
+
+Filter nos permite eliminar o seleccionar elementos de un array mediante un __predicado__ o filtro. Para ello le pasamos a `.filter` nuestro predicado igual que `.map`
+
+```javascript
+
+const isEven = x => x % 2 === 0
+[1,2,3,4,5,6].filter(isEven)
+
+// [2,4,6]
+
+[1,2,3,4,5,6].filter(x => x !== 4)
+
+// [1,2,3,5,6]
+
+
+```
+
+**reduce**
+
+Sin duda reduce es la función más difícil de entender de las tres y la que más miedo da cuando no la conoces. Pero también es muy potente y nos permite simplificar mucho el código cuando la usamos correctamente.
+
+Supongamos que queremos calcular la media aritmética de un array. Para eso normalmente haríamos un bucle para sumar los elementos y luego dividiríamos por el número de elementos:
+
+```javascript
+
+const avg = values => {
+  let sum = 0
+  for(let i = 0; i < values.length; i++) {
+    sum += values[i] 
+  }
+  return sum/values.length
+}
+
+const califications = [5,7,8,5,5,6,8,9,10]
+avg(califications)
+
+// 7
+
+```
+
+Este código se puede simplificar mucho usando reduce. Reduce toma el array y aplica la función que le demos, elemento a elemento, pasándo en cada paso una copia del resultado, veamos el código y luego veremos cómo lo hace:
+
+```javascript
+
+const avg = values => values.reduce((total, prev) => total + prev, 0)/values.length 
+const califications = [5,7,8,5,5,6,8,9,10]
+avg(califications)
+
+// 7
+
+```
+
+¿Qué?? ¿Cómo?? A todos nos pasa cuando vemos reduce por primera vez, veamos qué ha pasado.
+
+ 
