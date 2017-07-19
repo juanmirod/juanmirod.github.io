@@ -1,4 +1,4 @@
-#Por amor al código
+# Por amor al código
 
 *Por amor al código* es un blog de código abierto escrito utilizando Jenkins y Github. Aquí puedes encontrar tanto los posts publicados como los borradores, el código que compila el blog y los estilos css.
 
