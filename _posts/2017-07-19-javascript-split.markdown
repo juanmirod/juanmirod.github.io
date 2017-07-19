@@ -45,7 +45,7 @@ Alan Turin,English,1954`.split('\n').map(line => line.split(','))
 
 // y si usamos () nos devuelve los delimitadores
 'Ada Lovelace   ,  English ,   1815'.split(/(\s*,\s*)/)
-[ "Ada Lovelace", "   ,  ", "English", " ,   ", "1815" ]
+// [ "Ada Lovelace", "   ,  ", "English", " ,   ", "1815" ]
 
 // podemos encontrar todas las palabras diferentes de un texto con split, Set y Array.from
 Array.from(new Set('texto texto largo con con con muchas palabras'.split(' ')))
