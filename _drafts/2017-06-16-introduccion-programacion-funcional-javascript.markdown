@@ -194,6 +194,7 @@ avg(califications)
 
 ```
 
-¿Qué?? ¿Cómo?? A todos nos pasa cuando vemos reduce por primera vez, veamos qué ha pasado.
+> ¿Qué?? ¿Cómo?? 
 
- 
+A todos nos pasa cuando vemos reduce por primera vez, veamos qué ha pasado.
+
