@@ -5,13 +5,13 @@ layout: post
 tags: [javascript, snippets] 
 ---
 
-Todos los lenguajes tienen las típicas funciones que tenemos que consultar cada vez que las usamos. Bien porque no las usamos todos los días, bien porque se parecen a otras de la librería estándar o nos recuerdan a una función parecida en otro lenguaje. Lo cierto es que es un engorro y nos hace sentir tontos y olvidadizos y sentimos el __síndrome del impostor__ colgándose de nuestra espalda.
+Todos los lenguajes tienen las típicas funciones que tenemos que consultar cada vez que las usamos. Bien porque no las usamos todos los días, bien porque se parecen a otras de la librería estándar o nos recuerdan a una función parecida en otro lenguaje. Lo cierto es que es un engorro y nos hace sentir tontos y olvidadizos y sentimos el _síndrome del impostor_ colgándose de nuestra espalda.
 
 Este es el primero de una serie de artículos cortitos con ejemplos de algunas de esas funciones en JavaScript. La mejor forma de recordar una función es usarla y verla en muchos ejemplos, así que espero que depués de escribir estos aŕtículos no tenga que consultar más MDN para estas funciones y espero que de camino sean de utilidad a alguien.
 
 ## Split
 
-Esta función sirve para dividir una cadena en partes utilizando un carácter delimitador, devolviéndonos un array con los __"trozos"__. También admite un segundo parámetro opcional que indica cuántos elementos queremos que nos devuelva.
+Esta función sirve para dividir una cadena en partes utilizando un carácter delimitador, devolviéndonos un array con los _"trozos"_. También admite un segundo parámetro opcional que indica cuántos elementos queremos que nos devuelva.
 
 Pero lo mejor es ver algunos ejemplos. Los ejemplos están escritos de forma que se pueden comprobar pegándolos en el REPL de node o en la consola del navegador (F12). Por eso no he creado funciones que los contengan o permitan generalizarlos. Copialos, úsalos, trastéalos es la mejor forma de tener **split** grabada en tu memoria.
 
