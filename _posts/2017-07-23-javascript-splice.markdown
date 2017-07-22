@@ -1,6 +1,6 @@
 ---
 published: true
-title: Función split en JavaScript
+title: Función slice en JavaScript
 layout: post
 tags: [javascript, snippets] 
 ---
