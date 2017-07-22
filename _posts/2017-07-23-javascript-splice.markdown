@@ -11,7 +11,7 @@ Este es el segundo de una serie de artículos sobre funciones en javascript y ej
 
 ## Slice
 
-Slice, como su nombre indica, toma un __"trozo"__ de un array, indicado por un índice de inicio y un índice final (no incluido) Slice no modifica el array original y hace una copia __"superficial"__ con lo que si el array contiene referencias a objetos, slice no copiará clonará esos objetos, sino solo la referencia.
+Slice, como su nombre indica, toma un _"trozo"_ de un array, indicado por un índice de inicio y un índice final (no incluido) Slice no modifica el array original y hace una copia _"superficial"_ con lo que si el array contiene referencias a objetos, slice no copiará clonará esos objetos, sino solo la referencia.
 
 Si el índice inicial es negativo, se considerará que se comienza en el elemento -N comenzando por el final, si se omite se tomará como 0.
 Si el segundo índice se omite, se tomará como `array.length`
