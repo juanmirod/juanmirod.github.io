@@ -9,7 +9,8 @@ Los tests unitarios son una herramienta excelente para prevenir bugs en ejecuci�
 
 En JavaScript, [Jasmine](https://jasmine.github.io/2.4/introduction.html) es un framework de test que permite crear tests fáciles de leer de forma que sirven también de documentación para el código. Así, usando Jasmine, si queremos escribir una suit de tests para una función que suma dos números llamada 'add' la escribiríamos así:
 
-```
+```javascript
+
   describe('add function', function() {
     
     it('should add two numbers', function(){
@@ -23,9 +24,10 @@ En JavaScript, [Jasmine](https://jasmine.github.io/2.4/introduction.html) es un 
     ...
   
   })
+
 ```
 
-Vamos a ver algunos ejemplos de código y sus correspondientes tests. El projecto es una sencilla calculadora en JavaScript pero es diferente a los típicos ejemplos de calculadoras en javascript, ya que en esta no se utiliza eval para calcular los resultados, sino que el input se valida y las operaciones están limitadas a las que están definidas. Para ello he creado dos pequeños módulos, uno para la lógica y otro para el interface. 
+Vamos a ver algunos ejemplos de código y sus correspondientes tests. El proyecto es una sencilla calculadora en JavaScript, pero es diferente a los típicos ejemplos de calculadoras en javascript, ya que en esta no se utiliza eval para calcular los resultados, sino que el input se valida y las operaciones están limitadas a las que están definidas. Para ello he creado dos pequeños módulos, uno para la lógica y otro para el interface. 
 
 El proyecto es un ejemplo sencillo, según las especificaciones de cada proyecto serán pertinentes más o menos tests y habrá que controlar casos más concretos, espero que este proyecto sirva de ejemplo aunque no sea muy exhaustivo ni tenga muchos requisitos.
 
@@ -36,6 +38,7 @@ El problema viene a largo plazo, cuando el cliente dice que además de calcular 
 Por eso es por lo que en esta ocasión vamos a usar TDD y vamos a escribir primero unos tests de lo que queremos que nuestra calculadora haga:
 
 ```javascript
+
 // Calculator.spec.js
 describe('Calculator', function() {
 
@@ -72,6 +75,7 @@ describe('Calculator', function() {
   }); 
 
 });
+
 ```
 
 Bien, ya sabemos lo que queremos, una calculadora que sume y multiplique, y que no admita cualquier cosa por la entrada. Para implementar esto nuestro Módulo calculadora debe tener una función `storeAction` que será la que utilizaremos para introducir la siguiente operación o número sobre el que la calculadora debe operar, imitando el funcionamiento normal de una calculadora clásica. La functión **beforeEach** es una función de *Jasmine* que se ejecutará antes de cada función **it** y que nos sirve para asegurarnos de que antes de cada test partimos del mismo estado inicial.
@@ -110,6 +114,7 @@ Al abrir este fichero en el navegador, Jasmine creará un pequeño interface y l
 Para satisfacerlos, deberemos crear el módulo **Calculator** y añadir la función **storeAction** con la funcionalidad suficiente para que satisfaga los tests:
 
 ```javascript
+
 // Calculator.js
 var Calculator = (function(){
   'strict mode';
@@ -178,10 +183,11 @@ var Calculator = (function(){
   return exports;
   
 })();
+
 ```
 
-Este código satisface los tests de arriba y algunos más. Aún nos quedaría añadir la funcionalidad para restar, dividir, limpiar el input, etc. Puedes ver el ejemplo algo más completo en [este thimble](https://thimbleprojects.org/juanmirod/56250/). Para ver el resulado de los tests haz click en el fichero 'test.html'.
+Este código satisface los tests de arriba y algunos más. Aún nos quedaría añadir la funcionalidad para restar, dividir, limpiar el input, etc. Puedes ver el ejemplo algo más completo en [este thimble](https://thimbleprojects.org/juanmirod/56250/). Para ver el resultado de los tests haz click en el fichero 'test.html'.
 
 Si te fijas, en ese projecto no hay tests para la parte del interface de la calculadora. Hay funciones del interface que no tiene mucho sentido testar, el markup puede cambiar sin alterar la funcionalidad y no tiene mucho sentido escribir tests para algo así. Pero sí que podemos escribir tests que verifiquen que, cuando hago click en un botón o pulso una tecla, se llama a la función adecuada. Estos tests son algo más complicados  ya que tenemos que capturar los eventos y espiar las funciones que estos deben llamar. 
 
-Thimble es una buena herramienta para practicar TDD ya que el proyecto se va guardando y la vista se actualiza de forma automática. Pero necesitamos de conexión a internet y no tiene la velocidad y las ayudas de editores como Sublime. Para conseguir que la vista se actualice automáticamente como en Thimble en nuestro proyecto en local podemos utilizar varias herramientas diferentes. En el siguiente artículo me centraré en cómo añadir [Karma](https://karma-runner.github.io/0.13/index.html) a nuestro proyecto y utilizarlo para trabajar con TDD. 
+Thimble es una buena herramienta para practicar TDD ya que el proyecto se va guardando y la vista se actualiza de forma automática. Pero necesitamos de conexión a internet y no tiene la velocidad y las ayudas de editores como Sublime o VSCode. Para conseguir que la vista se actualice automáticamente como en Thimble en nuestro proyecto en local podemos utilizar varias herramientas diferentes. En el siguiente artículo me centraré en cómo añadir [Karma](https://karma-runner.github.io/0.13/index.html) a nuestro proyecto y utilizarlo para trabajar con TDD. 
