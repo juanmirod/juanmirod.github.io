@@ -47,3 +47,7 @@ a {
 .sidebar-nav-item.active, a.sidebar-nav-item:hover, a.sidebar-nav-item:focus {
   background-color: #00838f;
 }
+
+img {
+  width: 100%;
+}
