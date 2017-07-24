@@ -5,7 +5,7 @@ layout: post
 tags: [programación,ingeniería] 
 ---
 
-![foto del ENIAC uno de los primeros ordenadores](/public/img/ENIAC.jpg)
+![foto del ENIAC uno de los primeros ordenadores, 1946, fuente: wikipedia](/public/img/ENIAC.jpg "Foto del ENIAC, 1946, fuente: wikipedia")
 
 Este año ha coincidido que en el nuevo trabajo estoy haciendo más desarrollo de infraestructura y de arquitectura en general, lo que me obliga a pensar más en desarrollos escalables y a la vez he cursado la asignatura de Introducción a la Ingeniería del Software por la UNED.
 
@@ -21,7 +21,7 @@ Todo esto es lo que las metodologías ágiles vinieron a arreglar hace ya como 1
 
 En la asignatura de IdS de la UNED, para mi decepción, no se habla de la revolución de las metodologías ágiles sino que siguen anclados en el ciclo de vida en cascada o en V y demás metodologías del siglo pasado. Salvo una breve pero loable mención a Ken Beck y a XP, todo el libro de referencia está lleno de citas a libros y artículos de mediados de los 80, como si en una asignatura de arquitectura de computadores nos enseñaran a montar un ordenador con válvulas de vacío y cables.
 
-![foto del Colossus, el primer ordenador electrónico programable](/public/img/Colossus.jpg)
+![foto del Colossus, el primer ordenador electrónico programable, 1943, fuente: wikipedia](/public/img/Colossus.jpg "Foto del Colossus, 1943, fuente: wikipedia")
 
 Sin embargo, y pese a toda esa caspa, leer sobre arquitectura, diagramas, normalización de bases de datos, análisis de requisitos, etc. me ha ayudado a pensar mejor en cómo estructurar mi código y me ha enseñado algunos diagramas útiles para ayudarme a pensar en la arquitectura de mi aplicación o en cómo interactuan los diferentes componentes.
 

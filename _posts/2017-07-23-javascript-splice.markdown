@@ -19,8 +19,20 @@ Si el segundo índice se omite, se tomará como `array.length`
 Veamos algunos ejemplos para dejar claro su uso:
 
 ```javascript
-
+// constante para mejor legibilidad de los ejemplos
 const _ = undefined
+
+// Ejemplos con números
+[0,1,2,3,4,5,6,7,8].slice(_,5)
+// [0,1,2,3,4]
+
+[0,1,2,3,4,5,6,7,8].slice(3,5)
+// [3,4]
+
+[0,1,2,3,4,5,6,7,8].slice(-2)
+// [7,8]
+
+// Puedes usar slice con arrays con valores de cualquier tipo de datos escalar
 const computerScientists = ['John Hughes', 'Ada Lovelace', 'Barbara Liskov', 'Grace Hopper', 'Alan Key', 'John McCarthy']
 
 computerScientists.slice(1, 4)
@@ -38,4 +50,12 @@ computerScientists.slice(-2)
 computerScientists.slice()
 // ['John Hughes', 'Ada Lovelace', 'Barbara Liskov', 'Grace Hopper', 'Alan Key', 'John McCarthy']
 
+// ¡¡ Pero ojo con los objetos !!
+const punto1 = {x: 5, y: 10};
+const punto2 = {x: 8, y: 8};
+[punto1, punto2].slice()
+// [ Object, Object ]
+[punto1, punto2].slice()[0].x = 7;
+punto1
+// { x: 7, y: 10 } ¡¡Hemos modificado 'punto1'!!
 ```
