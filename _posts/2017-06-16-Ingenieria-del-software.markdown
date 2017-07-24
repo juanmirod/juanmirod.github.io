@@ -1,27 +1,29 @@
 ---
-published: false
+published: true
 title: Ingeniería del software
 layout: post
 tags: [programación,ingeniería] 
 ---
 
-Este año ha coincidido que en el nuevo trabajo estoy haciendo más desarrollo de infraestructura y de arquitectura en general y pensando más en desarrollos escalables y a la vez he cursado la asignatura de Introducción a la Ingeniería del Software por la UNED.
+![foto del ENIAC uno de los primeros ordenadores](/public/img/ENIAC.jpg)
+
+Este año ha coincidido que en el nuevo trabajo estoy haciendo más desarrollo de infraestructura y de arquitectura en general, lo que me obliga a pensar más en desarrollos escalables y a la vez he cursado la asignatura de Introducción a la Ingeniería del Software por la UNED.
 
 Cuando hice la ITIS en Málaga la Ingeniería del Software era una asignatura optativa y daba la casualidad de que el profesor era el peor de toda la facultad, así que, pese a que me interesaba mucho preferí ahorrármela por mi salud mental y emocional.
 
-Desde entonces he trabajado en empresas de diferentes tamaños y en proyectos de todo tipo, pero las metodologías de la IdS siempre han estado ausentes, incluso en empresas grandes o con bases de código de varios años y equipos de 20 o 30 personas, no solías ver Diagramas UML ni documentos de diseño o de especificaciones ni pruebas automatizadas ni nada de eso.
+Desde entonces he trabajado en empresas de diferentes tamaños y en proyectos de todo tipo, pero las metodologías de la IdS siempre han estado ausentes. Incluso en empresas medianas o con bases de código de varios años y equipos de 20 o 30 personas, no solías ver Diagramas UML ni documentos de diseño o de especificaciones ni pruebas automatizadas ni nada de eso.
 
-Lo más cercano fue cuando trabajé para el Ministerio de Educación, que teníamos una reunión mensual con acta y aprovación del acta y peticiones de permiso y notificaciones para cada cambio. Pero todo esto era más para la facturación y para cubrirse las espaldas que de cara a la arquitectura o al desarrollo.
+Lo más cercano fue cuando trabajé para el Ministerio de Educación, que teníamos una reunión mensual con acta y aprobación del acta y peticiones de permiso y notificaciones para cada cambio. Pero todo esto era más para la facturación y para cubrirse las espaldas que de cara a la arquitectura o al desarrollo.
 
 Al final siempre pasa algo así, lo importante son las fechas de entrega, y por el camino se caen las especificaciones, el diseño y por supuesto las pruebas automáticas.
 
-Todo esto es lo que las metodologías ágiles vinieron a arreglar hace ya como 15 años, pero en la mayoría de las empresas siguen hablando de ellas como algo "nuevo" de lo que no se fian mucho y que si se implementa se hace [mal y a medias](https://www.martinfowler.com/bliki/FlaccidScrum.html).
+Todo esto es lo que las metodologías ágiles vinieron a arreglar hace ya como 15 años, pero en la mayoría de las empresas siguen hablando de ellas como algo _"nuevo"_ de lo que no se fian mucho y que si se implementa se hace [mal y a medias](https://www.martinfowler.com/bliki/FlaccidScrum.html) al menos en España.
 
 En la asignatura de IdS de la UNED, para mi decepción, no se habla de la revolución de las metodologías ágiles sino que siguen anclados en el ciclo de vida en cascada o en V y demás metodologías del siglo pasado. Salvo una breve pero loable mención a Ken Beck y a XP, todo el libro de referencia está lleno de citas a libros y artículos de mediados de los 80, como si en una asignatura de arquitectura de computadores nos enseñaran a montar un ordenador con válvulas de vacío y cables.
 
 ![foto del Colossus, el primer ordenador electrónico programable](/public/img/Colossus.jpg)
 
-Sin embargo, y pese a toda esa caspa, leer sobre arquitectura, diagramas, normalización de bases de datos, análisis de requisitos, etc me ha ayudado a pensar mejor en cómo estructurar mi código y me ha enseñado algunos diagramas útiles para ayudarme a pensar en la arquitectura de mi aplicación o en cómo interactuan los diferentes componentes.
+Sin embargo, y pese a toda esa caspa, leer sobre arquitectura, diagramas, normalización de bases de datos, análisis de requisitos, etc. me ha ayudado a pensar mejor en cómo estructurar mi código y me ha enseñado algunos diagramas útiles para ayudarme a pensar en la arquitectura de mi aplicación o en cómo interactuan los diferentes componentes.
 
 Un diagrama en ocasiones es la mejor chuleta de apoyo a la documentación, es una forma de tener un esquema básico que te recuerda dónde estás en el desarrollo y qué otros módulos o aplicaciones interactúan con la tuya.
 
@@ -41,9 +43,9 @@ Todo eso en el primer mes de uso.
 
 **El software cambia muy rápido**, cambia constantemente y toda la teoría detrás del ciclo de vida en cascada está bien para desarrollar standards, para desarrollar hardware o para otro tipo de producto no moldeable, pero no para la mayoría del software.
 
-Dicho todo esto sigo pensando que el diseño y el análisis tienen su lugar en el desarrollo de software, pero no como una disciplina separada de la implementación, sino **como una forma de mantener, mejorar y evaluar el código**, de decidir dónde merece la pena gastar algo de tiempo en refactorizar, dónde hay que dividir un módulo o cómo organizar una arquitectura grande de forma que el trabajo se pueda dividir fácilmente.
+Dicho todo esto sigo pensando que **el diseño y el análisis tienen su lugar en el desarrollo de software, pero no como una disciplina separada de la implementación, sino como una forma de mantener, mejorar y evaluar el código**, de decidir dónde merece la pena gastar algo de tiempo en refactorizar, dónde hay que dividir un módulo o cómo organizar una arquitectura grande de forma que el trabajo se pueda dividir fácilmente.
 
-Esto no es algo que diga yo aquí, es algo que han dicho otros ingenieros y divulgadores mucho más sabios y experimentados que yo, solo repito sus palabras a modo de resumen personal y por si alguien ahí sigue pensando que la arquitectura en cascada es una buena idea. Termino con algunos enlaces mucho más interesantes e instructivos que mi opinión personal:
+Esto no es algo que diga yo aquí, es algo que han dicho otros ingenieros y divulgadores mucho más sabios y experimentados que yo, solo repito sus palabras a modo de resumen personal. Y por si alguien ahí sigue pensando que la arquitectura en cascada es una buena idea. Termino con algunos enlaces mucho más interesantes e instructivos que mi opinión personal:
 
 [Martin Fowler: Who needs architects](https://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf)
 
@@ -52,5 +54,4 @@ Esto no es algo que diga yo aquí, es algo que han dicho otros ingenieros y divu
 [Neal Ford: Investigating Architecture and design](https://www.ibm.com/developerworks/java/library/j-eaed1/index.html)
 
 [Michael Feathers: Emergent Optimization in Test Driven Design](https://drive.google.com/file/d/0B8ZX1RoWHuiJandXOHRSSG1BV1U/view)
-
 
