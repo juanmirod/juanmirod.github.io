@@ -37,21 +37,23 @@ De ahí las metodologías ágiles: Hay que reducir el ciclo de retroalimentació
 
 Y para iterar es fundamental poder refactorizar, poder publicar cambios con un comando y dar marcha atrás con otro, tener tests de regresión automatizados que nos aseguren que en cada iteración no perdemos funcionalidad anterior.
 
-Desarrollar software no es construir edificios o coches. No hay una cadena de montaje que cueste millones parar ni un enorme bloque de hormigón que no se pueda mover. El software es flexible, es portable y es caduco. No podemos poner de ejemplo los planos de un edificio porque en nuestro caso los usuarios vendrán y querrán mover la puerta de entrada, conectar la segunda planta con la sexta mediante un pasillo (el ascensor está ocupado!), cambiar el tamaño del ascensor mientras está en uso y usar la piscina como pista de padel porque resulta que las piscinas ya no se llevan. 
+El análisis y el diseño no es una parte previa al desarrollo, es necesariamente parte del desarrollo y sin conocimiento del problema y del contexto en el que se encuentra (serás un desarrollador menos valorado](https://www.linkedin.com/pulse/hard-thing-software-development-jesse-watson?__s=fotpfppvyfawf44bmqhj) y no podrás hacer un buen trabajo. El desarrollo de software no es simplemente apilar líneas de código como el que apila ladrillos, requiere un esfuerzo creativo y tomar muchas decisiones sobre como afrontar cada problema y cómo afectará cada decisión a largo plazo.
 
-Todo eso en el primer mes de uso. 
+Desarrollar software tampoco es como construir edificios o coches en el sentido de que o hay una cadena de montaje que cueste millones parar ni un enorme bloque de hormigón que no se pueda mover. No existe una forma concreta de hacer las cosas, no porque no exista, sino porque **en eso es en lo que somos mejores: cada vez que encontramos una buena metodología o una un buen algoritmo convertimos esas partes en librerías, frameworks, automatismos, etc para poder reutilizarlo y no tener que preocuparnos más por eso**. 
+
+El software es flexible, es reutilizable, es portable y es caduco. No podemos poner de ejemplo los planos de un edificio porque en nuestro caso los usuarios vendrán y querrán mover la puerta de entrada, conectar la segunda planta con la sexta mediante un pasillo (el ascensor está ocupado!), cambiar el tamaño del ascensor mientras está en uso y usar la piscina como pista de padel porque resulta que las piscinas ya no se llevan. Todo eso en el primer mes de uso. 
 
 **El software cambia muy rápido**, cambia constantemente y toda la teoría detrás del ciclo de vida en cascada está bien para desarrollar standards, para desarrollar hardware o para otro tipo de producto no moldeable, pero no para la mayoría del software.
 
-Dicho todo esto sigo pensando que **el diseño y el análisis tienen su lugar en el desarrollo de software, pero no como una disciplina separada de la implementación, sino como una forma de mantener, mejorar y evaluar el código**, de decidir dónde merece la pena gastar algo de tiempo en refactorizar, dónde hay que dividir un módulo o cómo organizar una arquitectura grande de forma que el trabajo se pueda dividir fácilmente.
+Dicho todo esto, sigo pensando que **el diseño y el análisis tienen su lugar en el desarrollo de software, pero no como una disciplina separada de la implementación, sino como una forma de mantener, mejorar y evaluar el código**, de decidir dónde merece la pena gastar algo de tiempo en refactorizar, dónde hay que dividir un módulo o cómo organizar una arquitectura grande de forma que el trabajo se pueda dividir fácilmente. **El eterno elefante en la habitación que no quieren ver los que defienden esa separación es que el único nivel lo suficientemente detallado para especificar qué debe hacer la máquina es el código**. I las herramientas de diseño, los gráficos, las especificaciones pueden darnos una falsa sansación de que estamos especificando el problema, pero aún no es posible especificarlo lo suficiente como para que la implementación sea trivial (¡Entonces no haría falta implementar!) y al final el diseño inicial no es más que un corsé de otra talla que tenemos que desmontar por completo y volver a montar para que se adapte a nuestro producto, nuestro cliente y nuestro equipo.
 
-Esto no es algo que diga yo aquí, es algo que han dicho otros ingenieros y divulgadores mucho más sabios y experimentados que yo, solo repito sus palabras a modo de resumen personal. Y por si alguien ahí sigue pensando que la arquitectura en cascada es una buena idea. Termino con algunos enlaces mucho más interesantes e instructivos que mi opinión personal:
+Esto no es algo que diga solo yo aquí, es algo que han dicho otros ingenieros y divulgadores mucho más sabios y experimentados que yo, solo repito sus palabras a modo de resumen personal. Y por si alguien ahí sigue pensando que la arquitectura en cascada es una buena idea y no cree que yo tenga ninguna autoridad en el tema (tiene razón en esa última parte), termino con algunos enlaces mucho más interesantes e instructivos que mi opinión personal:
 
 [Martin Fowler: Who needs architects](https://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf)
 
 [Martin Fowler: Is Design Dead?](https://www.martinfowler.com/articles/designDead.html)
 
-[Neal Ford: Investigating Architecture and design](https://www.ibm.com/developerworks/java/library/j-eaed1/index.html)
+[Neal Ford: Investigating Architecture and design](https://www.ibm.com/developerworks/java/library/j-eaed1/index.html)*
 
 [Michael Feathers: Emergent Optimization in Test Driven Design](https://drive.google.com/file/d/0B8ZX1RoWHuiJandXOHRSSG1BV1U/view)
 
