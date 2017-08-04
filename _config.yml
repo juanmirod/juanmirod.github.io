@@ -1,8 +1,8 @@
 excerpt_separator: ""
 highlighter: rouge
 markdown: kramdown
-url: http://blog.juanmirodriguez.es
+url: http://juanmirod.github.io
 title: "Por amor al código" 
 tagline: "Code snippeds y reflexiones sobre tecnología"
-description: "Blog de juanmirodriguez.es"
+description: "juanmirod.github.io"
 paginate: 1
