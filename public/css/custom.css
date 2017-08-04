@@ -44,7 +44,7 @@ a:focus, a:hover {
 }
 
 .sidebar-toggle:active, #sidebar-checkbox:checked ~ .sidebar-toggle {
-  background-color: #bff8ff;
+  background-color: #00838f;
   color: white;
 }
 
@@ -53,9 +53,14 @@ a:focus, a:hover {
   color: #232323;
 }
 
-.sidebar-nav-item.active, a.sidebar-nav-item:hover, a.sidebar-nav-item:focus {
+.sidebar-nav-item.active{
+  background-color: #bff8ff;
+  color: #232323;
+} 
+
+a.sidebar-nav-item:hover, a.sidebar-nav-item:focus {
   background-color: #00838f;
-  color: white;
+  color: #ffffff;
   transition: all 300ms ease;
 }
 
