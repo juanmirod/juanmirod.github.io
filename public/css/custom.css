@@ -53,6 +53,10 @@ a:focus, a:hover {
   color: #232323;
 }
 
+.sidebar-item a, .sidebar-nav-item a {
+  color: #232323;
+}
+
 .sidebar-nav-item.active{
   background-color: #bff8ff;
   color: #232323;
