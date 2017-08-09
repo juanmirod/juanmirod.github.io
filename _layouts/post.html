@@ -11,7 +11,19 @@ layout: default
 
 {% if page.tags contains "javascript" %}
 <div class="related">
-    <a href="{{ site.url }}/tag/javascript">Ver más artículos de JavaScript</a>
+    <h2>Más artículos de JavaScript</h2>
+    <ul class="related-posts">
+    {% for post in site.tags[page.tag] %}
+      <li>
+        <h3>
+          <a href="{{ post.url }}">
+            {{ post.title }}
+            <small>{{ post.date | date_to_string }}</small>
+          </a>
+        </h3>
+      </li>
+    {% endfor %}
+    </ul>
 </div>
 {% endif %}
 
