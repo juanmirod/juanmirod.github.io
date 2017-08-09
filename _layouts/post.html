@@ -8,6 +8,12 @@ layout: default
   {{ content }}
 </div>
 
+{%if post.tags contains 'javascript' %}
+<div class="related">
+    Puedes ver más [artículos de JavaScript aquí]({{ site.url }}/tag/javascript)
+</div>
+{% endif %}
+
 <div class="related">
   <h2>Últimos artículos</h2>
   <ul class="related-posts">
