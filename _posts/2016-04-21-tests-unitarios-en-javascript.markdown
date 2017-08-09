@@ -2,7 +2,7 @@
 published: true
 title: Tests unitarios en JavaScript con Jasmine
 layout: post
-tags: [javascript, test]
+tags: [javascript]
 ---
 
 Los tests unitarios son una herramienta excelente para prevenir bugs en ejecución y para describir el comportamiento que debe tener el código. Además, y [sobre todo si se realizan antes que el código](http://research.microsoft.com/en-us/groups/ese/nagappan_tdd.pdf) de la aplicación (lo que se conoce como **TDD**), los test unitarios ayudan a estructurar mejor el código, hacerlo más modular e independiente y además ayudan a dividir los problemas y hacerlos más sencillos de programar.

@@ -2,7 +2,7 @@
 published: true
 title: Función slice en JavaScript
 layout: post
-tags: [javascript, snippets] 
+tags: [javascript] 
 ---
 
 Siguiendo con las funciones que suelo tener que consultar y que espero que estos artículos me ayuden a superar, está slice.

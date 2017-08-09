@@ -2,7 +2,7 @@
 published: true
 title: Promesas en Javascript
 layout: post
-tags: [Inteligencia Artifical]
+tags: [javascript]
 ---
 
 El objeto Promise es ya un [standard de ES2015](http://www.ecma-international.org/ecma-262/6.0/#sec-promise-objects) y puede utilizarse en la mayoría de los navegadores. Para poder utilizarlo y seguir soportando IE (esa carga que todos los desarrolladores web llevamos a cuestas) existe un [polyfill](https://github.com/taylorhakes/promise-polyfill) que apenas ocupa 1kb.

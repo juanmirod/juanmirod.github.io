@@ -2,7 +2,7 @@
 published: true
 title: Función split en JavaScript
 layout: post
-tags: [javascript, snippets] 
+tags: [javascript] 
 ---
 
 Todos los lenguajes tienen las típicas funciones que tenemos que consultar cada vez que las usamos. Bien porque no las usamos todos los días, bien porque se parecen a otras de la librería estándar o nos recuerdan a una función parecida en otro lenguaje. Lo cierto es que es un engorro y nos hace sentir tontos y olvidadizos y sentimos el _síndrome del impostor_ colgándose de nuestra espalda.

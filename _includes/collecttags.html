@@ -8,11 +8,11 @@
 {% assign site.tags = "" %}
 {% for tag in rawtags %}
   {% if tag != "" %}
-    {% if tags == "" %}
-      {% assign tags = tag | split:'|' %}
+    {% if site.tags == "" %}
+      {% assign site.tags = tag | split:'|' %}
     {% endif %}
-    {% unless tags contains tag %}
-      {% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+    {% unless site.tags contains tag %}
+      {% assign site.tags = site.tags | join:'|' | append:'|' | append:tag | split:'|' %}
     {% endunless %}
   {% endif %}
 {% endfor %}

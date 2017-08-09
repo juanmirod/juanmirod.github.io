@@ -2,7 +2,7 @@
 published: false
 title: Programación Funcional en Javascript
 layout: post
-tags: [JavaScript, programación funcional]
+tags: [javascript, programación funcional]
 ---
 
 La programación funcional parece que por fin va ganando más y más adeptos gracias a nuevos lenguajes como Scala, Clojure o Elm y a nuevos frameworks y librerías como Lodash, Ramda, React o Redux, que aunque no son puramente declarativos, sí que utilizan herramientas de la programación funcional y aprovechan la característica de JavaScript de tener las funciones con un tratamiento de "primera clase" o de primitiva. Además ES6 añade algunas nuevas funcionalidades muy interesantes para el desarrollo funcional como la notación que expande elementos iterables con `...` o las funciones con la flecha gruesa `=>`

@@ -2,7 +2,7 @@
 published: true
 title: Configurando Karma en un proyecto JavaScript
 layout: post
-tags: [javascript, test]
+tags: [javascript]
 ---
 
 Este es el segundo de una serie de artículos sobre tests automáticos. Puedes encontrar el artículo anterior, que habla sobre Jasmine y TDD [aquí](http://juanmirod.github.io/2016/04/21/tests-unitarios-en-javascript.html).
