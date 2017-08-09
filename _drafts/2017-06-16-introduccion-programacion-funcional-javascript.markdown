@@ -143,7 +143,7 @@ Sigamos con las funciones de Iteradores.
 
 **filter**
 
-Filter nos permite eliminar o seleccionar elementos de un array mediante un __predicado__ o filtro. Para ello le pasamos a `.filter` nuestro predicado igual que `.map`
+Filter nos permite eliminar o seleccionar elementos de un array mediante un __predicado__ o filtro. Para ello le pasamos a `.filter` nuestro predicado, que no es más que una función que se ejecuta por cada elemento y devuelve un booleano. Si el valor develto es `true` el elemento se devolverá en el nuevo array, si es `false` el elemento no estará en el nuevo array. 
 
 ```javascript
 
@@ -182,7 +182,7 @@ avg(califications)
 
 ```
 
-Este código se puede simplificar mucho usando reduce. Reduce toma el array y aplica la función que le demos, elemento a elemento, pasándo en cada paso una copia del resultado, veamos el código y luego veremos cómo lo hace:
+Este código se puede simplificar mucho usando reduce. Reduce toma el array y aplica la función que le demos, elemento a elemento, pasando en cada paso una copia del resultado, veamos el código y luego veremos cómo lo hace:
 
 ```javascript
 

@@ -43,6 +43,10 @@ Alan Turin,English,1954`.split('\n').map(line => line.split(','))
 'Ada Lovelace   ,  English ,   1815'.split(/\s*,\s*/)
 // [ "Ada Lovelace", "English", "1815" ]
 
+// usando expresiones regulares también podemos usar varios delimitadores diferenciados
+'Hello, how are you?'.split(/,|\s+/g)
+// [ 'Hello', '', 'how', 'are', 'you?' ] 
+
 // y si usamos () nos devuelve los delimitadores
 'Ada Lovelace   ,  English ,   1815'.split(/(\s*,\s*)/)
 // [ "Ada Lovelace", "   ,  ", "English", " ,   ", "1815" ]
