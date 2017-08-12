@@ -6,9 +6,13 @@ layout: post
 tags: [javascript] 
 ---
 
-[Node.js](https://nodejs.org/) es un entorno de ejecución de JavaScript que utiliza el motor V8 de Google. La historia de JavaScript y de Node.js es curiosa porque casi parece que todo surgió por accidente. JavaScript es conocido por haber sido [diseñado en 10 días por Bredan Eich](/public/veredas_and_rodriguez_070206.pdf) y por sus [inconsistencias](https://www.destroyallsoftware.com/talks/wat), pero aun así se convirtió en el el lenguaje de facto de la web. Antes de Node.js hubo varios intentos de establecer un entorno de ejecución para JavaScript fuera de los navegadores, una historia muy entretenida sobre los inicios de Node.js y npm la cuenta el propio Issac Z. Schlueter [en su blog](http://blog.izs.me/post/157295170418/my-first-npm-publish)
+[Node.js](https://nodejs.org/) es un entorno de ejecución de JavaScript que utiliza el motor V8 de Google. La historia de JavaScript y de Node.js es curiosa porque casi parece que todo surgió por accidente. JavaScript es conocido por haber sido [diseñado en 10 días por Bredan Eich](/public/veredas_and_rodriguez_070206.pdf) y por sus [inconsistencias](https://www.destroyallsoftware.com/talks/wat), pero aun así se convirtió en el el lenguaje de facto de la web. Esto lo hizo cada vez más y más popular a medida que todas las páginas necesitaban más funcionalidad para cubrir las espectativas de los usuarios. JS es en la actualidad uno de los lenguajes más utilizados y de mayor crecimiento. Con lo que era inevitable que los desarrolladores de JavaScript quisieran usar el lenguaje fuera de los navegadores. Como dice la Ley de Atwood:
 
-**TLDR:** Node.JS y npm se convirtieron en el entorno de ejecución de JavaScript en el servidor y ahora podemos utilizar el mismo lenguaje para desarrollar en el servidor y en el front.
+> Any application that can be written in JavaScript, will eventually be written in JavaScript [ver más](https://blog.codinghorror.com/the-principle-of-least-power/)
+
+Antes de Node.js hubo varios intentos de establecer un entorno de ejecución para JavaScript fuera de los navegadores, una historia muy entretenida sobre los inicios de Node.js y npm la cuenta el propio Issac Z. Schlueter (creador de npm) [en su blog](http://blog.izs.me/post/157295170418/my-first-npm-publish)
+
+**TLDR:** Node.JS y npm se convirtieron en el entorno de ejecución de JavaScript en el servidor y ahora podemos utilizar el mismo lenguaje para desarrollar en el servidor y en el cliente.
 
 ## Instalación y el REPL
 
@@ -129,7 +133,7 @@ Nuestro módulo no hace nada a parte de definir una función y exportarla, pero 
 
 Node trae una serie de módulos básicos que podemos utilizar a modo de [librería estandard](https://nodejs.org/dist/latest-v6.x/docs/api/) Pero uno de los puntos fuertes de Node.js es el haberse mantenido flexible gracias a tener una librería estandar muy pequeña.
 
-Y en eso se basa npm. [npm](https://www.npmjs.com/) es un repositorio centraliazdo de módulos para Node.js En npm la filosofía también es la de módulos pequeños que hagan una sola cosa, parecido a lo que ocurre con los comandos de Unix, esto hace el lenguaje más fácil de componer, reordenar y modificar y tiene un gran potencial. Ahora mismo npm es el repositorio con mayor número de módulos de código abierto de todos los lenguajes y su número sigue creciendo a mayor velocidad que todos los demás.
+Ese es también el punto fuerte de npm. [npm](https://www.npmjs.com/) es un repositorio centraliazdo de módulos para Node.js En la comunidad de Node.js y npm la filosofía también es la de módulos pequeños que hagan una sola cosa, parecido a lo que ocurre con los comandos de Unix, esto hace el lenguaje más fácil de componer, reordenar y modificar y tiene un gran potencial. Ahora mismo npm es el repositorio con mayor número de módulos de código abierto de todos los lenguajes y su número sigue creciendo a mayor velocidad que todos los demás.
 
 npm se instala en nuestro sistema junto con Node.js y podemos usarlo para instalar cualquier paquete de forma global o local a nuestro proyecto. Un proyecto es simplemente una carpeta donde hemos ejecutado `npm init`:
 
@@ -142,7 +146,7 @@ npm init
 
 ``` 
 
-Al ejecutar este comando el programa nos hará algunas preguntas sobre el proyecto y creará un fichero `package.json` con la configuración mínima. Si solo queremos probar a instalar algunos paquetes podemos ejecutar `npm init -y` para crear este fichero y npm usará el nombre de la carpeta como nombre del proyecto.
+Al ejecutar este comando el programa nos hará algunas preguntas sobre el proyecto y creará un fichero `package.json` con la configuración mínima. Si solo queremos probar a instalar algunos paquetes podemos ejecutar `npm init -y` para crear este fichero y npm usará la configuración mínima por defecto y el nombre de la carpeta como nombre del proyecto.
 
 Ahora podemos instalar cualquier paquete del registro ejecutando `npm install` Por ejemplo podemos instalar [expressjs](http://expressjs.com), una serie de librerías para crear un servidor web:
 
@@ -153,7 +157,7 @@ npm install --save express
 
 ```
 
-El modificador `--save` indica a npm que queremos que guarde esta dependencia en el fichero del proyecto. Ahora podemos crear nuestro fichero `index.js` con este contenido:
+El modificador `--save` indica a npm que queremos que guarde esta dependencia en el fichero del proyecto. Con express instalado localmente, podemos crear nuestro fichero `index.js` con este contenido:
 
 ```
 
@@ -184,4 +188,4 @@ Servidor creado y escuchando en el puerto 3000!
 
 Si abres un navegador y vas a 'localhost:3000' verás el mensaje 'Hola desde Node!'
 
-Esas son las herramientas básicas de desarrollo en Node.js, con lo que sabes ya puedes ir a explorar un poco el registro de npm o la documentación de express y comenzar a desarrollar tu propio servidor web. 
+Esas son las herramientas básicas de desarrollo en Node.js. Módulos, un entorno de ejecución, el repositorio central de npm y JavaScript. Con lo que sabes ya puedes ir a explorar un poco el registro de npm o la documentación de express y comenzar a desarrollar tu propio servidor web :D
