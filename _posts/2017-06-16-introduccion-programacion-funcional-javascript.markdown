@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Introducción a programación funcional con JavaScript
 layout: post
 tags: [programación funcional, javascript] 
