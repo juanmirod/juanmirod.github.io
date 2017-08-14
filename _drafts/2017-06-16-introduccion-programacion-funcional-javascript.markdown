@@ -69,17 +69,24 @@ La descomposición de objectos y arrays, una nueva sintáxis de **ES6**, nos per
 
 var a, b, rest;
 [a, b] = [10, 20];
-console.log(a); // 10
-console.log(b); // 20
+a 
+// 10
+b 
+// 20
 
 [a, b, ...rest] = [10, 20, 30, 40, 50];
-console.log(a); // 10
-console.log(b); // 20
-console.log(rest); // [30, 40, 50]
+a
+// 10
+b
+// 20
+rest
+// [30, 40, 50]
 
 ({a, b} = {a: 10, b: 20});
-console.log(a); // 10
-console.log(b); // 20
+a
+// 10
+b
+// 20
 
 ```
 
@@ -87,7 +94,9 @@ Estas mismas transformaciones se pueden usar como parámetros en las funciones. 
 
 Como ejemplo de las convenciones de estilo y referencia rápida he creado [un gist]().
 
-Cómo probar los ejemplos. La forma más fácil de probar los ejemplos, modificarlos y crear alternativas es mediante el REPL de node. Estamos usando ES6, con lo que en el navegador podríamos necesitar usar babel y configurar el proyecto y demás son incomodidades necesarias para un proyecto real, pero son solo un estorbo para el proceso de aprendizaje y de ensayo y error. Node soporta ES6 y todos los ejemplos se podr´an correr en el REPL de node 6.9 o superior. Para poder usarlo instalamos node y luego en el terminal escribimos:
+## Cómo probar los ejemplos. 
+
+La forma más fácil de probar los ejemplos, modificarlos y crear alternativas es mediante el REPL de node. Estamos usando ES6, con lo que en el navegador podríamos necesitar usar babel y configurar el proyecto y demás son incomodidades necesarias para un proyecto real, pero son solo un estorbo para el proceso de aprendizaje y de ensayo y error. Node soporta ES6 y todos los ejemplos se podrán correr en el REPL de node 6.x o superior. Para poder usarlo instalamos node y luego en el terminal escribimos:
 
 ```shell
 
@@ -96,11 +105,13 @@ $> node
 
 ```
 
+Más sobre cómo instalar Node.js y el REPL [aquí](http://juanmirod.github.io/2017/08/09/introduccion_nodejs.html)
+
 ### Bucles
 
 Un primer paso bastante común es deshacerse de los bucles y utilizar las funciones .map/.filter/.reduce en su lugar. Estas funciones son parte de la librería estándar de JavaScript para Iterables y tienen una serie de propiedades muy interesantes. Usándolas no necesitaremos escribir contadores, con lo que reducimos una posible fuente de erratas (¿quién no se ha equivocado al anidar dos bucles for y ha usado el contador que no debía?), son funciones que se pueden componer y ganamos en brevedad y simplicidad al ofrecer comportamientos más variados que los de un bucle normal.
 
-Además, estas cuatro funciones se caracterizan porque no alteran el array de entrada, sino que devuelven un nuevo array siempre, lo cual nos asegura que estamos trabajando de forma funcional, sin crear efectos colaterales.
+Además, estas tres funciones se caracterizan porque no alteran el array de entrada, sino que devuelven un nuevo array siempre, lo cual nos asegura que estamos trabajando de forma funcional, sin crear efectos colaterales.
 
 **.map**
 
@@ -159,6 +170,38 @@ const isEven = x => x % 2 === 0
 
 ```
 
+Una buena ayuda para ayudar a recordar como usar filter es recordar el concepto de _predicado_. Una función predicado es una función que nos devuelve un booleano, que devuelve `true` o `false` para cualquier entrada que le pasemos. algunos ejemplos de predicados útiles:
+
+```javascript
+
+// predicados
+
+const isEven = x => x%2 === 0
+const greaterThan = min => x => x > min 
+const notEqual = y => x => x !== y
+const where = (property, value) => x => x[property] === value
+const whereNot = (property, value) => x => x[property] !== value
+
+// ejemplos de uso
+
+[1,2,3,4,5,6].filter(isEven)
+// [2,4,6]
+
+[1,2,3,4,5,6].filter(greaterThan(3))
+// [4,5,6]
+
+[1,2,3,4,5,6].filter(notEqual(3))
+// [1,2,4,5,6]
+
+[{x:1, y: 20}, {x: 35, y: 23}].filter(where('x', 35))
+// [{x: 35, y: 23}]
+
+[{x:1, y: 20}, {x: 35, y: 23}].filter(whereNot('x', 35))
+// [{x:1, y: 20}]
+
+```
+
+
 **reduce**
 
 Sin duda reduce es la función más difícil de entender de las tres y la que más miedo da cuando no la conoces. Pero también es muy potente y nos permite simplificar mucho el código cuando la usamos correctamente.
@@ -186,7 +229,7 @@ Este código se puede simplificar mucho usando reduce. Reduce toma el array y ap
 
 ```javascript
 
-const avg = values => values.reduce((total, prev) => total + prev, 0)/values.length 
+const avg = values => values.reduce((total, current) => total + current, 0)/values.length 
 const califications = [5,7,8,5,5,6,8,9,10]
 avg(califications)
 
@@ -196,5 +239,58 @@ avg(califications)
 
 > ¿Qué?? ¿Cómo?? 
 
-A todos nos pasa cuando vemos reduce por primera vez, veamos qué ha pasado.
+A todos nos pasa cuando vemos reduce por primera vez, veamos qué ha pasado. La función que le pasamos a reduce es bastante sencilla:
 
+```javascript
+
+(total, current) => total + current
+
+```
+
+Simplemente toma el valor actual y lo suma al total que tiene acumulado. El segundo argumento que le pasamos a reduce es el valor inicial `0`. Es decir que lo que estamos haciendo es decir: 
+
+> Empezando con 0, toma todos los valores del array y súmalos uno a uno.
+
+La función que se le pasa a reduce recibe 4 argumentos y el segundo parámetro de reduce es opcional y es el valor inicial que se pasará como primer parámetro cuando se llame a la función por primera vez. Es importante saber que este también será el valor por defecto si el array sobre el que operamos está vacío:
+
+```javascript
+
+[].reduce((total, current, index, originalArray) => { /* ... */ }, default) === default
+
+```
+
+Y por tanto si tratamos de ejecutar `reduce` sobre un array vacío dos devolverá una excepción:
+
+```javascript
+
+[].reduce((total, current, index, originalArray) => { /* ... */ })
+TypeError: Reduce of empty array with no initial value
+    at Array.reduce (native)
+    at repl:1:4
+    ...
+
+```
+
+**Ojo con la aridad de las funciones**
+
+Algo a tener en cuenta cuando empezamos a utilizar estas funciones y la notación _point-free_ es la aridad de las funciones. Todas estas funciones reciben varios argumentos del array que las llama y debemos tener cuidado en utilizarlas correctamente para no caer en errores que nos puedan despistar, JavaScript es un lenguaje dinámico y aceptará casi cualquier cosa que le pasemos sin protestar:
+
+```javascript
+
+[0,1,2,3,4,5,6].filter(notEqual)
+// [0,1,2,3,4,5,6]
+
+[0,1,2,3,4,5,6].filter((x) => isEven)
+// [0,1,2,3,4,5,6]
+
+
+```
+
+En los dos casos anteriores lo que está pasando es que estamos devolviendo la referencia a la función en lugar de llamarla, y por extraño que parezca, en JavaScript `!!((x) => {}) === true` y por tanto, el predicado siempre está devolviendo `true` y mantenemos todos los valores del array.
+
+Esto puede volverse especialmente problemático si usamos `currying`, pero por supuesto tiene fácil solución. Volveremos sobre este punto un poco más adelante.
+
+Con estas tres funciones podemos librarnos de la práctica totalidad de los bucles de nuestro código y olvidarnos de tener que mantener contadores y de esa complicada sintaxis que los acompaña, lo cual hará el código más fácil de leer y nos dejará centrarnos en los importante.
+
+
+Este artículo está en pleno desarrollo, si te gusta este estilo de programación en Javascript vuelve pronto y seguramente encuentres nuevo contenido. Si quieres animarme a seguir escribiendo o quieres ayudar puedes hacerlo porque este artículo está alojado en github cualquier comentario o contribución será bien recibido.
