@@ -92,11 +92,9 @@ b
 
 Estas mismas transformaciones se pueden usar como parámetros en las funciones. Más sobre este tema [aquí](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
-Como ejemplo de las convenciones de estilo y referencia rápida he creado [un gist]().
-
 ## Cómo probar los ejemplos. 
 
-La forma más fácil de probar los ejemplos, modificarlos y crear alternativas es mediante el REPL de node. Estamos usando ES6, con lo que en el navegador podríamos necesitar usar babel y configurar el proyecto y demás son incomodidades necesarias para un proyecto real, pero son solo un estorbo para el proceso de aprendizaje y de ensayo y error. Node soporta ES6 y todos los ejemplos se podrán correr en el REPL de node 6.x o superior. Para poder usarlo instalamos node y luego en el terminal escribimos:
+La forma más fácil de probar los ejemplos, modificarlos y crear alternativas es mediante el REPL de node. Hoy en día tanto Chrome como Firefox soportan ES6 [casi por completo](https://kangax.github.io/compat-table/es6/) Con lo que podemos probar también los ejemplos en la consola, pero presonalmente la consola de los navegadores siempre se me antoja pequeña e incómoda. Node soporta ES6 y todos los ejemplos se podrán correr en el REPL de node 6.x o superior. Para poder usarlo instalamos node y luego en el terminal escribimos:
 
 ```shell
 
@@ -135,7 +133,7 @@ Por ejemplo:
 
 ```
 
-Otra notación que es muy concisa es la __programación tácita__ o __pointfree notation__ que quiere decir que, cuando una función toma un parámetro de entrada y se usa como argumento a otra función, podemos omitir el parámetro y la llamada de esta forma:
+Otra notación que es muy concisa es la __programación tácita__ o __pointfree notation__ que quiere decir que, cuando una función toma un parámetro de entrada y se usa como argumento a otra función, podemos omitir el parámetro y la llamada queda de esta forma:
 
 ```javascript
 
@@ -148,7 +146,9 @@ const double = x => 2*x
 
 ```
 
-Espera un momento, ¿qué está pasando ahí? Lo que ocurre es que la función map espera una función y la llamará una vez por cada elemento del array, pasándole el elemento, como veíamos arriba. Así que es lo mismo pasarle la referencia `double` que la función anónima, map tomará la función y la invocará de la misma forma. Aquí empezamos a ver la potencia de JavaScript como lenguaje funcional, no todos los lenguajes permiten usar las funciones como argumentos de otras funciones de forma tan sencilla.
+> Espera un momento, ¿qué está pasando ahí? 
+
+Lo que ocurre es que la función map espera una función y la llamará una vez por cada elemento del array, pasándole el elemento, como veíamos arriba. Así que es lo mismo pasarle la referencia `double` que la función anónima, map tomará la función y la invocará de la misma forma. Aquí empezamos a ver la potencia de JavaScript como lenguaje funcional, no todos los lenguajes permiten usar las funciones como argumentos de otras funciones de forma tan sencilla y fácil de leer.
 
 Sigamos con las funciones de Iteradores.
 
@@ -201,6 +201,38 @@ const whereNot = (property, value) => x => x[property] !== value
 
 ```
 
+En los predicados de arriba también podemos ver algo que no he comentado hasta ahora: funciones que devuelven funciones. De igual forma que podemos pasar una función como arcumento, podemos devolverlas como resultado. Así:
+
+```javascript
+
+const notEqual = x => y => x !== y
+
+// es lo mismo que
+
+const notEqual = function(x) {
+  return function(y) {
+    return x !=== y
+  }
+}
+
+
+```
+
+Esto es habitual en JavaScript y el truco está en que utilizamos el ámbito de la función para acceder al primer parámetro desde la función interior. Como Javascript tiene ámbito léxico (closure) podemos acceder a la variable sin importar donde o cuando hagamos la llamada:
+
+```javascript
+
+const notThree = notEqual(3)
+
+[1,2,3,4,5].filter(notThree)
+// [1,2,4,5]
+
+notThree(8)
+// true
+
+```
+
+Puedes ver más sobre el ámbito léxico de JavaScript [aquí](http://juanmirod.github.io/2016/02/19/ambito-en-javascript.html)
 
 **reduce**
 
