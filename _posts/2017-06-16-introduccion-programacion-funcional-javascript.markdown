@@ -291,7 +291,7 @@ La función que se le pasa a reduce recibe 4 argumentos y el segundo parámetro 
 
 ```
 
-Y por tanto si tratamos de ejecutar `reduce` sobre un array vacío dos devolverá una excepción:
+Y por tanto si tratamos de ejecutar `reduce` sobre un array vacío sin pasarle un valor inicial, dos devolverá una excepción:
 
 ```javascript
 
@@ -325,4 +325,4 @@ Esto puede volverse especialmente problemático si usamos `currying`, pero por s
 Con estas tres funciones podemos librarnos de la práctica totalidad de los bucles de nuestro código y olvidarnos de tener que mantener contadores y de esa complicada sintaxis que los acompaña, lo cual hará el código más fácil de leer y nos dejará centrarnos en los importante.
 
 
-Este artículo está en pleno desarrollo, si te gusta este estilo de programación en Javascript vuelve pronto y seguramente encuentres nuevo contenido. Si quieres animarme a seguir escribiendo o quieres ayudar puedes hacerlo porque este artículo está alojado en github cualquier comentario o contribución será bien recibido.
+Este artículo está en pleno desarrollo, si te gusta este estilo de programación en Javascript vuelve pronto y seguramente encuentres nuevo contenido. Si quieres animarme a seguir escribiendo o quieres ayudar puedes hacerlo porque [este artículo está alojado en github](https://github.com/juanmirod/juanmirod.github.io/blob/master/_posts/2017-06-16-introduccion-programacion-funcional-javascript.markdown) cualquier comentario o contribución será bien recibido.
