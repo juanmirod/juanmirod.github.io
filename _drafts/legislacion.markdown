@@ -1,10 +1,52 @@
 # Examen Primera semana de Julio de 2017
 
-## 1. El uso de la informática como factor de estandarización. (Tema 1)
+## 1. El uso de la informática como factor de estandarización. (Tema 1 pag. 51)
 
-## 2. Momento de nacimiento del contrato en Internet. (Tema 5)
+Es uno de los problemas objetivamente vinculados a la relación contractual. El recurso a los contratos estándard es habitual en la contratación desde Internet a través de páginas web. Es fundamental analizar el modo en el que se recogen las cláusulas del contrato que el consumidor debe aceptar. Este aspecto también es relevante en la contratación entre profesionales.
 
-## 3. Las comunicaciones comerciales: su regulación y su posible repercusión en el contrato (Tema 6)
+## 2. Momento de nacimiento del contrato en Internet. (Tema 5 pag. 210)
+
+Cuando las partes se encuentran no presentes - ni físicamente ni mediante un medio de comunicación simultánea - se entiende que el destinatario tiene acceso al contenido del mensaje que recoje la aceptación cuando alcanza su dirección electrónica. Es decir, si el contrato se realiza mediante intercambio de mensajes por correo electrónico, desde el momento en el que el mensaje alcanza su dirección de correo electrónico. Solo pudiendo aceptarse como causa de exoneración un fallo en el proveedor de correo electrónico que impida el acceso a éste.
+
+Si el contrato es concluido a través de una página web, se entenderá que la orden o aceptación contractual es efectuada desde el momento en el que el programa informático de contratación recibe el correspondiente "clicado", "aceptación" o "compra" definitivo del destinatario y el proveedor de servicios puede acceder a él. 
+
+Sobre este tema es referencia obligada el artículo 15 de la Ley Modelo de la CNUDMI sobre comercio electrónico: Tiempo y lugar del envío y la recepción de un mensaje de datos. 
+
+## 3. Las comunicaciones comerciales: su regulación y su posible repercusión en el contrato (Tema 6 pag 223)
+
+Comunicaciones comerciales: “son todas las formas de comunicación destinadas a proporcionar directa o
+indirectamente bienes, servicios o la imagen de una empresa, organización o persona con una actividad
+comercial, industrial, artesanal o de profesiones reguladas”.
+
+No se consideran comunicaciones comerciales: los datos que permiten acceder directamente a la actividad
+de dicha empresa, organización o persona y; concretamente el nombre de dominio o la dirección de correoelectrónico; y las comunicaciones relativas a los bienes, servicios o a la imagen de dicha empresa, elaboradas
+de forma independiente de ella, en particular cuando estos se realizan sin contrapartida económica.
+
+Conclusión: conjunto de actividades variadas que el prestador de servicios –profesional- realiza durante la
+fase precontractual de cualquier hipotético futuro contrato con el fin de alcanzar su conclusión: publicidad,
+descuentos, premios, regalos, ofertas, concursos, invitaciones,...
+
+La Directiva 2000/31/CE exige que deban ser identificables como tales, y en nombre de quien se realizan. El
+envío indiscriminado de comunicaciones comerciales a destinatarios que no las hayan solicitado puede
+conllevar responsabilidades a la persona en nombre de la que se envían. Cuando estén permitidas por el
+Estado miembro del establecimiento, deberán ser claramente identificables, accesibles, inequívocas y de
+claras condiciones.
+
+La ley española distingue 3 tipos de comunicaciones comerciales: las de estricta naturaleza publicitaria –a las
+que exige que figure al inicio del mensaje la expresión “publicidad”-, las ofertas promocionales – que incluyen
+descuentos, premios y regalos-, y los concursos o juegos promocionales.
+
+En todo caso queda prohibido el envío de comunicaciones comerciales en las que se disimule o se oculte la
+identidad del remitente, así como las que inciten a visitar páginas que contravengan lo dispuesto.
+
+El destinatario podrá revocar en cualquier momento su consentimiento a recibir comunicaciones comerciales
+con la simple notificación de su voluntad mediante procedimientos simples y gratuitos.
+Se consideran “infracciones graves”:
+
+• El envío masivo de comunicaciones comerciales por e-mail u otro medio electrónico, o el envío, en el
+plazo de un año, de más de 3 a un mismo destinatario, si no se cumplen los requisitos.
+• El incumplimiento de la obligación de incorporar procedimientos para revocar el consentimiento
+prestado.
 
 ## 4. Protección de los programas de ordenador en el Derecho español: contenido de los derechos de explotación (Tema 9)
 
