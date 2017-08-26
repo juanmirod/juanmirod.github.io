@@ -70,11 +70,39 @@ La distribución de un programa informático abarca la puesta en circulación o 
 
 # Examen Segunda semana de Julio de 2017
 
-## 1. Definición de comercio electrónico (Tema 2)
+## 1. Definición de comercio electrónico (Tema 2 pags 80-84)
 
-## 2. Contratos celebrados a través de una subasta electrónica (Tema 3)
+El término comercio electrónico aún no tiene una definición formal concreta y al tratar de describirlo se usan términos ambiguos que acaban abarcando a lo que se se puede entender por "sociedad de la información". En la comunicación "una iniciativa europea en materia de comercio electrónico" COM (97) 157 se recogen algunos puntos claves sobre para una definición más acotada:
+
+- Consiste en la práctica de actividades comerciales mediante el procesamiento y/o la transmisión electrónica de datos.
+- No es un fenómeno nuevo que se inicia con la aparición de Internet. Ya se realizaba antes en redes cerradas (ECI).
+- Comprende actividades comerciales con comunicación directa y a distancia y también actividades en las que no hay comunicación directa.
+- Podrá ser directo o indirecto, según si todo el proceso (solicitud, pago y entrega) es exclusivamente electrónico o no.
+- Internet ha aportado al CE un mayor desarrollo, así como una generalización y ampliación de los sujetos que lo practican.
+
+## 2. Contratos celebrados a través de una subasta electrónica (Tema 3 pags 133-134)
+
+El procedimiento de subasta electrónica combina elementos de la contratación mediante página web y la contratación por correo electrónico. Está compuesto por:
+
+- El esquema contractual de la subasta
+    + Suelen consistir exclusivamente en compraventa, a menudo excluyendo determinados objetos como animales vivos, tabaco, etc.
+    + El sujeto titular del bien recibe el nombre de "vendedor" el programa informático realiza el papel del subastador y el conjunto de sujetos interesados son los licitadores o postores.
+    + Los objetos que son subastados vienen recogidos en una página web previa con sus características.
+    + Para participar en la licitación es necesario registrarse en el servidor y dar datos personales. Paso fundamental para realizar la calificación de vendedor y postores usada para prevenir actuaciones fraudulentas.
+
+- El programa informático de subasta del prestador de servicio
+    + Desarrolla materialmente la licitación
+    + Recoge de forma clara y sencilla las instrucciones técnicas y pasos a seguir por los participantes en la subasta.
+    + Realiza la función de director de la licitación.
+    + Su funcionamiento es semejante al de una página web para conclusión de contratos, pero con varios sujetos realizando pujas hasta el fin de la subasta.
+    + La subasta finaliza cuando se ha cumplido el plazo establecido sin nonguna puja, o porque un postor ha realizado la puja más alta, en cuyo caso queda concluida la compraventa, vinculando al vendedor y al mejor postor, ahora comprador.
+
+- La comunicación a través de correo electrónico
+    Se realiza tanto entre el servidor y las partes como entre vendedor y comprador una vez finalizada la puja. Esta es de especial relevancia ya que de ella depende la correcta ejecución del contrato, mediante el envío de la forma de pago y la forma y dirección de envío del objeto. 
 
 ## 3. Lugar de nacimiento del contrato en internet (Tema 5)
+
+
 
 ## 4. Delitos contra la propiedad intelectual (Tema 10)
 
