@@ -1,6 +1,7 @@
 ---
 published: true
 title: Ámbito en JavaScript
+description: Explicación de cómo funcionan el ámbito de las variables en JavaScript.
 layout: post
 tags: [javascript]
 ---
@@ -20,33 +21,39 @@ El ámbito de las variables en JavaScript puede ser un poco confuso a veces, per
 La mejor forma de ver cómo funcionan estas reglas es probándolas en directo:
 
 ```javascript
-var hi = 'Global: I am global. ';
+
+//'use strict'; // descomentar para ver el error al usar la variable bye
+
+var hi = 'Global: I am global. '
 var ObjectWithPrivateVariables = function ObjectDefinition() {
 
   // Esta variable está definida dentro del ámbito de la functión ObjectDefinition
-  var hi = 'Object: Hello. ';
+  var hi = 'Object: Hello. '
   //var bye; // descomentar para arreglar la fuga de la variable bye al ámbito global
 
   return {
     sayHi: function returnsAGreeting() {
       // El ámbito de esta función está dentro del ámbito de OnjectDefinition
-      return hi;
+      return hi
     },
     
     sayBye: function byes() {
-      bye = "Good bye!";
-      return bye;
+      bye = "Good bye!"
+      return bye
     }
   }
-};
+}
 
-var newObject = new ObjectWithPrivateVariables();
-document.write(newObject.sayHi());
-document.write(hi); // Accede a la variable Global
-document.write(newObject.sayBye());
-document.write(bye); // Esta variable se ha declarado como global y podemos acceder a ella, cuidado!!
-document.write(sayHi); // error sayHi is undefined
+var newObject = new ObjectWithPrivateVariables()
+var content = document.getElementById('content')
+content.innerHTML += newObject.sayHi()
+content.innerHTML += hi // Accede a la variable Global
+content.innerHTML += newObject.sayBye()
+content.innerHTML += bye // Esta variable se ha declarado como global y podemos acceder a ella, cuidado!!
+content.innerHTML += sayHi // sayHi es undefined
+
 ```
+
 [Edit in jsfiddle](https://jsfiddle.net/juanmirod/zgsgqz2j/)
 
 Es interesante jugar un poco con el script, mover las declaraciones de sitio y ver que pasa. Espero que sirva a alguien de ayuda, para cualquier duda o aportación, este post está alojado en  [github](https://github.com/juanmirod/juanmirod.github.io/blob/master/_posts/2016-02-19-ambito-en-javascript.markdown)

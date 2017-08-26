@@ -16,7 +16,7 @@ Antes de Node.js hubo varios intentos de establecer un entorno de ejecución par
 
 ## Instalación y el REPL
 
-Para instalar Node.js en Windows o en Mac basta con ir a la página principal y descargar el isntalador. Si usas Ubuntu solo necesitamos un par de comandos:
+Para instalar Node.js en Windows o en Mac basta con ir a la página principal y descargar el instalador. Si usas Ubuntu solo necesitamos un par de comandos:
 
 ```
 
@@ -38,7 +38,7 @@ node -v
 
 Para ejecutar el intérprete de Node, el REPL, simplemente escribimos el comando `node` y el terminal pasará a ser una consola de JavaScript en la que podremos ejecutar nuestro código.
 
-El REPL (siglas del inglés Read Eval Print Loop) es una consola que ejecuta cada expresión en JavaScript que le demos y devuelve el resultado de la expresión inmediatamente. Por ejemplo si escrimbimos:
+El REPL (siglas del inglés Read Eval Print Loop) es una consola que ejecuta cada expresión en JavaScript que le demos y devuelve el resultado de la expresión inmediatamente. Por ejemplo si escribimos:
 
 
 ```
@@ -133,7 +133,7 @@ Nuestro módulo no hace nada a parte de definir una función y exportarla, pero 
 
 Node trae una serie de módulos básicos que podemos utilizar a modo de [librería estandard](https://nodejs.org/dist/latest-v6.x/docs/api/) Pero uno de los puntos fuertes de Node.js es el haberse mantenido flexible gracias a tener una librería estandar muy pequeña.
 
-Ese es también el punto fuerte de npm. [npm](https://www.npmjs.com/) es un repositorio centraliazdo de módulos para Node.js En la comunidad de Node.js y npm la filosofía también es la de módulos pequeños que hagan una sola cosa, parecido a lo que ocurre con los comandos de Unix, esto hace el lenguaje más fácil de componer, reordenar y modificar y tiene un gran potencial. Ahora mismo npm es el repositorio con mayor número de módulos de código abierto de todos los lenguajes y su número sigue creciendo a mayor velocidad que todos los demás.
+Ese es también el punto fuerte de npm. [npm](https://www.npmjs.com/) es un repositorio centraliazdo de módulos para Node.js En la comunidad de Node.js y npm la filosofía también es la de módulos pequeños que hagan una sola cosa, parecido a lo que ocurre con los comandos de Unix. Esto hace el lenguaje más fácil de componer, reordenar y modificar y tiene un gran potencial. Ahora mismo npm es el repositorio con mayor número de módulos de código abierto de todos los lenguajes y su número sigue creciendo a mayor velocidad que todos los demás.
 
 npm se instala en nuestro sistema junto con Node.js y podemos usarlo para instalar cualquier paquete de forma global o local a nuestro proyecto. Un proyecto es simplemente una carpeta donde hemos ejecutado `npm init`:
 
