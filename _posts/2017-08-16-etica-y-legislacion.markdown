@@ -1,3 +1,15 @@
+---
+published: false
+title: Soluciones exámenes ética y legislación UNED
+description: Resúmenes realizados sobre las preguntas de exámenes de los últimos años.
+layout: post
+tags: [UNED] 
+---
+
+Soluciones a los exámenes de Ética y Legislación de la UNED entre 2015 y 2017. **Estas soluciones no están comprobadas ni verificadas por ningún profesor**. Las respuestas son el resultado de leer el texto de referencia (Derecho e Informática) y tratar de sintetizar una respuesta para cada pregunta. Para una información más precisa y detallada es mejor leer el libro original. Simplemente estoy estudiando la asignatura y pensé que podría compartir mis esfuerzos por si a alguien le sirven en el futuro. 
+
+Hay algunos temas de la asignatura, sobre todo los referentes a derechos de autor y delitos informáticos, que me parecen muy interesantes y trataré de ampliar en un futuro. Si quieres contribuir con más respuestas a exámenes o correcciones sobre el texto puedes hacerlo aquí.
+
 # Examen Primera semana de Julio de 2017
 
 ## 1. El uso de la informática como factor de estandarización. (Tema 1 pag. 51)
@@ -30,6 +42,8 @@ La Directiva 2000/31/CE exige que deban ser identificables como tales, y en nomb
 envío indiscriminado de comunicaciones comerciales a destinatarios que no las hayan solicitado puede
 conllevar responsabilidades a la persona en nombre de la que se envían. Las ofertas promocionales (descuentos, premios, regalos, concursos o juegos) Cuando estén permitidas por el Estado miembro del establecimiento, deberán ser claramente identificables, además de ser accesibles, inequívocas y claras las condiciones para acceder a ellas.
 
+Según el artículo 13 de la Directiva 2002/58/CE las comunicaciones comerciales no solicitadas no están permitidas, con lo que se requiere que hayan sido consentidas por el destinatario, salvo cuando el prestador de servicio envíe las comunicaciones con posterioridad a una relación contractual (en la cual el cliente haya proporcionado la dirección de correo electrónico) siempre en relación a productos similares y con la posibilidad de rechazar futuras comunicaciones.
+
 La ley española distingue 3 tipos de comunicaciones comerciales: las de estricta naturaleza publicitaria –a las
 que exige que figure al inicio del mensaje la expresión “publicidad”-, las ofertas promocionales – que incluyen
 descuentos, premios y regalos-, y los concursos o juegos promocionales.
@@ -39,15 +53,20 @@ identidad del remitente, así como las que inciten a visitar páginas que contra
 
 El destinatario podrá revocar en cualquier momento su consentimiento a recibir comunicaciones comerciales
 con la simple notificación de su voluntad mediante procedimientos simples y gratuitos.
-Se consideran “infracciones graves”:
+Se consideran “infracciones graves” (30001 - 150000 €):
 
-• El envío masivo de comunicaciones comerciales por e-mail u otro medio electrónico, o el envío, en el
+- El envío masivo de comunicaciones comerciales por e-mail u otro medio electrónico, o el envío, en el
 plazo de un año, de más de 3 a un mismo destinatario, si no se cumplen los requisitos.
-• El incumplimiento de la obligación de incorporar procedimientos para revocar el consentimiento
+- El incumplimiento de la obligación de incorporar procedimientos para revocar el consentimiento
 prestado.
 
-## 4. Protección de los programas de ordenador en el Derecho español: contenido de los derechos de explotación (Tema 9)
+## 4. Protección de los programas de ordenador en el Derecho español: contenido de los derechos de explotación (Tema 9 - pag. 308)
 
+Se exige permiso del autor para el uso del software, incluso cuando se trate de reproducción para uso personal. Esta autorización se materializa en las Licencias de Uso.
+
+Solo el titular de los derechos está facultado para autorizar o prohibir la traducción o adaptación del programa de ordenador a otro lenguaje de programación, así como la realización de cualquier proceso que provoque una alteración sustancial del resultado logrado por el programador originario.
+
+La distribución de un programa informático abarca la puesta en circulación o comercialización del original o copia en un soporte tangible, mediante venta, alquiler, o cualquier otro acto de disposición.
 
 # Examen Segunda semana de Julio de 2017
 

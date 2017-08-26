@@ -1,6 +1,7 @@
 ---
 published: true
 title: Introducción a programación funcional con JavaScript
+description: Introducción a conceptos de programación funcional en JavaScript. Cambia de paradigma sin cambiar de lenguaje.
 layout: post
 tags: [programación funcional, javascript] 
 ---
@@ -13,11 +14,11 @@ Los lenguajes funcionales siempre han estado ahí. Desde el comienzo de la infor
 
 Hoy en día todos los grandes lenguajes van introduciendo conceptos de la programación funcional, he incluso hemos visto aparecer alternativas híbridas de todo tipo: Scala y Clojure para Java, F# para C#, o las librerías de Reactive Programming para varias plataformas... Además, lenguajes como Erlang/Elixir o Elm están demostrando que la programación funcionar se puede aplicar con mucho éxito a ciertas aplicaciones y hacer el desarrollo más fiable y fácil de mantener.
 
-JavaScript, desde su concepción es un lenguage funcional y las ideas principales que le dan forma, las clausuras, las funciones como valores, la delegación de prototipos y la declaración de objetos sintácticamente son ideas tomadas de los lenguages Scheme y Self. Por eso JavaScript se adapta bastante bien a la programación funcional. Además, ES6 añade algunas nuevas funcionalidades muy interesantes para el desarrollo funcional como la notación que expande elementos iterables con `...` o las funciones con la flecha gruesa `=>`
+JavaScript, desde su concepción es un lenguaje funcional y las ideas principales que le dan forma, las clausuras, las funciones como valores, la delegación de prototipos y la declaración de objetos sintácticamente son ideas tomadas de los lenguajes Scheme y Self. Por eso JavaScript se adapta bastante bien a la programación funcional. Además, ES6 añade algunas nuevas funcionalidades muy interesantes para el desarrollo funcional como la notación que expande elementos iterables con `...` o las funciones con la flecha gruesa `=>`
 
-Si eres desarrollador de JavaScript y has visto algún ejemplo de código usando estas nuevas herramientas puede que te resultase totalmente extraterrestre, es casi como si fuera un lenguage diferente, pero el lenguage es el mismo, sólo cambian algunas palabras y lo que es más importante, la forma de escribirlo y leerlo.
+Si eres desarrollador de JavaScript y has visto algún ejemplo de código usando estas nuevas herramientas puede que te resultase totalmente extraterrestre, es casi como si fuera un lenguaje diferente, pero el lenguaje es el mismo, sólo cambian algunas palabras y lo que es más importante, la forma de escribirlo y leerlo.
 
-Voy a explicar algunos patrones útiles y ejemplos prácticos de como utilizar la programación funcional para mejorar la legibilidad y la fiabilidad de nuestro código en JavaScript sin necesidad de aprender un nuevo lenguaje o cambiar nuestro flujo de trabajo. Puedes introducir este código desde ya en tus proyectos y no tendrás que cambiar nada. Bueno, salvo si aun no usas ES6, cosa que te recomiendo desde ya, uses o no un estilo funcional en tu código.
+Voy a explicar algunos patrones útiles y ejemplos prácticos de como utilizar la programación funcional para mejorar la legibilidad y la fiabilidad de nuestro código en JavaScript sin necesidad de aprender un nuevo lenguaje o cambiar nuestro flujo de trabajo. Puedes introducir este código desde YA en tus proyectos y no tendrás que cambiar nada. Bueno, salvo si aun no usas ES6, cosa que te recomiendo desde ya, uses o no un estilo funcional en tu código.
 
 # ¿Qué es la programación funcional?
 
@@ -29,7 +30,7 @@ Se puede entender muy fácilmente lo que es una función pura si se sabe lo que 
 
 **Efectos colaterales** son todas aquellas modificaciones que haga una función que estén fuera de su ámbito. Como modificar o crear una variable global, escribir algo a stdout, mostrar un gráfico en pantalla, escribir un fichero en el disco duro, acceder a una base de datos... Cualquier cosa que no sea operar sobre sus parámetros y variables locales es un efecto colateral.
 
-Ahora podemos definir muy fácilmente una *Función pura* como aquella que no produce ningún efecto colateral. Las funciones puras son fáciles de usar, de testar y de leer y tienen la ventaja de que siempre se van a comportar de la misma forma al darle los mismos parámetros. no dependen de ningun estado externo o configuración.
+Ahora podemos definir muy fácilmente una *Función pura* como aquella que no produce ningún efecto colateral. Las funciones puras son fáciles de usar, de testar y de leer y tienen la ventaja de que siempre van a producir la misma salida al darle los mismos parámetros. No dependen de ningun estado externo o configuración.
 
 Claro está, solo con funciones puras no se puede construir un programa. Sería un programa sin ningún tipo de feedback, ni si quiera podríamos saber si se ha ejecutado correctamente o no. Por eso hablo de separar las funciones puras de las que no lo son.
 
