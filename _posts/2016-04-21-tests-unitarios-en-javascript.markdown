@@ -1,6 +1,7 @@
 ---
 published: true
 title: Tests unitarios en JavaScript con Jasmine
+description: Cómo empezar a escribir tests unitarios en JavaScript.
 layout: post
 tags: [javascript]
 ---

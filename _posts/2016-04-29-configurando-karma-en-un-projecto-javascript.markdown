@@ -1,6 +1,7 @@
 ---
 published: true
 title: Configurando Karma en un proyecto JavaScript
+description: Cómo ejecutar tus tests cada vez que guardas un cambio. 
 layout: post
 tags: [javascript]
 ---

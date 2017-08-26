@@ -18,9 +18,9 @@ Comunicaciones comerciales: “son todas las formas de comunicación destinadas 
 indirectamente bienes, servicios o la imagen de una empresa, organización o persona con una actividad
 comercial, industrial, artesanal o de profesiones reguladas”.
 
-No se consideran comunicaciones comerciales: los datos que permiten acceder directamente a la actividad
-de dicha empresa, organización o persona y; concretamente el nombre de dominio o la dirección de correoelectrónico; y las comunicaciones relativas a los bienes, servicios o a la imagen de dicha empresa, elaboradas
-de forma independiente de ella, en particular cuando estos se realizan sin contrapartida económica.
+No se consideran comunicaciones comerciales: "los datos que permiten acceder directamente a la actividad
+de dicha empresa, organización o persona y, concretamente el nombre de dominio o la dirección de correo electrónico [...] y las comunicaciones relativas a los bienes, servicios o a la imagen de dicha empresa, elaboradas
+de forma independiente de ella, en particular cuando estos se realizan sin contrapartida económica."
 
 Conclusión: conjunto de actividades variadas que el prestador de servicios –profesional- realiza durante la
 fase precontractual de cualquier hipotético futuro contrato con el fin de alcanzar su conclusión: publicidad,
@@ -28,9 +28,7 @@ descuentos, premios, regalos, ofertas, concursos, invitaciones,...
 
 La Directiva 2000/31/CE exige que deban ser identificables como tales, y en nombre de quien se realizan. El
 envío indiscriminado de comunicaciones comerciales a destinatarios que no las hayan solicitado puede
-conllevar responsabilidades a la persona en nombre de la que se envían. Cuando estén permitidas por el
-Estado miembro del establecimiento, deberán ser claramente identificables, accesibles, inequívocas y de
-claras condiciones.
+conllevar responsabilidades a la persona en nombre de la que se envían. Las ofertas promocionales (descuentos, premios, regalos, concursos o juegos) Cuando estén permitidas por el Estado miembro del establecimiento, deberán ser claramente identificables, además de ser accesibles, inequívocas y claras las condiciones para acceder a ellas.
 
 La ley española distingue 3 tipos de comunicaciones comerciales: las de estricta naturaleza publicitaria –a las
 que exige que figure al inicio del mensaje la expresión “publicidad”-, las ofertas promocionales – que incluyen

@@ -1,6 +1,7 @@
 ---
 published: true
 title: Función split en JavaScript
+description: Explicación y ejemplos de código.
 layout: post
 tags: [javascript] 
 ---

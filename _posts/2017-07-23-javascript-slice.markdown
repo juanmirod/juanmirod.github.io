@@ -1,6 +1,7 @@
 ---
 published: true
 title: Función slice en JavaScript
+description: Definición y ejemplos de código.
 layout: post
 tags: [javascript] 
 ---

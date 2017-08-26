@@ -1,6 +1,7 @@
 ---
 published: true
 title: Promesas en Javascript
+description: ¿Qué es una promesa? Ejemplos de código, buenas prácticas y antipatrones.
 layout: post
 tags: [javascript]
 ---

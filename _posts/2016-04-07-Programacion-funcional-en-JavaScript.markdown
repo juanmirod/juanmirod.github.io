@@ -1,6 +1,7 @@
 ---
 published: false
 title: Programación Funcional en Javascript
+description: Introducción a conceptos de programación funcional en JavaScript. Cambia de paradigma sin cambiar de lenguaje.
 layout: post
 tags: [javascript, programación funcional]
 ---
