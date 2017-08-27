@@ -110,18 +110,28 @@ En la práctica:
 - Si la oferta se hizo previamente y las partes se encuentran después el caso es el mismo solo que el lugar de nacimiento es el lugar donde se realizó la oferta.
 - Si las partes están temporal, pero no geográficamente presentes, el momento es el momento en el que se conoce la aceptación, el lugar de nacimiento del contrato será el lugar donde se realizó la oferta, que no tiene por qué coincidir con el de aceptación del contrato (móvil, oferta previa en el tiempo a aceptación)
 
-## 4. Delitos contra la propiedad intelectual (Tema 10)
+## 4. Delitos contra la propiedad intelectual (Tema 10 pag 329)
+
+Con carácter general, el Derecho penal español protege la propiedad intelectual (PI) al sancionar a quien _"con ánimo de lucro y en perjuicio de tercero reproduzca, plagie, distribuya o comunique todo o en parte, una obra literaria, artística, científica, o su trasformación, interpretación o ejecución artística fijada en cualquier tipo de soporte o comunicada a través de cualquier medio, sin la autorizaci´on de los titulares de los correspondientes derechos de la propiedad intelectual o de sus cesionarios."_ (art 270.1 CP)
+
+El Derecho español también considera los programas de ordenador como creaciones susceptibles de ser protegidos por el derecho de PI. Son objeto de protección penal tanto el _"programa fuente"_ como el _"programa objeto"_, la documentación preparatoria, la documentación técnica y los manuales de uso, así como las versiones sucesivas del programa y los programas derivados. Quedan excluidas las ideas y principios básicos y aquellos programas creados con el fin de ocasionar efectos nocivos a un sistema informático.
+
+La regulación del artículo 270.3 CP amplía esta protección, castigando la fabricación, importación, puesta en circulación o posesión de _"cualquier medio específicamente destinado a facilitar la supresión no autorizada o la neutralización  de cualquier dispositivo técnico que se haya utilizado para proteger programas de ordenador"_ No pudiendo aplicarse a programas que además de para este fin, tengan otras utilidades, como la compresión o descompresión o tratado de formatos especiales.
+
+Cuando existe condena por delito contra la PI, se podrá decretar la publicación de la sentencia, a costa del infrator, en un periódico oficial (BOE, BOCAM...).
 
 
 # Primera semana Julio 2016
 
 ## 1. El fomento institucional del uso de internet: la discutida necesidad de una regulación especial (Tema 1)
 
+
+
 ## 2. El documento de identidad electrónico: regulación, características y utilidad (Tema 4)
 
 ## 3. La prueba de los contratos concluidos en internet con forma electrónica: La transposición en España de la Directiva sobre firma electrónica (Tema 6)
 
-## 4. La protección de los programas de ordenador en el Derecho español: Límites a los derechos de explotación (Tema 9)
+## 4. La protección de los programas de ordenador en el Derecho español: Límites a los derechos de explotación (Tema 9 pag 309)
 
 
 # Segunda semana Julio 2016
