@@ -6,9 +6,11 @@ layout: post
 tags: [UNED] 
 ---
 
-Soluciones a los exámenes de Ética y Legislación de la UNED entre 2015 y 2017. **Estas soluciones no están comprobadas ni verificadas por ningún profesor**. Las respuestas son el resultado de leer el texto de referencia (Derecho e Informática) y tratar de sintetizar una respuesta para cada pregunta. Para una información más precisa y detallada es mejor leer el libro original. Simplemente estoy estudiando la asignatura y pensé que podría compartir mis esfuerzos por si a alguien le sirven en el futuro. 
+Soluciones a los exámenes de Ética y Legislación de la UNED entre 2015 y 2017. **Estas soluciones no están comprobadas ni verificadas por ningún profesor**. Las respuestas son el resultado de leer el texto de referencia (Derecho e Informática) y tratar de sintetizar una respuesta para cada pregunta. Para una información más precisa y detallada es mejor leer el libro original. Simplemente estoy estudiando la asignatura y pensé que podría compartir mi trabajo por si a alguien le sirven en el futuro. 
 
-Hay algunos temas de la asignatura, sobre todo los referentes a derechos de autor y delitos informáticos, que me parecen muy interesantes y trataré de ampliar en un futuro. Si quieres contribuir con más respuestas a exámenes o correcciones sobre el texto puedes hacerlo aquí.
+Hay algunos temas de la asignatura, sobre todo los referentes a derechos de autor y delitos informáticos, que me parecen muy interesantes y trataré de ampliar en un futuro en un lenguaje más llano, ya que entiendo que estos resúmenes no son útiles si no es para el estudiar la asignatura por ser demasiado específicos y carecer de contexto. 
+
+Si quieres contribuir con más respuestas a exámenes o correcciones sobre el texto puedes hacerlo aquí.
 
 # Examen Primera semana de Julio de 2017
 
@@ -110,7 +112,7 @@ En la práctica:
 - Si la oferta se hizo previamente y las partes se encuentran después el caso es el mismo solo que el lugar de nacimiento es el lugar donde se realizó la oferta.
 - Si las partes están temporal, pero no geográficamente presentes, el momento es el momento en el que se conoce la aceptación, el lugar de nacimiento del contrato será el lugar donde se realizó la oferta, que no tiene por qué coincidir con el de aceptación del contrato (móvil, oferta previa en el tiempo a aceptación)
 
-## 4. Delitos contra la propiedad intelectual (Tema 10 pag 329)
+## 4. <a name="delitosPI"></a>Delitos contra la propiedad intelectual (Tema 10 pag 329)
 
 Con carácter general, el Derecho penal español protege la propiedad intelectual (PI) al sancionar a quien _"con ánimo de lucro y en perjuicio de tercero reproduzca, plagie, distribuya o comunique todo o en parte, una obra literaria, artística, científica, o su trasformación, interpretación o ejecución artística fijada en cualquier tipo de soporte o comunicada a través de cualquier medio, sin la autorizaci´on de los titulares de los correspondientes derechos de la propiedad intelectual o de sus cesionarios."_ (art 270.1 CP)
 
@@ -123,26 +125,90 @@ Cuando existe condena por delito contra la PI, se podrá decretar la publicació
 
 # Primera semana Julio 2016
 
-## 1. El fomento institucional del uso de internet: la discutida necesidad de una regulación especial (Tema 1)
+## 1. <a name="discutida"></a>El fomento institucional del uso de internet: la discutida necesidad de una regulación especial (Tema 1)
+
+El derecho contractual sobre los contratos realizados a través de internet no debe serun cuerpo diferente al precedente derecho contractual, pero sí hay que tener en cuenta las características específicas del medio técnico empleado, esto es, el caracter interactivo, la desmaterialización e internacionalización, etc. Para ello se proponen dos vertientes:
+
+- La regulación desde el órgano legislativo nacional o supra-nacional.
+- La autoregulación, o creación de contratos que tenga en cuenta estas características especiales en cada caso. Esto se puede dar en dos modalidades: 
+    + Los pactos de las partes por los cuales determinan el derecho aplicable al contrato
+    + Los determinados Códigos de conducta por los que el profesional se compromete unilateralmente a conceder determinadas prerrogativas.
+
+La UE, mediante la Directiva 2000/31/CE opta por la regulación de las características especiales del contrato en internet ya que, dado el carácter internacional inherente a éste, la autoregulación llevaría a un núcleo jurídico difuminado. Aunque la autoregulación puede seguir llevándose a cabo como un añadido a esta regulación básica de la UE.
+
+## 2. <a name="DNIE"></a>El documento de identidad electrónico: regulación, características y utilidad (Tema 4 pag 167)
+
+Se define con las funciones que debe cumplir en la Ley 59/2003 de firma electrónica: _"el DNI que acredita electrónicamente la identidad personal de su titular y permite la firma electrónica de documentos."_ y también dispone que _"todas las personas físicas o jurídicas, públicas o privadas, reconocerán la eficacia del DNO electrónico para acreditar la identidad y los demás datos personales del titular que consten en el mismo, y para acreditar la identidad del firmante y la integridad de los documentos firmados con los dispositivos de firma electrónica en él incluidos"_.
+
+De ello se entiende que la la firma electrónica debe ser avanzada y reconocida, permitiendo en un contrato electrónico identificar a las partes y garantizar la integridad del contenido del documento informático en el que se recoge la oferta y/o aceptación contractual. Aunque no resuelve directamente los problemas asociados al pago mediante tarjeta bancaria.
+
+Su utilidad puede verse en:
+
+- Tener acceso a determinadas informaciones recogidas en webs.
+- Conclusión de contratos via internet
+- Relaciones de los administrados con las administraciones públicas.
+
+En cuanto a características necesarias:
+
+- Reconocido en el mayor ámbito territorial posible, por el momento la UE.
+- De caracter público (en España estaría vinculado al Ministerior de Ciencia y Tecnología y/o al Ministerio de Interior)
+- Gratuito o de cuantía no excesivamente gravosa para el partícular.
+
+Su funcionamiento se asienta en el uso de dos claves asimétricas, la pública, alojada en un registro del ministerio que corresponda y la privada, sólo conocida por el firmante, que le permitirá concluir contratos con ella de forma que el prestador de servicio pueda verificar el firmante mediante la clave pública.
 
 
+## 3. <a name="firmaElectronicaEs"></a>La prueba de los contratos concluidos en internet con firma electrónica: La transposición en España de la Directiva sobre firma electrónica (Tema 6 pag 249)
 
-## 2. El documento de identidad electrónico: regulación, características y utilidad (Tema 4)
+Tanto la Ley española como la Directiva comunitaria parten de la distinción de dos modelos:
 
-## 3. La prueba de los contratos concluidos en internet con forma electrónica: La transposición en España de la Directiva sobre firma electrónica (Tema 6)
+- La firma electrónica simple, o genérica: _"conjunto de datos en forma electrónica, consignados junto a otros o asociados con ellos, que puede ser utilizados como medio de identificación del firmante"_
 
-## 4. La protección de los programas de ordenador en el Derecho español: Límites a los derechos de explotación (Tema 9 pag 309)
+- La firma electrónica avanzada: _"firma electrónica que permite identificar al firmante y detectar cualquier cambio ulterior en los datos firmados, que está vinculada al firmante de manera única y a los datos a que se refiere y que ha sido creada por medios que el firmante puede mantener bajo su exclusivo control."_ 
 
+La primera no tiene la misma validez que la firma manuscrita, pero la segunda sí, siempre que esté basada en un certificado reconocido y haya sido producida por un dispositivo seguro de creación de firma (firma avanzada y reconocida)
+
+## 4. <a name="limitesExplotacion"></a>La protección de los programas de ordenador en el Derecho español: Límites a los derechos de explotación (Tema 9 pag 309)
+
+El artículo 100 de la LPI establece  las actividades que pueden llevarse a cabo sin necesidad de solicitar autorización al autor o al titular de los derechos:
+
+- Corrección de errores y la transformación del programa podrá realizarse siempre que se requiera para lograr su correcta utilización de cara a lograr los fines previstos en la licencia.
+
+- Copia de seguridad, se reconoce sólo al usuario legítimo y solo si es necesaria para su uso.
+
+- La ingenieria inversa, el usuario legítimo está autorizado a verificar las ideas implícitas del programa, peroo no implica que se pueda hacer uso de estas ideas en beneficio propio o ajeno.
+
+- Las versiones sucesivas están permitidas siempre que tengan originalidad suficiente como para considerarse obra derivada: traducciones, adaptaciones, revisiones, actualizaciones y anotaciones, compendios, resúmenes, extractos y arreglos musicales.
+
+- Descompilacion e inreoperabilidad siempre que sea necesaria, se realice solo para obtener interoperabilidad y no para la producción o comercialización de programas semejantes.
 
 # Segunda semana Julio 2016
 
-## 1. Criterios clasificatorios de los contratos celebrados en la red: de acuerdo a la forma en que se recoge el contrato y su fuerza probatoria (Tema 3)
+## 1. <a name="clasificacionForma"></a>Criterios clasificatorios de los contratos celebrados en la red: de acuerdo a la forma en que se recoge el contrato y su fuerza probatoria (Tema 3 pag 136)
 
-## 2. El documento de identidad electrónico: regulación, características y utilidad (Tema 4)
+Los contratos concluidos desde la red, es decir los contratos digitales, los perfeccionados mediante clicado o los concluiods mediante intercambio de mensajes de correo electrónico deben integrarse en la clasificación clásica, a saber:
 
-## 3. Síntesis de los específicos regímenes jurídicos en atención a las partes contratantes: Consideraciones comunes sobre la normativa de comercio electrónico. (Tema 6)
+- Contratos que no requieren de una forma determinada para su existencia
+- Contratos que vienen recogidos en una forma determinadad solo a efectos de prueba (ad probationem)
+- Aquellos que requieren necesariamente para su existencia de una determinada forma.
 
-## 4. Delitos contra la propiedad intelectual (Tema 10)
+## 2. El documento de identidad electrónico: regulación, características y utilidad. [ver arriba](#DNIE)
+
+## 3. <a name="comunesComercioElectronico"></a>Síntesis de los específicos regímenes jurídicos en atención a las partes contratantes: Consideraciones comunes sobre la normativa de comercio electrónico. (Tema 6 pag 254)
+
+- No se aplica a todas las relaciones contractuales que pueden tener lugar desde la red. Por ejemplo no se aplica a contratos concluidos mediante el intercambio de correos electrónicos o aquellos en los que solo la aceptación ha sido tramitada por Internet.
+
+- Regula más cuestiones que las estrictamente vinculadas a la contratación en red. Pudiendo aplicarse a transmisiones de información no remuneradas ajenas al fenómeno contractual.
+
+- Está principalmente dirigida a regular determinados aspectos de los servicios publicitados u ofrecidos por prestadores de servicio profesionales.
+
+- En materia de contratación, fija su atención en las relaciones que pueden tener lugar en una página web
+
+- Las actuaciones no remuneradas se incluyen para exigir la identificación segura del prestador de servicio en caso de informaciones publicitarias no solicitadas, ofertas en masa, la tutela del correcto respeto de los derechos de contenido económico derivados de la PI y la lucha contra el anonimato en posibles actos ilícitos.
+
+- Pueden distinguirse tres tipos de regímenes jurídicos aplicables a los contratos celebrados en Internet: contratación con consumidores, contratación entre profesionales y contratación entre particulares. Además, se tendrá en cuenta, dentro de cada uno de ellos, el tipo de instrumento o sistema: correo electrónico, página web, chat o videoconferencia.
+
+
+## 4. Delitos contra la propiedad intelectual. [ver arriba](#delitosPI)
 
 
 # Septiembre (Ord) 2016
@@ -158,37 +224,39 @@ Cuando existe condena por delito contra la PI, se podrá decretar la publicació
 
 # Primera semana Julio 2015
 
-## 1. Criterios clasificatorios de los contrataos celebrados en la red: de acuerdo a la forma en que se recoge el contrato y su fuerza probatoria (Tema 3)
+## 1. Criterios clasificatorios de los contrataos celebrados en la red: de acuerdo a la forma en que se recoge el contrato y su fuerza probatoria [ver arriba](#clasificacionForma)
 
-## 2. El documento de identidad electrónico: regulación, características y utilidad (Tema 4)
+## 2. El documento de identidad electrónico: regulación, características y utilidad [ver arriba](DNIE)
 
-## 3. Síntesis de los específicos regímenes jurídicos en atención a las partes contratantes: Consideraciones comunes sobre la normativa de comercio electrónico (Tema 6)
+## 3. Síntesis de los específicos regímenes jurídicos en atención a las partes contratantes: Consideraciones comunes sobre la normativa de comercio electrónico [ver arriba](#comunesComercioElectronico)
 
-## 4. Delitos contra la propiedad intelectual (Tema 10)
+## 4. Delitos contra la propiedad intelectual [ver arriba](#delitosPI)
 
 # Segunda semana Julio 2015
 
-## 1. El fomento institucional del uso de internet: La discutida... (Tema 1)
+## 1. El fomento institucional del uso de internet: La discutida... [ver arriba](#discutida)
 
-## 2. El DNI... (Tema 4)
+## 2. El documento de identidad electrónico: regulación, características y utilidad [ver arriba](DNIE)
 
-## 3. La prueba de los contratos concluidos en Internet con firma electrónica: la transposición en España en la Directiva sobre forma electrónica (Tema 6)
+## 3. La prueba de los contratos concluidos en Internet con firma electrónica: la transposición en España en la Directiva sobre forma electrónica [ver arriba](#firmaElectronicaEs)
 
-## 4. La protección de los programas de ordenador en el Derecho Español: Límites a los derechos de explotación (Tema 9)
+## 4. La protección de los programas de ordenador en el Derecho Español: Límites a los derechos de explotación [ver arriba](#limitesExplotacion)
+
 
 # Septiembre (Ord.) 2015
 
 ## 1. El fomento institucional... (Tema 1)
 
-## 2. El DNI... (Tema 4)
+## 2. El documento de identidad electrónico: regulación, características y utilidad [ver arriba](DNIE)
 
 ## 3. La prueba de los contratos... (Tema 6)
 
 ## 4. La protección de los programas... (Tema 9)
 
+
 # Primera Semana Julio 2014
 
-## 1. Debilidades que plantea esta dorma de contratación: internacionalidad (Tema 1)
+## 1. Debilidades que plantea esta forma de contratación: internacionalidad (Tema 1)
 
 ## 2. Las formas electrónicas: regulación, tipos y funciones de contratación (Tema 4)
 
@@ -196,7 +264,8 @@ Cuando existe condena por delito contra la PI, se podrá decretar la publicació
 
 ## 4. La libertad informática (Tema 7)
 
-# Segunda semana Julio 2015
+
+# Segunda semana Julio 2014
 
 ## 1. Debilidades que plantea esta  forma de contratación: carácter transversal e interdisciplinariedad jurídica ( Tema 1)
 
@@ -206,7 +275,8 @@ Cuando existe condena por delito contra la PI, se podrá decretar la publicació
 
 ## 4. La Ley Orgánica 15/1999 de Protección de Datos de Carácter Personal: Derechos de los afectados (Tema 8)
 
-# Septiembre Ordinaria 2015
+
+# Septiembre Ordinaria 2014
 
 ## 1. Comercio electrónico e Internet (Tema 2)
 
