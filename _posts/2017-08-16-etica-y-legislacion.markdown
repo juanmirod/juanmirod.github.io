@@ -114,7 +114,7 @@ En la práctica:
 
 ## 4. <a name="delitosPI"></a>Delitos contra la propiedad intelectual (Tema 10 pag 329)
 
-Con carácter general, el Derecho penal español protege la propiedad intelectual (PI) al sancionar a quien _"con ánimo de lucro y en perjuicio de tercero reproduzca, plagie, distribuya o comunique todo o en parte, una obra literaria, artística, científica, o su trasformación, interpretación o ejecución artística fijada en cualquier tipo de soporte o comunicada a través de cualquier medio, sin la autorizaci´on de los titulares de los correspondientes derechos de la propiedad intelectual o de sus cesionarios."_ (art 270.1 CP)
+Con carácter general, el Derecho penal español protege la propiedad intelectual (PI) al sancionar a quien _"con ánimo de lucro y en perjuicio de tercero reproduzca, plagie, distribuya o comunique todo o en parte, una obra literaria, artística, científica, o su trasformación, interpretación o ejecución artística fijada en cualquier tipo de soporte o comunicada a través de cualquier medio, sin la autorización de los titulares de los correspondientes derechos de la propiedad intelectual o de sus cesionarios."_ (art 270.1 CP)
 
 El Derecho español también considera los programas de ordenador como creaciones susceptibles de ser protegidos por el derecho de PI. Son objeto de protección penal tanto el _"programa fuente"_ como el _"programa objeto"_, la documentación preparatoria, la documentación técnica y los manuales de uso, así como las versiones sucesivas del programa y los programas derivados. Quedan excluidas las ideas y principios básicos y aquellos programas creados con el fin de ocasionar efectos nocivos a un sistema informático.
 
@@ -213,30 +213,64 @@ Los contratos concluidos desde la red, es decir los contratos digitales, los per
 
 # Septiembre (Ord) 2016
 
-## 1. Beneficios que aporta internet a la contratación: Reducción del coste de los productos y servicios y su precio de adquisición. (Tema 1)
+## 1. Beneficios que aporta Internet a la contratación: Reducción del coste de los productos y servicios y su precio de adquisición. (Tema 1 pag 42)
 
-## 2. El criterio subjetivo de determinación del régimen jurídico aplicable al contrato. (Tema 4)
+La contratación a través de Internet debería facilitar la reducción de precios al eliminar el costo de los intermediarios comerciales, aunque incluye costes adicionales de nuevos intermediarios (publicidad, infraestructura)
+Los costes de distribución desaparecen cuando el producto o servicio es de naturaleza inmaretial (p. ej. software) Pero no cuando es un producto material que deberá ser remitido al comprador.
+También se reducen costes en comunicaciones tradicionales (fax, teléfono) con respecto a las digitales.
+Estos factores deberían abaratar el precio de los bienes y productos, pero en la práctica no siempre sucede así y los precios son equivalentes a los del comercio tradicional.
 
-## 3. Principios rectores en materia de protección de datos de caracter personal: La calidad de los datos. (Tema 8)
+## 2. El criterio subjetivo de determinación del régimen jurídico aplicable al contrato. (Tema 4 pag 139)
 
-## 4. Delitos contra el patrimonio y contra el orden económico: Estafas, defraudaciones y daños. (Tema 10)
+Las características de las partes van a determinar el régimen jurídico aplicable:
 
+- Una relacioń mercantil (B2B) Cuando las partes sean profesionales que intercambien dentro de su ámbito de actuación propio.
+
+- Una relación civil (C2C P2P) cuando los sujetos que perfeccionan el contrato lo hacen en el ámbito de sus relaciones particulares, careciendo ambos de la condición de profesional.
+
+- Una relación de consumo (B2C) Cuando una de las partes actua como proveedor profesional y la otra actúa con un propósito ajeno a su actividad profesional.
+
+También han de tenerse en cuenta Las relaciones entre empresas y las administraciones públicas (B2A), los ciudadanos y las administraciones (C2A) y las relaciones entre las empresas y sus empleados (B2E)
+
+Es fundamental resaltar la problemática internacionalización que tiene lugar en el fenómeno contratual por Internet, que permite a los consumidores concluir contratos de carácter internacional, lo cual quedaba antes reservado a administraciones y empresas.
+
+## 3. Principios rectores en materia de protección de datos de caracter personal: La calidad de los datos. (Tema 8 pag 285)
+
+_principio de calidad_: los datos deben ser adecuados y pertinentes en relación con el ámbito y finalidad para el que se han obtenido. Esto engloba:
+
+    - _Principio de exactitud_ los datos han de ser precisos y mantenerse actualizados
+    
+    - _Principio de finalidad_ impide que los datos sean tratados con fines diferentes o incompatibles con aquellos para los que se obtuvieron y deberán ser destruídos si dejan de ser pertinentes o necesarios.
+    
+    - _Principio de lealtad_ Para la recogida de datos sólo podran utilizarse medios legales
+
+## 4. Delitos contra el patrimonio y contra el orden económico: Estafas, defraudaciones y daños. (Tema 10 pag 327)
+
+Podemos llamar fraudes o estafas informáticas tanto a las realizadas a través de manipulaciones informáticas como a la fabricación de programas con esos fines.
+
+La estafa mediante manipulación informática (phising) señala como reos de estafa a "quienes con ánimo de lucro, y valiéndose de alguna manipulación informática o artificio semejante consigan la transferencia no consentida de cualquier activo patrimonial en perjuicio de tercero" También se castiga la difusión o tenencia de programas que permitan la comisión de estafas, aunque no se hayan utilizado.
+Las defraudaciones de fluido eléctrico y análogas sancionan al "que hiciere uso de cualquier equipo temrinal de telecomunicación, sin consentimiento de su titular, ocasionando a este un perjuicio"
+
+En cuanto a la regulación del Delito de Daños, se recogen dos modalidades:
+- Cusar daños a programas informáticos o documentos electrónicos mediante la destrucción o inutilización del soporte físico o lógico. Existiendo un tipo agravado cuando los daños son producidos mediante incendios, explosiones o otro medio de potencia destructiva.
+- Obstaculizar o interrumpir a través de diferentes medios, el funcionamiento de sistemas informáticos: el sabotaje informático. El borrado o modificación de los datos debe ser permanente.
 
 # Primera semana Julio 2015
 
 ## 1. Criterios clasificatorios de los contrataos celebrados en la red: de acuerdo a la forma en que se recoge el contrato y su fuerza probatoria [ver arriba](#clasificacionForma)
 
-## 2. El documento de identidad electrónico: regulación, características y utilidad [ver arriba](DNIE)
+## 2. El documento de identidad electrónico: regulación, características y utilidad [ver arriba](#DNIE)
 
 ## 3. Síntesis de los específicos regímenes jurídicos en atención a las partes contratantes: Consideraciones comunes sobre la normativa de comercio electrónico [ver arriba](#comunesComercioElectronico)
 
 ## 4. Delitos contra la propiedad intelectual [ver arriba](#delitosPI)
 
+
 # Segunda semana Julio 2015
 
 ## 1. El fomento institucional del uso de internet: La discutida... [ver arriba](#discutida)
 
-## 2. El documento de identidad electrónico: regulación, características y utilidad [ver arriba](DNIE)
+## 2. El documento de identidad electrónico: regulación, características y utilidad [ver arriba](#DNIE)
 
 ## 3. La prueba de los contratos concluidos en Internet con firma electrónica: la transposición en España en la Directiva sobre forma electrónica [ver arriba](#firmaElectronicaEs)
 
@@ -245,13 +279,13 @@ Los contratos concluidos desde la red, es decir los contratos digitales, los per
 
 # Septiembre (Ord.) 2015
 
-## 1. El fomento institucional... (Tema 1)
+## 1. El fomento institucional del uso de internet: La discutida... [ver arriba](#discutida)
 
-## 2. El documento de identidad electrónico: regulación, características y utilidad [ver arriba](DNIE)
+## 2. El documento de identidad electrónico: regulación, características y utilidad [ver arriba](#DNIE)
 
-## 3. La prueba de los contratos... (Tema 6)
+## 3. La prueba de los contratos concluidos en Internet con firma electrónica: la transposición en España en la Directiva sobre forma electrónica [ver arriba](#firmaElectronicaEs)
 
-## 4. La protección de los programas... (Tema 9)
+## 4. La protección de los programas de ordenador en el Derecho Español: Límites a los derechos de explotación [ver arriba](#limitesExplotacion)
 
 
 # Primera Semana Julio 2014
@@ -285,3 +319,26 @@ Los contratos concluidos desde la red, es decir los contratos digitales, los per
 ## 3. Principios rectores en materia de protección de datos de carácter personal: Principio de Información y el Consentimiento del interesado (Tema 8)
 
 ## 4. Las bases de datos y el derecho "sui generis": Objetivo de protección y Contenido del derecho "sui generis" (Tema 9)
+
+
+# Otros epígrafes:
+
+Otros resúmenes hechos estudiando el resto de epígrafes:
+
+### Principios rectores en materia de protección de datos de caracter personal: Principio de información: 
+
+Los titulares de los datos tienen derecho a saber quien va a realizar el tratamiento de los datos y con qué fines y deberán ser informados expresamente y de forma inequívoca de:
+    
+    - La existencia del fichero en el que los datos van a ser incorporados, la finalidad que se persigue y los destinatarios de la información
+
+    - si está obligado o no a facilitar los datos
+
+    - las consecuencias que se derivan de la obtención de los datos o de la negativa a facilitarlos
+
+    - la posibilidad de ejercer los derechos de acceso, rectificación, cancelación y oposición
+
+    - la identidad y dirección del responsable del tratamiento, o en su caso, de su representante
+
+### Principios rectores en materia de protección de datos de caracter personal: el consentimiento del interesado.
+
+El consentimiento del intersado es condición indispensable para que el tratamiento de datos de carácter personal sea lícito. En el caso de datos sensibles debe prestarse expresamente y por escrito. La legislación contempla excepciones para datos públicos recabados con intereses legítimos o para el ejercicio de las funciones de las Administraciones públicas
