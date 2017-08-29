@@ -104,7 +104,7 @@ El procedimiento de subasta electrónica combina elementos de la contratación m
 
 ## 3. Lugar de nacimiento del contrato en internet (Tema 5)
 
-El ordenamiento español situa el lugar de nacimiento del contrato en el lugar donde se hizo la oferta, considerándose el contrato se consudera concluido desde el momento en el que el ofertante tiene conocimiento de la aceptación del contrato aplicando la "buena fé" (teoría del conocimiento + teoría de la recepción).
+El ordenamiento español situa el lugar de nacimiento del contrato en el lugar donde se hizo la oferta, el contrato se considera concluido desde el momento en el que el ofertante tiene conocimiento de la aceptación del contrato aplicando la "buena fé" (teoría del conocimiento + teoría de la recepción).
 
 En la práctica:
 
