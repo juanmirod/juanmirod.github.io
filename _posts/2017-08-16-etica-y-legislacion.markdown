@@ -301,9 +301,16 @@ En cuanto a la regulación del Delito de Daños, se recogen dos modalidades:
 
 # Segunda semana Julio 2014
 
-## 1. Debilidades que plantea esta  forma de contratación: carácter transversal e interdisciplinariedad jurídica ( Tema 1)
+## 1. Debilidades que plantea esta  forma de contratación: carácter transversal e interdisciplinariedad jurídica (Tema 1 pag 49)
+
+En la contratación por Internet, am menudo resulta difícil deslindar las fronteras correspondientes al Derecho públic y privado, Derecho penal, Derecho fiscal, civil y/o mercantil.
+Desde una perspectiva territorial, pueden originarse dudas respecto a la aplicación del derecho comunitario, interno o internacional. Además, dentro del derecho privado, se combinan cuestiones de privacidad, protección de datos personales, propiedad itelectual e industrual, contractual, etc.
+La finalidad de la Ley Modelo no es la de regular aspectos de otras disciplinas jurídicas.
+
 
 ## 2. Momento y lugar de la perfección del contrato en Internet: Relevancia jurídica del tema (Tema 5)
+
+
 
 ## 3. La presencia de condiciones generales de contratación (Tema 6)
 
