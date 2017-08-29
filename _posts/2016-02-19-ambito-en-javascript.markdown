@@ -86,11 +86,11 @@ countTo(5)
 [Editar en jsfiddle](https://jsfiddle.net/juanmirod/r2wLyvg3/)
 
 
-Algo muy curioso de este pequeño código es el diferente resultado de los dos primeros `console.log` Las variables `let` y `const` no permiten ser usadas antes de ser declaradas, pero las variables declaradas con `var` sí. Esto es debido a una propiedad que se llama `hoisting`, que quiere decir que el compilador de JavaScript hace una primera pasada por todo el código para ver qué variables y funciones hemos definido y asignarles su ámbito. Hasta que la ejecución no llegue al punto de la asignación la variable tendrá el valor `undefined`. Esto no ocurre con let y const, que no son creadas hasta que la ejecución no llega al punto donde son declaradas. Así, si creamos una variable de bloque dentro de una condición que no se cumple, nunca se creará, y estaremos ahorrando ese tiempo y esa memoria.
+Algo muy curioso de este pequeño código es el diferente resultado de los dos primeros `console.log` Las variables `let` y `const` no permiten ser usadas antes de ser declaradas, pero las variables declaradas con `var` sí. Esto es debido a una propiedad que se llama `hoisting`, que quiere decir que el compilador de JavaScript hace una primera pasada por todo el código para ver qué variables y funciones hemos definido y asignarles su ámbito. Hasta que la ejecución no llegue al punto de la asignación la variable tendrá el valor `undefined`. Esto no ocurre con `let` y `const`, que no son creadas hasta que la ejecución no llega al punto donde son declaradas. Así, si creamos una variable de bloque dentro de una condición que no se cumple, nunca se creará, y estaremos ahorrando ese tiempo y esa memoria.
 
-Estas propiedades hacen que las variables `let` y `const` sean consideradas más fáciles de entender, que es lo importante, y actualmente las guías de estilo de código recomienden su uso sobre var, e incluso si usas un linter lo más seguro es que si usas var te lo marque, al menos, como un warning.
+Estas propiedades hacen que las variables `let` y `const` sean consideradas más fáciles de entender, que es lo importante, y actualmente las guías de estilo de código recomienden su uso sobre var. Si usas un linter, lo más seguro es que, si usas var, te lo marque como un warning o un error.
 
-La diferencia entre let y const es que las variables `const` no se pueden reasignar, con lo que en el caso de valores escalares (cadenas, números y buleanos) son efectivamente constantes. 
+La diferencia entre let y const es que las variables `const` no se pueden reasignar, con lo que en el caso de valores escalares (cadenas, números y booleanos) son efectivamente constantes. 
 
 ```javascript
 
