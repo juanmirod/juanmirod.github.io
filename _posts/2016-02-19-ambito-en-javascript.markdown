@@ -10,7 +10,7 @@ El ámbito de las variables en JavaScript puede ser un poco confuso a veces, per
 
 + En JavaScript **las funciones tienen su propio ámbito léxico**, lo que quiere decir que depende de cómo son declaradas en el código y no de cuando se ejecutan.
 
-+ **Sólo las funciones** pueden crear un nuevo ámbito y como excepción, los bloques **catch** también crean su propio ámbito. Con la introducción de las variables `let` y `const` en ES6, también tenemos a nuestra disposición ámbito de bloque, ver más abajo para ver qu´e significa esto.
++ **Sólo las funciones** pueden crear un nuevo ámbito y como excepción, los bloques **catch** también crean su propio ámbito. Con la introducción de las variables `let` y `const` en ES6, también tenemos a nuestra disposición ámbito de bloque, ver más abajo para ver qué significa esto.
 
 > ¿Cómo funciona este ámbito léxico de las funciones? 
 
@@ -56,7 +56,7 @@ content.innerHTML += sayHi // sayHi es undefined
 
 [Editar en jsfiddle](https://jsfiddle.net/juanmirod/zgsgqz2j/)
 
-Es interesante jugar un poco con el script, mover las declaraciones de sitio y ver que pasa. Espero que sirva a alguien de ayuda, para cualquier duda o aportación, este post está alojado en  [github](https://github.com/juanmirod/juanmirod.github.io/blob/master/_posts/2016-02-19-ambito-en-javascript.markdown)
+Es interesante jugar un poco con el script, mover las declaraciones de sitio y ver que pasa. 
 
 > Ok, lo he pillado y ahora ¿Qué es eso del ámbito de bloque?
 
@@ -109,3 +109,4 @@ pt.x = 15 // sin problema, ahora pt.x vale 15 en lugar de 0
 
 En el ejemplo de código puede verse que no ocurre así con los objetos, porque lo que no se puede modificar es la referencia que contiene esa variable, pero sí podremos modificar las propiedades internas del objeto, (a no ser que estén congeladas, pero de eso hablaremos otro día).
 
+Para cualquier duda o aportación, este post está alojado en  [github](https://github.com/juanmirod/juanmirod.github.io/blob/master/_posts/2016-02-19-ambito-en-javascript.markdown)
