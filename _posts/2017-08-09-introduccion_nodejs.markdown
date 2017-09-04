@@ -6,17 +6,17 @@ layout: post
 tags: [javascript] 
 ---
 
-[Node.js](https://nodejs.org/) es un entorno de ejecución de JavaScript que utiliza el motor V8 de Google. La historia de JavaScript y de Node.js es curiosa porque casi parece que todo surgió por accidente. JavaScript es conocido por haber sido [diseñado en 10 días por Bredan Eich](/public/javascript10days.pdf) y por sus [inconsistencias](https://www.destroyallsoftware.com/talks/wat), pero aun así se convirtió en el el lenguaje de facto de la web. Esto lo hizo cada vez más y más popular a medida que todas las páginas necesitaban más funcionalidad para cubrir las espectativas de los usuarios. JS es en la actualidad uno de los lenguajes más utilizados y de mayor crecimiento. Con lo que era inevitable que los desarrolladores de JavaScript quisieran usar el lenguaje fuera de los navegadores. Como dice la Ley de Atwood:
+[Node.js](https://nodejs.org/) es un entorno de ejecución de JavaScript que utiliza el motor V8 de Google. La historia de JavaScript y de Node.js es curiosa porque casi parece que todo surgió por accidente. JavaScript es conocido por haber sido [diseñado en 10 días por Bredan Eich](/public/javascript10days.pdf) y por sus [inconsistencias](https://www.destroyallsoftware.com/talks/wat), pero aun así, se ha convertido en el el lenguaje de facto de la web. La imposición tecnológica de los navegadores, unido a la bajísima curva de aprendizaje han hecho de JavaScript el lenguaje con más crecimiento de los últimos tiempos. Herramientas como jQuery, Mootools y Backbone, Lodash, Angular, React... Han ido evolucionando la arquitectura de un lenguaje dinámico en principio carente de estructura. JS es en la actualidad uno de los lenguajes más utilizados y de mayor crecimiento. Con lo que era inevitable que los desarrolladores de JavaScript quisieran usar el lenguaje fuera de los navegadores. Como dice la Ley de Atwood:
 
 > Any application that can be written in JavaScript, will eventually be written in JavaScript [ver más](https://blog.codinghorror.com/the-principle-of-least-power/)
 
-Antes de Node.js hubo varios intentos de establecer un entorno de ejecución para JavaScript fuera de los navegadores, una historia muy entretenida sobre los inicios de Node.js y npm la cuenta el propio Issac Z. Schlueter (creador de npm) [en su blog](http://blog.izs.me/post/157295170418/my-first-npm-publish)
+Antes de Node.js hubo varios intentos de establecer un entorno de ejecución para JavaScript fuera de los navegadores. Los programadores querían sacar JavaScript del corsé del navegador, querían poder hacer aplicaciones, modificar ficheros y acceder al hardware. Una historia muy entretenida sobre los inicios de Node.js y npm la cuenta el propio Issac Z. Schlueter (creador de npm) [en su blog](http://blog.izs.me/post/157295170418/my-first-npm-publish) 
 
-**TLDR:** Node.JS y npm se convirtieron en el entorno de ejecución de JavaScript en el servidor y ahora podemos utilizar el mismo lenguaje para desarrollar en el servidor y en el cliente.
+**TLDR:** Node.JS y npm se convirtieron en el entorno de ejecución de JavaScript en el servidor y ahora podemos utilizar el mismo lenguaje para desarrollar en el servidor y en el cliente en el caso del desarrollo web, aunque también hay gente usando Node para ioT, para robots, para herramientas de línea de comandos, etc.
 
 ## Instalación y el REPL
 
-Para instalar Node.js en Windows o en Mac basta con ir a la página principal y descargar el instalador. Si usas Ubuntu solo necesitamos un par de comandos:
+Para instalar Node.js en Windows o en Mac, basta con ir a la página principal y descargar el instalador. Si usas Ubuntu, solo necesitamos un par de comandos:
 
 ```
 
@@ -27,7 +27,7 @@ sudo apt-get install -y nodejs
 
 Si usas otra distribución de Linux, [mira aquí](https://nodejs.org/en/download/package-manager/#installing-node-js-via-package-manager).
 
-Una vez instalado podemos comprobar que la versión es la correcta (actualmente la versión LTS es la 6.x) haciendo 
+Una vez instalado podemos comprobar que la versión es la correcta (actualmente la versión LTS es la 6.x) escribiendo 
 
 ```
 
