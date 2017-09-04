@@ -16,7 +16,7 @@ Si quieres contribuir con más respuestas a exámenes o correcciones sobre el te
 
 ## 1. El uso de la informática como factor de estandarización. (Tema 1 pag. 51)
 
-Es uno de los problemas objetivamente vinculados a la relación contractual. El recurso a los contratos estándard es habitual en la contratación desde Internet a través de páginas web. Es fundamental analizar el modo en el que se recogen las cláusulas del contrato que el consumidor debe aceptar. Este aspecto también es relevante en la contratación entre profesionales.
+Es uno de los problemas objetivamente vinculados a la relación contractual. El recurso a los contratos estándard es habitual en la contratación desde Internet a través de páginas web en forma de una serie de clausulas o condiciones generales que el consumidor es llamado a aceptar para la conclusión del contrato. Es fundamental analizar el modo en el que se recogen las cláusulas del contrato que el consumidor debe aceptar aunque este aspecto también es relevante en la contratación entre profesionales.
 
 
 ## 2. Momento de nacimiento del contrato en Internet. (Tema 5 pag. 210)
@@ -30,13 +30,13 @@ Sobre este tema es referencia obligada el artículo 15 de la Ley Modelo de la CN
 
 ## 3. Las comunicaciones comerciales: su regulación y su posible repercusión en el contrato (Tema 6 pag 223)
 
-Comunicaciones comerciales: “son todas las formas de comunicación destinadas a proporcionar directa o
-indirectamente bienes, servicios o la imagen de una empresa, organización o persona con una actividad
-comercial, industrial, artesanal o de profesiones reguladas”.
+Comunicaciones comerciales: 
 
-No se consideran comunicaciones comerciales: "los datos que permiten acceder directamente a la actividad
-de dicha empresa, organización o persona y, concretamente el nombre de dominio o la dirección de correo electrónico [...] y las comunicaciones relativas a los bienes, servicios o a la imagen de dicha empresa, elaboradas
-de forma independiente de ella, en particular cuando estos se realizan sin contrapartida económica."
+> "son todas las formas de comunicación destinadas a promocionar directa o indirectamente bienes, servicios o la imagen de una empresa, organización o persona con una actividad comercial, industrial, artesanal o de profesiones reguladas".
+
+No se consideran comunicaciones comerciales: 
+
+> "los datos que permiten acceder directamente a la actividad de dicha empresa, organización o persona y, concretamente el nombre de dominio o la dirección de correo electrónico [...] y las comunicaciones relativas a los bienes, servicios o a la imagen de dicha empresa, elaboradas de forma independiente de ella, en particular cuando estos se realizan sin contrapartida económica."
 
 Conclusión: conjunto de actividades variadas que el prestador de servicios –profesional- realiza durante la
 fase precontractual de cualquier hipotético futuro contrato con el fin de alcanzar su conclusión: publicidad,
@@ -49,7 +49,7 @@ conllevar responsabilidades a la persona en nombre de la que se envían. Las ofe
 Según el artículo 13 de la Directiva 2002/58/CE las comunicaciones comerciales no solicitadas no están permitidas, con lo que se requiere que hayan sido consentidas por el destinatario, salvo cuando el prestador de servicio envíe las comunicaciones con posterioridad a una relación contractual (en la cual el cliente haya proporcionado la dirección de correo electrónico) siempre en relación a productos similares y con la posibilidad de rechazar futuras comunicaciones.
 
 La ley española distingue 3 tipos de comunicaciones comerciales: las de estricta naturaleza publicitaria –a las
-que exige que figure al inicio del mensaje la expresión “publicidad”-, las ofertas promocionales – que incluyen
+que exige que figure al inicio del mensaje la expresión "publicidad"-, las ofertas promocionales – que incluyen
 descuentos, premios y regalos-, y los concursos o juegos promocionales.
 
 En todo caso queda prohibido el envío de comunicaciones comerciales en las que se disimule o se oculte la
@@ -57,7 +57,8 @@ identidad del remitente, así como las que inciten a visitar páginas que contra
 
 El destinatario podrá revocar en cualquier momento su consentimiento a recibir comunicaciones comerciales
 con la simple notificación de su voluntad mediante procedimientos simples y gratuitos.
-Se consideran “infracciones graves” (30001 - 150000 €):
+
+Se consideran __"infracciones graves"__ (30001 - 150000 €):
 
 - El envío masivo de comunicaciones comerciales por e-mail u otro medio electrónico, o el envío, en el
 plazo de un año, de más de 3 a un mismo destinatario, si no se cumplen los requisitos.
@@ -68,17 +69,18 @@ prestado.
 
 ## 4. Protección de los programas de ordenador en el Derecho español: contenido de los derechos de explotación (Tema 9 - pag. 308)
 
-Se exige permiso del autor para el uso del software, incluso cuando se trate de reproducción para uso personal. Esta autorización se materializa en las Licencias de Uso.
+Se exige permiso del autor para el uso del software, incluso cuando se trate de reproducción para uso personal. Esta autorización se materializa en las Licencias de Uso, que indican los derechos y restricciones al consumidor, según la licencia.
 
 Solo el titular de los derechos está facultado para autorizar o prohibir la traducción o adaptación del programa de ordenador a otro lenguaje de programación, así como la realización de cualquier proceso que provoque una alteración sustancial del resultado logrado por el programador originario.
 
 La distribución de un programa informático abarca la puesta en circulación o comercialización del original o copia en un soporte tangible, mediante venta, alquiler, o cualquier otro acto de disposición.
 
+
 # Examen Segunda semana de Julio de 2017
 
 ## 1. Definición de comercio electrónico (Tema 2 pags 80-84)
 
-El término comercio electrónico aún no tiene una definición formal concreta y al tratar de describirlo se usan términos ambiguos que acaban abarcando a lo que se se puede entender por "sociedad de la información". En la comunicación "una iniciativa europea en materia de comercio electrónico" COM (97) 157 se recogen algunos puntos claves sobre para una definición más acotada:
+El término comercio electrónico aún no tiene una definición formal concreta y al tratar de describirlo se usan términos ambiguos que acaban abarcando a lo que se se puede entender por __"sociedad de la información"__. En la comunicación __"una iniciativa europea en materia de comercio electrónico"__ COM (97) 157, se recogen algunos puntos claves sobre para una definición más acotada:
 
 - Consiste en la práctica de actividades comerciales mediante el procesamiento y/o la transmisión electrónica de datos.
 - No es un fenómeno nuevo que se inicia con la aparición de Internet. Ya se realizaba antes en redes cerradas (ECI).
@@ -101,7 +103,7 @@ El procedimiento de subasta electrónica combina elementos de la contratación m
     + Recoge de forma clara y sencilla las instrucciones técnicas y pasos a seguir por los participantes en la subasta.
     + Realiza la función de director de la licitación.
     + Su funcionamiento es semejante al de una página web para conclusión de contratos, pero con varios sujetos realizando pujas hasta el fin de la subasta.
-    + La subasta finaliza cuando se ha cumplido el plazo establecido sin nonguna puja, o porque un postor ha realizado la puja más alta, en cuyo caso queda concluida la compraventa, vinculando al vendedor y al mejor postor, ahora comprador.
+    + La subasta finaliza cuando se ha cumplido el plazo establecido sin ninguna puja, o porque un postor ha realizado la puja más alta, en cuyo caso queda concluida la compraventa, vinculando al vendedor y al mejor postor, ahora comprador.
 
 - La comunicación a través de correo electrónico
     Se realiza tanto entre el servidor y las partes como entre vendedor y comprador una vez finalizada la puja. Esta es de especial relevancia ya que de ella depende la correcta ejecución del contrato, mediante el envío de la forma de pago y la forma y dirección de envío del objeto. 
@@ -118,11 +120,13 @@ En la práctica:
 
 ## 4. <a name="delitosPI"></a>Delitos contra la propiedad intelectual (Tema 10 pag 329)
 
-Con carácter general, el Derecho penal español protege la propiedad intelectual (PI) al sancionar a quien _"con ánimo de lucro y en perjuicio de tercero reproduzca, plagie, distribuya o comunique todo o en parte, una obra literaria, artística, científica, o su trasformación, interpretación o ejecución artística fijada en cualquier tipo de soporte o comunicada a través de cualquier medio, sin la autorización de los titulares de los correspondientes derechos de la propiedad intelectual o de sus cesionarios."_ (art 270.1 CP)
+Con carácter general, el Derecho penal español protege la propiedad intelectual (PI) al sancionar a quien 
+
+> _"con ánimo de lucro y en perjuicio de tercero reproduzca, plagie, distribuya o comunique todo o en parte, una obra literaria, artística, científica, o su trasformación, interpretación o ejecución artística fijada en cualquier tipo de soporte o comunicada a través de cualquier medio, sin la autorización de los titulares de los correspondientes derechos de la propiedad intelectual o de sus cesionarios."_ (art 270.1 CP)
 
 El Derecho español también considera los programas de ordenador como creaciones susceptibles de ser protegidos por el derecho de PI. Son objeto de protección penal tanto el _"programa fuente"_ como el _"programa objeto"_, la documentación preparatoria, la documentación técnica y los manuales de uso, así como las versiones sucesivas del programa y los programas derivados. Quedan excluidas las ideas y principios básicos y aquellos programas creados con el fin de ocasionar efectos nocivos a un sistema informático.
 
-La regulación del artículo 270.3 CP amplía esta protección, castigando la fabricación, importación, puesta en circulación o posesión de _"cualquier medio específicamente destinado a facilitar la supresión no autorizada o la neutralización  de cualquier dispositivo técnico que se haya utilizado para proteger programas de ordenador"_ No pudiendo aplicarse a programas que además de para este fin, tengan otras utilidades, como la compresión o descompresión o tratado de formatos especiales.
+La regulación del artículo 270.3 CP amplía esta protección, castigando la fabricación, importación, puesta en circulación o posesión de __"cualquier medio específicamente destinado a facilitar la supresión no autorizada o la neutralización  de cualquier dispositivo técnico que se haya utilizado para proteger programas de ordenador"__ No pudiendo aplicarse a programas que además de para este fin, tengan otras utilidades, como la compresión o descompresión o tratado de formatos especiales.
 
 Cuando existe condena por delito contra la PI, se podrá decretar la publicación de la sentencia, a costa del infrator, en un periódico oficial (BOE, BOCAM...).
 
@@ -326,7 +330,7 @@ La finalidad de la Ley Modelo no es la de regular aspectos de otras disciplinas 
 
 ## 2. Momento y lugar de la perfección del contrato en Internet: Relevancia jurídica del tema (Tema 5 pag 195)
 
-EL momento exacto de inicio del contrato es importante para poder determinar desde cuando son exigibles las obligaciones establecidas en él para las partes. También es necesario para poder aplicar otros derechos como la revocación o retirada de la aceptación, la transmisión de los riesgos de la cosa adquiriente, la aplicación de clausulas que impliquen periodos de tiempo como la resolución del contrato a distancia y para poder determinar la ley o normal aplicable en el tiempo a la relación contractual.
+EL momento exacto de inicio del contrato es importante para poder determinar desde cuando son exigibles las obligaciones establecidas en él para las partes. También es necesario para poder aplicar otros derechos como la revocación o retirada de la aceptación, la transmisión de los riesgos de la cosa adquiriente, la aplicación de clausulas que impliquen periodos de tiempo como la resolución del contrato a distancia y para poder determinar la ley o norma aplicable en el tiempo a la relación contractual.
 
 También es fundamental determinar el lugar exacto de conclusión del contrato para poder determinar la __ley o norma aplicable espacialmente__, el __fuero jurisdicional competente__ y el lugar de cumplimiento de las obligaciones recogidas en el negocio, a falta de una norma expresa que lo determine.
 
@@ -356,6 +360,7 @@ reconocida o simple, e incluso, si éstas están accesibles desde la web de form
 siquiera requerirán ser aceptadas mediante ninguna firma electrónica, siempre que esta aceptación venga
 recogida en soporte electrónicos. 
 
+
 ## 4. La Ley Orgánica 15/1999 de Protección de Datos de Carácter Personal: Derechos de los afectados (Tema 8)
 
 Los derechos establecidos por la LOPD son personales y gratuítos y pueden realizarse por cualquier cauce admitido en el Derecho que se incluya la identificación del aceptado, la petición que se formula y los documentos que la justifican, y son:
@@ -383,7 +388,7 @@ No todo lo que se realiza en Internet es comercio electrónico ni todo el comerc
 
 - El modo abierto de comunicación, que permite el acceso a la red a cualquier persona independientemente de su condición y lugar físico.
 
-- El permitir la comunicación en las dos direcciones, llo que hace el servicio altamente interactivo.
+- El permitir la comunicación en las dos direcciones, lo que hace el servicio altamente interactivo.
 
 
 ## 2. Ámbito de aplicación subjetivo de la Directiva sobre Comercio Eletrónico: El concepto de consumidor en las relaciones derivadas de un servicio de la sociedad de la información (Tema 4)
