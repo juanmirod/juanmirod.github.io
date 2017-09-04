@@ -6,9 +6,9 @@ layout: post
 tags: [UNED] 
 ---
 
-Soluciones a los exámenes de Ética y Legislación de la UNED entre 2015 y 2017. **Estas soluciones no están comprobadas ni verificadas por ningún profesor**. Las respuestas son el resultado de leer el texto de referencia (Derecho e Informática) y tratar de sintetizar una respuesta para cada pregunta. Para una información más precisa y detallada es mejor leer el libro original. Simplemente estoy estudiando la asignatura y pensé que podría compartir mi trabajo por si a alguien le sirven en el futuro. 
+Soluciones a los exámenes de Ética y Legislación de la UNED entre 2015 y 2017. **Estas soluciones no están comprobadas ni verificadas por ningún profesor**. Las respuestas son el resultado de leer el texto de referencia (Derecho e Informática) y tratar de sintetizar una respuesta para cada pregunta. Para una información más precisa y detallada es mejor leer el libro original. Simplemente estoy estudiando la asignatura y pensé que podría compartir mi trabajo por si a alguien le sirve en el futuro. 
 
-Hay algunos temas de la asignatura, sobre todo los referentes a derechos de autor y delitos informáticos, que me parecen muy interesantes y trataré de ampliar en un futuro en un lenguaje más llano, ya que entiendo que estos resúmenes no son útiles si no es para el estudiar la asignatura por ser demasiado específicos y carecer de contexto. 
+Hay algunos temas de la asignatura, sobre todo los referentes a derechos de autor y delitos informáticos, que me parecen muy interesantes y trataré de ampliar en un futuro en un lenguaje más llano, ya que entiendo que estos resúmenes no son útiles si no es para estudiar la asignatura por ser demasiado específicos y carecer de contexto. 
 
 Si quieres contribuir con más respuestas a exámenes o correcciones sobre el texto puedes hacerlo aquí.
 
@@ -18,6 +18,7 @@ Si quieres contribuir con más respuestas a exámenes o correcciones sobre el te
 
 Es uno de los problemas objetivamente vinculados a la relación contractual. El recurso a los contratos estándard es habitual en la contratación desde Internet a través de páginas web. Es fundamental analizar el modo en el que se recogen las cláusulas del contrato que el consumidor debe aceptar. Este aspecto también es relevante en la contratación entre profesionales.
 
+
 ## 2. Momento de nacimiento del contrato en Internet. (Tema 5 pag. 210)
 
 Cuando las partes se encuentran no presentes - ni físicamente ni mediante un medio de comunicación simultánea - se entiende que el destinatario tiene acceso al contenido del mensaje que recoje la aceptación cuando alcanza su dirección electrónica. Es decir, si el contrato se realiza mediante intercambio de mensajes por correo electrónico, desde el momento en el que el mensaje alcanza su dirección de correo electrónico. Solo pudiendo aceptarse como causa de exoneración un fallo en el proveedor de correo electrónico que impida el acceso a éste.
@@ -25,6 +26,7 @@ Cuando las partes se encuentran no presentes - ni físicamente ni mediante un me
 Si el contrato es concluido a través de una página web, se entenderá que la orden o aceptación contractual es efectuada desde el momento en el que el programa informático de contratación recibe el correspondiente "clicado", "aceptación" o "compra" definitivo del destinatario y el proveedor de servicios puede acceder a él. 
 
 Sobre este tema es referencia obligada el artículo 15 de la Ley Modelo de la CNUDMI sobre comercio electrónico: Tiempo y lugar del envío y la recepción de un mensaje de datos. 
+
 
 ## 3. Las comunicaciones comerciales: su regulación y su posible repercusión en el contrato (Tema 6 pag 223)
 
@@ -59,8 +61,10 @@ Se consideran “infracciones graves” (30001 - 150000 €):
 
 - El envío masivo de comunicaciones comerciales por e-mail u otro medio electrónico, o el envío, en el
 plazo de un año, de más de 3 a un mismo destinatario, si no se cumplen los requisitos.
+
 - El incumplimiento de la obligación de incorporar procedimientos para revocar el consentimiento
 prestado.
+
 
 ## 4. Protección de los programas de ordenador en el Derecho español: contenido de los derechos de explotación (Tema 9 - pag. 308)
 
@@ -175,11 +179,11 @@ El artículo 100 de la LPI establece  las actividades que pueden llevarse a cabo
 
 - Copia de seguridad, se reconoce sólo al usuario legítimo y solo si es necesaria para su uso.
 
-- La ingenieria inversa, el usuario legítimo está autorizado a verificar las ideas implícitas del programa, peroo no implica que se pueda hacer uso de estas ideas en beneficio propio o ajeno.
+- La ingenieria inversa, el usuario legítimo está autorizado a verificar las ideas implícitas del programa, pero no implica que pueda hacer uso de estas ideas en beneficio propio o ajeno.
 
 - Las versiones sucesivas están permitidas siempre que tengan originalidad suficiente como para considerarse obra derivada: traducciones, adaptaciones, revisiones, actualizaciones y anotaciones, compendios, resúmenes, extractos y arreglos musicales.
 
-- Descompilacion e inreoperabilidad siempre que sea necesaria, se realice solo para obtener interoperabilidad y no para la producción o comercialización de programas semejantes.
+- Descompilacion e interoperabilidad siempre que sea necesaria, se realice solo para obtener interoperabilidad y no para la producción o comercialización de programas semejantes.
 
 # Segunda semana Julio 2016
 
@@ -215,9 +219,12 @@ Los contratos concluidos desde la red, es decir los contratos digitales, los per
 
 ## 1. Beneficios que aporta Internet a la contratación: Reducción del coste de los productos y servicios y su precio de adquisición. (Tema 1 pag 42)
 
-La contratación a través de Internet debería facilitar la reducción de precios al eliminar el costo de los intermediarios comerciales, aunque incluye costes adicionales de nuevos intermediarios (publicidad, infraestructura)
-Los costes de distribución desaparecen cuando el producto o servicio es de naturaleza inmaretial (p. ej. software) Pero no cuando es un producto material que deberá ser remitido al comprador.
-También se reducen costes en comunicaciones tradicionales (fax, teléfono) con respecto a las digitales.
+- La contratación a través de Internet debería facilitar la reducción de precios al eliminar el costo de los intermediarios comerciales, aunque incluye costes adicionales de nuevos intermediarios (publicidad, infraestructura)
+
+- Los costes de distribución desaparecen cuando el producto o servicio es de naturaleza inmaretial (p. ej. software) Pero no cuando es un producto material que deberá ser remitido al comprador.
+
+- También se reducen costes en comunicaciones tradicionales (fax, teléfono) con respecto a las digitales.
+
 Estos factores deberían abaratar el precio de los bienes y productos, pero en la práctica no siempre sucede así y los precios son equivalentes a los del comercio tradicional.
 
 ## 2. El criterio subjetivo de determinación del régimen jurídico aplicable al contrato. (Tema 4 pag 139)
@@ -236,7 +243,7 @@ Es fundamental resaltar la problemática internacionalización que tiene lugar e
 
 ## 3. Principios rectores en materia de protección de datos de caracter personal: La calidad de los datos. (Tema 8 pag 285)
 
-_principio de calidad_: los datos deben ser adecuados y pertinentes en relación con el ámbito y finalidad para el que se han obtenido. Esto engloba:
+_Principio de calidad_: los datos deben ser adecuados y pertinentes en relación con el ámbito y finalidad para el que se han obtenido. Esto engloba:
 
     - _Principio de exactitud_ los datos han de ser precisos y mantenerse actualizados
     
@@ -248,11 +255,18 @@ _principio de calidad_: los datos deben ser adecuados y pertinentes en relación
 
 Podemos llamar fraudes o estafas informáticas tanto a las realizadas a través de manipulaciones informáticas como a la fabricación de programas con esos fines.
 
-La estafa mediante manipulación informática (phising) señala como reos de estafa a "quienes con ánimo de lucro, y valiéndose de alguna manipulación informática o artificio semejante consigan la transferencia no consentida de cualquier activo patrimonial en perjuicio de tercero" También se castiga la difusión o tenencia de programas que permitan la comisión de estafas, aunque no se hayan utilizado.
-Las defraudaciones de fluido eléctrico y análogas sancionan al "que hiciere uso de cualquier equipo temrinal de telecomunicación, sin consentimiento de su titular, ocasionando a este un perjuicio"
+La estafa mediante manipulación informática (phising) señala como reos de estafa a 
+
+> "quienes con ánimo de lucro, y valiéndose de alguna manipulación informática o artificio semejante, consigan la transferencia no consentida de cualquier activo patrimonial en perjuicio de tercero" 
+
+También se castiga la difusión o tenencia de programas que permitan la comisión de estafas, aunque no se hayan utilizado.
+
+Las defraudaciones de fluido eléctrico y análogas sancionan al __"que hiciere uso de cualquier equipo terminal de telecomunicación, sin consentimiento de su titular, ocasionando a este un perjuicio"__
 
 En cuanto a la regulación del Delito de Daños, se recogen dos modalidades:
+
 - Cusar daños a programas informáticos o documentos electrónicos mediante la destrucción o inutilización del soporte físico o lógico. Existiendo un tipo agravado cuando los daños son producidos mediante incendios, explosiones o otro medio de potencia destructiva.
+
 - Obstaculizar o interrumpir a través de diferentes medios, el funcionamiento de sistemas informáticos: el sabotaje informático. El borrado o modificación de los datos debe ser permanente.
 
 # Primera semana Julio 2015
@@ -303,30 +317,89 @@ En cuanto a la regulación del Delito de Daños, se recogen dos modalidades:
 
 ## 1. Debilidades que plantea esta  forma de contratación: carácter transversal e interdisciplinariedad jurídica (Tema 1 pag 49)
 
-En la contratación por Internet, am menudo resulta difícil deslindar las fronteras correspondientes al Derecho públic y privado, Derecho penal, Derecho fiscal, civil y/o mercantil.
-Desde una perspectiva territorial, pueden originarse dudas respecto a la aplicación del derecho comunitario, interno o internacional. Además, dentro del derecho privado, se combinan cuestiones de privacidad, protección de datos personales, propiedad itelectual e industrual, contractual, etc.
+En la contratación por Internet, a menudo resulta difícil deslindar las fronteras correspondientes al Derecho público y privado, Derecho penal, Derecho fiscal, civil y/o mercantil.
+
+Desde una perspectiva territorial, pueden originarse dudas respecto a la aplicación del derecho comunitario, interno o internacional. Además, dentro del derecho privado, se combinan cuestiones de privacidad, protección de datos personales, propiedad intelectual e industrual, derecho contractual, etc.
+
 La finalidad de la Ley Modelo no es la de regular aspectos de otras disciplinas jurídicas.
 
 
-## 2. Momento y lugar de la perfección del contrato en Internet: Relevancia jurídica del tema (Tema 5)
+## 2. Momento y lugar de la perfección del contrato en Internet: Relevancia jurídica del tema (Tema 5 pag 195)
 
+EL momento exacto de inicio del contrato es importante para poder determinar desde cuando son exigibles las obligaciones establecidas en él para las partes. También es necesario para poder aplicar otros derechos como la revocación o retirada de la aceptación, la transmisión de los riesgos de la cosa adquiriente, la aplicación de clausulas que impliquen periodos de tiempo como la resolución del contrato a distancia y para poder determinar la ley o normal aplicable en el tiempo a la relación contractual.
 
+También es fundamental determinar el lugar exacto de conclusión del contrato para poder determinar la __ley o norma aplicable espacialmente__, el __fuero jurisdicional competente__ y el lugar de cumplimiento de las obligaciones recogidas en el negocio, a falta de una norma expresa que lo determine.
 
-## 3. La presencia de condiciones generales de contratación (Tema 6)
+## 3. La presencia de condiciones generales de contratación (Tema 6 pag 220)
+
+Los contratos operados desde una página web siguen un procedimiento de sucesión de pantallas
+en el que la negociación de las cláusulas desaparece. Los más relevantes son los
+“contratos en masa” a través de una página web, a los que siguen en importancia las subastas.
+
+Estos contratos en masa se caracterizan por poder hacer un contrato idéntico con multitud de personas, y
+por carecer de la etapa previa en la que se negocia el contenido contractual.
+
+En este contexto, son las condiciones generales de contratación quienes representan el instrumento de
+estandarización de las relaciones contractuales. El comprador deberá ser informado debidamente o deberá
+haber aceptado para que resulten eficaces.
+
+La regulación española distingue entre un régimen jurídico amplio destinado a regular las “condiciones
+generales” dirigidas a la contratación en general, y un régimen específico sobre las “cláusulas abusivas”
+destinado a los consumidores, las que pese a que sean aceptadas por ellos, serán nulas cuando sean
+declaradas abusivas.
+
+En los casos de contratación telefónica o electrónica será necesario que conste la aceptación de todas y cada
+una de las cláusulas del contrato, sin necesidad de firma convencional.
+
+En Internet será suficiente manifestar la aceptación de las cláusulas mediante firma electrónica avanzada no
+reconocida o simple, e incluso, si éstas están accesibles desde la web de forma clara y comprensible, ni
+siquiera requerirán ser aceptadas mediante ninguna firma electrónica, siempre que esta aceptación venga
+recogida en soporte electrónicos. 
 
 ## 4. La Ley Orgánica 15/1999 de Protección de Datos de Carácter Personal: Derechos de los afectados (Tema 8)
+
+Los derechos establecidos por la LOPD son personales y gratuítos y pueden realizarse por cualquier cauce admitido en el Derecho que se incluya la identificación del aceptado, la petición que se formula y los documentos que la justifican, y son:
+
+- __Derecho de información__ permite al afectado saber quien conoce sus datos, y cómo y para qué van a ser utilizados y tratados.
+
+- __Derecho de consulta__ cualquier sujeto puede conocer los tratamientos de datos que existen, su finalidad y la identidad del responsable. 
+
+- __Derecho de impugnación de valores__ permite al usuario rechazar decisiones que tengan efectos jurídicos y se hayan adoptado evaluando aspectos de su personalidad mediante el tratamiento de sus datos.
+
+- __Derecho de acceso__ los afectados podrán obtener gratuitamente información de los datos y las cesiones realizadas o que se puedan realizar.
+
+- __Derecho a rectificación y cancelación__ permite al afectado exigir la rectificación de los datos en función al principio de calidad, y la cancelación cuando ya no sean necesarios o se hayan cumplido los plazos legales atendiendo al principio de finalidad.
+
+La cancelación de los datos no implica su borrado inmediato si no su bloqueo durante un tiempo y posterior borrado.
 
 
 # Septiembre Ordinaria 2014
 
-## 1. Comercio electrónico e Internet (Tema 2)
+## 1. Comercio electrónico e Internet (Tema 2 pag 95)
+
+No todo lo que se realiza en Internet es comercio electrónico ni todo el comercio electrónico se realiza a través de Internet. El comercio electrónico ya se realizaba antes mediante EDI, pero hay una serie de características que han hecho de Internet un medio idóneo para el avance del comercio electrónico y la sociedad de la información:
+
+- La modalidad técnica de presentación de bienes y servicios (los documentos hipertextuales) que convierten los sitios comerciales en escaparates telemáticos desde los que además se puede concluir el contrato.
+
+- El modo abierto de comunicación, que permite el acceso a la red a cualquier persona independientemente de su condición y lugar físico.
+
+- El permitir la comunicación en las dos direcciones, llo que hace el servicio altamente interactivo.
+
 
 ## 2. Ámbito de aplicación subjetivo de la Directiva sobre Comercio Eletrónico: El concepto de consumidor en las relaciones derivadas de un servicio de la sociedad de la información (Tema 4)
 
-## 3. Principios rectores en materia de protección de datos de carácter personal: Principio de Información y el Consentimiento del interesado (Tema 8)
+La directiva sobre comercio electrónico identifica al "consumidor" como "cualquier persona física que con un propósito ajeno al de su actividad económica, negocio o profesión" Pero en algunos paises de la Unión, como en España, también se consideran consumidores a las personas jurídicas, con lo que se pueden producir divergencias de criterios en contrataciones internacionales donde la normativa no coincida en la definición de consumidor, y en dificultades para establecer si se trata de una relación de consumo o no.
 
-## 4. Las bases de datos y el derecho "sui generis": Objetivo de protección y Contenido del derecho "sui generis" (Tema 9)
 
+## 3. Principios rectores en materia de protección de datos de carácter personal: Principio de Información y el Consentimiento del interesado (Tema 8 pag 285 y 286)
+
+El principio de información es fundamental para que el interesado pueda ejercer sus derechos, ya que si el afectado no sabe que sus datos están siendo almacenados difícilmente podrá acceder a ellos o pedir que se modifiquen o destruyan los documentos de acuerdo al principio de calidad, finalidad y lealtad. El afectado debe conocer: la existencia del fichero, la finalidad y la identidad de su propietario. Si está obligado o no a facilitar los datos. Las consecuencias que se derivan de de la obtención de los datos o de su negativa a suministrarlos. La posibilidad de ejercer los derechos de acceso, modificación, cancelación y oposición.
+
+El consentimiento del interesado  puede ser explícito o tácito,en el caso de datos de carácter sensible (opinión política, orientación sexual, religión, etc) debe prestarse expresamente y por escrito.
+
+## 4. Las bases de datos y el derecho "sui generis": Objetivo de protección y Contenido del derecho "sui generis" (Tema 9 pag 315)
+
+Las bases de datos, aun muchas veces consisten en contenido no original (bbdd exahustivas), el alto coste y la creciente competencia en el mercado internacional hacían difícil la inversión en este tipo de infraestructuras. Para proteger a los fabricantes e incentivar la creación de bases de datos se crea este derecho "ui géneris" que es independiente del derecho de PI y el derecho de propiedad industrial. El derecho "sui generis" de las bases de datos otorga a sus fabricantes la potestad de autirizar o prohibir el acceso y utilización de la totalidad o una parte sustancial de su contenido. Este derecho es de 15 años en lugar de 60 como el las creacions artísticas y el software, pero serán prorrogables si se demuestra que ha sido necesaria una inversión importante para su mantenimiento y/o actualización a lo largo del tiempo. 
 
 # Otros epígrafes:
 
