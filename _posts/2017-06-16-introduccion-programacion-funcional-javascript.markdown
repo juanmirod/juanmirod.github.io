@@ -202,7 +202,7 @@ const whereNot = (property, value) => x => x[property] !== value
 
 ```
 
-En los predicados de arriba también podemos ver algo que no he comentado hasta ahora: funciones que devuelven funciones. De igual forma que podemos pasar una función como arcumento, podemos devolverlas como resultado. Así:
+En los predicados de arriba también podemos ver algo que no he comentado hasta ahora: funciones que devuelven funciones. De igual forma que podemos pasar una función como argumento, podemos devolverlas como resultado. Así:
 
 ```javascript
 
@@ -323,7 +323,117 @@ En los dos casos anteriores lo que está pasando es que estamos devolviendo la r
 
 Esto puede volverse especialmente problemático si usamos `currying`, pero por supuesto tiene fácil solución. Volveremos sobre este punto un poco más adelante.
 
-Con estas tres funciones podemos librarnos de la práctica totalidad de los bucles de nuestro código y olvidarnos de tener que mantener contadores y de esa complicada sintaxis que los acompaña, lo cual hará el código más fácil de leer y nos dejará centrarnos en los importante.
+Con estas tres funciones podemos librarnos de la práctica totalidad de los bucles de nuestro código y olvidarnos de tener que mantener contadores y de esa complicada sintaxis que los acompaña, lo cual hará el código más fácil de leer y nos dejará centrarnos en lo que queremos hacer con los elementos del array.
+
+### Funciones de orden superior
+
+Otra herramienta funcional que hemos visto por encima en el apartado sobre bucles son las funciones de orden superior, es decir, las funciones que reciben otras funciones como parámetros o devuelven una función como salida.
+
+Un par de ejemplos que veíamos arriba son los generadores notEqual o where:
+
+```javascript
+
+const notEqual = y => x => x !== y
+const where = (property, value) => x => x[property] === value
+
+```
+
+Estos funciones devuelven un predicado en función a los parámetros que reciben:
+
+```javascript
+
+
+notEqual(3)
+// [Function]
+
+const notThree = notEqual(3)
+notThree(5)
+// true
+
+notEqual(3)(5)
+// true
+
+notEqual(2)(2)
+// false
+
+
+```
+
+Esta forma de escribir y generar funciones nos permite crear fácilmente código más expresivo y que se puede componer. Cuando, como en estos casos, lo que hacemos es tomar una función que tomaría varios parámetros y tomarlos uno a uno, devolviendo cada vez una función que espera el siguiente parámetro estamos _currificando_ (del inglés currying) la función.
+
+> f(x,y,z) => f(x) => g(y) => h(z)
+
+En el caso de `where`, podríamos escribirlo así:
+
+```javascript
+
+const where = property => value => x => x[property] === value
+
+
+```
+
+Suponiendo que tenemos un array con objetos que hemos sacado de una base de datos y queremos buscar uno por id podríamos hacerlo así:
+
+```javascript
+
+const whereIdIs = where('id')
+
+users.filter(whereIdIs(42))
+// [{ id: 42, name: 'Ramón' ... }]
+
+```
+
+Sin usar filter ni currificar, suponiendo que queramos devolver siempre un array como hace filter, seguramente hubieramos acabado con un código tal que así:
+
+```javascript
+
+function findById(users, id) {
+  for (let i = 0; i < users.length; i++) {
+    if (users[i].id === id ) {
+      return [users[i]]
+    }
+  }
+  return []
+}
+
+findById(users, 42)
+// [{ id: 42, name: 'Ramón' ... }]
+
+```
+
+La ventaja de where es que podemos usarlo para construir el predicado que necesitemos en cada momento. Si en otra función queremos buscar un usuario por nombre en lugar de por id, bastará con hacer:
+
+```javascript
+
+const whereNameIs = where('name')
+
+// o simplemente usarlo sin crear un alias
+
+users.filter(where('name')('Ramón'))
+
+```
+
+_currificar_ funciones es muy útil en general a hora de trabajar con funciones y componerlas y es una herramienta que combiene dominar para mejorar nuestro código en JavaScript. Hay librerías que ofrecen una función `curry` que toma una función y nos la devuelve _currificada_ Vamos a probar a escribir nuestra propia función `curry` para 2 parámetros:
+
+```javascript
+
+const curry2 = f => x => y => f(x,y)
+
+// ejemplo
+const add = (x,y) => x + y
+
+const curriedAdd = curry2(add)
+curriedAdd(2)(3)
+// 5
+
+const add2 = curriedAdd(2)
+
+add2(3)
+// 5
+
+```
+
+Por supuesto, la implementación se complica para n parámetros, pero para eso están las librerías funcionales que veremos al final del artículo, por ahora este simple ejercicio espero que sirva para mostrar lo que es _currificar_ una función.
 
 
 Este artículo está en pleno desarrollo, si te gusta este estilo de programación en Javascript vuelve pronto y seguramente encuentres nuevo contenido. Si quieres animarme a seguir escribiendo o quieres ayudar puedes hacerlo porque [este artículo está alojado en github](https://github.com/juanmirod/juanmirod.github.io/blob/master/_posts/2017-06-16-introduccion-programacion-funcional-javascript.markdown) cualquier comentario o contribución será bien recibido.
