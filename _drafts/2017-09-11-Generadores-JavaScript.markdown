@@ -55,13 +55,13 @@ for(var c of counter) {
 En el ejemplo anterior hemos usado todo el tiempo un bucle `while (true)` sin bloquear o saturar la cpu y sin ninguna alerta por parte de node. Esto es así porque `yield` pausa la 
 ejecución de la función, y por lo tanto, pausa el bucle infinito cada vez que produce un valor.
 
-Nuestro generador de contadores podría usarse para generar identificadores por ejemplo, pero también podemos pensar en usos más complejos, como un generador del número PI que nos devuelve tantos decimales como le pidamos, pero nunca calcula más de los necesarios:
+Nuestro generador de contadores podría usarse para generar identificadores por ejemplo, pero también podemos pensar en usos más complejos, como un generador de fibonacci que genera tantos números de fibonacci como le pidamos:
 
 ```javascript
 
 ```
 
-De esta forma, PI devolverá siempre los decimales que le pasemos, potencialmente infinitos. Esto es lo que se llama _evaluación perezosa_ y es un concepto importante en muchas aplicaciones.
+Esto es lo que se llama _evaluación perezosa_ y es un concepto importante en muchas aplicaciones.
 
 ...
 
@@ -85,26 +85,19 @@ function* range (limit) {
 
 ```
 
-Este ejemplo consigue algo que no podemos hacer simplemente con un bucle y que es más legible que la forma normalmente recomendada de crear un rango en `javascript` sin usar librerías:
+Este ejemplo utiliza la sintaxis del spread operator y los generadores para obtener un resultado más legible que la forma normalmente recomendada de crear un rango en `javascript` usando ES6:
 
 ```javascript
 
-Array(10).fill(null).map((elem, index) => index)
+[...Array(5).keys()]
 // [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
 
-// puedes mejorar esto partiendolo en funciones:
-
-const arrayOf = (num, value) => Array(num).fill(value)
-const toRange = (elem, index) => index 
-
-arrayOf(10, null).map(toRange)
-// [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
-
-// pero [...range(10)] sigue siendo mucho más fácil de leer
 
 ```
 
 ### Async / await
+
+Los ejemplos anteriores vienen bien para entender como funcionan los generadores, pero tienen una aplicación práctica limitada. Donde los generadores son realmente útiles en el día a día es en las operaciones asíncronas.
 
 Una de las funcionalidades más coreadas de ES7 son las nuevas construcciones `async` y `await`, que nos permiten ejecutar código asíncrono pero escribiéndolo de forma lineal, sin necesidad de pensar en callbacks o promesas:
 
