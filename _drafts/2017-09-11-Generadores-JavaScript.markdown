@@ -55,17 +55,42 @@ for(var c of counter) {
 En el ejemplo anterior hemos usado todo el tiempo un bucle `while (true)` sin bloquear o saturar la cpu y sin ninguna alerta por parte de node. Esto es así porque `yield` pausa la 
 ejecución de la función, y por lo tanto, pausa el bucle infinito cada vez que produce un valor.
 
-Nuestro generador de contadores podría usarse para generar identificadores por ejemplo, pero también podemos pensar en usos más complejos, como un generador de fibonacci que genera tantos números de fibonacci como le pidamos:
+Nuestro generador de contadores podría usarse para generar identificadores por ejemplo. Esto es lo que se llama _evaluación perezosa_ y es un concepto importante en lenguajes funcionales como Haskell. Básicamente nos permite tener listas o estructuras de datos infinitas y operar sobre ellas, por ejemplo podemos tener un operador `take(n)` que toma los N primeros elementos de una lista infinita:
 
 ```javascript
 
+function* oddsGenerator() {
+  let i = 1
+  while (true) {
+    yield i
+    i = i + 2
+  }
+}
+
+var oddNumbers = oddsGenerator() // todos los números impares 
+
+function take(n, iter) {
+  let counter = n
+  for ( c of iter) {
+    console.log(c)
+    counter--
+    if(counter <= 0) break
+  }
+}
+
+take(5, oddNumbers) // toma 5 números impares
+// 1
+// 3
+// 5
+// 7
+// 9
+
 ```
 
-Esto es lo que se llama _evaluación perezosa_ y es un concepto importante en muchas aplicaciones.
+Para ver más usos y ventajas de la evaluación perezosa puedes ver [este hilo de stackoverflow](https://stackoverflow.com/questions/265392/why-is-lazy-evaluation-useful)
 
-...
+Otra forma de obtener los valores producidos por el generador en ES6 es mediante el _spread operator_: 
 
-Además, tal y como funcionan los generadores, podemos usarlos con un bucle `for of` o incluso con el `spreat operator` de ES6 para obtener los resultados que queramos.
 
 ```javascript
 
@@ -85,7 +110,7 @@ function* range (limit) {
 
 ```
 
-Este ejemplo utiliza la sintaxis del spread operator y los generadores para obtener un resultado más legible que la forma normalmente recomendada de crear un rango en `javascript` usando ES6:
+Este ejemplo utiliza la sintaxis del spread operator y los generadores para obtener un resultado más legible y más flexible que la forma normalmente recomendada de crear un rango en `javascript` usando ES6:
 
 ```javascript
 
@@ -95,20 +120,91 @@ Este ejemplo utiliza la sintaxis del spread operator y los generadores para obte
 
 ```
 
+
 ### Async / await
 
-Los ejemplos anteriores vienen bien para entender como funcionan los generadores, pero tienen una aplicación práctica limitada. Donde los generadores son realmente útiles en el día a día es en las operaciones asíncronas.
+Los ejemplos anteriores vienen bien para entender como funcionan los generadores, pero tienen una aplicación práctica limitada. Donde los generadores son realmente útiles es en las operaciones asíncronas.
 
-Una de las funcionalidades más coreadas de ES7 son las nuevas construcciones `async` y `await`, que nos permiten ejecutar código asíncrono pero escribiéndolo de forma lineal, sin necesidad de pensar en callbacks o promesas:
+Una de las funcionalidades más coreadas de ES7 son las nuevas construcciones `async` y `await`, que nos permiten ejecutar código asíncrono pero escribiéndolo de forma lineal, sin necesidad de pensar en callbacks o promesas. Veamos cómo funciona:
 
 ```javascript
+
+function helloDelayed() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Hello'), 5000)
+  })
+}
+
+async function hi() {
+  const greeting = await helloDelayed()
+  console.log(greeting)
+}
+
+hi()
+
+// a los 5 segundos aparece 'Hello'
+
+```
+
+Lo genial de async await es que el código de la función async es lineal, le hemos pasado una promesa a await y nos devuelde directamente el valor con el que se ha resuelto, esperando y deteniendo la ejecución de la función.
+
+No me voy a detener más en explicar cómo funciona, eso lo dejo para otro post, pero `async/await` en realidad no es más que un uso concreto de los generadores, _azucar sintáctico_ para usar un generador y evaluar una promesa, podríamos replicar esta funcionalidad así:
+
+```javascript
+
+function helloDelayed() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Hello'), 5000)
+  })
+}
+
+function hi(gen) {
+  const iterator = gen()
+  iterator.next()
+
+  helloDelayed.then(res => iterator.next(res))
+}
+
+hi(function* () {
+  const greeting = yield;
+  console.log(greeting)
+})
+
+```
+
+Esta solución es más difícil de leer y de escribir, sobre todo por el doble `.next` necesario para que funcione, y por la poca legibilidad del comando `yield` en si mismo. Pero muestra una parte importante del funcionamiento de los generadores. 
+
+Lo que está pasando aquí es que `hi` recibe un generador como parámetro, lo ejecuta y llama una vez a `.next` para ejecutar el generador hasta el yield y luego lo vuelve a llamar cuando tiene el resultado de la promesa para revolver el resultado al yield. 
+
+Hasta ahora no habíamos hablado de esto para no complicar más, pero podemos añadir a la llamada a `.next` un parámetro, que a su vez podemos capturar en una variable asignándola a `yield`. Esta, para mi, es la funcionalidad más confusa de los generadores, pero es la clave para usarlos como para ejecutar llamadas asíncronas o corutinas como veremos en el siguiente apartado. Veamos un pequeño ejemplo de como funciona:
+
+```javascript
+
+function* counterGenerator() {
+  let i = 0
+  while (true) {
+    const str = yield i
+    console.log(str)
+    i++
+  }
+}
+
+var counter = counterGenerator()
+
+counter.next('hi') 
+// { value: 0, done: false }
+// el primer 'next' no imprime nada porque el generador se ejecuta solo hasta el yield
+counter.next('ho') 
+// ho
+// { value: 1, done: false }
+counter.next('hu') 
+// hu
+// { value: 2, done: false }
 
 
 ```
 
-Pero `async/await` en realidad no es más que un uso concreto de los generadores, _azucar sintáctico_ para usar un generador y evaluar una promesa:
+Este mecanismo nos da una forma de comunicarnos con el generador, algo muy potente, aunque en mi opinión con una sintaxis difícil de leer y nada clara.
 
-```javascript
-
-```
+## Corutinas
 
