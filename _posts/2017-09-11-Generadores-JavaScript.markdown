@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Generadores en JavaScript
 description: Definición y usos de los generadores en JavaScript. Bucles infinitos, evaluación perezosa, async/await y corutinas.
 layout: post
