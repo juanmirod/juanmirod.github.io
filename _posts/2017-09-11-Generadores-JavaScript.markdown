@@ -12,7 +12,7 @@ Los generadores son una herramienta de programación muy poderosa, pero difícil
 
 Un generador es una función especial en JavaScript que puede pausar su ejecución y retomarla en un punto arbitrario. Para definirlos utilizamos dos nuevas palabras reservadas del lenguaje: `function*` y `yield`. 
 
-> Este es uno de los casos más claros en los que he encontrado que la barrera del idioma a veces dificulta la comprensión de ciertos conceptos. `yield` es una palabra poco habitual en inglés, y para un no-nativo como yo, me suena totalmente fuera de contexto. Se traduce como *_producir_* o *_ceder_* 
+> Este es uno de los casos más claros en los que he encontrado que la barrera del idioma a veces dificulta la comprensión de ciertos conceptos. `yield` es una palabra poco habitual en inglés, y para un no-nativo como yo, me suena totalmente fuera de contexto. Se traduce como _producir_ o _ceder_ 
 
 Trataré de explicar su funcionamiento con un ejemplo de código:
 
