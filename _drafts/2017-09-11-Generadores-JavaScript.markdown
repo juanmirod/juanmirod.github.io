@@ -121,7 +121,7 @@ Este ejemplo utiliza la sintaxis del spread operator y los generadores para obte
 ```
 
 
-### Async / await
+### Async/await y corutinas
 
 Los ejemplos anteriores vienen bien para entender como funcionan los generadores, pero tienen una aplicación práctica limitada. Donde los generadores son realmente útiles es en las operaciones asíncronas.
 
@@ -146,9 +146,9 @@ hi()
 
 ```
 
-Lo genial de async await es que el código de la función async es lineal, le hemos pasado una promesa a await y nos devuelde directamente el valor con el que se ha resuelto, esperando y deteniendo la ejecución de la función.
+Lo genial de `async/await` es que el código de la función async es lineal, le hemos pasado una promesa a await y nos devuelde directamente el valor con el que se ha resuelto, esperando y deteniendo la ejecución de la función.
 
-No me voy a detener más en explicar cómo funciona, eso lo dejo para otro post, pero `async/await` en realidad no es más que un uso concreto de los generadores, _azucar sintáctico_ para usar un generador y evaluar una promesa, podríamos replicar esta funcionalidad así:
+No me voy a detener más en explicar cómo funciona, eso lo dejo para otro post, pero `async/await` en realidad no es más que un uso concreto de los generadores, _azucar sintáctico_ para usar un generador y evaluar una promesa, podríamos replicar esta funcionalidad, para una sola llamada (más adelante veremos la generalización) así:
 
 ```javascript
 
@@ -204,7 +204,59 @@ counter.next('hu')
 
 ```
 
-Este mecanismo nos da una forma de comunicarnos con el generador, algo muy potente, aunque en mi opinión con una sintaxis difícil de leer y nada clara.
+Este mecanismo nos da una forma de comunicarnos con el generador, algo muy potente, aunque en mi opinión con una sintaxis difícil de leer y nada clara. Los generadores no son una herramienta que hay que usar con moderación, pero nos permiten hacer cosas que estarían fuera de nuestro alcance con JavaScript si no fuera con ellos, como el ejemplo que veremos a continuación.
 
-## Corutinas
+Generalizando el código de helloDelayed, se puede construir una función que controle la ejecución de funciones asíncronas prácticamente igual a como hace async/await, veamos un ejemplo que lee dos ficheros (ejemplo tomado de [este post de TJ HoloWaychuck](https://medium.com/@tjholowaychuk/callbacks-vs-coroutines-174f1fe66127), que recomiendo leer, el código original usa callbacks, pero lo he modificado para usar promesas, dos ejemplos por el precio de uno _;)_):
 
+```javascript
+
+const fs = require('fs')
+
+function thread(fn) {
+  var gen = fn()
+
+  function next(res) {
+    var ret = gen.next(res)
+    if (ret.done) return
+    ret.value.then(next)
+  }
+  
+  next()
+}
+
+thread(function *(){
+  var a = yield read('README.md')
+  var b = yield read('index.html')
+  console.log(a)
+  console.log(b)
+})
+
+
+function read(path) {
+  return new Promise(resolve => fs.readFile(path, 'utf8', (err, res) => resolve(res)))
+}
+
+```
+
+Este código, sí se parece mucho más al de `async/await`, es más, si cambiamos `thread` por `async` y imaginamos que `yield` es `await` es prácticamente igual:
+
+```javascript
+
+async(function *(){
+  var a = yield read('README.md')
+  var b = yield read('index.html')
+  console.log(a)
+  console.log(b)
+})
+
+```
+
+Este ejemplo básico es una simplificación de la librería [Co](https://github.com/tj/co), que nos permite escribir este tipo de código asíncrono de forma lineal con corutinas.
+
+Bueno, en realidad cuando hablamos de generadores hablamos de [_'semicorutinas'_](https://en.wikipedia.org/wiki/Coroutine#Comparison_with_generators) porque los generadores no son tan flexibles como las corutinas de lenguajes como Go, pero por simplificar diremos que son equivalentes a corutinas, porque es la herramienta que tenemos para esta función en JavaScript a nivel nativo. 
+
+En cuando a otras librerías, [fibjs](https://github.com/fibjs/fibjs) y [node-fibers](https://github.com/laverdet/node-fibers) son implementaciones de _'fibers'_ que podríamos traducir como _"fibras"_ o _"hilos ligeros"_ que es más flexible que los generadores y que algunos desarrolladores [quieren incluir en el núcleo de Node.js](https://github.com/nodejs/node/issues/9131).
+
+Los generadores y las corutinas son herramientas avanzadas del lenguaje que seguramente no tengas que utilizar directamente a no ser que hagas desarrollo de sistemas o librerías, pero de las que podemos sacar provecho en nuestro código con librerías como `Co`, `node-fibers` o el nuevo `async/await` nativo. Espero que estos ejemplos hayan resuelto algunas dudas y generado aun más dudas e interés por el lenguaje y sirva como introducción al tema.
+
+Este artículo está alojado en github y cualquier comentario, revisión, corrección o contribución será bien recibido.
