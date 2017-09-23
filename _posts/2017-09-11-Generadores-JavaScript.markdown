@@ -49,25 +49,31 @@ El iterador devuelto por `counterGenerator` Puede usarse a su vez dentro de un b
 
 for(var c of counter) { 
   console.log(c)
-  if(c > 100) break // break detiene el bucle for como si hubiera encontrado done === true
+  if(c > 10) break // break detiene el bucle for como si hubiera encontrado done === true
 }
+
+// 1
+// 2
+// 3
+// ...
+// 10
 
 ```
 
 ### Bucles infinitos y evaluación perezosa
 
 En el ejemplo anterior hemos usado todo el tiempo un bucle `while (true)` sin bloquear o saturar la cpu y sin ninguna alerta por parte de node. Esto es así porque `yield` pausa la 
-ejecución de la función, y por lo tanto, pausa el bucle infinito cada vez que produce un valor.
+ejecución de la función, y por lo tanto, pausa el bucle infinito, cada vez que produce un valor.
 
-Esto es lo que se llama _evaluación perezosa_ y es un concepto importante en lenguajes funcionales como Haskell. Básicamente nos permite tener listas o estructuras de datos infinitas y operar sobre ellas, por ejemplo podemos tener un operador `take(n)` que toma los N primeros elementos de una lista infinita:
+Esto es lo que se llama _evaluación perezosa_ y es un concepto importante en lenguajes funcionales como Haskell. Básicamente nos permite tener listas o estructuras de datos _"infinitas"_ y operar sobre ellas, por ejemplo podemos tener un operador `take(n)` que toma los N primeros elementos de una lista infinita:
 
 ```javascript
 
 function* oddsGenerator() {
-  let n = 1
+  let n = 0
   while (true) {
-    yield n
-    n = n + 2
+    yield 2*n + 1
+    n++
   }
 }
 
@@ -91,9 +97,9 @@ take(5, oddNumbers) // toma 5 números impares
 
 ```
 
-La evaluación perezosa permite construir este tipo de estructuras _"infinitas"_ o completas sin producir errores de ejecución y también son más eficientes en algoritmos de búsqueda, recorrido de árboles y cosas así al evaluar el mínimo número de nodos necesarios para encontrar la solución. Para ver más usos y ventajas de la evaluación perezosa puedes ver [este hilo de stackoverflow](https://stackoverflow.com/questions/265392/why-is-lazy-evaluation-useful)
+La evaluación perezosa permite construir este tipo de estructuras _"infinitas"_ o completas sin producir errores de ejecución y también son más eficientes en algoritmos de búsqueda, recorrido de árboles y cosas así, al evaluar el mínimo número de nodos necesarios para encontrar la solución. Para ver más usos y ventajas de la evaluación perezosa puedes ver [este hilo de stackoverflow](https://stackoverflow.com/questions/265392/why-is-lazy-evaluation-useful)
 
-Como añadido en JavaScript, los generadores nos permiten crear una sintaxis más legible en el uso de arrays. Una obtener los valores producidos por el generador en ES6 es mediante el _spread operator_: 
+Como añadido en JavaScript, los generadores nos permiten crear una sintaxis más legible en el uso de arrays. Podemos obtener los valores producidos por el generador en ES6 mediante el _spread operator_: 
 
 
 ```javascript
@@ -109,21 +115,19 @@ function* range (limit) {
 [...range(5)]
 // [ 0, 1, 2, 3, 4 ] 
 
-[...range(10)]
-// [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
-
 ```
 
-Este ejemplo utiliza la sintaxis del spread operator y los generadores para obtener un resultado más legible y más flexible que la forma normalmente recomendada de crear un rango en `javascript` usando ES6:
+Pero cuidado con utilizar el _spread operator_ o los bucles for con listas infinitas como la de arriba:
 
 ```javascript
 
-[...Array(5).keys()]
-// [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+for(let c of oddNumbers) { // bucle infinito!!
+  console.log(c) 
+}
 
+[...oddNumbers] // bucle infinito y overflow de memoria, no podemos crear un array infinito en la memoria!!
 
 ```
-
 
 ### Async/await y corutinas
 
