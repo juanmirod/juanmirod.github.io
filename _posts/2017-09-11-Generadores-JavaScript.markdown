@@ -8,7 +8,7 @@ tags: [javascript]
 
 Los generadores son una herramienta de programación muy poderosa, pero difícil de entender cuando la vemos por primera vez. En este artículo trataré de definir de forma lo más sencilla posible qué son y como se usan los generadores y pasar a varios ejemplos prácticos en los que los generadores nos permiten simplificar código o directamente hacer cosas que no pensábamos que se pudieran hacer en JavaScript como funciones de evaluación perezosa y corutinas.
 
-> ¿Qué es un generador?
+### ¿Qué es un generador?
 
 Un generador es una función especial en JavaScript que puede pausar su ejecución y retomarla en un punto arbitrario. Para definirlos utilizamos dos nuevas palabras reservadas del lenguaje: `function*` y `yield`. 
 
