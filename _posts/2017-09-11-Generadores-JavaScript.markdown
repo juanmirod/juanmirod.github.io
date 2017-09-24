@@ -125,7 +125,7 @@ for(let c of oddNumbers) { // bucle infinito!!
   console.log(c) 
 }
 
-[...oddNumbers] // bucle infinito y overflow de memoria, no podemos crear un array infinito en la memoria!!
+[...oddNumbers] // bucle infinito y 'out of memory', no podemos crear un array infinito en la memoria!!
 
 ```
 
