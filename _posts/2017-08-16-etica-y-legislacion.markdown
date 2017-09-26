@@ -1,16 +1,16 @@
 ---
-published: false
+published: true
 title: Soluciones exámenes ética y legislación UNED
 description: Resúmenes realizados sobre las preguntas de exámenes de los últimos años.
 layout: post
 tags: [UNED] 
 ---
 
-Soluciones a los exámenes de Ética y Legislación de la UNED entre 2015 y 2017. **Estas soluciones no están comprobadas ni verificadas por ningún profesor**. Las respuestas son el resultado de leer el texto de referencia (Derecho e Informática) y tratar de sintetizar una respuesta para cada pregunta. Para una información más precisa y detallada es mejor leer el libro original. Simplemente estoy estudiando la asignatura y pensé que podría compartir mi trabajo por si a alguien le sirve en el futuro. 
+Soluciones a los exámenes de Ética y Legislación de la UNED entre 2015 y 2017. **Estas soluciones no están comprobadas ni verificadas por ningún profesor**. Las respuestas son el resultado de leer el texto de referencia [Derecho e Informática](https://www.librosuned.com/LU14262/Derecho-e-inform%C3%83%C2%A1tica-%C3%83%C2%A9tica-y-legislaci%C3%83%C2%B3n.aspx) y tratar de sintetizar una respuesta para cada pregunta. Para una información más precisa y detallada es mejor leer el libro original. Simplemente estoy estudiando la asignatura y pensé que podría compartir mi trabajo por si a alguien le sirve en el futuro. 
 
 Hay algunos temas de la asignatura, sobre todo los referentes a derechos de autor y delitos informáticos, que me parecen muy interesantes y trataré de ampliar en un futuro en un lenguaje más llano, ya que entiendo que estos resúmenes no son útiles si no es para estudiar la asignatura por ser demasiado específicos y carecer de contexto. 
 
-Si quieres contribuir con más respuestas a exámenes o correcciones sobre el texto puedes hacerlo aquí.
+Si quieres contribuir con más respuestas a exámenes o correcciones sobre el texto puedes hacerlo [aquí](https://github.com/juanmirod/juanmirod.github.io/blob/master/_posts/2017-08-16-etica-y-legislacion.markdown).
 
 # Examen Primera semana de Julio de 2017
 
