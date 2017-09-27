@@ -15,6 +15,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #313131;
 }
 
+.icon {
+  width: 50px;
+}
+
 .masthead {
   background-color: #00bcd4;
 }

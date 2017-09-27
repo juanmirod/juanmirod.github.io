@@ -4,7 +4,7 @@ markdown: kramdown
 url: http://juanmirod.github.io
 title: "Por amor al código" 
 tagline: "Code snippeds y reflexiones sobre tecnología"
-description: "juanmirod.github.io"
+description: "Blog de código abierto sobre desarrollo y tecnología en general."
 paginate: 1
 github: 
   repo: https://github.com/juanmirod/juanmirod.github.io
