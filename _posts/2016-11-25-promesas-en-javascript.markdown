@@ -36,11 +36,15 @@ console.log(promise)
 
 En este punto la variable promise es un objecto y podemos operar con él. Hasta dentro de 10 segundos no se establecerá su valor y no contendrá la cadena 'Hello world!' pero podemos seguir trabajando con ella como si si que fuera así.
 
+`.then` es un método de la promesa que acepta una función, cuando la promesa se resuelve, llama a la función que le pasamos a `.then` pasándole como parámetro lo que le pasáramos a `resolve`, en realidad, le estamos pasando a _.then_ la función  _resolve_. Veamos como se haría en el ejemplo anterior:
+
 ```javascript
 
 promise.then(function(message) {
-  console.log(message) // 'Hello World!'
+  console.log(message) 
 })
+
+// 'Hello World!'
 
 ```
 
@@ -66,7 +70,7 @@ $.get('http://...')
 
 ```
 
-Pero si no necesitamos jQuery para nada más, a lo mejor no queremos incluirlo sólo para esto. Por suerte los navegadores ya comienzan a soportar la función ['fetch'](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), que devuelve una promesa y funciona de forma parecida a la función ajax de jQuery, pero usando la terminología estandard:
+Pero si no necesitamos jQuery para nada más, a lo mejor no queremos incluirl en nuestro proyecto sólo para esto. Por suerte, los navegadores ya comienzan a soportar la función ['fetch'](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), que devuelve una promesa y funciona de forma parecida a la función ajax de jQuery, pero usando la terminología estandard:
 
 ```javascript
 
@@ -80,7 +84,7 @@ fetch('http://...')
 
 ```
 
-Estas funciones sólo son válidas para peticiones AJAX, pero las promesas no se restringen solo a esto, podemos usarlas para cualquier operación no síncrona. Podemos usarlas para funciones que queremos ejecutar en el futuro como en el primer ejemplo, o para encapsular la ejecución de eventos, controlar procesos que tardan cierto tiempo en ejecutarse, peticiones a la cache, etc.
+Estas funciones sólo son válidas para peticiones AJAX, pero las promesas no se restringen solo a esto. Podemos usarlas para cualquier operación no síncrona. Podemos usarlas para funciones que queremos ejecutar en el futuro como en el primer ejemplo, o para encapsular la ejecución de eventos, controlar procesos que tardan cierto tiempo en ejecutarse, peticiones a la cache, etc.
 
 Un ejemplo diferente de cómo utilizar una promesa es utilizarlas para ejecutar nuestra aplicación cuando el DOM se ha cargado y está listo.
 
@@ -102,14 +106,14 @@ function ready() {
 }
 
 ready().then(function() {
-  // Ya podemos hacer cosas con el DOM
+  // Aquí podemos hacer cosas con el DOM
 })
 
 ```
 
-Ese es un ejemplo de un evento que sabemos que ocurrirá solo una vez y que podemos capturar en una promesa. Y lo de solo una vez es importante porque **una vez la promesa toma un valor, no se modificará, se dice que la promesa se ha cumplido, resuelto o establecido**.
+Ese es un ejemplo de un evento que sabemos que ocurrirá solo una vez y que podemos capturar en una promesa. Y lo de solo una vez es importante porque **una vez la promesa toma un valor, no se modificará. Se dice que la promesa se ha cumplido, resuelto o establecido**.
 
-Además de _'resolverse'_ las promesas pueden _'denegarse'_. Para denegarlas llamaremos ala segunda función que recibimos como parámetro que normalmente recibe el nombre de 'reject':
+Además de _'resolverse'_ las promesas pueden _'denegarse'_. Para denegarlas, llamaremos a la segunda función que recibimos como parámetro que normalmente recibe el nombre de 'reject':
 
 ```javascript
 
