@@ -15,6 +15,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #313131;
 }
 
+.sidebar-icons {
+  background-color: #f8f4f8;
+  padding-left: 20px;
+}
+
 .sidebar-icons .icon {
   width: 36px;
   display: inline;
