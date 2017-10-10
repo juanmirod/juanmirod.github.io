@@ -6,7 +6,7 @@ layout: post
 tags: [opinion]
 ---
 
-Es evidente, que gran parte de lo que hacemos es suplantarnos a nosotros mismos. O dicho de otra forma, automatizar procesos que podríamos hacer a mano, pero que podemos automatizar, mejorando en velocidad, eficiencia, tolerancia a errores, reproducibilidad, portabilidad, independencia... 
+Es evidente, que gran parte de lo que hacemos los desarrolladores es suplantarnos a nosotros mismos. O dicho de otra forma, automatizar procesos que podríamos hacer a mano, pero que podemos automatizar, mejorando en velocidad, eficiencia, tolerancia a errores, reproducibilidad, portabilidad, independencia... 
 
 En todos los proyectos hay partes del desarrollo tediosas o repetitivas que solemos automatizar: tests runners, compilación, generadores de clases o componentes, procesos de empaquetado, implantación, etc, etc.
 
@@ -18,17 +18,17 @@ Como todo desarrollador, en más de una ocasión me he planteado cómo podría c
 
 En este sentido, hay varios caminos que se han intentado seguir hasta ahora para conseguir acercarse al _"programa que programe"_ o dicho de otra manera, para depender menos, o nada, de los desarrolladores.
 
-Cucumber y el desarrollo de tests de comportamiento en general son una aproximación a una forma de escribir especificaciones que den más control a los gestores o jefes de producto. En realidad cucumber no automatiza el desarrollo, solo las especificaciones, de forma que son comprobables y reproducibles, pero no pueden generar el código de la aplicación por si mismas, al menos no hasta ahora.
+**Cucumber y el desarrollo de tests de comportamiento** en general son una aproximación a una forma de escribir especificaciones que den más control a los gestores o jefes de producto. En realidad cucumber no automatiza el desarrollo, solo las especificaciones, de forma que son comprobables y reproducibles, pero no pueden generar el código de la aplicación por si mismas, al menos no hasta ahora.
 
-Las DSLs o Lenguajes de dominio específico, son algo parecido. Se crea un lenguaje de muy alto nivel y centrado en el dominio concreto del negocio, de forma que sea fácil para los expertos no desarrolladores escribir programas en este nuevo lenguaje específico. 
+Las DSLs o **lenguajes de dominio específico**, son algo parecido. Se crea un lenguaje de muy alto nivel y centrado en el dominio concreto del negocio, de forma que sea fácil para los expertos no desarrolladores escribir programas en este nuevo lenguaje específico. 
 
 Es más claro y exitoso ejemplo de esto son las hojas de excell. En excell cada negocio, o incluso cada usuario, crea sus propias reglas, tablas y cálculos, de forma que se pueden conseguir cálculos complejos sin necesidad de un desarrollador profesional. Excell se usa en muchas profesiones que no consideramos cercanas al desarrollo, pero que utilizan la potencia de un lenguaje de alto nivel, declarativo y multidioma para programar algoritmos complejos casi sin saberlo.
 
-Las redes neuronales, y en especial las redes de aprendizaje profundo, son otra aproximación a la generación de programas que suplanten sistemas desarrollados a mano. Las redes de aprendizaje profundo están demostrando mejorar los resultados de enormes sistemas expertos o de reglas desarrollados a mano durante años, reduciendo el tiempo de desarrollo enormemente. Hoy en día, clasifican imágenes, emails, posts en redes sociales e incluso diseñan piezas de ingeniería que usan menos material y son más resistentes.
+Las redes neuronales, y en especial **las redes de aprendizaje profundo**, son otra aproximación a la generación de programas que suplanten sistemas desarrollados a mano. Las redes de aprendizaje profundo están demostrando mejorar los resultados de enormes sistemas expertos o de reglas desarrollados a mano durante años, reduciendo el tiempo de desarrollo enormemente. Hoy en día, clasifican imágenes, emails, posts en redes sociales, reconocen personas e incluso diseñan piezas de ingeniería que usan menos material y son más resistentes.
 
-Otro gran avance que ha conseguido escalar los sistemas a nivel mundial es _"la nube"_. Los contenedores y los servicios de servidores que nos abstraen del problema de tener un servidor físico en un lugar concreto hacen que no necesitemos una armada de desarrolladores para poder escalar nuestro sistema a nivel mundial.
+Otro gran avance que ha conseguido escalar los sistemas a nivel mundial es **"la nube"**. Los contenedores y los servicios de servidores que nos abstraen del problema de tener un servidor físico en un lugar concreto hacen que no necesitemos una armada de desarrolladores para poder escalar nuestro sistema a nivel mundial.
 
-Pero todos estos son aplicaciones específicas dentro de dominios específicos. Al final no son más que soluciones más complejas pero parecidas a _"automatizar el build"_. No le damos un problema abierto a la máquina y ésta nos devuelve un programa que lo resuelve, sino que dentro de un dominio conocido y un rango de parámetros (enorme en algunos casos) la máquina nos devuelve una respuesta.
+Pero todos estos son aplicaciones específicas dentro de dominios específicos. Al final no son más que soluciones (mucho) más complejas, pero parecidas a _"automatizar el build"_. No le damos un problema abierto a la máquina y esta nos devuelve un programa que lo resuelve, sino que dentro de un dominio conocido y un rango de parámetros (enorme en algunos casos) la máquina nos devuelve una respuesta.
 
 Y es que hasta ahora esa es la forma que entendemos que funciona una máquina: le damos un input y nos devuelve un output. Pregunta-respuesta. Pero, hasta ahora al menos, no hemos conseguido crear una máquina que _"razone"_ en el sentido amplio de la palabra.
 
