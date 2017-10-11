@@ -22,7 +22,7 @@ En este sentido, hay varios caminos que se han intentado seguir hasta ahora para
 
 El extremo son los CMS como Wordpress, Prestashop o Magento. Sistemas completamente funcionales, con los que podemos tener una web funcionando con poco más que apretar un botón, mientras siguen pudiendose extender y modificar mediante código. 
 
-Antes para crear una web o un blog necesitábamos contratar un servicio de hosting, programar cada una de las páginas y sus interacciones, diseñar y crear la base de datos, etc. Ahora pulsamos un botón y tenemos una nueva instancia de wordpress y podemos cambiar su apariencia y funcionalidad con unos cuantos clicks de ratón.
+Antes, para crear una web o un blog necesitábamos contratar un servicio de hosting, programar cada una de las páginas y sus interacciones, diseñar y crear la base de datos, etc. Ahora pulsamos un botón y tenemos una nueva instancia de Wordpress y podemos cambiar su apariencia y funcionalidad con unos cuantos clicks de ratón.
 
 Este blog, por poner otro ejemplo, está alojado en github utilizando Jekyll y Github Pages. Ahora mismo estoy editando un fichero de texto en mi ordenador, pero cuando ejecuto `git push` el texto se sube a github, dispara un proceso que compila el HTML de la página y lo sube a los CDN de github. Solo con un comando, no tengo que preocuparme de servidores, ni bases de datos, ni de programar nada.
 
