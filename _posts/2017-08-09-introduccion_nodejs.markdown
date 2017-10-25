@@ -12,7 +12,7 @@ tags: [javascript]
 
 Antes de Node.js hubo varios intentos de establecer un entorno de ejecución para JavaScript fuera de los navegadores. Los programadores querían sacar JavaScript del corsé del navegador, querían poder hacer aplicaciones, modificar ficheros y acceder al hardware. Una historia muy entretenida sobre los inicios de Node.js y npm la cuenta el propio Issac Z. Schlueter (creador de npm) [en su blog](http://blog.izs.me/post/157295170418/my-first-npm-publish) 
 
-**TLDR:** Node.JS y npm se convirtieron en el entorno de ejecución de JavaScript en el servidor y ahora podemos utilizar el mismo lenguaje para desarrollar en el servidor y en el cliente en el caso del desarrollo web, aunque también hay gente usando Node para ioT, para robots, para herramientas de línea de comandos, etc.
+**TLDR:** Node.JS y npm se convirtieron en el entorno de ejecución de JavaScript en el servidor. Ahora podemos utilizar el mismo lenguaje para desarrollar en el servidor y en el cliente en el caso del desarrollo web, aunque también hay gente usando Node para ioT, para robots, para herramientas de línea de comandos, etc.
 
 ## Instalación y el REPL
 
