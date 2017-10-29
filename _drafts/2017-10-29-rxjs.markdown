@@ -1,0 +1,67 @@
+---
+published: false
+title: Introducción a programación reactiva con RxJS
+description: Definición, conceptos básicos y uso de RxJS.
+layout: post
+tags: [javascript] 
+---
+
+En los últimos años, Microsoft [ha dado un giro hacia el desarrollo de código abierto](https://thenewstack.io/microsoft-shifting-emphasis-open-source/) bastante sorprendente para muchos. En el mundo del desarrollo web, donde antes no salían de su mundo .NET han aportado numerosas herramientas y librerías que se usan a diario por millones de desarrolladores, entre ellas el reciente editor Visual Studio Code, el lenguaje TypeScript y las librerías de programación reactiva, RxJS en su versión para JavaScript. A estas últimas quiero dedicar este artículo.
+
+## ¿Qué es la programación reactiva?
+
+RxJS es una librería que nos permite unificar diferentes operaciones asíncronas dentro de un mismo comportamiento, pudiendo así componer y operar sobre eventos, llamadas a funciones, promesas y flujos con las mismas funciones. 
+
+> ¿Cómo?
+
+Veamos un ejemplo para aclarar el concepto. Gracias a RxJS podemos tomar una promesa y convertirla en un _Observable_
+
+```javascript
+
+```
+
+O tomar un stream de eventos como el `keyup` y convertirlo, también, en un _Observable_
+
+```javascript
+
+```
+
+Pero, un websocket también es un stream de eventos:
+
+```javascript
+
+```
+
+> ¿Y todo esto para qué?
+
+Pues ahora tanto la promesa, como los eventos de teclado o ratón, o un websocktet, todos tienen el mismo API, todos podemos tratarlos igual, y esto tiene muchas ventajas, no solo a nivel de carga mental, sino que, nos permite componerlos y realizar operaciones que antes no teníamos disponibles.
+
+Por ejemplo podemos filtrar los eventos de teclado para ignorar las dobles pulsaciones:
+
+```javascript
+// ejemplo debounce
+
+```
+
+O podemos añadir un retardo para solo aceptar un evento cada X segundos y así no saturar el servidor o no agobiar al usuario:
+
+```javascript
+// ejemplo throttling
+
+```
+
+Además podemos combinar varios eventos:
+
+```javascript
+
+// combine latests
+
+```
+
+O Podemos, a partir de un mismo evento, formatear la salida de diferentes formas:
+
+```javascript
+// ejemplo map
+```
+
+Todas estas operaciones nos permiten tener un código mucho más declarativo y conciso que si tuvieramos que programar estas operaciones mediante callbacks.
