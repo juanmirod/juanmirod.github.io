@@ -34,9 +34,9 @@ console.log(promise)
 
 ```
 
-En este punto la variable promise es un objecto y podemos operar con él. Hasta dentro de 10 segundos no se establecerá su valor y no contendrá la cadena 'Hello world!' pero podemos seguir trabajando con ella como si si que fuera así.
+En este punto la variable promise es un objeto y podemos operar con él. Hasta dentro de 10 segundos no se establecerá su valor y no contendrá la cadena 'Hello world!' pero podemos seguir trabajando con ella como si si que fuera así.
 
-`.then` es un método de la promesa que acepta una función, cuando la promesa se resuelve, llama a la función que le pasamos a `.then` pasándole como parámetro lo que le pasáramos a `resolve`, en realidad, le estamos pasando a _.then_ la función  _resolve_. Veamos como se haría en el ejemplo anterior:
+`.then` es un método de la promesa que acepta una función, cuando la promesa se resuelve, llama a la función que le pasamos a `.then` pasándole como parámetro lo que le pasáramos a `resolve`. En realidad, le estamos pasando a _.then_ la función  _resolve_. Veamos como se haría en el ejemplo anterior:
 
 ```javascript
 
@@ -50,7 +50,7 @@ promise.then(function(message) {
 
 Así dicho parece que lo que estamos haciendo es complicar las cosas, pero las promesas tienen dos ventajas principales: 
 
-1. **Nos devuelven el control.** Gracias a las promesas, mantenemos control sobre la ejecución de nuestro programa, que antes delegábamos en una llamada asíncrona que podía o no terminar. Ahora con las promesas podemos operar independientemente de lo que pase con la llamada asíncrona. Además las promesas tienen la gran ventaja de que si el código lanza una excepción dentro de la Promesa, ésta la capturará y la devolverá convenientemente con la función 'catch'.
+1. **Nos devuelven el control.** Gracias a las promesas, mantenemos control sobre la ejecución de nuestro programa, que antes delegábamos en una llamada asíncrona que podía o no terminar. Ahora con las promesas podemos operar independientemente de lo que pase con la llamada asíncrona. Además, las promesas tienen la gran ventaja de que si el código lanza una excepción dentro de la Promesa, ésta la capturará y la devolverá convenientemente con la función 'catch'.
 
 2. **Las promesas se pueden encadenar.** Podemos hacer que la ejecución de una promesa dependa de otra, o esperar a que todo un grupo de promesas se resuelvan. Esto hace que el código sea mucho menos engorroso y mucho más fácil de leer y mantener. 
 
@@ -143,7 +143,7 @@ promise
 
 Cuando una promesa es rechazada, la ejecución saltará directamente al primer `.catch` que encuentre, saltándose el/los then (luego veremos que puede hacer varios) que haya delante.
 
-Pero como una promesa una vez tome un valor no se modificará, si se resuelve y algo más tarde tratamos de denegarla, la promesa ignorará la llamada a _'reject'_ y mantendrá el valor con el que se resolvió. Esto hace que podamos añadir un tiempo de expiración a nuestras promesas, por ejemplo para una petición o un evento que esperamos que se ejecute antes de un tiempo determinado, podríamos añadir un tiempo máximo por el que esperar a que se descargue una imagen o un script y si se supera ese tiempo, tomarlo como un error:
+Pero como una promesa una vez tome un valor no se modificará, si se resuelve y algo más tarde tratamos de denegarla, la promesa ignorará la llamada a _'reject'_ y mantendrá el valor con el que se resolvió. Esto hace que podamos añadir un tiempo de expiración a nuestras promesas. Por ejemplo, para una petición o un evento que esperamos que se ejecute antes de un tiempo determinado, podríamos añadir un tiempo máximo por el que esperar a que se descargue una imagen o un script y si se supera ese tiempo, tomarlo como un error:
 
 ```javascript
 
@@ -250,9 +250,11 @@ Promise.race([p1, p2]).then(function(value) {
 
 ```
 
-Estas funciones pueden crearse gracias a que, como comentaba antes, las Promesas encapsulan operaciones asíncronas devolviéndonos siempre el mismo interface y por tanto creando una forma fácil de manipularlas y agruparlas. 
+Estas funciones pueden crearse gracias a que, como comentaba antes, las Promesas encapsulan operaciones asíncronas devolviéndonos siempre el mismo interface, dándonos una forma fácil de manipularlas y agruparlas. 
 
 Tanto es así, que las promesas cumplen una serie de [propiedades matemáticas](https://medium.com/@jamiedixon/promises-and-arrays-are-the-same-5ea68a4d769b#.ogdbn4l4s) que hacen que podamos usarlas con operaciones como map/filter/reduce, esto es lo que hace [Bluebird](http://bluebirdjs.com/docs/api-reference.html), dándonos todo el repertorio de operaciones que podemos hacer con promesas, lo que resulta muy útil cuando todas nuestras librerías devuelven promesas y podemos manejarlas a alto nivel. Además, si nuestra librería no está escrita con promesas, sino con el estilo de callbacks de node, pero queremos aprovechar las ventajas de las promesas, Bluebird nos da una función para convertir las funciones que usan callbacks a promesas: [promisify](http://bluebirdjs.com/docs/api/promise.promisify.html)
+
+> ACTUALIZACIÓN: Node también incluye una función `promisify` [desde la versión 8](https://nodejs.org/api/util.html#util_util_promisify_original), con lo que ya no es necesario usar Bluebird para esto.
 
 ## Patrones útiles
 
