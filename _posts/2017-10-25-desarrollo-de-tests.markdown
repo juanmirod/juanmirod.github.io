@@ -25,13 +25,89 @@ Escribir los primeros tests siempre parece un poco tonto. Hay tan poco código q
 
 > En mi humilde experiencia el mejor momento para escribir los primeros tests es **DESDE EL PRINCIPIO**
 
-No me entiendas mal, el código exploratorio está bien y hacer un par de pruebas en dos días o tres te permite probar ideas, y tal vez al principio seas como yo de los que prefieres esbozar la GUI en HTML para tener algo visual que modificar y probar. Todo eso está bien pero seguramente cuando quieras añadirle tests te darás cuenta de que tal y como está es una maraña y es imposible de testear y o bien empiezas de nuevo y añades los tests desde el principio o bien has dejado pasar demasiado tiempo, tu prototipo de espagueti ha crecido hasta ser usable y ya no quieres tirarlo todo por la ventana. Y entonces ya has perdido la oportunidad de escribir tests para ese proyecto.
+No me entiendas mal, el código exploratorio está bien y hacer un par de pruebas en dos días o tres te ayuda a pensar en el problema, y tal vez al principio seas como yo de los que prefieres esbozar la GUI en HTML para tener algo visual que modificar y probar. Todo eso está bien. Pero, seguramente, cuando quieras añadirle tests te darás cuenta de que, tal y como está, es una maraña y es imposible de testear. O bien empiezas de nuevo y añades los tests desde el principio, o bien has dejado pasar demasiado tiempo, tu prototipo de espagueti ha crecido hasta ser usable. Te están pidiendo más funcionalidad y ya no quieres tirarlo todo por la ventana. Y entonces ya has perdido la oportunidad de escribir tests para ese proyecto.
 
 Por eso pienso que es mejor escribir los tests desde el principio. No tienen que ser muchos, ni muy exhaustivos, pero sí los suficientes como para no poder escribir el código todo en una enorme maraña. 
 
 > ¿Cuántos son suficientes tests?
 
-En ese tema no me considero ningún experto, al revés, pienso que aun me queda mucho que aprender. Pero mi tendencia ahora mismo es a tratar de tener al menos un test por cada unidad funcional del código. Eso puede ser un componente si estoy en Angular o una función o un módulo si estoy en JS puro, pero la idea es que no haya funcionalidad sin su test. Con eso consigo que desde el momento en el que pienso en añadir un componente, una función o un 'if' que define un nuevo camino o funcionalidad, primero pienso en qué función va a cumplir y cómo podría testarla.
+En ese tema no me considero ningún experto, al revés, pienso que aun me queda mucho que aprender. Pero mi tendencia ahora mismo es a tratar de tener al menos un test por cada unidad funcional del código. Eso puede ser un componente si estoy en Angular o una función o un módulo si estoy en JS puro, pero la idea es que no haya funcionalidad sin su test. Con eso consigo que desde el momento en el que pienso en añadir un componente, una función o un 'if' que define un nuevo camino o funcionalidad, primero pienso en qué función va a cumplir y cómo podría testarla. Y además me hace asegurarme de que no añado esa funcionalidad de forma que no pueda testarla. Voy a tratar de explicarlo con un ejemplo.
+
+Imaginemos que tenemos la típica aplicación de listado de TODOs. Tenemos un array que guarda las tareas, que son objetos de JS, para añadir una tarea tenemos una función addTodo que recibe el listado de tareas y la nueva tarea y devuelve un nuevo listado con las tareas:
+
+
+```javascript
+
+const addTodo = (todos = [], newTodo = {}) => [...todos, newTodo]
+
+describe('addTodo', () => {
+  const sampleTodo = { text: 'Do something!' }
+  const _ = undefined
+
+  it('adds a todo to an empty list', () => {
+    expect(addTodo([], sampleTodo)).toEqual([sampleTodo])
+  })
+
+  it('creates an empty list if not provided', () => {
+    expect(addTodo(_, sampleTodo)).toEqual([sampleTodo])
+  })
+
+  ...
+  
+})
+
+``` 
+
+Nos piden que añadamos un _timestamp_ a addTodo, la API ya está en producción y addTodo se utiliza en varios puntos de nuestra aplicación. De primeras se me ocurre que no es problema, puedo hacer algo así:
+
+```javascript
+
+const addTodo = (todos = [], newTodo = {}) => {
+  newTodo.timestamp = Date.now()
+  return [...todos, newTodo]
+}
+
+```
+
+Pero así rompería todos los tests, porque ahora no puedo comprobar que el valor de timestamp coincide con un valor concreto (en realidad sí podría haciendo una comparación parcial con jasmine.objectContaining, ver más abajo para eso, pero supongamos que no) ¿Cómo puedo arreglarlo?
+
+```javascript
+
+const addTodo = (todos = [], newTodo = {}, timestamp = Date.now()) => {
+  newTodo.timestamp = timestamp
+  return [...todos, newTodo]
+}
+
+// o mejor aún
+const addTodo = (todos = [], newTodo = {}, timestamp = Date.now()) =>
+  [...todos, Object.assign({}, newTodo, { timestamp: timestamp })]
+
+
+```
+
+Ahora podemos seguir testeando esta función sin problema:
+
+```javascript
+
+describe('addTodo', () => {
+  const now = Date.now()
+  const sampleTodo = { text: 'Do something!' }
+  const expectedTodo = { text: 'Do something!', timestamp: now}
+  const _ = undefined
+
+  it('adds a todo to an empty list', () => {
+    expect(addTodo([], sampleTodo, now)).toEqual([expectedTodo])
+  })
+
+  it('creates an empty list if not provided', () => {
+    expect(addTodo(_, sampleTodo, now)).toEqual([expectedTodo])
+  })
+
+  ...
+  
+})
+
+```
 
 
 [1]:http://juanmirod.github.io/2016/04/29/configurando-karma-en-un-projecto-javascript.html
