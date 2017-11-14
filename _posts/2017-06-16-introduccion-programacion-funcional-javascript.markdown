@@ -16,9 +16,11 @@ Hoy en día todos los grandes lenguajes van introduciendo conceptos de la progra
 
 JavaScript, desde su concepción es un lenguaje funcional y las ideas principales que le dan forma, las clausuras, las funciones como valores, la delegación de prototipos y la declaración de objetos sintácticamente son ideas tomadas de los lenguajes Scheme y Self. Por eso JavaScript se adapta bastante bien a la programación funcional. Además, ES6 añade algunas nuevas funcionalidades muy interesantes para el desarrollo funcional como la notación que expande elementos iterables con `...` o las funciones con la flecha gruesa `=>`
 
-Si eres desarrollador de JavaScript y has visto algún ejemplo de código usando estas nuevas herramientas puede que te resultase totalmente extraterrestre, es casi como si fuera un lenguaje diferente, pero el lenguaje es el mismo, sólo cambian algunas palabras y lo que es más importante, la forma de escribirlo y leerlo.
+Si eres desarrollador de JavaScript puede que hayas visto algunos ejemplos usando estas herramientas que te hayan resultado extraños. El código es más corto y conciso. Casi puedes leerlo como si fuera un fichero de configuración más que código porque es más declarativo, pero para entenderlo de verdad y utilizarlo es necesario conocer algunas funciones y patrones que hacen que todo encaje. Y lo que es más importante, la forma de escribir y leer el código cambia.
 
-Voy a explicar algunos patrones útiles y ejemplos prácticos de como utilizar la programación funcional para mejorar la legibilidad y la fiabilidad de nuestro código en JavaScript sin necesidad de aprender un nuevo lenguaje o cambiar nuestro flujo de trabajo. Puedes introducir este código desde YA en tus proyectos y no tendrás que cambiar nada. Bueno, salvo si aun no usas ES6, cosa que te recomiendo desde ya, uses o no un estilo funcional en tu código.
+Voy a explicar algunos patrones útiles y ejemplos prácticos de como utilizar la programación funcional para mejorar la legibilidad y la fiabilidad de nuestro código en JavaScript sin necesidad de aprender un nuevo lenguaje o cambiar nuestro flujo de trabajo.
+
+Puedes introducir este código desde YA en tus proyectos y no tendrás que cambiar nada. (Bueno, salvo si aun no usas ES6, cosa que te recomiendo desde ya, uses o no un estilo funcional en tu código.)
 
 # ¿Qué es la programación funcional?
 
@@ -26,7 +28,7 @@ Antes de nada me gustaría aclarar este concepto. En este caso vamos a entender 
 
 |> ¿Funciones puras, efectos colaterales?
 
-Se puede entender muy fácilmente lo que es una función pura si se sabe lo que son los efectos colaterales o secundarios (side-effects en inglés):
+Son dos términos directamente relacionados. Se puede entender muy fácilmente lo que es una función pura si se sabe lo que son los efectos colaterales o secundarios (side-effects en inglés):
 
 **Efectos colaterales** son todas aquellas modificaciones que haga una función que estén fuera de su ámbito. Como modificar o crear una variable global, escribir algo a stdout, mostrar un gráfico en pantalla, escribir un fichero en el disco duro, acceder a una base de datos... Cualquier cosa que no sea operar sobre sus parámetros y variables locales es un efecto colateral.
 
@@ -42,7 +44,9 @@ Vamos a hacer un repaso por las herramientas del lenguaje que podemos usar para 
 
 En el código de los ejemplos seguiré algunas convenciones de código y herramientas de ES6 para ser más conciso y conseguir una notación más parecida a lenguages como Haskell o Erlang. 
 
-Este es el estilo del que comentaba que tal vez parezca un poco extraño, como guía inicial para aquellos que no estén familiarizados con ES6:
+Este es el estilo al principio puede resultar un poco extraño o más familiar, según tu bagaje como desarrollador. Si te resulta raro te pido que le des una oportunidad y verás como rápidamente ves que al ser más breve y más declarativo, es más fácil de leer y de escribir y puede mejorar mucho tu código JavaScript. 
+
+Como guía inicial para aquellos que no estén familiarizados con ES6 utilizaré las funciones con flecha en la mayoría de los ejemplos. Esta es la sintaxis, junto a la equivalencia en ES5 (no hablo de `this` porque en todos estos ejemplos usaremos funciones independientes que no dependen del objeto de contexto):
 
 ```javascript
 
@@ -62,7 +66,7 @@ x => 2*x == function(x) { return 2*x; }
 
 Además, aunque no es muy común en según qué círculos, en JavaScript se puede no usar el ´;´ como delimitador de expresiones. Una de las funcionalidades del lenguaje, llamada ASI (Automatic Semicolon Insertion) hace que sean innecesarios, básicamente al ponerlos estamos haciendo el trabajo del compilador. Si queréis leer más sobre el tema os recomiendo [este artículo de Isaac Z. Schlueter, el creador de npm](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding)
 
-Todo esto era para decir que no habrá puntos y coma en el código :)
+Todo esto era para decir que no habrá puntos y coma (`;`) en el código :)
 
 La descomposición de objectos y arrays, una nueva sintáxis de **ES6**, nos permite hacer cosas como estas:
 
@@ -108,7 +112,7 @@ Más sobre cómo instalar Node.js y el REPL [aquí](http://juanmirod.github.io/2
 
 ### Bucles
 
-Un primer paso bastante común es deshacerse de los bucles y utilizar las funciones .map/.filter/.reduce en su lugar. Estas funciones son parte de la librería estándar de JavaScript para Iterables y tienen una serie de propiedades muy interesantes. Usándolas no necesitaremos escribir contadores, con lo que reducimos una posible fuente de erratas (¿quién no se ha equivocado al anidar dos bucles for y ha usado el contador que no debía?), son funciones que se pueden componer y ganamos en brevedad y simplicidad al ofrecer comportamientos más variados que los de un bucle normal.
+Un primer paso para hacer nuestor código más funcional bastante común, es deshacerse de los bucles y utilizar las funciones .map/.filter/.reduce en su lugar. Estas funciones son parte de la librería estándar de JavaScript para Iterables y tienen una serie de propiedades muy interesantes. Usándolas **no necesitaremos escribir contadores, con lo que reducimos una posible fuente de erratas** (¿quién no se ha equivocado al anidar dos bucles for y ha usado el contador que no debía?), son funciones que se pueden componer y ganamos en brevedad y simplicidad al ofrecer comportamientos más variados que los de un bucle normal.
 
 Además, estas tres funciones se caracterizan porque no alteran el array de entrada, sino que devuelven un nuevo array siempre, lo cual nos asegura que estamos trabajando de forma funcional, sin crear efectos colaterales.
 
@@ -435,5 +439,59 @@ add2(3)
 
 Por supuesto, la implementación se complica para n parámetros, pero para eso están las librerías funcionales que veremos al final del artículo, por ahora este simple ejercicio espero que sirva para mostrar lo que es _currificar_ una función.
 
+### Funciones asíncronas
+
+Hasta ahora, las funciones de orden superior que hemos usado son funciones síncronas, es decir, que se ejecutan en el orden en el que están escritas. Incluso los bucles de `.map`, `.filter` y `.reduce` se ejecutan de forma síncrona:
+
+```javascript
+
+[1,2,3].map(x => console.log(x)); console.log('After map')
+// 1
+// 2
+// 3
+// After map
+// undefined
+
+```
+
+Pero JavaScript está lleno de funciones asíncronas. Las funciones asíncronas son las que se ejecutan en otro momento, como resultado de un evento o de una respuesta a una petición. Usando el ejemplo anterior, pero ejecutando la función de forma asíncrona:
+
+
+```javascript
+
+const asyncLog = x => setImmediate(() => console.log(x))
+[1,2,3].map(asyncLog); console.log('After map')
+// After map
+// undefined
+// 1
+// 2
+// 3
+
+```
+
+No voy a extenderme en cómo funcionan las llamadas asíncronas en JavaScript, eso lo dejo para otro artículo sobre el Event Loop, pero dejémoslo en que las llamadas asíncronas se ejecutan fuera del orden en el que está escrito el programa. En JavaScript son muy comunes, pero el código de arriba no es muy limpio. Si realmente queremos escribir 'After map' después de transformar el array, ¿cómo lo hacemos?
+
+Para mejorarlo podemos usar las Promesas. Las promesas son un tipo de objeto que nos permite encapsular las llamadas asíncronas con un interface con el que podemos trabajar como si tuviéramos el resultado antes de ejecutarse la función. Siguiendo con el ejemplo anterior:
+
+```javascript
+
+const asyncLog = x => new Promise((resolve, reject) => {
+  setImmediate(() => {
+    console.log(x)
+    resolve()
+  })
+})
+
+Promise.all([1,2,3].map(asyncLog)).then(() => console.log('After map'))
+// 1
+// 2
+// 3
+// After map
+
+```
+
+En este ejemplo le hemos dado la vuelta a la tortilla. asyncLog sigue siendo asíncrona, pero hemos encapsulado cada llamada en una promesa que se resuelve cuando la función se ejecuta y luego hemos usado `Promise.all` para ejecutar el _After map_ cuando todas las promesas se han resuelto. El código se vuelve a leer en el mismo orden en el que obtenemos los resultados, aunque las llamadas sean asíncronas. 
+
+Este ejemplo es muy básico porque estas funciones no hacen más que loguear sus parámetros, para ver ejemplos reales y aprender más sobre las Promesas y cómo utilizarlas puedes ver [mi artículo dedicado sólo a ellas](http://juanmirod.github.io/2016/11/25/promesas-en-javascript.html).
 
 Este artículo está en pleno desarrollo, si te gusta este estilo de programación en Javascript vuelve pronto y seguramente encuentres nuevo contenido. Si quieres animarme a seguir escribiendo o quieres ayudar puedes hacerlo porque [este artículo está alojado en github](https://github.com/juanmirod/juanmirod.github.io/blob/master/_posts/2017-06-16-introduccion-programacion-funcional-javascript.markdown) cualquier comentario o contribución será bien recibido.
