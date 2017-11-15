@@ -466,4 +466,4 @@ Hay mucha documentación de calidad en Inglés y online sobre promesas, algunos 
 
 [Articulo en MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) La documentación de MDN sobre promesas, también en español.
 
-(Este artículo todavía está en desarrollo, seguiré añadiendo ejemplos de uso, así como anti-patrones y libros y artículos de referencia muy pronto. Si encuentras una errata o quiere hacer alguna aportación, estaré encantado de recibir tus comentarios o PRs en [Github](https://github.com/juanmirod/juanmirod.github.io/blob/master/_posts/2016-11-25-promesas-en-javascript.markdown))
+(Este artículo todavía está en desarrollo, seguiré añadiendo ejemplos de uso, así como anti-patrones y libros y artículos de referencia muy pronto.)

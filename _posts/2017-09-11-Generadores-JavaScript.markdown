@@ -268,5 +268,3 @@ En cuando a otras librerías para corutinas, [fibjs](https://github.com/fibjs/fi
 Los generadores y las corutinas son herramientas avanzadas del lenguaje que seguramente no tengas que utilizar directamente a no ser que hagas desarrollo de sistemas o librerías, pero de las que podemos sacar provecho en nuestro código con librerías como `Co`, `node-fibers` o el nuevo `async/await` nativo. Espero que estos ejemplos hayan resuelto algunas dudas y generado aun más dudas e interés por el lenguaje y sirva como introducción a todo este tema.
 
 Otra lectura recomendada para profundizar en los Generadores es el libro de Kyle Simpson ES6 and Beyond, y en concreto [el capítulo sobre Iteradores y Generadores](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch3.md#generators).
-
-Este artículo [está alojado en github](https://github.com/juanmirod/juanmirod.github.io/blob/master/_posts/2017-09-11-Generadores-JavaScript.markdown) y cualquier comentario, revisión, corrección o contribución será bien recibido.
