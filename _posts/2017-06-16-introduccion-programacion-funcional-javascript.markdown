@@ -494,4 +494,4 @@ En este ejemplo le hemos dado la vuelta a la tortilla. asyncLog sigue siendo as�
 
 Este ejemplo es muy básico porque estas funciones no hacen más que loguear sus parámetros, para ver ejemplos reales y aprender más sobre las Promesas y cómo utilizarlas puedes ver [mi artículo dedicado sólo a ellas](http://juanmirod.github.io/2016/11/25/promesas-en-javascript.html).
 
-Este artículo está en pleno desarrollo, si te gusta este estilo de programación en Javascript vuelve pronto y seguramente encuentres nuevo contenido. Si quieres animarme a seguir escribiendo o quieres ayudar puedes hacerlo porque [este artículo está alojado en github](https://github.com/juanmirod/juanmirod.github.io/blob/master/_posts/2017-06-16-introduccion-programacion-funcional-javascript.markdown) cualquier comentario o contribución será bien recibido.
+Este artículo está en pleno desarrollo, si te gusta este estilo de programación en Javascript vuelve pronto y seguramente encuentres nuevo contenido. 
