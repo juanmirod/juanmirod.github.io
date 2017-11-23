@@ -108,5 +108,3 @@ pt.x = 15 // sin problema, ahora pt.x vale 15 en lugar de 0
 ```
 
 En el ejemplo de código puede verse que no ocurre así con los objetos, porque lo que no se puede modificar es la referencia que contiene esa variable, pero sí podremos modificar las propiedades internas del objeto, (a no ser que estén congeladas, pero de eso hablaremos otro día).
-
-Para cualquier duda o aportación, este post está alojado en  [github](https://github.com/juanmirod/juanmirod.github.io/blob/master/_posts/2016-02-19-ambito-en-javascript.markdown)
