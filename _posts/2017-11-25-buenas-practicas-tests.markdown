@@ -32,7 +32,7 @@ Tener sólo tests de integración hace que sea muy difícil cubrir todas las pos
 Tener al menos algunos tests para cada parte del código nos ayudará a mantener los diferentes módulos desacoplados y pueden servir para comprobar al menos las funcionalidades más comunes.
 
 ## Tener un equipo de QA que revise el código antes de publicarlo es **mucho mejor que probarlo tú mismo.** 
-Por mucho que quieras, tú no eres un observador objetivo. Siempre tendrás tendencia a probar el _camino feliz_ Además, un buen equipo de QA se puede encargar de escribir tests de integración o test funcionales automáticos. Si tienes la suerte de tener un equipo de QA, escúchalos y aprende de ellos, nadie conoce mejor tu producto.
+Por mucho que quieras, tú no eres un observador objetivo. Siempre tendrás tendencia a probar el _camino feliz_. Además, un buen equipo de QA se puede encargar de escribir tests de integración o test funcionales automáticos. Si tienes la suerte de tener un equipo de QA, escúchalos y aprende de ellos, nadie conoce mejor tu producto.
 
 ## Una tabla de pruebas de regresión para probar tú mismo es mejor que NADA 
 Entre el abismo y una chuleta el día del examen, al menos está bien tener la chuleta.
@@ -45,6 +45,5 @@ Las herramientas de test, de cobertura y análisis de código **no te dicen si t
 
 Las pruebas de software, son parte del proceso de diseño y desarrollo, porque aseguran que cumplimos las especificaciones y que nuestro diseño es correcto. Y es que...
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">“Without requirements or design , programming is the art of adding bugs to an empty text file.” - Louis Srygley</p>&mdash; Programming Wisdom (@CodeWisdom) <a href="https://twitter.com/CodeWisdom/status/912738902376632321?ref_src=twsrc%5Etfw">September 26, 2017</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">“Without requirements or design , programming is the art of adding bugs to an empty text file.” - Louis Srygley</p>&mdash; Programming Wisdom (@CodeWisdom) <a href="https://twitter.com/CodeWisdom/status/912738902376632321">September 26, 2017</a></blockquote>
 

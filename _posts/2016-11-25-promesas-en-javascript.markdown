@@ -420,7 +420,7 @@ anAsyncCall()
 
 Con el nuevo código sí se captura la excepción. Además, si comentamos la línea del throw, el resultado por consola es 10 en lugar de 5, porque estamos obteniendo el resultado de ejecutar 'somethingComplicated' lo que, seguramente, era la intención de escribir el código de esta manera.
 
-Seguiré editando el artículo y añadiéndo ejemplos en cuanto pueda, pero mientras dejo un par de artículos sobre el tema: [Bluebird - Anti-patterns](http://bluebirdjs.com/docs/anti-patterns.html) y [Promises anti-patterns en taoofcode](http://taoofcode.net/promise-anti-patterns/)
+Seguiré editando el artículo y añadiéndo ejemplos en cuanto pueda, pero mientras dejo un par de artículos sobre el tema: [Bluebird - Anti-patterns](http://bluebirdjs.com/docs/anti-patterns.html), [We have a problem with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html) y [Promises anti-patterns en taoofcode](http://taoofcode.net/promise-anti-patterns/)
 
 ## Encadenando promesas de forma dinámica
 
