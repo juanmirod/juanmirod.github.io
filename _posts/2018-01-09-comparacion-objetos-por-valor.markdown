@@ -54,9 +54,11 @@ JSON.stringify(a) === JSON.stringify(b) // true
 
 ```
 
-`JSON.stringify` convertir´a el objeto a una cadena, podemos usarlo con objetos anidados sin problemas mientras no haya funciones dentro de las propiedades o propiedades cíclicas. Si usamos objetos literales nos permiten estructurar nuestros datos y acceder fácilmente a ellos, siempre han sigo muy utilizados en JavaScript y más desde el auge de las APIs JSON, pero aún más desde que llegaron React y Redux a revolucionar la comunidad y promover el uso de funciones puras, inmutabilidad y objetos literales para manejar nuestras aplicaciones.
+`JSON.stringify` convertirá el objeto a una cadena, podemos usarlo con objetos anidados sin problemas mientras no haya funciones dentro de las propiedades o propiedades cíclicas. Los objetos literales nos permiten estructurar nuestros datos y acceder fácilmente a ellos, siempre han sigo muy utilizados en JavaScript y más desde el auge de las APIs JSON, pero aún más desde que llegaron React y Redux a revolucionar la comunidad y promover el uso de funciones puras, inmutabilidad y objetos literales para manejar nuestras aplicaciones.
 
-Algunos dirán ¿pero y las funciones de Lodash o Underscore para comparar objetos? Desde luego, si usas alguna de estas o otra librería funcional que te provea este método: úsalo, la implementación está más que testeada y optimizada, es una apuesta segura. Pero si no tienes esta dependencia en tu proyecto a lo mejor no quieres añadirla y crear una función isEqual JSON.stringify es trivial:
+Algunos dirán ¿pero y las funciones de Lodash o Underscore para comparar objetos? Desde luego, si usas alguna de estas o otra librería funcional que tenga este método: úsalo, la implementación está más que testeada y optimizada, es una apuesta segura. 
+
+Pero si no tienes esta dependencia en tu proyecto, a lo mejor no quieres añadirla y crear una función isEqual JSON.stringify es trivial:
 
 ```javascript
 
@@ -80,4 +82,4 @@ Es más lento que la implementación de Underscore, pero debemos recordar que:
 
 > Premature optimization is the root of all evil -- [DonaldKnuth](http://wiki.c2.com/?PrematureOptimization)
 
-Y a no ser que realmente vayamos a usar esta operación decenas de miles de veces por segundo de forma continuada, seguramente no nos merezca la pena el peso extra y la dependencia que añadimos a la aplicación. De todas formas, para poder comparar, enlazo a jsperf con un benchmark que aparece nada más buscar el tema en google: [https://jsperf.com/lo-dash-vs-underscore-vs-json-stringify-isequal](https://jsperf.com/lo-dash-vs-underscore-vs-json-stringify-isequal)
+Y **a no ser que realmente vayamos a usar esta operación decenas de miles de veces por segundo de forma continuada, seguramente no nos merezca la pena el peso extra y la dependencia que añadimos a la aplicación**. De todas formas, para poder comparar, enlazo a jsperf con un benchmark que aparece nada más buscar el tema en google: [https://jsperf.com/lo-dash-vs-underscore-vs-json-stringify-isequal](https://jsperf.com/lo-dash-vs-underscore-vs-json-stringify-isequal)
