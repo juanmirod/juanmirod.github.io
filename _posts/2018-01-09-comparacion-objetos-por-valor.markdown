@@ -78,8 +78,10 @@ isEqual(a, b) // true
 
 > Pero ¿y eso no será muy lento?
 
-Es más lento que la implementación de Underscore, pero debemos recordar que:
+Es algo más lento que la implementación de Underscore, pero debemos recordar que:
 
 > Premature optimization is the root of all evil -- [DonaldKnuth](http://wiki.c2.com/?PrematureOptimization)
 
-Y **a no ser que realmente vayamos a usar esta operación decenas de miles de veces por segundo de forma continuada, seguramente no nos merezca la pena el peso extra y la dependencia que añadimos a la aplicación**. De todas formas, para poder comparar, enlazo a jsperf con un benchmark que aparece nada más buscar el tema en google: [https://jsperf.com/lo-dash-vs-underscore-vs-json-stringify-isequal](https://jsperf.com/lo-dash-vs-underscore-vs-json-stringify-isequal)
+Y **a no ser que realmente vayamos a usar esta operación decenas de miles de veces por segundo de forma continuada, no nos merezce la pena el peso extra y la dependencia que añadimos a la aplicación**. De todas formas, para poder comparar, enlazo a jsperf con un benchmark que aparece nada más buscar el tema en google: [https://jsperf.com/lo-dash-vs-underscore-vs-json-stringify-isequal](https://jsperf.com/lo-dash-vs-underscore-vs-json-stringify-isequal)
+
+La solución de `JSON.stringify` se entiende a simple vista por cualquier programador de JavaScript, no tiene ninguna lógica oculta que nos haga preguntarnos que haría en tal o cual caso y si es necesario siempre se puede sustituir más adelante por algo más sofisticado.
