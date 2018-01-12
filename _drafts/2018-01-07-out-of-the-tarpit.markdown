@@ -1,0 +1,41 @@
+---
+published: false
+title: Reseña Out of the Tarpit
+description: Opinión y pequeño resumen de los puntos más importantes de este paper
+layout: post
+tags: [paper,opinion] 
+---
+
+Conforme leo algunos papers quiero ir subiéndo los más interesantes al blog y comentándolos aunque sea de pasada para ayudarme a recordarlos y tenerlos a mano para volver a ellos cuando quiera. La idea no es mía la he tomado de sitios como [the morning paper](https://blog.acolyer.org) o el [directorio de Bret Victor](http://worrydream.com/refs/)
+
+Out of the tarpit - Mosley and Marks 2006
+
+Siempre me gustan este tipo de ensayos que hablan de el trabajo del programador, y cómo todos coinciden en que hay que tratar de conseguir la mayor simplicidad posible y tener programa lo más declarativo posible. Este paper en concreto además se centra en uno de los temas favoritos de los desarrolladores: como crear un framework de trabajo ideal, que permita ese estilo simple y declarativo de desarrollo. Ha tenido bastante repercusión en la industria y lo he visto citado más de una vez por conocidos desarrolladores.
+
+[añadir citas: swadonette, om, rick hickery, Fernando..] 
+
+> ¿Qué es la simplicidad?
+
+La simplicidad para el desarrollador es siempre como un espejismo. Como una ilusión optica que sabes que no puede ser verdad. Para los ojos de los no desarrolladores todo debería ser tan fácil como especificar en unas cuantas frases o gráficos el problema y el ordenador debería poder hacer el resto. Para eso los tenemos, para hacer todo cálculo que no sea puramente creativo. 
+
+O eso parece. Cuando te acercas a los detalles, cuando te pones a programar, te das cuenta de que necesitas ser mucho más concreto y todos esos pequeños detalles que se obviaron en la descripción inicial pero son imprescindibles para tener un sistema que funcione son el 80% del trabajo.
+
+> Por ejemplo, un cliente normal solo piensa en "guarda estos datos en la base de datos" Pero nosotros tenemos que decidir si en una base de datos relacional o de documentos por ejemplo (¿Postgress o MySQL? ¿Mongo, MariaDB, Couch, Dynamo? ¿Redis, Memcache? ...), cómo normalizar los datos para almacenarlos, qué índices deberemos crear para facilitar las búsquedas, qué tipos de datos tienen los diferentes campos que se quieren guardar, que tamaño total tienen los datos y si se podrán mantener en RAM, se deben cachear o no, cómo se va a acceder a esos datos posteriormente y si deben replicarse a lo largo y ancho del mundo, si queremos que el almancenamiento sea immutable tipo log o mutable, qué permisos y qué privacidad tienen los datos, ¿quién debe poder acceder a ellos? ¿Quien no debería poder? ¿Hay leyes que protejan estos datos? ¿Pueden ser un atractivos para un atacante? etc, etc, etc...
+
+Algunas de esas preguntas debe de responderlas el cliente o el proyecto, si no fueron respondidas en las especificaciones, deberíamos preguntar directamente para saber qué hacer. Pero otras dependen únicamente del hecho de que estamos representando los datos en ordenadores que tienen limitaciones físicas y temporales. Esto último es lo que en Out of the tarpit llaman *complejidad accidental*. Es decir, el desarrollador debería poder escapar de toda esa complejidad derivada de estar representando los datos como 1's y 0's centro de un disco magnético o de una matriz de transistores. Deberíamos poder ignorar los detalles sobre velocidad de acceso, espacio, tipos de datos (a nivel de bytes) y demás limitaciones del hardware para centrarnos en el problema en sí.
+
+> ¿Cómo lo conseguimos? 
+
+La propuesta de los autores es la Programación Funcional Relacional (FRP en el original) que es un término que han inventado ellos para el framework que proponen. Pero antes de llegar a la propuesta final, dejan claro que es una cuestión de disciplina y de limitar la expresividad del/los lenguajes de programación para buscar la simplicidad. 
+
+El paper identifica dos fuentes principales de complejidad que enturbia el código: estado y lógica de control. Dentro de estos, además, separa lo que ya hemos llamado *"complejidad accidental"* de la *"complejidad esencial"* que es aquella innerente al problema que estamos tratanto, incluso si solo habláramos de él de forma figurada o totalmente matemática, suponiendo que los cálculos se hacen de forma ideal y no limitados por el hardware y los problemas del mundo real.
+
+Para atomizar y atacar esta complejidad se basan en dos principios: evitar la complejidad y separarla cuando no puedes evitarla. 
+
+Evitarla quiere decir no crear ningún estado o lógica que no sea absolutamente necesaria para resolver el problema, todo estado que se pueda derivar de la entrada, deberá derivarse y no almacenarse a no ser que sea realmente necesario para comprender mejor el problema. 
+
+Separarla quiere decir que, si vemos que necesitamos ese estado o esa lógica de control, debemos separarlo a donde pertenece dentro de la arquitectura. Esto así dicho suena más fácil de lo que es, ya que al final la responsabilidad recae en la diligencia del programador. De ahí que la propuesta sea también usar varios lenguajes, muy restringidos, para cada parte del framework, para evitar que los programadores caigan en la tentación de *"acortar camino"* mezclando lógica con estado. Un poco como CSS y HTML que son lenguajes muy restringidos y con una función concreta, salvo que en el caso del desarrollo web el control y el estado los gestionamos con JavaScript que es un lenguaje dinámico y muy laxo.
+
+En este sentido me llama la atención que la propuesta sea tener lenguajes restringidos cuando la tendencia en todos los lenguajes es incorporar más y más funcionalidad. Personalmente creo que el objetivo de tener un programa totalmente declarativo y funcional ayudaría mucho al desarrollo, pero no es la tendencia que veo en los lenguajes actuales o futuros. Lo que yo veo, extrapolando a partir del panorama actual, es lenguajes cada vez más ricos e intercambiables, cada vez más expresivos y que se pueden usar en cualquier situación. Ahora mismo hay una explosión de compiladores y traductores. Compilar Haskell o Clojure o Reason a JavaScript, C o C++ a wasm, compilar javascript a binario, Clojure sobre Java o sobre .NET, Crystal es como un Ruby que compila y es super rápido... 
+
+**La idea es que no importa en el lenguaje que trabajes, pronto podrás hacer cualquier tipo de aplicación, para la web o fuera de ella, con cualquier lenguaje.** Veo los lenguajes de programación del futuro un poco como los lenguajes naturales: cada uno tendrá su lenguaje "nativo" o preferido y con él podrá hacer lo mismo que con cualquier otro. Por supuesto habrá bilingües y políglotas, y algunos lenguajes seguirán siendo mejor para algunas cosas y habrá dominios que estén completamente en un lenguaje, pero eso también pasa con los lenguajes humanos y esa es la tendencia que veo. Al final la complejidad del mundo real no se puede encasillar o domar y nosotros no somos máquinas. Pensar con restricciones no es nuestra forma natural de expresarnos y siempre tendemos a la solución que nos dé más libertad de expresión, esa es una de las razones del éxito de JavaScript o de que diferentes dialectos de LISP sigan usándose.
