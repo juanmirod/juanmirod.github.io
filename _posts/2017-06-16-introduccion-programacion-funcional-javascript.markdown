@@ -36,13 +36,13 @@ Ahora podemos definir muy fácilmente una *Función pura* como aquella que no pr
 
 Claro está, solo con funciones puras no se puede construir un programa. Sería un programa sin ningún tipo de feedback, ni si quiera podríamos saber si se ha ejecutado correctamente o no. Por eso hablo de separar las funciones puras de las que no lo son.
 
-Sobre el tema de crear un nucleo de funciones puras y una serie de plugins o módulos alrededor que conecten el núcleo con el mundo real hay mucho que hablar también, pero eso es un tema más de arquitectura y hoy vamos a centrarnos en cómo desarrollar estas funciones y combinarlas para crear sistemas fáciles de testar, mantener y expandir.
+Sobre el tema de crear un nucleo de funciones puras y una serie de plugins o módulos alrededor que conecten el núcleo con el mundo real hay mucho que hablar también, sobre todo recomiendo el video de Bernhardt [Boundaries](https://www.destroyallsoftware.com/talks/boundaries) pero eso es un tema más de arquitectura y hoy vamos a centrarnos en cómo desarrollar estas funciones y combinarlas para crear sistemas fáciles de testar, mantener y expandir.
 
 ## Herramientas de desarrollo funcional en JavaScript
 
-Vamos a hacer un repaso por las herramientas del lenguaje que podemos usar para escribir utilizar funciones puras como base principal para nuestro código. Intentaré ir desde las funcionalidades más fáciles o conocidas a las más ajenas a la mayoría.
+Vamos a hacer un repaso por las herramientas del lenguaje que podemos usar para utilizar funciones puras como base principal para nuestro código. Intentaré ir desde las funcionalidades más fáciles o conocidas a las más ajenas a la mayoría.
 
-En el código de los ejemplos seguiré algunas convenciones de código y herramientas de ES6 para ser más conciso y conseguir una notación más parecida a lenguages como Haskell o Erlang. 
+En el código de los ejemplos seguiré algunas convenciones de código y herramientas de ES6 para ser más conciso y conseguir una notación más funcional y limpia. 
 
 Este es el estilo al principio puede resultar un poco extraño o más familiar, según tu bagaje como desarrollador. Si te resulta raro te pido que le des una oportunidad y verás como rápidamente ves que al ser más breve y más declarativo, es más fácil de leer y de escribir y puede mejorar mucho tu código JavaScript. 
 
@@ -112,9 +112,9 @@ Más sobre cómo instalar Node.js y el REPL [aquí](http://juanmirod.github.io/2
 
 ### Bucles
 
-Un primer paso para hacer nuestor código más funcional bastante común, es deshacerse de los bucles y utilizar las funciones .map/.filter/.reduce en su lugar. Estas funciones son parte de la librería estándar de JavaScript para Iterables y tienen una serie de propiedades muy interesantes. Usándolas **no necesitaremos escribir contadores, con lo que reducimos una posible fuente de erratas** (¿quién no se ha equivocado al anidar dos bucles for y ha usado el contador que no debía?), son funciones que se pueden componer y ganamos en brevedad y simplicidad al ofrecer comportamientos más variados que los de un bucle normal.
+Un primer paso para hacer nuestro código más funcional bastante común, es deshacerse de los bucles y utilizar las funciones .map/.filter/.reduce en su lugar. Estas funciones son parte de la librería estándar de JavaScript para Iterables y tienen una serie de propiedades muy interesantes. Usándolas **no necesitaremos escribir contadores, con lo que reducimos una posible fuente de erratas** (¿quién no se ha equivocado al anidar dos bucles for y ha usado el contador que no debía?), son funciones que se pueden componer y ganamos en brevedad y simplicidad al ofrecer comportamientos más variados que los de un bucle normal.
 
-Además, estas tres funciones se caracterizan porque no alteran el array de entrada, sino que devuelven un nuevo array siempre, lo cual nos asegura que estamos trabajando de forma funcional, sin crear efectos colaterales.
+Además, estas tres funciones se caracterizan porque no alteran el array de entrada, sino que devuelven un nuevo array siempre, lo cual nos asegura que estamos trabajando de forma pura, sin crear efectos colaterales.
 
 **.map**
 
@@ -571,5 +571,6 @@ const avg = arr => arr.reduce((total, next) =>
 Ahora sí que tenemos la misma funcionalidad que arriba, y la suma sólo se ejecutará si `next` no es `null` ni `undefined`. Este ejemplo puede parecer un poco extremo, estamos sustituyendo una de las piezas básicas de la sintaxis, una de las primeras cosas que aprendemos normalmente cuando nos enseñan a programar. Pero esa es la premisa de la programación funcional, utilizar funciones y tipos de datos para representar nuestro programa. Poco a poco estamos consiguiendo expresar cualquier expresión como una sucesión de funciones y eso es algo muy potente de cara a reusabilidad y testabilidad.
 
 En este último ejemplo a aparecido una función algo curiosa: `k`. La función constante, o `k` es una función que siempre devuelve el mismo valor, y que nos sirve en este caso para poder pasarle a `either` una función en lugar de una expresión. Tal vez más adelante me aventure a mostrar otros combinators, pero si te ha llamado la atención esta función y quieres saber su origen puedes ver la [entrada en la wikipedia sobre lógica combinatoria](https://es.wikipedia.org/wiki/L%C3%B3gica_combinatoria#Ejemplos_de_combinadores).
+
 
 Este artículo está en pleno desarrollo, si te gusta este estilo de programación en Javascript vuelve pronto y seguramente encuentres nuevo contenido. 
