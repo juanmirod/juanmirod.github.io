@@ -557,13 +557,13 @@ Pero hay una diferencia entre este código y el anterior. Este código siempre e
 
 const k = x => () => x 
 
-const sum = (x, y) => x + y
+const sum = x => y => x + y
 
 const either = (pred, onTrue, onFalse) => x => pred(x) ? onTrue(x) : onFalse(x)
 
 // calcula la media de un array de números
 const avg = arr => arr.reduce((total, next) => 
-  either(isNull(next), k(total), sum(total, next))
+  either(isNull, k(total), sum(total))(next)
 , 0) / arr.length
 
 ```
