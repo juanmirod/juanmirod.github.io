@@ -494,4 +494,82 @@ En este ejemplo le hemos dado la vuelta a la tortilla. asyncLog sigue siendo as�
 
 Este ejemplo es muy básico porque estas funciones no hacen más que loguear sus parámetros, para ver ejemplos reales y aprender más sobre las Promesas y cómo utilizarlas puedes ver [mi artículo dedicado sólo a ellas](http://juanmirod.github.io/2016/11/25/promesas-en-javascript.html).
 
+### Condicionales con Maybe y Either
+
+Con las herramientas que hemos visto hasta ahora y algunas funciones auxiliares podemos escribir un código casi libre de paréntesis y de construcciones sintácticas. Conforme nos acostumbramos a encadenar promesas, usar funciones para transformar los datos y usar map/filter/reduce nos vamos dando cuenta de que podemos escribir muchas funciones como una serie de operaciones sobre la entrada, por ejemplo supongamos una hipotética app que pide los datos de unos clientes y quiere calcular la edad media:
+
+```javascript
+
+// Dado un nombre de una propiedad y un objeto, devuelve el valor de esa propiedad en el objeto
+const pluck = prop => obj => obj[prop]
+
+// función para poder usar map con aplicación parcial
+const map = f => arr => arr.map(f)
+
+// calcula la media de un array de números
+const avg = arr => arr.reduce((total, next) => total + next, 0) / arr.length
+
+const avgAge = () =>
+  getUsers()
+    .then(map(pluck('birthDate'))
+    .then(avg)
+
+```
+
+Salvo cuando tenemos que usar un condicional. Si en el ejemplo anterior tuvieramos que contemplar la opción de que algunos usuarios tengan la edad `undefined` se nos rompe nuestra bonita cadena de funciones y tenemos que volver a escribir sintaxis para el `if`:
+
+```javascript
+
+// calcula la media de un array de números
+const avg = arr => arr.reduce((total, next) => {
+  if (next === undefined || next === null) {
+    return total
+  }
+  return total + next
+}, 0) / arr.length
+
+```
+
+No está mal, pero rompe un poco el estilo y sobre todo, no es DRY, cada vez que queremos comprobar esa condición en nuestra aplicación, tenemos que escribir ese mismo código. ¡A no ser que escribamos unas funciones que sustituyan las comprobaciones de nulidad!
+
+```javascript
+
+const isNull = x === undefined || x === null
+
+const either = (pred, trueValue, falseValue) => x => pred(x) ? trueValue : falseValue
+
+```
+
+Con ellas la función que calcula la media quedaría así:
+
+```javascript
+
+// calcula la media de un array de números
+const avg = arr => arr.reduce((total, next) => 
+  either(isNull(next), total, total+next)
+, 0) / arr.length
+
+```
+
+Pero hay una diferencia entre este código y el anterior. Este código siempre ejecuta las dos expresiones, mientras el condicional solo ejecutaba una de ellas, para tener la misma funcionalidad necesitamos envolver las expresiones en una función, de forma que solo se llame a una de las funciones después de comprobar el valos del predicado:
+
+```javascript
+
+const k = x => () => x 
+
+const sum = (x, y) => x + y
+
+const either = (pred, onTrue, onFalse) => x => pred(x) ? onTrue(x) : onFalse(x)
+
+// calcula la media de un array de números
+const avg = arr => arr.reduce((total, next) => 
+  either(isNull(next), k(total), sum(total, next))
+, 0) / arr.length
+
+```
+
+Ahora sí que tenemos la misma funcionalidad que arriba, y la suma sólo se ejecutará si `next` no es `null` ni `undefined`. Este ejemplo puede parecer un poco extremo, estamos sustituyendo una de las piezas básicas de la sintaxis, una de las primeras cosas que aprendemos normalmente cuando nos enseñan a programar. Pero esa es la premisa de la programación funcional, utilizar funciones y tipos de datos para representar nuestro programa. Poco a poco estamos consiguiendo expresar cualquier expresión como una sucesión de funciones y eso es algo muy potente de cara a reusabilidad y testabilidad.
+
+En este último ejemplo a aparecido una función algo curiosa: `k`. La función constante, o `k` es una función que siempre devuelve el mismo valor, y que nos sirve en este caso para poder pasarle a `either` una función en lugar de una expresión. Tal vez más adelante me aventure a mostrar otros combinators, pero si te ha llamado la atención esta función y quieres saber su origen puedes ver la [entrada en la wikipedia sobre lógica combinatoria](https://es.wikipedia.org/wiki/L%C3%B3gica_combinatoria#Ejemplos_de_combinadores).
+
 Este artículo está en pleno desarrollo, si te gusta este estilo de programación en Javascript vuelve pronto y seguramente encuentres nuevo contenido. 

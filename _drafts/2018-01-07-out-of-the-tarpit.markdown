@@ -10,7 +10,7 @@ Conforme leo algunos papers quiero ir subiéndo los más interesantes al blog y 
 
 [Out of the tarpit - Mosley and Marks 2006](/public/out-of-the-tarpit.pdf)
 
-Siempre me gustan este tipo de ensayos que hablan de el trabajo del programador, y cómo todos coinciden en que hay que tratar de conseguir la mayor simplicidad posible y tener programa lo más declarativo posible. Este paper en concreto además se centra en uno de los temas favoritos de los desarrolladores: como crear un framework de trabajo ideal, que permita ese estilo simple y declarativo de desarrollo. Ha tenido bastante repercusión en la industria y lo he visto citado más de una vez por conocidos desarrolladores.
+Siempre me gustan este tipo de ensayos que hablan de el trabajo del programador, y cómo todos coinciden en que hay que tratar de conseguir la mayor simplicidad posible y tener programa lo más declarativo posible. Este paper en concreto, además, se centra en uno de los temas favoritos de los desarrolladores: como crear un framework de trabajo ideal, que permita ese estilo simple y declarativo de desarrollo. Ha tenido bastante repercusión en la industria y lo he visto citado más de una vez por conocidos desarrolladores.
 
 [añadir citas: swadonette, om, rick hickery, Fernando..] 
 
