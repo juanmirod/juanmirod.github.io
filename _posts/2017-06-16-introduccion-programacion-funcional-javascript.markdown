@@ -42,11 +42,13 @@ Sobre el tema de crear un nucleo de funciones puras y una serie de plugins o mó
 
 Vamos a hacer un repaso por las herramientas del lenguaje que podemos usar para utilizar funciones puras como base principal para nuestro código. Intentaré ir desde las funcionalidades más fáciles o conocidas a las más ajenas a la mayoría.
 
-En el código de los ejemplos seguiré algunas convenciones de código y herramientas de ES6 para ser más conciso y conseguir una notación más funcional y limpia. 
+No pretendo que esta sea una guía exhaustiva o prescriptiva de cómo programar. Simplemente son una serie de funciones y patrones que pueden ayudar a hacer el código más conciso, legible o testable. Como todas las técnicas, patrones y librerías, no hay balas de plata. No pretendo decir que solo debas programar así o que la POO no sirva para nada. Cada cosa tiene su lugar, hay ámbitos donde la POO encaja mejor y otros donde lo hace la programación funcional, lugares donde es mejor usar Observables o aplicaciones que puedes resolver con jQuery. Al final yo veo escribir código como escribir un texto: cuando más vocabulario y más conocimiento tengas, mejor serás capaz de adaptarte y de describir el problema.
 
-Este es el estilo al principio puede resultar un poco extraño o más familiar, según tu bagaje como desarrollador. Si te resulta raro te pido que le des una oportunidad y verás como rápidamente ves que al ser más breve y más declarativo, es más fácil de leer y de escribir y puede mejorar mucho tu código JavaScript. 
+En el código de los ejemplos seguiré algunas convenciones de código y herramientas de ES6 para ser más conciso y conseguir una notación más funcional y limpia. Además el código de los ejemplos pretende ser lo más simple e ilustrativo posible para que hacer llegar lo mejor posible cada idea, no pretende ser un código correcto o general que pueda usarse directamente en una aplicación.
 
-Como guía inicial para aquellos que no estén familiarizados con ES6 utilizaré las funciones con flecha en la mayoría de los ejemplos. Esta es la sintaxis, junto a la equivalencia en ES5 (no hablo de `this` porque en todos estos ejemplos usaremos funciones independientes que no dependen del objeto de contexto):
+Este estilo al principio puede resultar un poco extraño o más familiar, según tu bagaje como desarrollador. Si te resulta raro te pido que le des una oportunidad y verás como rápidamente ves que al ser más breve y más declarativo, es más fácil de leer y de escribir y puede mejorar mucho tu código JavaScript. 
+
+Como guía inicial, para aquellos que no estén familiarizados con ES6, utilizaré las funciones con flecha en la mayoría de los ejemplos. Esta es la sintaxis, junto a la equivalencia en ES5 (no hablo de `this` porque en todos estos ejemplos usaremos funciones independientes que no dependen del objeto de contexto):
 
 ```javascript
 
