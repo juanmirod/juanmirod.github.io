@@ -22,3 +22,7 @@ Seymour Papert (Creador de Logo y Lego Mindstorm, OLPC junto con Minsky) (http:/
 Wolfram
 
 Sobre educación digital, español: http://lab.cccb.org/es/educacion-digital-no-es-alfabetizacion-digital/
+
+Bred Victor thoughts on teaching: http://worrydream.com/#!/SomeThoughtsOnTeaching
+
+Taylor Gatto essays on education: https://www.amazon.com/dp/1893163210
