@@ -5,7 +5,9 @@ layout: post
 tags: [linux, opinion] 
 ---
 
-Desde hace años uso Linux, tanto en el trabajo como en casa. Cambié a Linux gradualmente, no soy una persona de extremos y tardo un poco en sacarle el jugo a las cosas. Al principio solo era curiosidad por probar un sistema operativo más seguro y más fiable. La primera vez que probé la línea de comandos en la facultad me pareció todo anticuado y sin sentido, pero poco a poco fui familiarizándome con los comandos para manejar archivos, con la estructura de directorios de Linux y con los gestores de paquetes. 
+Desde hace años uso Linux, tanto en el trabajo como en casa. Cambié a Linux gradualmente, no soy una persona de extremos y tardo un poco en sacarle el jugo a las cosas. 
+
+Al principio solo era curiosidad por probar un sistema operativo más seguro y más fiable. La primera vez que probé la línea de comandos en la facultad me pareció todo anticuado y sin sentido, pero poco a poco fui familiarizándome con los comandos para manejar archivos, con la estructura de directorios de Linux y con los gestores de paquetes. 
 
 **Poco a poco te das cuenta de que puedes modificar y configurar TODO. Linux no es simplemente un Sistema Operativo, es un sistema libre, que puedes leer, modificar y replicar.** Hay más código y documentación del que podrás leer, más comandos de los que puedes aprender, más libertad de la que podrías soñar con cualquier otro sistema operativo.
 
@@ -13,35 +15,19 @@ He escrito comandos en una línea que me costaría cientos escribir en JavaScrip
 
 En un programa de edición gŕafico, para aplicar un filtro tienes que aprender donde está la opción, como se configura, cuáles eran los parámetros que usaste la última vez que encajaban con lo que querías hacer... Todo esto persiguiendo iconos minúsculos con el ratón. 
 
-En la línea de comandos buscas el comando una vez y podrás usarlo un millón de veces, meterlo en un bucle, en un script, usarlo dentro de seis meses simplemente invocando un alias. Las posibilidades son infinitas, porque no dependes de una serie de acciones más o menos conocidas con el ratón, **lo tienes escrito**.
+En la línea de comandos buscas el comando una vez y podrás usarlo un millón de veces, meterlo en un bucle, en un script, usarlo dentro de seis meses simplemente invocando un alias. 
 
-En [The Linux Comand Line (pdf)](/public/TLCL-09.12.pdf), William E. Shotts lo explica muy bien esa sensación de posibilidades sin límites, con una analogía con los Erector Construction Set (más conocidos como Mecano para mi generación)
+**Las posibilidades son infinitas, porque no dependes de una serie de acciones más o menos conocidas con el ratón, lo tienes escrito**.
+
+En [The Linux Comand Line (pdf)](/public/TLCL-09.12.pdf), William E. Shotts explica muy bien esa sensación de posibilidades sin límites, con una analogía con los Erector Construction Set (más conocidos como Mecano para mi generación)
 
     Linux Is About Imagination
 
-    When I am asked to explain the difference between Windows and Linux, I often
-    use a toy analogy.
+    When I am asked to explain the difference between Windows and Linux, I often use a toy analogy.
     
-    Windows is like a Game Boy. You go to the store and buy one all shiny new in the
-    box. You take it home, turn it on and play with it. Pretty graphics, cute sounds.
-    After a while though, you get tired of the game that came with it so you go back
-    to the store and buy another one. This cycle repeats over and over. Finally, you go
-    back to the store and say to the person behind the counter, “I want a game that
-    does this!” only to be told that no such game exists because there is no “market
-    demand” for it. Then you say, “But I only need to change this one thing!” The
-    person behind the counter says you can't change it. The games are all sealed up in
-    their cartridges. You discover that your toy is limited to the games that others
-    have decided that you need and no more.
+    Windows is like a Game Boy. You go to the store and buy one all shiny new in the box. You take it home, turn it on and play with it. Pretty graphics, cute sounds. After a while though, you get tired of the game that came with it so you go back to the store and buy another one. This cycle repeats over and over. Finally, you go back to the store and say to the person behind the counter, “I want a game that does this!” only to be told that no such game exists because there is no “market demand” for it. Then you say, “But I only need to change this one thing!” The person behind the counter says you can't change it. The games are all sealed up in their cartridges. You discover that your toy is limited to the games that others have decided that you need and no more.
     
-    Linux, on the other hand, is like the world's largest Erector Set. You open it up
-    and it's just a huge collection of parts. A lot of steel struts, screws, nuts, gears,
-    pulleys, motors, and a few suggestions on what to build. So you start to play with
-    it. You build one of the suggestions and then another. After a while you discover
-    that you have your own ideas of what to make. You don't ever have to go back to
-    the store, as you already have everything you need. The Erector Set takes on the
-    shape of your imagination. It does what you want.
-    Your choice of toys is, of course, a personal thing, so which toy would you find
-    more satisfying?
+    Linux, on the other hand, is like the world's largest Erector Set. You open it up and it's just a huge collection of parts. A lot of steel struts, screws, nuts, gears, pulleys, motors, and a few suggestions on what to build. So you start to play with it. You build one of the suggestions and then another. After a while you discover that you have your own ideas of what to make. You don't ever have to go back to the store, as you already have everything you need. The Erector Set takes on the shape of your imagination. It does what you want. Your choice of toys is, of course, a personal thing, so which toy would you find more satisfying?
 
 En [In the begining was the command line](http://www.cryptonomicon.com/beginning.html) Neal Stephenson compara los sistemas operativos con coches, y Linux con un tanque ligero, indestructible, que consume lo mismo que un coche y puede circular por ciudad, con voluntarios que lo mantienen y te explican cómo funciona, todo completamente gratis...
 
