@@ -21,52 +21,64 @@ En la línea de comandos buscas el comando una vez y podrás usarlo un millón d
 
 En [The Linux Comand Line (pdf)](/public/TLCL-09.12.pdf), William E. Shotts explica muy bien esa sensación de posibilidades sin límites, con una analogía con los Erector Construction Set (más conocidos como Mecano para mi generación)
 
-    Linux Is About Imagination
+> Linux Is About Imagination
 
-    When I am asked to explain the difference between Windows and Linux, I often use a toy analogy.
-    
-    Windows is like a Game Boy. You go to the store and buy one all shiny new in the box. You take it home, turn it on and play with it. Pretty graphics, cute sounds. After a while though, you get tired of the game that came with it so you go back to the store and buy another one. This cycle repeats over and over. Finally, you go back to the store and say to the person behind the counter, “I want a game that does this!” only to be told that no such game exists because there is no “market demand” for it. Then you say, “But I only need to change this one thing!” The person behind the counter says you can't change it. The games are all sealed up in their cartridges. You discover that your toy is limited to the games that others have decided that you need and no more.
-    
-    Linux, on the other hand, is like the world's largest Erector Set. You open it up and it's just a huge collection of parts. A lot of steel struts, screws, nuts, gears, pulleys, motors, and a few suggestions on what to build. So you start to play with it. You build one of the suggestions and then another. After a while you discover that you have your own ideas of what to make. You don't ever have to go back to the store, as you already have everything you need. The Erector Set takes on the shape of your imagination. It does what you want. Your choice of toys is, of course, a personal thing, so which toy would you find more satisfying?
+> When I am asked to explain the difference between Windows and Linux, I often use a toy analogy.
+
+> Windows is like a Game Boy. You go to the store and buy one all shiny new in the box. You take it home, turn it on and play with it. Pretty graphics, cute sounds. After a while though, you get tired of the game that came with it so you go back to the store and buy another one. This cycle repeats over and over. Finally, you go back to the store and say to the person behind the counter, “I want a game that does this!” only to be told that no such game exists because there is no “market demand” for it. Then you say, “But I only need to change this one thing!” The person behind the counter says you can't change it. The games are all sealed up in their cartridges. You discover that your toy is limited to the games that others have decided that you need and no more.
+
+> Linux, on the other hand, is like the world's largest Erector Set. You open it up and it's just a huge collection of parts. A lot of steel struts, screws, nuts, gears, pulleys, motors, and a few suggestions on what to build. So you start to play with it. You build one of the suggestions and then another. After a while you discover that you have your own ideas of what to make. You don't ever have to go back to the store, as you already have everything you need. The Erector Set takes on the shape of your imagination. It does what you want. Your choice of toys is, of course, a personal thing, so which toy would you find more satisfying?
 
 En [In the begining was the command line](http://www.cryptonomicon.com/beginning.html) Neal Stephenson compara los sistemas operativos con coches, y Linux con un tanque ligero, indestructible, que consume lo mismo que un coche y puede circular por ciudad, con voluntarios que lo mantienen y te explican cómo funciona, todo completamente gratis...
 
-    Imagine a crossroads where four competing auto dealerships are situated. One of them (Microsoft) is much, much bigger than the others. It started out years ago selling three-speed bicycles (MS-DOS); these were not perfect, but they worked, and when they broke you could easily fix them.
+> Imagine a crossroads where four competing auto dealerships are situated. One of them (Microsoft) is much, much bigger than the others. It started out years ago selling three-speed bicycles (MS-DOS); these were not perfect, but they worked, and when they broke you could easily fix them.
 
-    There was a competing bicycle dealership next door (Apple) that one day began selling motorized vehicles--expensive but attractively styled cars with their innards hermetically sealed, so that how they worked was something of a mystery.
+> There was a competing bicycle dealership next door (Apple) that one day began selling motorized vehicles--expensive but attractively styled cars with their innards hermetically sealed, so that how they worked was something of a mystery.
 
-    The big dealership responded by rushing a moped upgrade kit (the original Windows) onto the market. This was a Rube Goldberg contraption that, when bolted onto a three-speed bicycle, enabled it to keep up, just barely, with Apple-cars. The users had to wear goggles and were always picking bugs out of their teeth while Apple owners sped along in hermetically sealed comfort, sneering out the windows. But the Micro-mopeds were cheap, and easy to fix compared with the Apple-cars, and their market share waxed.
+> The big dealership responded by rushing a moped upgrade kit (the original Windows) onto the market. This was a Rube Goldberg contraption that, when bolted onto a three-speed bicycle, enabled it to keep up, just barely, with Apple-cars. The users had to wear goggles and were always picking bugs out of their teeth while Apple owners sped along in hermetically sealed comfort, sneering out the windows. But the Micro-mopeds were cheap, and easy to fix compared with the Apple-cars, and their market share waxed.
 
-    Eventually the big dealership came out with a full-fledged car: a colossal station wagon (Windows 95). It had all the aesthetic appeal of a Soviet worker housing block, it leaked oil and blew gaskets, and it was an enormous success. A little later, they also came out with a hulking off-road vehicle intended for industrial users (Windows NT) which was no more beautiful than the station wagon, and only a little more reliable.
+> Eventually the big dealership came out with a full-fledged car: a colossal station wagon (Windows 95). It had all the aesthetic appeal of a Soviet worker housing block, it leaked oil and blew gaskets, and it was an enormous success. A little later, they also came out with a hulking off-road vehicle intended for industrial users (Windows NT) which was no more beautiful than the station wagon, and only a little more reliable.
 
-    Since then there has been a lot of noise and shouting, but little has changed. The smaller dealership continues to sell sleek Euro-styled sedans and to spend a lot of money on advertising campaigns. They have had GOING OUT OF BUSINESS! signs taped up in their windows for so long that they have gotten all yellow and curly. The big one keeps making bigger and bigger station wagons and ORVs.
+> Since then there has been a lot of noise and shouting, but little has changed. The smaller dealership continues to sell sleek Euro-styled sedans and to spend a lot of money on advertising campaigns. They have had GOING OUT OF BUSINESS! signs taped up in their windows for so long that they have gotten all yellow and curly. The big one keeps making bigger and bigger station wagons and ORVs.
 
-    On the other side of the road are two competitors that have come along more recently.
+> On the other side of the road are two competitors that have come along more recently.
 
-    One of them (Be, Inc.) is selling fully operational Batmobiles (the BeOS). They are more beautiful and stylish even than the Euro-sedans, better designed, more technologically advanced, and at least as reliable as anything else on the market--and yet cheaper than the others.
+> One of them (Be, Inc.) is selling fully operational Batmobiles (the BeOS). They are more beautiful and stylish even than the Euro-sedans, better designed, more technologically advanced, and at least as reliable as anything else on the market--and yet cheaper than the others.
 
-    With one exception, that is: Linux, which is right next door, and which is not a business at all. It's a bunch of RVs, yurts, tepees, and geodesic domes set up in a field and organized by consensus. The people who live there are making tanks. These are not old-fashioned, cast-iron Soviet tanks; these are more like the M1 tanks of the U.S. Army, made of space-age materials and jammed with sophisticated technology from one end to the other. But they are better than Army tanks. They've been modified in such a way that they never, ever break down, are light and maneuverable enough to use on ordinary streets, and use no more fuel than a subcompact car. These tanks are being cranked out, on the spot, at a terrific pace, and a vast number of them are lined up along the edge of the road with keys in the ignition. Anyone who wants can simply climb into one and drive it away for free.
+> With one exception, that is: Linux, which is right next door, and which is not a business at all. It's a bunch of RVs, yurts, tepees, and geodesic domes set up in a field and organized by consensus. The people who live there are making tanks. These are not old-fashioned, cast-iron Soviet tanks; these are more like the M1 tanks of the U.S. Army, made of space-age materials and jammed with sophisticated technology from one end to the other. But they are better than Army tanks. They've been modified in such a way that they never, ever break down, are light and maneuverable enough to use on ordinary streets, and use no more fuel than a subcompact car. These tanks are being cranked out, on the spot, at a terrific pace, and a vast number of them are lined up along the edge of the road with keys in the ignition. Anyone who wants can simply climb into one and drive it away for free.
 
-    Customers come to this crossroads in throngs, day and night. Ninety percent of them go straight to the biggest dealership and buy station wagons or off-road vehicles. They do not even look at the other dealerships.
+> Customers come to this crossroads in throngs, day and night. Ninety percent of them go straight to the biggest dealership and buy station wagons or off-road vehicles. They do not even look at the other dealerships.
 
-    Of the remaining ten percent, most go and buy a sleek Euro-sedan, pausing only to turn up their noses at the philistines going to buy the station wagons and ORVs. If they even notice the people on the opposite side of the road, selling the cheaper, technically superior vehicles, these customers deride them cranks and half-wits.
+> Of the remaining ten percent, most go and buy a sleek Euro-sedan, pausing only to turn up their noses at the philistines going to buy the station wagons and ORVs. If they even notice the people on the opposite side of the road, selling the cheaper, technically superior vehicles, these customers deride them cranks and half-wits.
 
-    The Batmobile outlet sells a few vehicles to the occasional car nut who wants a second vehicle to go with his station wagon, but seems to accept, at least for now, that it's a fringe player.
+> The Batmobile outlet sells a few vehicles to the occasional car nut who wants a second vehicle to go with his station wagon, but seems to accept, at least for now, that it's a fringe player.
 
-    The group giving away the free tanks only stays alive because it is staffed by volunteers, who are lined up at the edge of the street with bullhorns, trying to draw customers' attention to this incredible situation. A typical conversation goes something like this:
+> The group giving away the free tanks only stays alive because it is staffed by volunteers, who are lined up at the edge of the street with bullhorns, trying to draw customers' attention to this incredible situation. A typical conversation goes something like this:
 
-    Hacker with bullhorn: "Save your money! Accept one of our free tanks! It is invulnerable, and can drive across rocks and swamps at ninety miles an hour while getting a hundred miles to the gallon!"
+> Hacker with bullhorn: "Save your money! Accept one of our free tanks! It is invulnerable, and can drive across rocks and swamps at ninety miles an hour while getting a hundred miles to the gallon!"
 
-    Prospective station wagon buyer: "I know what you say is true...but...er...I don't know how to maintain a tank!"
+> Prospective station wagon buyer: "I know what you say is true...but...er...I don't know how to maintain a tank!"
 
-    Bullhorn: "You don't know how to maintain a station wagon either!"
+> Bullhorn: "You don't know how to maintain a station wagon either!"
 
-    Buyer: "But this dealership has mechanics on staff. If something goes wrong with my station wagon, I can take a day off work, bring it here, and pay them to work on it while I sit in the waiting room for hours, listening to elevator music."
+> Buyer: "But this dealership has mechanics on staff. If something goes wrong with my station wagon, I can take a day off work, bring it here, and pay them to work on it while I sit in the waiting room for hours, listening to elevator music."
 
-    Bullhorn: "But if you accept one of our free tanks we will send volunteers to your house to fix it for free while you sleep!"
+> Bullhorn: "But if you accept one of our free tanks we will send volunteers to your house to fix it for free while you sleep!"
 
-    Buyer: "Stay away from my house, you freak!"
+> Buyer: "Stay away from my house, you freak!"
 
-    Bullhorn: "But..."
+> Bullhorn: "But..."
 
-    Buyer: "Can't you see that everyone is buying station wagons?"
+> Buyer: "Can't you see that everyone is buying station wagons?"
+
+Por último quería volver a incidir en la propiedad más destacable de Linux, que cada vez parece más ahogada en esta nueva era de código abierto que no es código libre: Linux es Software Libre, y como bien dice Richard Stallman:
+
+> [El software libre es incluso más importante hoy en día](https://www.gnu.org/philosophy/free-software-even-more-important.html)
+
+> With free software, the users control the program, both individually and collectively. So they control what their computers do (assuming those computers are loyal and do what the users' programs tell them to do).
+
+> With proprietary software, the program controls the users, and some other entity (the developer or “owner”) controls the program. So the proprietary program gives its developer power over its users. That is unjust in itself; moreover, it tempts the developer to mistreat the users in other ways.
+
+> Even when proprietary software isn't downright malicious, its developers have an incentive to make it addictive, controlling and manipulative. You can say, as does the author of that article, that the developers have an ethical obligation not to do that, but generally they follow their interests. If you want this not to happen, make sure the program is controlled by its users.
+
+> Freedom means having control over your own life. If you use a program to carry out activities in your life, your freedom depends on your having control over the program. You deserve to have control over the programs you use, and all the more so when you use them for something important in your life.
