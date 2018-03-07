@@ -13,11 +13,13 @@ Al principio solo era curiosidad por probar un sistema operativo más seguro y m
 
 He escrito comandos en una línea que me costaría cientos escribir en JavaScript o en Python para tener la misma funcionalidad. La línea de comandos tiene herramientas increíbles y lo mejor es que cuando aprendes algo puedes guardar el comando, o ponerlo en un script y lo tienes **para siempre**. 
 
-En un programa de edición gŕafico, para aplicar un filtro tienes que aprender donde está la opción, como se configura, cuáles eran los parámetros que usaste la última vez que encajaban con lo que querías hacer... Todo esto persiguiendo iconos minúsculos con el ratón. 
+Imaginemos una situación típica: Tienes un montón de fotos que quieres convertir a blanco y negro con un filtro concreto para ver como quedan, porque estás buscando la mejor o quieres decidir cuál imprimir o lo que sea. Abres tu programa de edición gráfico favorito (por ejemplo GIMP) seleccionas el filtro que quieres, los valores, ves como queda y guardas la foto. Si te sabes los atajos de teclado, tal vez guardar la foto o incluso abrir la siguiente foto para aplicarle el mismo filtro puede que sea un par de golpes de teclado. Si no, tienes que hacer todo esto otra vez para cada foto, persiguiendo iconos minúsculos con el ratón. De cualquier forma tienes que abrir, editar y guardar CADA FOTO. A veces haces click sin querer en la opción que no es, o te equivocas al guardar y machacas la foto original... Creo que es fácil que te resulte familiar esta escena. Lo que muchos pensamos cuando hacemos esto es **"¿No hay una forma mejor? ¿Por que no puedo decirle al ordenador que haga con todas esas fotos lo que acabo de hacer con esa?"** La conclusión suele ser que el ordenador es imbécil, cuando no es así, simplemente estamos usando la herramienta errónea. 
 
-En la línea de comandos buscas el comando una vez y podrás usarlo un millón de veces, meterlo en un bucle, en un script, usarlo dentro de seis meses simplemente invocando un alias. 
+En la línea de comandos buscas el comando una vez, lo pruebas, y podrás usarlo un millón de veces. Podrás usar un comodín para ejecutarlo sobre todas tus imágenes, o meterlo en un bucle, en un script, usarlo dentro de seis meses sobre una nueva remesa de fotografías simplemente invocando un alias.
 
 **Las posibilidades son infinitas, porque no dependes de una serie de acciones más o menos conocidas con el ratón, lo tienes escrito**.
+
+Las macros que no dependen del ratón, sino que guardan tus acciones y las ejecutan también son una solución, pero normalmente dependen del programa que las crea y no se pueden componer o exportar a otros programas. La línea de comandos es lo más universal que tenemos ahora mismo. Funciona igual en tu escritorio que en un servidor en AWS, puedes componer comandos de diferentes herramientas, puedes crear scripts y en resumen puedes hacer todo eso que creíais que el ordenador era demasiado tonto para hacer. Solo requiere un punto de vista diferente.
 
 En [The Linux Comand Line (pdf)](/public/TLCL-09.12.pdf), William E. Shotts explica muy bien esa sensación de posibilidades sin límites, con una analogía con los Erector Construction Set (más conocidos como Mecano para mi generación)
 
@@ -71,7 +73,7 @@ En [In the begining was the command line](http://www.cryptonomicon.com/beginning
 
 > Buyer: "Can't you see that everyone is buying station wagons?"
 
-Por último quería volver a incidir en la propiedad más destacable de Linux, que cada vez parece más ahogada en esta nueva era de código abierto que no es código libre: Linux es Software Libre, y como bien dice Richard Stallman:
+Por último, quería volver a incidir en la propiedad más destacable de Linux, que cada vez parece más ahogada en esta nueva era de código abierto que no es código libre: Linux es Software Libre, y como bien dice Richard Stallman:
 
 > [El software libre es incluso más importante hoy en día](https://www.gnu.org/philosophy/free-software-even-more-important.html)
 
