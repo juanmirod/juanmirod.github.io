@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Reseña ¿Qué es la ética informática?
 description: Puntos de vista y recursos sobre la ética de nuestra profesión 
 layout: post
