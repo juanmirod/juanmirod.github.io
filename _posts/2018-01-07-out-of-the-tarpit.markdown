@@ -44,7 +44,7 @@ Para atomizar y atacar esta complejidad se basan en dos principios: evitar la co
 
 Esto así dicho suena más fácil de lo que es, ya que al final la responsabilidad recae en la diligencia del programador. Para ayudar en esta labor se establece que la arquitectura debe de seguir este diagrama:
 
-[!Diagrama FRP](/public/img/frp.png)
+![Diagrama FRP](/public/img/frp.png)
 
 Para mi este es un diagrama más importante que el posterior de FRP porque es más genérico: tenemos un lenguage y una infraestructura que nos van a permitir expresar el estado esencial en base a una serie de axiomas independientes del resto del programa, es decir que los cambios en el resto del programa nunca deben suponer cambios en el estado esencial. Si el estado esencial cambia, seguramente se vean afectados los otros componentes, pero este núcleo no debe verse afectados por cambios en el exterior.
 
