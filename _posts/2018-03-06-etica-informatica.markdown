@@ -24,7 +24,9 @@ En ese texto, el autor hace un repaso de los diferentes campos en los que es nec
 tecnologías. Como contribuciones problemáticas de las tecnologías de la información, está el
 papel que juegan en la globalización de la economía, las fusiones empresariales o en el aumento continuo del abismo entre los países desarrollados y en desarrollo.
 
-Tras mostrar la necesidad de la ética en la informática y los puntos conflictivos, Guibert hace un repaso del estado de la literatura y la enseñanza de la ética informática. La conclusión es que los pasos que se han dado son demasiado débiles: necesitamos de una mayor concienciación y un mayor estudio de las cuestiones éticas que supone el desarrollo de las tecnologías de la información y las comunicaciones y necesitamos también dar más puntos de vista sobre los actuales, muy individualistas y centrados en la responsabilidad del individuo y no en la de las empresas o en las repercusiones en la sociedad del desarrollo tecnológico actual. La EI no es sólo hablar de si debemos ser más o menos rigurosos en el desempeño de nuestro trabajo, sino también de cómo plantear soluciones y alternativas a las desigualdades y discriminaciones que genera.
+Tras mostrar la necesidad de la ética en la informática y los puntos conflictivos, Guibert hace un repaso del estado de la literatura y la enseñanza de la ética informática. La conclusión es que los pasos que se han dado son demasiado débiles: necesitamos de una mayor concienciación y un mayor estudio de las cuestiones éticas que supone el desarrollo de las tecnologías de la información y las comunicaciones y necesitamos también dar más puntos de vista sobre los actuales, muy individualistas y centrados en la responsabilidad del individuo y no en la de las empresas o en las repercusiones en la sociedad del desarrollo tecnológico actual. 
+
+La EI no es sólo hablar de si debemos ser más o menos rigurosos en el desempeño de nuestro trabajo, sino también de cómo plantear soluciones y alternativas a las desigualdades y discriminaciones que genera.
 
 [1]: http://juanmirod.github.io/2017/08/16/etica-y-legislacion.html
 [2]: /public/Ética_Informática_Guibert.pdf
