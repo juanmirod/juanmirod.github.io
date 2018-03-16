@@ -252,13 +252,153 @@ Promise.race([p1, p2]).then(function(value) {
 
 Estas funciones pueden crearse gracias a que, como comentaba antes, las Promesas encapsulan operaciones asíncronas devolviéndonos siempre el mismo interface, dándonos una forma fácil de manipularlas y agruparlas.
 
-Tanto es así, que, con algunas modificaciones, las promesas podrían ser una mónada, en [este hilo de github](https://github.com/promises-aplus/promises-spec/issues/94) se puede seguir una interesante conversación entre varios desarrolladores muy conocidos sobre ese tema. Aun así, la solución de las promesas de Javascript nos da un interface que es cási una mónada y sobre el que también podemos operar, aunque no sea de forma tan genérica, [con operaciones como map/filter/reduce](https://medium.com/@jamiedixon/promises-and-arrays-are-the-same-5ea68a4d769b#.ogdbn4l4s), esto es lo que hace [Bluebird](http://bluebirdjs.com/docs/api-reference.html), dándonos todo el repertorio de operaciones que podemos hacer con promesas, lo que resulta muy útil cuando todas nuestras librerías devuelven promesas y podemos manejarlas a alto nivel. Además, si nuestra librería no está escrita con promesas, sino con el estilo de callbacks de node, pero queremos aprovechar las ventajas de las promesas, Bluebird nos da una función para convertir las funciones que usan callbacks a promesas: [promisify](http://bluebirdjs.com/docs/api/promise.promisify.html)
+Tanto es así, que, con algunas modificaciones, las promesas podrían ser una mónada, en [este hilo de github](https://github.com/promises-aplus/promises-spec/issues/94) se puede seguir una interesante conversación entre varios desarrolladores muy conocidos sobre ese tema. Cuando las promesas estaban en proceso de especificación en el lenguaje, algunos programadores del mundo de la programación funcional se quejaron de que no eran "correctas", no permitían las operaciones de composición que podrían permitir y así los desarrolladores de JavaScript perdíamos un gran potencial. Recientemente André Stalz ha renovado el debate [en su blog](https://staltz.com/promises-are-not-neutral-enough.html)
+
+Aun así, la solución de las promesas de Javascript nos da un interface que es cási una mónada y sobre el que también podemos operar, aunque no sea de forma tan genérica, [con operaciones como map/filter/reduce](https://medium.com/@jamiedixon/promises-and-arrays-are-the-same-5ea68a4d769b#.ogdbn4l4s), esto es lo que hace [Bluebird](http://bluebirdjs.com/docs/api-reference.html), dándonos todo el repertorio de operaciones que podemos hacer con promesas, lo que resulta muy útil cuando todas nuestras librerías devuelven promesas y podemos manejarlas a alto nivel. Además, si nuestra librería no está escrita con promesas, sino con el estilo de callbacks de node, pero queremos aprovechar las ventajas de las promesas, Bluebird nos da una función para convertir las funciones que usan callbacks a promesas: [promisify](http://bluebirdjs.com/docs/api/promise.promisify.html)
 
 > ACTUALIZACIÓN: Node también incluye una función `promisify` [desde la versión 8](https://nodejs.org/api/util.html#util_util_promisify_original), con lo que ya no es necesario usar Bluebird para esto.
 
 ## Patrones útiles
 
-Cuando llevas un tiempo usando promesas de forma regular, te das cuenta de que hay ciertos patrones de código que se repiten. El problema más común con las promesas es el mismo que con los callbacks: en lugar de un "árbol de navidad" de callbacks podemos acabar creando un árbol de navidad de promesas.
+Cuando llevas un tiempo usando promesas de forma regular, te das cuenta de que hay ciertos patrones de código que se repiten. 
+
+### Composición/flujo de promesas
+
+Una de las coas que ocurre cuando usas promesas es que acabas teniendo que usarlas para todo. Si no pierdes las ventajas de la captura de errores y el encapsulamiento. Esto es debido al problema que hemos comentado antes de que las promesas son muy dogmáticas en su comportamiento y te obligan a moldear tu código para utilizarlas. Todo esto para decir que al usar promesas es habitual tener código que depende de una ejecución secuencial de promesas:
+
+```javascript
+
+promesa1()
+  .then(res => promesa2(res))
+  .then(res => promesa3(res))
+  .then(res => promesa4(res))
+  .then(res => promesa5(res))
+
+```
+
+Es algo que suele ocurrir cuando tenemos que preparar algún tipo de entorno, como un entorno de testing o la inicialización de la app o el provisioning de una base de datos y necesitamos ejecutar una serie de acciones de manera secuencial. Puedes ver un ejemplo con código real en [este repositorio de couchbase]():
+
+```javascript
+
+// Run the example
+verifyNodejsVersion()
+  .then(storeInitial)
+  .then(lookupEntireDocument)
+  .then(subdocItemLookupTwoFields)
+  .then(subdocArrayAdd)
+  .then(lookupEntireDocument)
+  .then(subdocArrayManipulation)
+  .then(subDocumentItemLookup)
+  .then(subdocArrayRemoveItem)
+  .then(subDocumentItemLookup)
+  .then(() => {
+    process.exit(0);
+  })
+  .catch((err) => {
+    console.log("ERR:", err)
+    process.exit(0);
+  });
+
+```
+
+En este caso el código ejecuta una serie de acciones sobre la base de datos y sale, como un proceso por lotes, aunque es solo un ejemplo de uso.
+
+Seguramente ver ese ejemplo hace que algo no te parezca bien. Aunque encadenar las funciones de esta forma es lineal y muy funcional y nos permite tener control sobre las excepciones, este código no es DRY, hay algo que se repite en casi todas las líneas: `.then(` Es ver algo así y a la mayoría se nos pone la piel de gallina, hay algo que no está bien en tener que repetirse tanto. Y tenemos razón, lo que ocurre es que el `.then` tiene un comportamiento muy peculiar que hace que tengamos que usarlo así y no podamos componerlo directamente. Lo ideal, lo que está pidiendo este código, sería poder hacer:
+
+```javascript
+
+pipe(
+  verifyNodejsVersion,
+  storeInitial,
+  lookupEntireDocument,
+  subdocItemLookupTwoFields,
+  subdocArrayAdd,
+  lookupEntireDocument,
+  subdocArrayManipulation,
+  subDocumentItemLookup,
+  subdocArrayRemoveItem,
+  subDocumentItemLookup,
+  () => process.exit(0)
+)
+.catch((err) => {
+  console.log("ERR:", err)
+  process.exit(0);
+});
+// ERROR...
+
+```
+
+> Si te estás preguntándo qué hace la función `pipe`, puedes verlo en [este artículo sobre programación funcional](http://juanmirod.github.io/2017/06/16/introduccion-programacion-funcional-javascript.html) Pero sigue leyendo y lo aclaro en un momento con la solución.
+
+Pero no podemos hacer eso con las promesas. ¡`pipe` no llama a `.then`! Esa era la principal queja de los programadores funcionales cuando querían cambiar la especificación de las promesas de JavaScript. No podemos usar `pipe`, ni `compose`, ni `map`, ni `fold`, ni ninguna de todas esas herramientas funcionales tal y como están. 
+
+Pero, aunque esta no sea una situación ideal, y algunos hayan decidido hacer sus propias promesas que encajen dentro del resto de la programación funcional, lo que sí que podemos hacer es nuestra propia función `pipePromises`. Y además no es nada del otro mundo:
+
+```javascript
+
+function pipePromises(...promisesFunctions) {
+  return promisesFunctions.reduce(
+    (lastPromise, f) => lastPromise.then(f), 
+    Promise.resolve()
+  )
+}
+
+
+```
+
+Esta función encadena las promesas usando `.then` y pasando el resultado de una a la siguiente. Con esta función podríamos encadenar las promesas sin repetir los `.then` y manteniendo la funcionalidad del primer código:
+
+```javascript
+
+pipePromises(
+  verifyNodejsVersion,
+  storeInitial,
+  lookupEntireDocument,
+  subdocItemLookupTwoFields,
+  subdocArrayAdd,
+  lookupEntireDocument,
+  subdocArrayManipulation,
+  subDocumentItemLookup,
+  subdocArrayRemoveItem,
+  subDocumentItemLookup,
+  () => process.exit(0)
+)
+.catch((err) => {
+  console.log("ERR:", err)
+  process.exit(0);
+});
+
+```
+
+Puedes comprobar que funciona con [este fiddle](https://jsfiddle.net/juanmirod/wr5gsm5x/):
+
+```javascript
+
+function pipePromises(...promisesFunctions) {
+  return promisesFunctions.reduce(
+    (lastPromise, f) => lastPromise.then(f), 
+    Promise.resolve()
+  )
+}
+
+const promiseInc = i => Promise.resolve(i + 1)
+
+pipePromises(
+  () => promiseInc(0),
+  promiseInc,
+  promiseInc,
+  promiseInc,
+  promiseInc
+)
+.then(console.log)
+// 5
+
+```
+
+
+### El árbol de promesas
+
+El problema más común con las promesas es el mismo que con los callbacks: en lugar de un "árbol de navidad" de callbacks podemos acabar creando un árbol de navidad de promesas.
 
 ```javascript
 
