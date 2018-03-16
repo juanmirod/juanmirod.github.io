@@ -276,7 +276,7 @@ promesa1()
 
 ```
 
-Es algo que suele ocurrir cuando tenemos que preparar algún tipo de entorno, como un entorno de testing o la inicialización de la app o el provisioning de una base de datos y necesitamos ejecutar una serie de acciones de manera secuencial. Puedes ver un ejemplo con código real en [este repositorio de couchbase]():
+Es algo que suele ocurrir cuando tenemos que preparar algún tipo de entorno, como un entorno de testing o la inicialización de la app o el provisioning de una base de datos y necesitamos ejecutar una serie de acciones de manera secuencial. Puedes ver un ejemplo con código real en [este repositorio de couchbase](https://github.com/couchbaselabs/devguide-examples/blob/master/nodejs/subdocES6.js#L19):
 
 ```javascript
 
