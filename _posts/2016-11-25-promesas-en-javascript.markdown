@@ -562,34 +562,6 @@ Con el nuevo código sí se captura la excepción. Además, si comentamos la lí
 
 Seguiré editando el artículo y añadiéndo ejemplos en cuanto pueda, pero mientras dejo un par de artículos sobre el tema: [Bluebird - Anti-patterns](http://bluebirdjs.com/docs/anti-patterns.html), [We have a problem with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html) y [Promises anti-patterns en taoofcode](http://taoofcode.net/promise-anti-patterns/)
 
-## Encadenando promesas de forma dinámica
-
-Como último apunte y curiosidad sobre uso de las promesas quiero proponer un pequeño ejercicio. Imaginemos que queremos realizar una secuencia de promesas de forma dinámica (por ejemplo si queremos hacer un gráfico con mis amigos de facebook y los amigos de mis amigos y así sucesivamente...) es decir, no sabemos a priori, cuántos pasos o qué camino implicará el cálculo, con lo que no podemos escribir la secuencia. Esto puede hacerse de forma más fácil y legible con las funciones de Bluebir, pero como ejercicio probemos a hacerlo sólo con ES6. Podemos hacerlo encadenándolas de forma dinámica:
-
-```javascript
-
-var results = [1,2,3,4,5]
-
-var getResultDoubled = function(num){
-  return new Promise(function(resolve){
-    console.log('Called with '+num)
-    setTimeout(function(){
-      resolve(num*2)
-    }, 2000)
-  });
-};
-
-var chainedPromise = Promise.resolve()
-results.forEach(function(result){
-  chainedPromise = chainedPromise.then(function(){
-    return getResultDoubled(result)
-  }).then(console.log)
-})
-
-```
- 
-Este es un script pequeño pero muy interesante. getResultDoubled devuelve una promesa que se resolverá pasados 2 segundos. Utilizando una promesa y la función forEach lo que hacemos es crear una cadena de promesas que dependen de que la anterior se resuelva para continuar. Si ejecutas este código verás que los resultados se muestran en orden en la consola y cada promesa espera a que la anterior termine para ejecutarse. A diferencia de .all y .race, que ejecuta todas las promesas en paralelo, nuestro código las ejecuta en serie. Este código no es nada habitual ya que implica una gran dependencia muy directa entre las llamadas, sin ningún tipo de tratamiento intermedio, normalmente aunque tengas que crear promesas de forma dinámica el código no será tan conciso como este. Pero es un ejercicio interesante para ver cómo se pueden encadenar las promesas de forma dinámica.
-
 ## Conclusiones
 
 La conclusión a todo esto: utiliza promesas para mejorar la legibilidad y fiabilidad de tu código y recuperar el control de la ejecución del código asíncrono. Este es un artículo largo, pero solo he dado un repaso superficial a las propiedades y usos de las promesas. Es importante aprender a usarlas correctamente, pero son una herramienta muy poderosa para mejorar tu código en JavaScript.
