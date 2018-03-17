@@ -301,9 +301,9 @@ verifyNodejsVersion()
 
 ```
 
-En este caso el código ejecuta una serie de acciones sobre la base de datos y sale, como un proceso por lotes, aunque es solo un ejemplo de uso.
+En este caso, el código ejecuta una serie de acciones sobre la base de datos y sale, como un proceso por lotes, aunque es solo un ejemplo de uso.
 
-Seguramente ver ese ejemplo hace que algo no te parezca bien. Aunque encadenar las funciones de esta forma es lineal y muy funcional y nos permite tener control sobre las excepciones, este código no es DRY, hay algo que se repite en casi todas las líneas: `.then(` Es ver algo así y a la mayoría se nos pone la piel de gallina, hay algo que no está bien en tener que repetirse tanto. Y tenemos razón, lo que ocurre es que el `.then` tiene un comportamiento muy peculiar que hace que tengamos que usarlo así y no podamos componerlo directamente. Lo ideal, lo que está pidiendo este código, sería poder hacer:
+Seguramente, ver ese ejemplo hace que algo no te parezca bien. Aunque encadenar las funciones de esta forma es lineal y muy funcional y nos permite tener control sobre las excepciones, este código no es DRY, hay algo que se repite en casi todas las líneas: `.then(`. Es ver algo así y a la mayoría se nos pone la piel de gallina, hay algo que no está bien en tener que repetirse tanto. Y tenemos razón, lo que ocurre es que el `.then` tiene un comportamiento muy peculiar que hace que tengamos que usarlo así y no podamos componerlo directamente. Lo ideal, lo que está pidiendo este código, sería poder hacer:
 
 ```javascript
 
@@ -412,7 +412,7 @@ promiseA()
 
 ``` 
 
-Esto ocurre porque la función 'doSomethingFancy' necesita los valores devueltos por las dos promesas y functionB también necesita el valor de la primera promesa. Si estamos usando Bluebird, 'join' puede ayudarnos con esto, pero si no queremos aprender otro API más o añadir otra dependencia a nuestro proyecto, hay varias formas de solucionar el problema con las promesas nativas de **es6**:
+Esto ocurre porque la función `doSomethingFancy` necesita los valores devueltos por las dos promesas y functionB también necesita el valor de la primera promesa. Si estamos usando Bluebird, `join` puede ayudarnos con esto, pero si no queremos aprender otro API más o añadir otra dependencia a nuestro proyecto, hay varias formas de solucionar el problema con las promesas nativas de **es6**:
 
 **Utilizando variables en el ámbito superior.** 
 
@@ -474,8 +474,6 @@ function joinPromises(functionA, functionAB) {
 promiseA().then(joinPromises(functionB, doSomethingFancy))
 
 ```
-
-Aunque este último ejemplo puede despistar si no estás acostumbrado a este tipo de sintaxis.
 
 ## Anti-patrones al utilizar promesas
 
