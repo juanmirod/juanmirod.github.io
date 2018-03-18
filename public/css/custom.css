@@ -18,6 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 .masthead-title a img {
   width: 28px;
   margin-right: 5px;
+  float: left;
 }
 
 .sidebar-icons {
