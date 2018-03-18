@@ -496,6 +496,50 @@ En este ejemplo le hemos dado la vuelta a la tortilla. asyncLog sigue siendo as�
 
 Este ejemplo es muy básico porque estas funciones no hacen más que loguear sus parámetros, para ver ejemplos reales y aprender más sobre las Promesas y cómo utilizarlas puedes ver [mi artículo dedicado sólo a ellas](http://juanmirod.github.io/2016/11/25/promesas-en-javascript.html).
 
+### Composición
+
+Componer funciones es, simplemente, aplicarlas sucesivamente:
+
+```javascript
+
+(f·g)(x) = f(g(x)) 
+
+``` 
+
+Lo hacemos muchas veces sin darnos cuenta:
+
+```javascript
+
+Math.round(average([1,2,3]))
+
+```
+
+Cuando aplicamos una función, y el resultado se lo pasamos a otra función, estamos componiendo funciones. Pero cuando empiezas a usar más funciones puras ocurre que cada vez más tu código es una serie de composiciones. Los datos pasan por varias funciones hasta que tienes el resultado que quieres mostrar al usuario. La programación funcional hace que pasemos del paradigma de _"objetos que se pasan mensajes"_ al de "flujo de datos y transformaciones"_ y claro, todos esos paréntesis hacen el código poco legible y difícil de modificar. Por suerte no tenemos que hacerlo así, gracias a la expresión de arriba sabemos que podemos hacer esto:
+
+```javascript
+
+const compose = (...functions) => x => functions.reduceRight((last, f) => f(last), x)
+
+compose(
+  Math.round,
+  average
+)([1,2,3])
+
+```
+
+Escribir el código de esta manera tiene varias ventajas: es más fácil de leer y es más fácil modificarlo al no tener que estar contando paréntesis. En cuanto a la legibilidad, a lo mejor el orden de las funciones puede despistar si no estás acostumbrado, pero para eso está `pipe`, que hace lo mismo que compose, pero aplica las funciones de izquierda a derecha, o de arriba a abajo en nuestro ejemplo, lo que sí que encaja con la metáfora del flujo de datos y mantiene el orden de lectura habitual:
+
+```javascript
+
+const pipe = (...functions) => x => functions.reduce((last, f) => f(last), x)
+
+pipe(
+  average,
+  Math.round
+)([1,2,3])
+
+```
+
 ### Condicionales con Maybe y Either
 
 Con las herramientas que hemos visto hasta ahora y algunas funciones auxiliares podemos escribir un código casi libre de paréntesis y de construcciones sintácticas. Conforme nos acostumbramos a encadenar promesas, usar funciones para transformar los datos y usar map/filter/reduce nos vamos dando cuenta de que podemos escribir muchas funciones como una serie de operaciones sobre la entrada, por ejemplo supongamos una hipotética app que pide los datos de unos clientes y quiere calcular la edad media:
