@@ -500,7 +500,7 @@ Este ejemplo es muy básico porque estas funciones no hacen más que loguear sus
 
 Componer funciones es, simplemente, aplicarlas sucesivamente:
 
-```javascript
+```
 
 (f·g)(x) = f(g(x)) 
 
@@ -514,7 +514,9 @@ Math.round(average([1,2,3]))
 
 ```
 
-Cuando aplicamos una función, y el resultado se lo pasamos a otra función, estamos componiendo funciones. Pero cuando empiezas a usar más funciones puras ocurre que cada vez más tu código es una serie de composiciones. Los datos pasan por varias funciones hasta que tienes el resultado que quieres mostrar al usuario. La programación funcional hace que pasemos del paradigma de _"objetos que se pasan mensajes"_ al de "flujo de datos y transformaciones"_ y claro, todos esos paréntesis hacen el código poco legible y difícil de modificar. Por suerte no tenemos que hacerlo así, gracias a la expresión de arriba sabemos que podemos hacer esto:
+Cuando aplicamos una función, y el resultado se lo pasamos a otra función, estamos componiendo funciones. Pero, cuando empiezas a usar más funciones puras, ocurre que tu código se va convirtiendo en una serie de composiciones. Los datos pasan por varias funciones hasta que tienes el resultado que quieres mostrar al usuario. **La programación funcional hace que pasemos del paradigma de _"objetos que se pasan mensajes"_ al de "flujo de datos y transformaciones"_** y claro, todos esos paréntesis hacen el código poco legible y difícil de modificar. 
+
+Por suerte no tenemos que hacerlo así, gracias a la expresión de arriba sabemos que podemos hacer esto:
 
 ```javascript
 
