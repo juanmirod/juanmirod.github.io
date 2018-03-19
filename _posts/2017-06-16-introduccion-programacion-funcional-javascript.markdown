@@ -342,38 +342,6 @@ En los dos casos anteriores lo que está pasando es que estamos devolviendo la r
 
 Esto puede volverse especialmente problemático si usamos `currying`, pero por supuesto tiene fácil solución. Volveremos sobre este punto un poco más adelante.
 
-Cuando digo que `reduce` es muy potente me refiero a que en realidad, es la única función que necesitamos para operaciones iterativas. Tanto `map` como `filter` pueden definirse con reduce. Poríamos tener estas tres operaciones como funciones independientes así:
-
-```javascript
-
-const reduce = (f, def) => arr => arr.reduce(f, def)
-
-const map = f => reduce((total, next) => [...total, f(next)], [])
-
-const filter = pred => reduce((total, next) => pred(next) ? [...total, next] : total, [])
-
-const doubles = map(double)
-
-doubles([1, 2, 3, 4, 5])
-// [ 2, 4, 6, 8, 10 ]
-
-const evens = filter(x => x%2 === 0)
-
-evens([1, 2, 3, 4, 5])
-// [ 2, 4 ]
-
-const acc = reduce((a,b) => a+b, 0)
-
-acc([1, 2, 3, 4, 5])
-// 15
-
-const avg = arr => acc(arr) / arr.length
-
-avg([1,2,3,4,5])
-// 3
-
-```
-
 Con estas tres funciones podemos librarnos de la práctica totalidad de los bucles de nuestro código y olvidarnos de tener que mantener contadores y de esa complicada sintaxis que los acompaña, lo cual hará el código más fácil de leer y nos dejará centrarnos en lo que queremos hacer con los elementos del array.
 
 ### Funciones de orden superior
@@ -485,6 +453,43 @@ add2(3)
 ```
 
 Por supuesto, la implementación se complica para n parámetros, pero para eso están las librerías funcionales que veremos al final del artículo, por ahora este simple ejercicio espero que sirva para mostrar lo que es _currificar_ una función.
+
+### Reduce para todo
+
+Cuando digo que `reduce` es muy potente me refiero a que en realidad, es la única función que necesitamos para operaciones iterativas. Tanto `map` como `filter` pueden definirse con reduce. Poríamos tener estas tres operaciones como funciones independientes así:
+
+```javascript
+
+const reduce = (f, def) => arr => arr.reduce(f, def)
+
+const map = f =>
+  reduce((total, next) => [...total, f(next)], [])
+
+const filter = pred =>
+  reduce((total, next) => pred(next) ? [...total, next] : total, [])
+
+const doubles = map(double)
+
+doubles([1, 2, 3, 4, 5])
+// [ 2, 4, 6, 8, 10 ]
+
+const evens = filter(x => x%2 === 0)
+
+evens([1, 2, 3, 4, 5])
+// [ 2, 4 ]
+
+const acc = reduce((a,b) => a+b, 0)
+
+acc([1, 2, 3, 4, 5])
+// 15
+
+const avg = arr => acc(arr) / arr.length
+
+avg([1,2,3,4,5])
+// 3
+
+```
+
 
 ### Funciones asíncronas
 
