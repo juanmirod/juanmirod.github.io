@@ -286,7 +286,20 @@ A todos nos pasa cuando vemos reduce por primera vez, veamos qué ha pasado. La 
 
 ```
 
-Simplemente toma el valor actual y lo suma al total que tiene acumulado. El segundo argumento que le pasamos a reduce es el valor inicial `0`. Es decir que lo que estamos haciendo es decir: 
+Simplemente toma el valor actual y lo suma al total que tiene acumulado. Es decir, podríamos escribirlo así:
+
+```javascript
+
+const sum = (a, b) => a + b
+const avg = values => values.reduce(sum, 0)/values.length 
+const califications = [5,7,8,5,5,6,8,9,10]
+avg(califications)
+
+// 7
+
+```
+
+El segundo argumento que le pasamos a reduce es el valor inicial `0`. Es decir que lo que estamos haciendo es decir: 
 
 > Empezando con 0, toma todos los valores del array y súmalos uno a uno.
 
@@ -328,6 +341,38 @@ Algo a tener en cuenta cuando empezamos a utilizar estas funciones y la notació
 En los dos casos anteriores lo que está pasando es que estamos devolviendo la referencia a la función en lugar de llamarla, y por extraño que parezca, en JavaScript `!!((x) => {}) === true` y por tanto, el predicado siempre está devolviendo `true` y mantenemos todos los valores del array.
 
 Esto puede volverse especialmente problemático si usamos `currying`, pero por supuesto tiene fácil solución. Volveremos sobre este punto un poco más adelante.
+
+Cuando digo que `reduce` es muy potente me refiero a que en realidad, es la única función que necesitamos para operaciones iterativas. Tanto `map` como `filter` pueden definirse con reduce. Poríamos tener estas tres operaciones como funciones independientes así:
+
+```javascript
+
+const reduce = (f, def) => arr => arr.reduce(f, def)
+
+const map = f => reduce((total, next) => [...total, f(next)], [])
+
+const filter = pred => reduce((total, next) => pred(next) ? [...total, next] : total, [])
+
+const doubles = map(double)
+
+doubles([1, 2, 3, 4, 5])
+// [ 2, 4, 6, 8, 10 ]
+
+const evens = filter(x => x%2 === 0)
+
+evens([1, 2, 3, 4, 5])
+// [ 2, 4 ]
+
+const acc = reduce((a,b) => a+b, 0)
+
+acc([1, 2, 3, 4, 5])
+// 15
+
+const avg = arr => acc(arr) / arr.length
+
+avg([1,2,3,4,5])
+// 3
+
+```
 
 Con estas tres funciones podemos librarnos de la práctica totalidad de los bucles de nuestro código y olvidarnos de tener que mantener contadores y de esa complicada sintaxis que los acompaña, lo cual hará el código más fácil de leer y nos dejará centrarnos en lo que queremos hacer con los elementos del array.
 
