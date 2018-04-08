@@ -632,7 +632,7 @@ No está mal, pero rompe un poco el estilo y sobre todo, no es DRY, cada vez que
 
 ```javascript
 
-const isNull = x === undefined || x === null
+const isNull = x => x === undefined || x === null
 
 const either = (pred, trueValue, falseValue) => x => pred(x) ? trueValue : falseValue
 
