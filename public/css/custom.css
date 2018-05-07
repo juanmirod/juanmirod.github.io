@@ -15,6 +15,14 @@ h1, h2, h3, h4, h5, h6 {
   color: #313131;
 }
 
+.page-title, .post-title, .post-title a {
+  text-shadow: 2px 2px 2px #9b9999;
+}
+
+.masthead-title a {
+  text-shadow: 2px 2px 2px #d2d4d3;
+}
+
 .masthead-title a img {
   width: 28px;
   margin-right: 5px;
