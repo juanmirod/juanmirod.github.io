@@ -16,20 +16,25 @@ Y por otro lo que dicen: Microsoft ha cambiado, la adquisición no es necesariam
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Seems like the LinkedIn acquisition is going well so far. I&#39;d be willing to give them the benefit of the doubt. Especially with Satya at the helm.</p>&mdash; MICHAEL JACKSON (@mjackson) <a href="https://twitter.com/mjackson/status/1003427703758860288?ref_src=twsrc%5Etfw">June 4, 2018</a></blockquote>
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Seems like the LinkedIn acquisition is going well so far. I&#39;d be willing to give them the benefit of the doubt. Especially with Satya at the helm.</p>&mdash; MICHAEL JACKSON (@mjackson) <a href="https://twitter.com/mjackson/status/1003427703758860288?ref_src=twsrc%5Etfw">June 4, 2018</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Friendly reminder that git is open source, but GitHub *isn’t*.<br><br>Also, while I don’t like Windows, Microsoft has a track of making great software for developers. So I’m not concerned</p>&mdash; Belén 😱 (@ladybenko) <a href="https://twitter.com/ladybenko/status/1003529634162593792?ref_src=twsrc%5Etfw">June 4, 2018</a></blockquote>
 
 Otros, dicen que no hay que preocuparse porque pase lo que pase, siempre nos quedan los repos de git y podemos mudarnos a otro sitio:
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">This is the main reason I don&#39;t find the Microsoft / github acquisition to be that much of a worry <a href="https://t.co/lw4zRz55pL">https://t.co/lw4zRz55pL</a></p>&mdash; Martin Fowler (@martinfowler) <a href="https://twitter.com/martinfowler/status/1003678870556626945?ref_src=twsrc%5Etfw">June 4, 2018</a></blockquote>
 
-Personalmente creo que pecamos muchas veces de inocentes si decimos que tenemos los repos o que Microsoft es una compañía igual que Github. En el primer caso el potencial de Github no es que guarde tu repo en la nube, eso o hace bitbucket, gitlab y otras tantas y lo hacía sourceforge mucho antes que ellos. El potencial de Github es como herramienta de gestión de proyectos y de colaboración y eso es código cerrado y que no podemos duplicar fácilmente. Por otra parte Microsoft no es el mismo tipo de compañía que Github. Microsoft es una plataforma de software para b2b y b2c, y sus intereses están directamente relacionados con Windows y Azure, mientras que Github era agnóstica en cuanto a tu sistema operativo y la nube que uses para tus proyectos.
+Personalmente creo que pecamos muchas veces de inocentes si decimos que tenemos los repos o que Microsoft es una compañía igual que Github. 
 
-Sobre el hecho de que Microsoft es una plataforma y cómo eso dirige sus decisiones, puedes leer más en [stratechery](https://stratechery.com/2018/the-bill-gates-line/) Microsoft tiene una [conocida historia de EEE](https://en.wikipedia.org/wiki/Embrace%2C_extend%2C_and_extinguish) y que ahora hayan cambiado de CEO y hayan abrazado el OSS para muchos no es más que una bonita emboltura o un sapo que se han tenido que tragar para volver a ejecutar la misma estrategia. Con Github Microsoft completa un camino en el que lleva trabajando años, ahora tienen el control sobre las principales herramientas de desarrollo a nivel mundial:
+En el primer caso, **el potencial de Github no es que guarde tu repo en la nube, eso o hace bitbucket, gitlab y otras tantas y lo hacía sourceforge mucho antes que ellos. El potencial de Github es como herramienta de gestión de proyectos y de colaboración** y eso es código cerrado y que no podemos duplicar fácilmente. Por otra parte Microsoft no es el mismo tipo de compañía que Github. Microsoft es una plataforma de software para b2b y b2c, y sus intereses están directamente relacionados con Windows y Azure, mientras que Github era agnóstica en cuanto a tu sistema operativo y la nube que uses para tus proyectos.
 
-* Controlan el principal lenguaje que compila a JavaScript, TypeScript, que se ha convencido a gran parte de los desarrolladores web y es especialmente afín a los desarrolladores de .Net
-* Controlan VSCode, que no es más que el hermano pequeño de Visual Studio, más ligero y más amigable, pero que cada día se parece más a su hermano mayor en cuanto a tamaño y a sobrecarga de funcionalidades.
-* Controlan Electron, una de las principales plataformas de desarrollo de aplicaciones de escritorio, que utiliza las mismas tecnologías que la web.
-* Y ahora controlan Github, la principal plataforma de colaboración en el mundo del desarrollo.
+Sobre el hecho de que Microsoft es una plataforma y cómo eso dirige sus decisiones, puedes leer más en [stratechery](https://stratechery.com/2018/the-bill-gates-line/) Microsoft tiene una [conocida historia de EEE](https://en.wikipedia.org/wiki/Embrace%2C_extend%2C_and_extinguish) y que ahora hayan cambiado de CEO y hayan abrazado el OSS para muchos no es más que una bonita emboltura o un sapo que se han tenido que tragar para volver a ejecutar la misma estrategia. Con Github, Microsoft completa un camino en el que lleva trabajando años, ahora tienen el control sobre las principales herramientas de desarrollo a nivel mundial:
+
+- Controlan el principal lenguaje que compila a JavaScript, TypeScript, que se ha convencido a gran parte de los desarrolladores web y es especialmente afín a los desarrolladores de .Net
+
+- Controlan VSCode, que se ha convertido en el editor más popular por méritos propios, pero que no es más que el hermano pequeño de Visual Studio, más ligero y más amigable, pero que cada día se parece más a su hermano mayor en cuanto a tamaño y a sobrecarga de funcionalidades.
+
+- Controlan Electron, una de las principales plataformas de desarrollo de aplicaciones de escritorio, que utiliza las mismas tecnologías que la web.
+
+- Y ahora controlan Github, la principal plataforma de colaboración en el mundo del desarrollo.
 
 Si algo nos ha enseñado la historia es que si pones demasiado poner en las manos de una sola persona o organización, tarde o temprano actuará en su propio beneficio y de forma despótica y llevándose por delante lo que haga falta.
 
