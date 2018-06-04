@@ -39,5 +39,3 @@ Sobre el hecho de que Microsoft es una plataforma y cómo eso dirige sus decisio
 Si algo nos ha enseñado la historia es que si pones demasiado poner en las manos de una sola persona o organización, tarde o temprano actuará en su propio beneficio y de forma despótica y llevándose por delante lo que haga falta.
 
 Si algo más hemos aprendido en la corta historia de la informática es que, cuando eso ocurra, los desarrolladores volveremos a implementar una opción libre en la que podamos hackear sin tener que pagar o rendir cuentas a nadie. Porque podemos, porque sabemos hacerlo y porque las grandes compañías al final siempre acaban moviendose a otro ritmo y nosotros queremos poder hurgar en el código. Aunque siempre haya Microsofts y Apples y IBMs, también siempre habrá Richard Stalmans, Linus Torvalds y Tim Berners Lees.
-
-EDIT: pequeño cambio para volver a compilar el blog por que parece que github-pages no ha funcionado bien por primera vez en años, malditas casualidades...
