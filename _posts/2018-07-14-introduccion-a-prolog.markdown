@@ -43,7 +43,7 @@ En prolog tenemos dos piezas elementales para construir nuestros programas. Los 
 
 Por ejemplo, si añadimos un hecho que diga que Juan es amigo de Patricia y el predicado que dice que los amigos de Juan son mis amigos:
 
-```prolog
+```shell
 /* amigos.pl */
 amigo(juan, patricia).
 amigo(yo, X) :- amigo(juan, X).
@@ -57,7 +57,7 @@ X es una variable, las variables empiezan por mayúscula y prolog tratará de su
 
 Por ejemplo, podemos preguntar a Prolog si patricia es mi amiga `amigo(yo, patricia).`, prolog sustituirá la X por patricia y luego tratará de ver si hay algún predicado o algún hecho que permita confirmar que `amigo(juan,patricia).` como tenemos un hecho que es exactamente así, prolog responderá afirmativamente. 
 
-```prolog
+```shell
 ? - [amigos].
 ? - amigo(yo, patricia).
 true.
