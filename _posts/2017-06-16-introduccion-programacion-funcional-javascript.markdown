@@ -3,6 +3,7 @@ published: true
 title: Introducción a programación funcional con JavaScript
 description: Introducción a conceptos de programación funcional en JavaScript. Cambia de paradigma sin cambiar de lenguaje.
 layout: post
+image: /public/img/1024px-HL_Stencil.jpg
 tags: [programación funcional, javascript] 
 ---
 
@@ -11,6 +12,8 @@ tags: [programación funcional, javascript]
 La programación funcional parece que por fin va ganando más y más adeptos gracias a nuevos lenguajes como Scala, Clojure o Elm y a nuevos frameworks y librerías como Lodash, Ramda, React o Redux, que aunque no son puramente declarativos, sí que utilizan patrones y herramientas de la programación funcional. 
 
 Los lenguajes funcionales siempre han estado ahí. Desde el comienzo de la informática, cuando Alonzo Church (profesor de Alan Turing, que luego escribiría con él la [Tésis de Church-Turing](https://en.wikipedia.org/wiki/Church%E2%80%93Turing_thesis)) definiera el Cálculo Lambda. Su historia está plagada de grandes nombres y grandes éxitos. Pero a la industria nunca le ha terminado de convencer y fue optando siempre por opciones imperativas, como ADA, C, PASCAL, Java o C#.
+
+![Imagen del símbolo lamba pintado en una pared como referencia al videojuego Half Life](/public/img/1024px-HL_Stencil.jpg)
 
 Hoy en día todos los grandes lenguajes van introduciendo conceptos de la programación funcional, he incluso hemos visto aparecer alternativas híbridas de todo tipo: Scala y Clojure para Java, F# para C#, o las librerías de Reactive Programming para varias plataformas... Además, lenguajes como Erlang/Elixir o Elm están demostrando que la programación funcionar se puede aplicar con mucho éxito a ciertas aplicaciones y hacer el desarrollo más fiable y fácil de mantener.
 
