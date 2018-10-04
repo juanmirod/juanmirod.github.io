@@ -10,6 +10,9 @@ Había pensado escribir sobre estos papers poco a poco, pero la lista crece y so
 
 El listado no tiene ningún orden particular, todos me parecen grandes ideas, unos son largos otros apenas dos páginas. Unos muy técnicos, otros más filosóficos... 
 
++ Should computers learn like humans?
+
++ [Yedalog: exploring knowledge at scale](https://ai.google/research/pubs/pub43462)
 
 + Meta-Interpretive Learning from noisy images
 

@@ -3,6 +3,7 @@ published: true
 title: Generadores de código, desarrollo automático y por qué es difícil una IA que programe.
 description: Artículo de opinión sobre por qué es difícil crear programas que desarrollen aplicaciones y cómo esto enlaza con los problemas de la Inteligencia Artificial General.
 layout: post
+image: /public/img/architect.png
 tags: [opinion]
 ---
 
