@@ -3,6 +3,7 @@ published: true
 title: Reseña Out of the Tarpit
 description: Opinión y pequeño resumen de los puntos más importantes de este paper
 layout: post
+image: /public/img/frp.png
 tags: [paper,opinion] 
 ---
 

@@ -2,8 +2,11 @@
 published: true
 title: ¿Por qué Linux?
 layout: post
+image: /public/img/gnulinux.png
 tags: [linux, opinion] 
 ---
+
+![Logos de GNU y Linux](/public/img/gnulinux.png)
 
 Desde hace años uso Linux, tanto en el trabajo como en casa. Cambié a Linux gradualmente, no soy una persona de extremos y tardo un poco en sacarle el jugo a las cosas. 
 
@@ -32,6 +35,8 @@ En [The Linux Comand Line (pdf)](/public/TLCL-09.12.pdf), William E. Shotts expl
 > Linux, on the other hand, is like the world's largest Erector Set. You open it up and it's just a huge collection of parts. A lot of steel struts, screws, nuts, gears, pulleys, motors, and a few suggestions on what to build. So you start to play with it. You build one of the suggestions and then another. After a while you discover that you have your own ideas of what to make. You don't ever have to go back to the store, as you already have everything you need. The Erector Set takes on the shape of your imagination. It does what you want. Your choice of toys is, of course, a personal thing, so which toy would you find more satisfying?
 
 En [In the begining was the command line](http://www.cryptonomicon.com/beginning.html) Neal Stephenson compara los sistemas operativos con coches, y Linux con un tanque ligero, indestructible, que consume lo mismo que un coche y puede circular por ciudad, con voluntarios que lo mantienen y te explican cómo funciona, todo completamente gratis...
+
+![Fotografía de un tanque ligero](/public/img/light_tank.png)
 
 > Imagine a crossroads where four competing auto dealerships are situated. One of them (Microsoft) is much, much bigger than the others. It started out years ago selling three-speed bicycles (MS-DOS); these were not perfect, but they worked, and when they broke you could easily fix them.
 

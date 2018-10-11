@@ -5,6 +5,7 @@ url: http://juanmirod.github.io
 title: "Por amor al código" 
 tagline: "Code snippets y reflexiones sobre tecnología"
 description: "Blog de código abierto sobre desarrollo y tecnología en general."
+image: /public/logo144.png
 author: 
   twitter: juanmirod
 logo: /public/logo144.png
