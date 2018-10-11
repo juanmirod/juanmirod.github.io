@@ -6,7 +6,7 @@ image: /public/img/gnulinux.png
 tags: [linux, opinion] 
 ---
 
-![Logos de GNU y Linux](/public/img/gnulinux.png)
+![Logos de GNU y Linux](/public/img/gnulinux.jpg)
 
 Desde hace años uso Linux, tanto en el trabajo como en casa. Cambié a Linux gradualmente, no soy una persona de extremos y tardo un poco en sacarle el jugo a las cosas. 
 
@@ -36,7 +36,7 @@ En [The Linux Comand Line (pdf)](/public/TLCL-09.12.pdf), William E. Shotts expl
 
 En [In the begining was the command line](http://www.cryptonomicon.com/beginning.html) Neal Stephenson compara los sistemas operativos con coches, y Linux con un tanque ligero, indestructible, que consume lo mismo que un coche y puede circular por ciudad, con voluntarios que lo mantienen y te explican cómo funciona, todo completamente gratis...
 
-![Fotografía de un tanque ligero](/public/img/light_tank.png)
+![Fotografía de un tanque ligero](/public/img/light_tank.jpg)
 
 > Imagine a crossroads where four competing auto dealerships are situated. One of them (Microsoft) is much, much bigger than the others. It started out years ago selling three-speed bicycles (MS-DOS); these were not perfect, but they worked, and when they broke you could easily fix them.
 
