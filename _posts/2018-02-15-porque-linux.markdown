@@ -80,6 +80,9 @@ En [In the begining was the command line](http://www.cryptonomicon.com/beginning
 
 Por último, quería volver a incidir en la propiedad más destacable de Linux, que cada vez parece más ahogada en esta nueva era de código abierto que no es código libre: Linux es Software Libre, y como bien dice Richard Stallman:
 
+![Picture of Richard Stallman by Sam Williams](/public/img/Richard_Matthew_Stallman.jpeg)
+###### By Sam Williams - Taken from the cover of the O'Reilly book w:Free as in Freedom: Richard Stallman's Crusade for Free Software, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=208390
+
 > [El software libre es incluso más importante hoy en día](https://www.gnu.org/philosophy/free-software-even-more-important.html)
 
 > With free software, the users control the program, both individually and collectively. So they control what their computers do (assuming those computers are loyal and do what the users' programs tell them to do).
