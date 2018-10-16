@@ -14,7 +14,7 @@ En esos enlaces puedes encontrar lo que es una Promesa y cómo funciona, pero la
 
 Decimos que una promesa es como un recibo que nos dan de un pedido. Sabemos que va a tardar X, y que no lo tenemos justo al pagar, pero el recibo y su localizador nos aseguran que tendremos el producto en el futuro. 
 
-Poniéndonos algo más técnicos, una promesa es un objeto que encapsula una operación asíncrona. La operación asíncrona (una llamada AJAX, un evento, una llamada a una functión programada para el futuro) tiene una duración indeterminada, pero al crear una promesa obtenemos inmediatamente un objeto con el que podemos trabajar. Es decir:
+Poniéndonos algo más técnicos, una promesa es un objeto que encapsula una operación asíncrona. La operación asíncrona (una llamada AJAX, un evento, una llamada a una función programada para el futuro) tiene una duración indeterminada, pero al crear una promesa obtenemos inmediatamente un objeto con el que podemos trabajar. Es decir:
 
 ```javascript
 
