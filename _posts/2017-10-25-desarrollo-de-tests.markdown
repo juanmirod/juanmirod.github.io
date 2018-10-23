@@ -128,15 +128,47 @@ Esta forma de programar además te permite no tener todo en la cabeza al mismo t
 
 Pero ya es suficiente de hablar de las bondades del testing. Escribir tests no es siempre fácil, especialmente cuando nadie te ha enseñado y no sabes por donde empezar. Así que hagamos un repaso a varios patrones que he ido aprendiendo con en este tiempo para testear distintos tipos de código.
 
+## Aislando tests para iterar más rápido
+
+Antes de seguir quería introducir una funcionalidad de jasmine que es muy útil para centrarnos en un fichero o un test en concreto. En jasmine tenemos varias funciones para excluir tests de la suit o para hacer que sólo se ejecuten algunos de los tests de la suit. Esto es útil especialmente cuando tenemos una suite grande y estamos desarrollando un nuevo módulo o funcionalidad y no queremos que se ejecute la suite completa cada vez que guardamos el fichero porque tarda mucho o nos distrae:
+
++ xit - los tests definidos con xit en lugar de it se excluyen de la suit y apareceran como pendientes cuando la ejecutemos.
++ fit - Si definimos algún test con fit en lugar de it sólo se ejecutarán los tests que estén así definidos, ignorando todos los demás.
++ fdescribe - Igual que fit pero para todos los tests que quedan dentro de este fdescribe.
+
 ## Funciones puras
 
-## Mocks y stubs
+Las funciones puras son aquellas que solo actuan sobre sus variables locales y devuelven un resultado, pero no actúan sobre ninguna variable externa ni producen ningún otro efecto, como imprimir en pantalla, leer un fichero o hacer una petición http. Para más información sobre lo que es una función pura puedes ver mi artículo sobre programación funcional, donde explico lo que son más detalladamente.
 
-## Objetos que emiten eventos
+Estas son las funciones más fáciles de testear y pronto intentaremos tener el mayor número de estas functiones, y esto es algo bueno, porque las funciones puras son predecibles y son fiables. Es decir, son funciones que nos darán pocos problemas y por tanto es una buena práctica tratar de tener la mayor parte posible de nuestra base de código de esta forma.
+
+Para testar una función pura solo necesitaremos escribir la llamada a la función con los parámetros que queramos y indicar cual es la salida esperada. Por ejemplo si tenemos una función que calcula la media:
+
+```javascript
+function avg(list){
+  return list.reduce((item, acc) => item + acc, 0) / list.length
+}
+```
+
+Podríamos escribir algunos tests como estos:
+
+```javascript
+it('calcula la media', () => {
+  const media = avg([1,2,3,4,5])
+  expect(media).toBe(3)
+})
+```
 
 ## Injección de dependencias y espías
 
-## Aislando tests para iterar más rápido
+No todo pueden ser ser funciones puras, para que nuestro programa se comunique y podamos ver algún resultado, es necesario que tenga algún efecto externo. 
+
+## Objetos que emiten eventos
+
+## Mocks y stubs
+
+## Proxyquire
+
 
 
 [1]:http://juanmirod.github.io/2016/04/29/configurando-karma-en-un-projecto-javascript.html
