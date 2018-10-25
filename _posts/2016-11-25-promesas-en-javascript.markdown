@@ -3,6 +3,7 @@ published: true
 title: Promesas en Javascript
 description: ¿Qué es una promesa? Ejemplos de código, buenas prácticas y antipatrones.
 layout: post
+image: /public/img/wait_number.jpg
 tags: [javascript]
 ---
 
@@ -13,6 +14,8 @@ En esos enlaces puedes encontrar lo que es una Promesa y cómo funciona, pero la
 ## ¿Qué es una promesa y cómo se utiliza? 
 
 Decimos que una promesa es como un recibo que nos dan de un pedido. Sabemos que va a tardar X, y que no lo tenemos justo al pagar, pero el recibo y su localizador nos aseguran que tendremos el producto en el futuro. 
+
+![Imagen de un ticket de una cola de espera](/public/img/wait_number.jpg)
 
 Poniéndonos algo más técnicos, una promesa es un objeto que encapsula una operación asíncrona. La operación asíncrona (una llamada AJAX, un evento, una llamada a una función programada para el futuro) tiene una duración indeterminada, pero al crear una promesa obtenemos inmediatamente un objeto con el que podemos trabajar. Es decir:
 
