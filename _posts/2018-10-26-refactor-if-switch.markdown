@@ -1,11 +1,14 @@
 ---
-published: false
+published: true
 title: Refactorizando switch y if-else encadenados
 description: Técnicas de refactorización para cadenas de cláusulas ifs y switch
 layout: post
-image: 
+image: /public/img/diomari-madulara-110583-unsplash.jpg
 tags: [javascript]
 ---
+
+![Photo of a row of switches](/public/img/diomari-madulara-110583-unsplash.jpg)
+(Photo by Diomari Madulara on Unsplash)
 
 Una de las construcciones sintácticas más discutidas desde la sentencia `GOTO` es `switch`. A menudo es criticada y seguro que si llevas un tiempo programando te has encontrado algún `switch` enorme de cientos de líneas, que controla una parte importante del flujo de un programa y que hace que cada vez que queremos entender que pasa en ese programa, tengamos que pasar por ese switch y recorrerlo manualmente.
 
@@ -135,3 +138,4 @@ app.execAction(multiply24)
 
 ```
 
+Hemos creado una forma de reutilizar nuestra lógica y recudir al mínimo la síntaxis, usamos solo llamadas a funciones para crear los casos y ejecutar la selección y tanto la clase `Matcher` como cada actión, se puede testear y modificar por separado.
