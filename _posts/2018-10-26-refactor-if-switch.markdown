@@ -12,7 +12,7 @@ tags: [javascript]
 
 Una de las construcciones sintácticas más discutidas desde la sentencia `GOTO` es `switch`. A menudo es criticada y seguro que si llevas un tiempo programando te has encontrado algún `switch` enorme de cientos de líneas, que controla una parte importante del flujo de un programa y que hace que cada vez que queremos entender que pasa en ese programa, tengamos que pasar por ese switch y recorrerlo manualmente.
 
-Vamos a ver cómo podemos refactorizar esas sentencias `switch` para hacerlas más fácil de leer o diréctamente, para hacerlas desaparecer. Voy a usar un ejemplo de switch muy sencillo para que el resto del programa no sea una distracción. Podría hacer el mismo ejercicio usando Redux y varios reducers, estos cambios se pueden aplicar igualmente y en la documentación de Redux hay muy buenos ejemplos de como eliminar los switchs de los reducers. Pero yo prefiero utilizar el ejemplo más simple posible, para poder centrarme en la refactorización del `switch` y no en lo que hace.
+Vamos a ver cómo podemos refactorizar esas sentencias `switch` para hacerlas más fácil de leer o directamente, para hacerlas desaparecer. Voy a usar un ejemplo de switch muy sencillo para que el resto del programa no sea una distracción. Podría hacer el mismo ejercicio usando Redux y varios reducers, estos cambios se pueden aplicar igualmente y en la documentación de Redux hay muy buenos ejemplos de como eliminar los switchs de los reducers. Pero yo prefiero utilizar el ejemplo más simple posible, para poder centrarme en la refactorización del `switch` y no en lo que hace.
 
 Este es nuestro código inicial, supongamos que tenemos una calculadora, y la función que decide que operación utilizar en función a la acción que le pasamos:
 

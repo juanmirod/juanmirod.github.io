@@ -44,3 +44,17 @@ El listado no tiene ningún orden particular, todos me parecen grandes ideas, un
 
 + [Out of the tarpit](http://juanmirod.github.io/public/out-of-the-tarpit.pdf) Y mi reseña sobre este paper [aquí](http://juanmirod.github.io/2018/01/07/out-of-the-tarpit.html)
 
++[A Few Billion Lines of Code Later: Using Static Analysis to Find Bugs in the Real World](https://cacm.acm.org/magazines/2010/2/69354-a-few-billion-lines-of-code-later/fulltext#FNA) Genial paper sobre los problemas de escalar un producto a un público amplio y sobre lenguajes de programación. Los autores desarrollaron un sistema de analisis estático de errores quw funcionaba bastante bien en el laboratorio tomando algunos repositorios grandes de código abierto como el del kernel de linux. Al comercializar el producto se enfrentaron a toda una nueva categoria de problemas. Cada cliente tenia un metodo de build diferente y usaba un compilador de C diferente.
+
+> "How do we run your tool?"
+
+"Just type 'make' and we'll rewrite its output."
+
+"What's 'make'? We use ClearCase."
+
+"Uh, What's ClearCase?"
+
+Otra gran cita que resume no solo el problema que tenian con el analisis estatico sino el problema del desarrollo software en general:
+
+> You can't check code you can't parse. Checking code deeply requires understanding the code's semantics. The most basic requirement is that you parse it. Parsing is considered a solved problem. Unfortunately, this view is naïve, rooted in the widely believed myth that programming languages exist.
+
