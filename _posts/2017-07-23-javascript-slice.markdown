@@ -3,6 +3,7 @@ published: true
 title: Función slice en JavaScript
 description: Definición y ejemplos de código.
 layout: post
+image: /public/img/artur-rutkowski-112531-unsplash.jpg
 tags: [javascript] 
 ---
 
@@ -11,6 +12,8 @@ Siguiendo con las funciones que suelo tener que consultar y que espero que estos
 Este es el segundo de una serie de artículos sobre funciones en javascript y ejemplos de uso. Puedes ver el primero [aquí](http://juanmirod.github.io/2017/07/19/javascript-split.html)
 
 ## Slice
+
+![Foto de un trozo de pan y un cuchillo](/public/img/artur-rutkowski-112531-unsplash.jpg)
 
 Slice, como su nombre indica, toma un _"trozo"_ de un array, indicado por un índice de inicio y un índice final (no incluido) Slice no modifica el array original y hace una copia _"superficial"_ con lo que si el array contiene referencias a objetos, slice no clonará esos objetos, sino solo la referencia.
 
