@@ -20,23 +20,26 @@ Un aspecto a tener en cuenta es que las etiquetas semánticas de HTML5 y constru
 
 Las principales etiquetas semánticas son:
 
-nav
++ header - Cabecera de la página
 
-aside
++ footer - El pie de página
 
-main
++ nav - Indica que este elemento contiene el menú de navigación de la página
 
-section
++ aside - Es un elemento añadido al contenido principal, se puede usar para widgets, notas sobre un artículo, etc
 
-article
++ main - El contenido principal de la página
 
-footer
++ section - Delimita una sección dentro de una página o un artículo
 
-header
++ article - Delimita el contenido de un artículo dentro de la página
 
+Además de estas etiquetas, debemos añadir atributos a nuestros elementos que permitan a las herramientas que leen en voz alta la página describir las imágenes y leer correctamente los formularios:
 
+Todas las imágenes deben tener un texto alternativo que explique el contenido de la imagen.
+Los elementos label deben apuntar al elemento al que se refieren.
+Todos los enlaces deben tener un href y no comportarse como botones.
+Los botones deben ser elementos button y no enlaces.
 
-
-
-
+Si cumplimos estas recomendaciones en el HTML ya tendremos una web mucho más accesible y fácil de leer, pero hay que tener en cuenta otros factores como los colores elegidos para la web, su organización y que el contenido sea accesible por todo el mundo. Esto último quiere decir que si tenemos elementos de audio o video, la página deberá proveer una transcripción o substítulos completos en el video que permitan verlo a una persona sorda.
 
