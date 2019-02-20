@@ -10,6 +10,9 @@ Esta introducción está enfocada a desarrolladores que estén familiarizados co
 
 ## ¿Por qué accesibilidad?
 
+> The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect. 
+Tim Berners-Lee
+
 Es importante clarificar que la accesibilidad, además de una cuestión básica de equidad en el acceso a la información, es un algo que beneficia a todos y cada uno de los usuarios de una aplicación o de una página web. Al diseñar una aplicación teniendo en cuenta la accesibilidad desde el comienzo, conseguiremos que sea más fácil de leer y de comprender por todos los usuarios. Además, cualquiera de nosotros podemos, por circunstancias de la vida, vernos en un estado temporal de incapacidad. Tal vez por una lesión puede que tengamos que usar solo una de nuestras manos durante un tiempo. Bajo ciertas condiciones lumínicas nuestra visión puede ser menor de la habitual (sol, destellos) puede que estemos en un lugar muy ruidoso o donde se deba guardar silencio y no podamos usar el audio del ordenador, tal como si fuésemos sordos... Las páginas accesibles tienen estas y otras muchas situaciones en cuenta de forma que siempre sean usables por todos y en todas las circunstancias posibles.
 
 ## ¿Por donde empiezo?
@@ -42,4 +45,9 @@ Todos los enlaces deben tener un href y no comportarse como botones.
 Los botones deben ser elementos button y no enlaces.
 
 Si cumplimos estas recomendaciones en el HTML ya tendremos una web mucho más accesible y fácil de leer, pero hay que tener en cuenta otros factores como los colores elegidos para la web, su organización y que el contenido sea accesible por todo el mundo. Esto último quiere decir que si tenemos elementos de audio o video, la página deberá proveer una transcripción o substítulos completos en el video que permitan verlo a una persona sorda.
+
+Además nuestra web debe ser usable sólamente con el teclado, manteniendo un orden coherente en la navegación y evitando "trampas de teclado". Una trampa de teclado es cuando algunos elementos de la página no son accesibles mediante teclado o al entrar a alguno de ellos otros dejan de serlo. Esto ocurre sobre todo con los diálogos modales, pero puede ocurrir por un layout complicado o un atributo incorrectamente programado.
+
+
+
 
