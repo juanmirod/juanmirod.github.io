@@ -18,7 +18,7 @@ Antes de Node.js hubo varios intentos de establecer un entorno de ejecución par
 
 Para instalar Node.js en Windows o en Mac, basta con ir a la página principal y descargar el instalador. Si usas Ubuntu, solo necesitamos un par de comandos:
 
-```
+```shell
 
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install -y nodejs
@@ -29,7 +29,7 @@ Si usas otra distribución de Linux, [mira aquí](https://nodejs.org/en/download
 
 Una vez instalado podemos comprobar que la versión es la correcta (actualmente la versión LTS es la 6.x) escribiendo 
 
-```
+```shell
 
 node -v
 
@@ -41,7 +41,7 @@ Para ejecutar el intérprete de Node, el REPL, simplemente escribimos el comando
 El REPL (siglas del inglés Read Eval Print Loop) es una consola que ejecuta cada expresión en JavaScript que le demos y devuelve el resultado de la expresión inmediatamente. Por ejemplo si escribimos:
 
 
-```
+```shell
 
 > 2 + 2
 4
@@ -50,7 +50,7 @@ El REPL (siglas del inglés Read Eval Print Loop) es una consola que ejecuta cad
 
 `4` es el resultado de la expresión `2 + 2`, otro ejemplo
 
-```
+```shell
 
 > console.log('Hola Mundo')
 'Hola Mundo'
@@ -60,7 +60,7 @@ undefined
 
 'Hola mundo' es la salida que produce `console.log('Hola Mundo')` y `undefined` es lo que devuelve la función. También podemos definir funciones y variables `globales` que podremos usar a continuación:
 
-```
+```javascript
 
 > var factorial  = function(x) {
 ...   if ( x <= 1 ) return x
@@ -74,7 +74,7 @@ undefined
 
 En las versiones actuales de Node.js tenemos soporte de prácticamente la totalidad de la especificación de ES2015, con lo que podríamos escribir la función de arriba de otra forma:
 
-```
+```javascript
 
 > const factorial  = x => ( x <= 1 ) ? x : x * factorial(x-1) 
 undefined
@@ -90,7 +90,7 @@ El REPL es muy útil para probar pequeñas funciones y expresiones, yo cada vez 
 
 Node no es solo el REPL, también podemos ejecutar ficheros. Solo tenemos que crear un fichero con el código javascript que queramos ejecutar y pasárselo al comando `node`
 
-```
+```shell
 
 echo 'console.log("Hello Node")' > hello.js
 node hello.js
@@ -100,7 +100,7 @@ node hello.js
 
 Cada fichero JavaScript es un módulo para Node.js y si queremos usar alguna función definida dentro del fichero primero tendremos que exportarla. Por ejemplo creemos el fichero `factorial.js` con el siguiente contenido:
 
-```
+```javascript
 
 const factorial = x => ( x <= 1 ) ? x : x * factorial(x-1)
 
@@ -111,7 +111,7 @@ module.exports = factorial
 
 Si ejecutamos ese fichero veremos que no pasa nada. 
 
-```
+```shell
 
 node factorial.js 
 
@@ -121,7 +121,7 @@ node factorial.js
 Nuestro módulo no hace nada a parte de definir una función y exportarla, pero desde el propio REPL o desde otro fichero Node.js podremos importar esta función y utilizarla:
 
 
-```
+```javascript
 
 > const factorial = require('./factorial.js')
 > factorial(5)
@@ -138,7 +138,7 @@ Ese es también el punto fuerte de npm. [npm](https://www.npmjs.com/) es un repo
 npm se instala en nuestro sistema junto con Node.js y podemos usarlo para instalar cualquier paquete de forma global o local a nuestro proyecto. Un proyecto es simplemente una carpeta donde hemos ejecutado `npm init`:
 
 
-```
+```shell
 
 mkdir hello
 cd hello
@@ -151,7 +151,7 @@ Al ejecutar este comando el programa nos hará algunas preguntas sobre el proyec
 Ahora podemos instalar cualquier paquete del registro ejecutando `npm install` Por ejemplo podemos instalar [expressjs](http://expressjs.com), una serie de librerías para crear un servidor web:
 
 
-```
+```shell
 
 npm install --save express
 
@@ -159,7 +159,7 @@ npm install --save express
 
 El modificador `--save` indica a npm que queremos que guarde esta dependencia en el fichero del proyecto. Con express instalado localmente, podemos crear nuestro fichero `index.js` con este contenido:
 
-```
+```javascript
 
 const express = require('express')
 const app = express()
@@ -178,7 +178,7 @@ app.listen(3000, function () {
 Y ejecutarlo en la consola: 
 
 
-```
+```shell
 
 node index.js
 
