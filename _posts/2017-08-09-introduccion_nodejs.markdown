@@ -18,7 +18,7 @@ Antes de Node.js hubo varios intentos de establecer un entorno de ejecución par
 
 Para instalar Node.js en Windows o en Mac, basta con ir a la página principal y descargar el instalador. Si usas Ubuntu, solo necesitamos un par de comandos:
 
-```plaintext
+```sh
 
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install -y nodejs
