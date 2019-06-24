@@ -36,7 +36,7 @@ document.querySelector('.someclass');
 document.querySelectorAll('div.note, div.alert');
 ```
 
-#### Acceder a hijos/padres de un elemento
+### Acceder a hijos/padres de un elemento
 
 ```javascript
 // Obtener los hijos de un elemento
@@ -47,7 +47,8 @@ var hijos = elem.childNodes;
 var padre = elem.parentNode;
 ```
 
-#### Crear nuevos elementos en el DOM
+### Crear nuevos elementos en el DOM
+
 ```javascript
 // Para crear elementos llamamos a createElement con el nombre del elemento
 var nuevoH1 = document.createElement('h1');
@@ -68,7 +69,7 @@ nuevoParrafo.innerHTML = textoParrafo
 // los elementos estarían listos para añadirlos al DOM, ahora mismo solo existen en memoria, pero no serán visibles hasta que no los añadamos a un elemento del DOM
 ```
 
-#### Añadir elementos al DOM
+### Añadir elementos al DOM
 
 ```javascript
 // seleccionamos un elemento
@@ -110,7 +111,7 @@ box2.insertAdjacentHTML('beforebegin', '<div><p>un parrafo nuevo.</p></div>');
 // afterend - El nuevo HTML es insertado justo después del elemento, a la misma altura (hermano).
 ```
 
-#### Añadir/eliminar/modificar Clases
+### Añadir/eliminar/modificar Clases
 
 ```javascript
 // Tomamos un elemento
