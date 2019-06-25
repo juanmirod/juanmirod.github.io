@@ -8,7 +8,7 @@ tags: [javascript]
 ---
 
 ![Photo of a row of switches](/public/img/diomari-madulara-110583-unsplash.jpg)
-(Photo by Diomari Madulara on Unsplash)
+<small>(Photo by Diomari Madulara on Unsplash)</small>
 
 Una de las construcciones sintácticas más discutidas desde la sentencia `GOTO` es `switch`. A menudo es criticada y es que la sentencia switch tiene el problema de que es una fuente de acoplamiento. Seguro que si lleva un tiempo programando te ha ocurrido algo parecido a esto:
 

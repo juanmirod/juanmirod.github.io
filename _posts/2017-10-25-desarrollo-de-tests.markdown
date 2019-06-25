@@ -10,13 +10,15 @@ Durante el tiempo que llevo escribiendo tests automáticos para mis aplicaciones
 
 > "Testing can show the presence, not the absence of bugs" EW Dijsktra
 
-Pero esa cita le hizo un flaco favor al mundo del desarrollo. Los tests no prueban que tu programa sea infalible, pero te ayudan a diseñarlo y a construirlo de forma ordenada, te ayudan a descubrir los errores pronto y a tener confianza al refactorizar. Al pensar en todo esto siempre me pongo nervioso y me da por escribir en twitter y todo.
+Pero esa cita le hizo un flaco favor al mundo del desarrollo. Los tests no prueban que tu programa sea infalible, pero te ayudan a diseñarlo y a construirlo de forma ordenada, te ayudan a descubrir los errores pronto y a tener confianza al refactorizar. Al pensar en todo esto, siempre me pongo nervioso y me da por escribir en twitter y todo.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="es" dir="ltr">Pregunta seria que me llevo haciendo un tiempo: ¿Por qué nadie enseña a programar desde cero usando TDD? Imagina ahorrarte todas esas horas frustrado delante del ordenador escribiendo printf para ver que estaba pasando porque no sabías debugear ni escribir un test...</p>&mdash; Juanmi Rodriguez (@juanmirod) <a href="https://twitter.com/juanmirod/status/923646197109329921?ref_src=twsrc%5Etfw">October 26, 2017</a></blockquote>
 
 Creo firmemente que si nos enseñaran a escribir tests desde el principio en lugar de enseñarnos con esas ridículas metáforas sobre recetas de cocina y pseudocódigo, el desarrollo de software sería algo muy diferente a lo que conocemos muchos ahora.
 
-Pero nunca es fácil encontrar información sobre cómo escribir tests, cómo ejecutarlos y cómo usarlos, así que quiero aportar mi granito de arena contando lo que he aprendido hasta ahora con dos objetivos principales: el primero es archivarlo en mi blog para ver si sigo pensando lo mismo dentro de 5 años, y el segundo es predicar con el ejemplo y ayudar a que más desarrolladores españoles se pasen al lado de los tests y dejen de lado la frustración de los console.log, los printf y demás ténicas de debugueo chusqueras que no son más que parches.
+Pero nunca es fácil encontrar información sobre cómo escribir tests, cómo ejecutarlos y cómo usarlos. Tengo que admitir que para enseñar a programar empezando por los tests, alguien tendría que escribir los tests por ti. Los tests son tan difíciles o más de escribir que el código que están testeando, y básicamente empezar por los tests para alguien sin experiencia es como tratar de correr antes que andar. 
+
+Así que quiero aportar mi granito de arena contando lo que he aprendido hasta ahora con dos objetivos principales: el primero es archivarlo en mi blog para ver si sigo pensando lo mismo dentro de 5 años, y el segundo es predicar con el ejemplo y ayudar a que más desarrolladores españoles se pasen al lado de los tests y dejen de lado la frustración de los console.log, los printf y demás ténicas de debugueo chusqueras que no son más que parches.
 
 ## Setup del proyecto 
 
@@ -128,6 +130,76 @@ Esta forma de programar además te permite no tener todo en la cabeza al mismo t
 
 Pero ya es suficiente de hablar de las bondades del testing. Escribir tests no es siempre fácil, especialmente cuando nadie te ha enseñado y no sabes por donde empezar. Así que hagamos un repaso a varios patrones que he ido aprendiendo con en este tiempo para testear distintos tipos de código.
 
+## Mi primer test
+
+El ejemplo mínimo, el 'hello world' de las pruebas automáticas con JasmineJS sería algo así:
+
+```javascript
+// fichero media.js
+function media(a,b) {
+  return (a + b)/2
+}
+
+describe('función media', () => { // descripción de este grupo de tests
+  it('calcula la media de dos números', () => { // descrición del test
+    const resultado = media(4, 8) // creamos una prueba
+    expect(resultado).toBe(6) // comprobamos que el resultado es el esperado
+  })
+})
+```
+
+Si copias este ejemplo en el fichero `media.js` y ejecutas ´npx jasmine media.js` deberías ver algo así en la consola:
+
+```
+Randomized with seed 57391
+Started
+.
+
+
+1 spec, 0 failures
+Finished in 0.006 seconds
+Randomized with seed 57391 (jasmine --random=true --seed=57391)
+```
+
+Enhorabuena! has escrito y comprobado tu primer test. Puedes cambiar la función y ver como falla. Por ejemplo, si quitamos la división por 2:
+
+
+```
+Started
+F
+
+Failures:
+1) función media calcula la media de dos números
+  Message:
+    Expected 12 to be 6.
+  Stack:
+    Error: Expected 12 to be 6.
+        at <Jasmine>
+        at UserContext.it (/home/juanmi/projects/pruebas/media.js:8:23)
+        at <Jasmine>
+
+1 spec, 1 failure
+Finished in 0.008 seconds
+```
+
+Genial, ahora sabemos que si alguien (ese alguien puedes ser tú dentro de un par de meses) viene y cambia nuestra función de forma que ya no es una media, el test dará un error, avisándonos del cambio de funcionalidad.
+Un buen test debe definir lo que queremos que haga la función, y no cómo lo hace, si por ejemplo cambiamos la función media para ser más general:
+
+```javascript
+function media() {
+  const values = Array.from(arguments)
+  return values.reduce((x, total) => x + total) / values.length
+}
+
+```
+
+Nuestro test seguirá pasando sin fallos, ya que, aunque hemos cambiado la implementación, la prueba de ese test sigue siendo válida.
+
+Esta es la base del desarrollo con tests automáticos: definimos la funcionalidad mediante una prueba, comprobamos que la implementación cumple la prueba (si no es así repasamos la implementación para ver por qué no la cumple y corregimos el error) y pasamos a definit la siguiente funcionalidad.
+
+De esta forma vamos definiendo nuestro programa y creando las pruebas que comprueban nuestras expectativas sobre el código conforme el programa crece.
+Para un repaso más detallado y algunos ejemplos más de cómo escribir pruebas automáticas con JasmineJS puedes ver [mi post de introducción a las pruebas automáticas][]
+
 ## Aislando tests para iterar más rápido
 
 Antes de seguir quería introducir una funcionalidad de jasmine que es muy útil para centrarnos en un fichero o un test en concreto. En jasmine tenemos varias funciones para excluir tests de la suit o para hacer que sólo se ejecuten algunos de los tests de la suit. Esto es útil especialmente cuando tenemos una suite grande y estamos desarrollando un nuevo módulo o funcionalidad y no queremos que se ejecute la suite completa cada vez que guardamos el fichero porque tarda mucho o nos distrae:
@@ -138,25 +210,16 @@ Antes de seguir quería introducir una funcionalidad de jasmine que es muy útil
 
 ## Funciones puras
 
-Las funciones puras son aquellas que solo actuan sobre sus variables locales y devuelven un resultado, pero no actúan sobre ninguna variable externa ni producen ningún otro efecto, como imprimir en pantalla, leer un fichero o hacer una petición http. Para más información sobre lo que es una función pura puedes ver mi artículo sobre programación funcional, donde explico lo que son más detalladamente.
+Las funciones puras son aquellas que solo actúan sobre sus variables locales y devuelven un resultado, pero no actúan sobre ninguna variable externa ni producen ningún otro efecto, como imprimir en pantalla, leer un fichero o hacer una petición http. Para más información sobre lo que es una función pura puedes ver mi artículo sobre programación funcional, donde explico lo que son más detalladamente.
 
 Estas son las funciones más fáciles de testear y pronto intentaremos tener el mayor número de estas functiones, y esto es algo bueno, porque las funciones puras son predecibles y son fiables. Es decir, son funciones que nos darán pocos problemas y por tanto es una buena práctica tratar de tener la mayor parte posible de nuestra base de código de esta forma.
 
-Para testar una función pura solo necesitaremos escribir la llamada a la función con los parámetros que queramos y indicar cual es la salida esperada. Por ejemplo si tenemos una función que calcula la media:
+Para testar una función pura solo necesitaremos escribir la llamada a la función con los parámetros que queramos y indicar cual es la salida esperada. Por ejemplo, nuestra función que calcula la media:
 
 ```javascript
 function avg(list){
   return list.reduce((item, acc) => item + acc, 0) / list.length
 }
-```
-
-Podríamos escribir algunos tests como estos:
-
-```javascript
-it('calcula la media', () => {
-  const media = avg([1,2,3,4,5])
-  expect(media).toBe(3)
-})
 ```
 
 ## Injección de dependencias y espías
