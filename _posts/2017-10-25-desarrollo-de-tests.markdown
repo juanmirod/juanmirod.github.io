@@ -222,7 +222,7 @@ function avg(list){
 }
 ```
 
-## Injección de dependencias y espías
+## Inyección de dependencias y espías
 
 No todo pueden ser ser funciones puras, para que nuestro programa se comunique y podamos ver algún resultado, es necesario que tenga algún efecto externo. 
 
