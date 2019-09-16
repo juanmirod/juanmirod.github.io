@@ -78,17 +78,4 @@ En [In the begining was the command line](http://www.cryptonomicon.com/beginning
 
 > Buyer: "Can't you see that everyone is buying station wagons?"
 
-Por último, quería volver a incidir en la propiedad más destacable de Linux, que cada vez parece más ahogada en esta nueva era de código abierto que no es código libre: Linux es Software Libre, y como bien dice Richard Stallman:
-
-![Picture of Richard Stallman by Sam Williams](/public/img/Richard_Matthew_Stallman.jpeg)
-###### By Sam Williams - Taken from the cover of the O'Reilly book w:Free as in Freedom: Richard Stallman's Crusade for Free Software, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=208390
-
-> [El software libre es incluso más importante hoy en día](https://www.gnu.org/philosophy/free-software-even-more-important.html)
-
-> With free software, the users control the program, both individually and collectively. So they control what their computers do (assuming those computers are loyal and do what the users' programs tell them to do).
-
-> With proprietary software, the program controls the users, and some other entity (the developer or “owner”) controls the program. So the proprietary program gives its developer power over its users. That is unjust in itself; moreover, it tempts the developer to mistreat the users in other ways.
-
-> Even when proprietary software isn't downright malicious, its developers have an incentive to make it addictive, controlling and manipulative. You can say, as does the author of that article, that the developers have an ethical obligation not to do that, but generally they follow their interests. If you want this not to happen, make sure the program is controlled by its users.
-
-> Freedom means having control over your own life. If you use a program to carry out activities in your life, your freedom depends on your having control over the program. You deserve to have control over the programs you use, and all the more so when you use them for something important in your life.
+Por último, quería volver a incidir en la propiedad más destacable de Linux, que cada vez parece más ahogada en esta nueva era de código abierto que no es código libre: Linux es Software Libre, no solo puedes ver el código, puedes ejecutarlo, copiarlo, distribuirlo. Está ahí para que todos podamos aprovecharlo y construir encima de él, ese es su gran valor y su gran fortaleza.

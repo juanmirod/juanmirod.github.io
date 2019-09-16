@@ -20,6 +20,8 @@ El listado no tiene ningún orden particular, todos me parecen grandes ideas, un
 
 + Cargo Cult Science de Feynman
 
++ [Upgrade your cargo cult for the win](https://meaningness.com/metablog/upgrade-your-cargo-cult) (relacionado con el anterior)
+
 + The Humble programmer de Dijkstra
 
 + On Building systems that will fail de Corbato
