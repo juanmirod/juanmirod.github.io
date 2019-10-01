@@ -60,3 +60,4 @@ El listado no tiene ningún orden particular, todos me parecen grandes ideas, un
 
     > You can't check code you can't parse. Checking code deeply requires understanding the code's semantics. The most basic requirement is that you parse it. Parsing is considered a solved problem. Unfortunately, this view is naïve, rooted in the widely believed myth that programming languages exist.
 
++ [On the concecuences of literacy](/public/papers/Goody-The_consequences_of_literacy.pdf)

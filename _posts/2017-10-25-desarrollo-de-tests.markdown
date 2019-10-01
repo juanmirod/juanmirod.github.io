@@ -22,7 +22,7 @@ Así que quiero aportar mi granito de arena contando lo que he aprendido hasta a
 
 ## Setup del proyecto 
 
-Lo primero que necesitamos y no suele venir dado para desarrollar una suit de tests es un test runner, y preferiblemente una librería de test que nos facilite la labor de escribir los casos de prueba y las comprobaciones. Personalmente mi preferida es Jasmine, [En un post anterior][1] explico como crear un proyecto que use JasmineJS y Karma para crear y ejecutar tu suit de tests. Hay otras muchas librerías y test runners, dependiendo del tamaño del proyecto y de la experiencia personal o del equipo podemos preferir una u otra. Yo me centraré en este artículo en el uso de JasmineJS, pero todas son parecidas, lo importante es la forma de organizar el código para que sea fácil de testear. Para mostrar mejor todos los ejemplos que vienen he creado un proyecto en github y he ido añadiendo el código mientras escribía este texto. Puedes ver la configuración inicial en [el primer commit][2].
+Lo primero que necesitamos y no suele venir dado para desarrollar una suit de tests es un test runner, y preferiblemente una librería de test que nos facilite la labor de escribir los casos de prueba y las comprobaciones. Personalmente mi preferida es Jasmine, [En un post anterior][1] explico como crear un proyecto que use JasmineJS y Karma para crear y ejecutar tu suit de tests. Hay otras muchas librerías y test runners, dependiendo del tamaño del proyecto y de la experiencia personal o del equipo podemos preferir una u otra. Yo me centraré en este artículo en el uso de JasmineJS, pero todas son parecidas, lo importante es la forma de organizar el código para que sea fácil de testear. Para mostrar mejor todos los ejemplos que vienen he creado un proyecto en github y he ido añadiendo el código mientras escribía este texto. Puedes ver la configuración inicial en [el primer commit][].
 
 ## Primeros tests
 
@@ -198,11 +198,11 @@ Nuestro test seguirá pasando sin fallos, ya que, aunque hemos cambiado la imple
 Esta es la base del desarrollo con tests automáticos: definimos la funcionalidad mediante una prueba, comprobamos que la implementación cumple la prueba (si no es así repasamos la implementación para ver por qué no la cumple y corregimos el error) y pasamos a definit la siguiente funcionalidad.
 
 De esta forma vamos definiendo nuestro programa y creando las pruebas que comprueban nuestras expectativas sobre el código conforme el programa crece.
-Para un repaso más detallado y algunos ejemplos más de cómo escribir pruebas automáticas con JasmineJS puedes ver [mi post de introducción a las pruebas automáticas][]
+Para un repaso más detallado y algunos ejemplos más de cómo escribir pruebas automáticas con JasmineJS puedes ver [mi post de introducción a las pruebas automáticas][3]
 
 ## Aislando tests para iterar más rápido
 
-Antes de seguir quería introducir una funcionalidad de jasmine que es muy útil para centrarnos en un fichero o un test en concreto. En jasmine tenemos varias funciones para excluir tests de la suit o para hacer que sólo se ejecuten algunos de los tests de la suit. Esto es útil especialmente cuando tenemos una suite grande y estamos desarrollando un nuevo módulo o funcionalidad y no queremos que se ejecute la suite completa cada vez que guardamos el fichero porque tarda mucho o nos distrae:
+Antes de seguir quería introducir una funcionalidad de jasmine que es muy útil para centrarnos en un fichero o un test en concreto. En jasmine tenemos varias funciones para excluir tests de la suit o para hacer que sólo se ejecuten algunos de los tests de la suit. Esto es útil especialmente cuando tenemos una suite grande y estamos desarrollando un nuevo módulo o funcionalidad y no queremos que se ejecute la suite completa cada vez que guardamos el fichero porque tarda mucho o nos distrae ([documentación de jasmine aquí][2]):
 
 + xit - los tests definidos con xit en lugar de it se excluyen de la suit y apareceran como pendientes cuando la ejecutemos.
 + fit - Si definimos algún test con fit en lugar de it sólo se ejecutarán los tests que estén así definidos, ignorando todos los demás.
@@ -222,6 +222,12 @@ function avg(list){
 }
 ```
 
+Escribir tests es un proceso directo:
+
+
+## Tests basados en propiedades (Property Based Testing)
+
+
 ## Inyección de dependencias y espías
 
 No todo pueden ser ser funciones puras, para que nuestro programa se comunique y podamos ver algún resultado, es necesario que tenga algún efecto externo. 
@@ -236,3 +242,4 @@ No todo pueden ser ser funciones puras, para que nuestro programa se comunique y
 
 [1]:http://juanmirod.github.io/2016/04/29/configurando-karma-en-un-projecto-javascript.html
 [2]:https://jasmine.github.io/api/2.6/global.html#fdescribe
+[3]:http://juanmirod.github.io/2016/04/21/tests-unitarios-en-javascript.html
