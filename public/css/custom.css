@@ -31,8 +31,13 @@ blockquote {
   text-shadow: 2px 2px 2px #9b9999;
 }
 
+.masthead {
+  background: rgb(255,42,119); 
+  background: linear-gradient(90deg, rgba(255,42,119,1) 0%, rgba(0,188,212,1) 48%);
+}
+
 .masthead-title a {
-  text-shadow: 2px 2px 2px #d2d4d3;
+  text-shadow: 2px 2px 2px #080808;
 }
 
 .masthead-title a img {

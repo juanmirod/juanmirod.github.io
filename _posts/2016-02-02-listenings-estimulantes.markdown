@@ -33,7 +33,9 @@ A continuación dejo una lista con los videos y audios que me han gustado más y
 
 - [The Fringe benefits of failure by J.K. Rowling](http://www.ted.com/talks/jk_rowling_the_fringe_benefits_of_failure). Discurso de la escritora en un acto de graduación de la Universidad de Harvard. Si no has leído Harry Potter, siempre lo recomiendo en versión original como lectura sencilla y muy entretenida para todos los públicos.
 
-- [Do schools kill creativity?](http://www.ted.com/talks/ken_robinson_says_schools_kill_creativity) Una de las charlas más conocidas de TED, Sir Ken Robinson se pregunta si la escuela está limitando más que educando a los niños.  
+- [Do schools kill creativity?](http://www.ted.com/talks/ken_robinson_says_schools_kill_creativity) Una de las charlas más conocidas de TED, Sir Ken Robinson se pregunta si la escuela está limitando más que educando a los niños.
+
+- [How to escape education's death valley](https://www.abc.net.au/radio/programs/shortandcurly/) Otra charla de Sir Ken Robinson sobre la educación estandarizada y la falta de inclusión.
 
 - [Everything you think to know about addictions is wrong](http://www.ted.com/talks/johann_hari_everything_you_think_you_know_about_addiction_is_wrong) Otra charla de TED, esta vez sobre el verdadero causante de las addicciones.
 
