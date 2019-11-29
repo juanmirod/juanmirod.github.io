@@ -131,3 +131,14 @@ strong {
 .pagination {
   color: #616161;
 }
+
+@media only screen and (max-width: 320px) {
+  .masthead-title {
+    text-align: left;
+    margin-left: 60px;
+  }
+
+  .author-picture {
+    display: none;
+  }
+}
