@@ -132,7 +132,7 @@ strong {
   color: #616161;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 550px) {
   .masthead-title {
     text-align: left;
     margin-left: 60px;
