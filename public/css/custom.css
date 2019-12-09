@@ -33,7 +33,7 @@ blockquote {
 
 .masthead {
   background: rgb(255,42,119); 
-  background: linear-gradient(90deg, rgb(255,42,119) 0%, rgb(0,188,212) 48%);
+  background: linear-gradient(90deg, rgb(255,42,119) 5%, rgb(178, 61, 242) 15%, rgb(0,188,212) 30%);
 }
 
 .masthead-title a {
