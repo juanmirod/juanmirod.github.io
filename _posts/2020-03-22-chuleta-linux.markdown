@@ -74,8 +74,8 @@ PasswordAuthentication no
 ## Utilidades varias
 
 * `notify-send` crea una notificación en el escritorio. Ej. crear una alarma para dentro de 10 segundos: `sleep 10; notify-send "Hora e descansar!" "Se ha terminado el Pomodoro"`
-* Los comodines siempre se expanden en orden: `cat *.txt > out.txt` concatenará los ficheros `1.txt`, `2.txt` y `3.txt` en ese orden.
-d* `script filename` guarda una sesion de comandos en un fichero, genial para crear scripts a partir de tareas manuales que solemos repetir.
+* Los comodines siempre se expanden en orden: `cat *.txt > out.txt` concatenará los ficheros `1.txt`, `2.txt` y `3.txt` en ese orden. También se pueden usar expansiones con llaves: `{1..9}` `{a..z}`  
+* `script filename` guarda una sesion de comandos en un fichero, genial para crear scripts a partir de tareas manuales que solemos repetir.
 * `df -h` te dice el espacio libre en los discos duros
 * `free -h` para espacio libre en la RAM
 * `du -sh foldername` dice el espacio ocupado por el directorio, si haces: `du -sh *` te dice el espacio que ocupan todos los subdirectorios del directorio actual
@@ -86,6 +86,7 @@ d* `script filename` guarda una sesion de comandos en un fichero, genial para cr
 * `wc -l` muestra el número de líneas del stream se le pase, por ejemplo: `cat file.txt | wc -l` nos dá el número de líneas de un fichero y `grep -iR 'palabra' . | wc -l` nos daría el número de líneas en las que aparece la palabra `palabra` en todos los ficheros del directorio y sus hijos.
 * `convert *.png out.pdf` crea un pdf con una imagen por página.
 * `gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=out.pdf first.pdf second.pdf` Concatena varios pdfs en uno con ghostscript
+* `fc-cache -f -v` Refrescar las fuentes de sistema una vez has copiado los ficheros de fuentes que quieres añadir a `~/.fonts/`
 * Para modificar el nombre/convertir una serie de ficheros: `for i in *.pdf; do mv "$i" CS749__"$i"; done`. Por ejemplo, si tenemos una carpeta con un montón de documentos de word que tenemos que imprimir, en lugar de abrirlos uno por uno y darle a imprimir, podemos hacer:
 
 ```shell
