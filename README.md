@@ -18,6 +18,8 @@ Fuentes de inspiración para este blog, a las que les debo mucho por todo lo que
 
 - [Joel on Software](https://www.joelonsoftware.com/) Junto con Coding Horror uno de los blogs más conocidos y nombrados de desarrolladores.
 
+- [Brain Pickings](https://www.brainpickings.org/) Maria Popova ha creado un proyecto de vida que es a la vez su sustento, su hobbie y su legado. Cuando alguien pone tanto tiempo y esfuerzo en algo puedes notarlo desde el primer momento. 
+
 - [Neil Gaiman así en general](http://journal.neilgaiman.com/) Porque su consejo para todos aquellos que le preguntan como ser escritor o cómo escribir un libro siempre es: Escribe, ya. Termínalo, publícalo y escribe otro. Escribe y lee todo lo que puedas:
 
 > Assume that you have a million words inside you that are actually rubbish, and you need to get them out before you get to the good ones, and if you get there early, that's great. (https://youtu.be/1Z4mwSdcLoc?t=36m25s)
