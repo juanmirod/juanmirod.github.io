@@ -61,7 +61,7 @@ Al final, cualquier especificación lo suficientemente detallada como para gener
 
 Cuando trato de explicar esto a alguien siempre be acuerdo del [sketch de Tip y Col sobre cómo llenar un vaso de agua.](https://www.youtube.com/watch?v=qHqDpUpbpJI) y es que, hasta en el gesto más sencillo, hay mil presunciones y mil formas en las que podríamos hacerlo mal.
 
-<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/Bqn8Z7xdPCFy0" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/water-funny-Bqn8Z7xdPCFy0">via GIPHY</a></p>
+![Gif of a cartoon character trying to drink water by the wrong way of the glass](https://media.giphy.com/media/Bqn8Z7xdPCFy0/giphy.gif)
 
 En este sentido, hay un proyecto muy interesante en muchos aspectos, el Cyc, es el proyecto de inteligencia artifical más lonjevo hasta ahora, y uno de los pocos que trata de codificar el conocimiento no escrito, cosas como las del sketch de Tip y Col, que no están escritas, cosas como que si ves a alguien con el pelo verde, debe habérselo teñido porque los humanos no tenemos el pelo verde de forma natural. Para saber más sobre Cyc puedes leer [este artículo wn wired](https://www.wired.com/2016/03/doug-lenat-artificial-intelligence-common-sense-engine/)
 
