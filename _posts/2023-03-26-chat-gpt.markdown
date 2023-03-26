@@ -1,0 +1,42 @@
+---
+published: true
+title: ¿Por qué es tan importante Chat GPT?
+layout: post
+tags: [opinión, Inteligencia Artifical, LLM] 
+---
+
+Los LLMs o Modelos de Lenguaje de Aprendizaje (por sus siglas en inglés) son una
+rama de la inteligencia artificial que se centra en permitir que las            
+aplicaciones informáticas se comuniquen con los seres humanos en un lenguaje    
+natural. Con la llegada de sistemas como ChatGPT, estamos ante un nuevo         
+paradigma en el que los usuarios pueden comunicarse de una manera más intuitiva 
+y natural con las máquinas.                                                     
+
+## ¿Por qué es esto tan importante?           
+
+Principalmente, la interacción con las máquinas se simplifica enormemente, lo   
+que mejora la experiencia del usuario. En lugar de aprender una sintaxis        
+complicada o navegar por una interfaz difícil de usar, los usuarios pueden hacer
+preguntas o dar órdenes de manera natural. 
+
+## ¿Qué usos podrán tener los LLMs en un futuro próximo?
+
+Además, los LLMs de última generación
+son capaces de comprender el contexto de la conversación, lo que facilita el    
+proceso de detectar errores en el código y corregirlos. Esto hace que el        
+debugging y el pair programming sean mucho más sencillos y eficaces.            
+
+Otro beneficio importante de los LLMs como ChatGPT radica en su capacidad para  
+utilizarse como interfaz para aplicaciones y juegos, donde el modelo devuelve   
+una serie de acciones o comandos. 
+
+También pueden ser empleados como agente      
+conversacional o de atención al público, aunque aquí surgen algunos riesgos. El 
+mayor problema cuando se trata de estos usos, es que el modelo es vulnerable a  
+los ataques de inyección de prompts. Todo lo que el modelo lee es interpretado, 
+lo que lo hace susceptible a ser manipulado por personas malintencionadas.      
+
+## ¿Van a quitarme el trabajo?
+
+En general, los LLMs como ChatGPT representan un cambio de paradigma importante 
+en la forma en que interactuamos con nuestras aplicaciones informáticas.
