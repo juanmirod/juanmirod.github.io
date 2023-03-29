@@ -42,9 +42,13 @@ Creo que esto es realmente lo que atrapa a la mayoría, aunque no sepan muy bien
 
 ## ¿Qué usos podrán tener los LLMs en un futuro próximo?
 
-A parte de la conversión directa a chatbot+contexto del ámbito que sea, creo que los LLMs tienen un potencial enorme como interface de aplicaciones y videojuegos. Aún no tienen la velocidad necesaria, pero cuando whisper y chatGPT sean más rápidos, podremos hablarle a los NPJ de un juego y que nos respondan o ejecuten nuestras órdenes sin necesidad de nada más. 
+A parte de la conversión directa a chatbot+contexto del ámbito que sea, creo que los LLMs tienen un potencial enorme como interface de aplicaciones y como generadores de contenido para videojuegos. 
 
 En una aplicación, la demostración de Microsoft con Office es una muestra de hacia donde podría ir la industria. Asistentes inteligentes en las aplicaciones de forma que ya no hace falta aprenderse todas las opciones de la UI, le dices al modelo lo que quieres y él se encarga de ejecutar.
+
+La otra aplicación muy comentada es como generador de contenidos. Ya existen start-ups como [Jasper](https://www.jasper.ai/) o [copy.io](https://www.copy.ai/) que utilizan a GPT3 para generar copys, blogposts, emails, redacciones, resúmenes...
+
+Por último, aún no tienen la velocidad necesaria, pero cuando whisper y chatGPT sean más rápidos, podremos hablarle a los NPJ de un juego y que nos respondan o ejecuten nuestras órdenes sin necesidad de nada más, se acabaron las conversaciones enlatadas y la selección de diálogos fijos. Los diseñadores podrían darle un papel y un guión a ChatGPT y a partir de ahí el jugador podrá preguntar lo que quiera y tener una respuesta coherente. Se me ocurre que podría revolucionar el campo de las aventuras gráficas, donde ya telltale avanzó mucho gracias al lenguaje chatscript de Bruce Wilcox, pero esto es otro nivel totalmente. 
 
 ## ¿Van a quitarme el trabajo?
 
