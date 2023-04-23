@@ -5,7 +5,9 @@ layout: post
 tags: [programación, Inteligencia Artificial, LLM, ChatGPT] 
 ---
 
-Llevo un tiempo siguiendo la pista a los avances de la IA, IAs generativas, modelos de lenguaje, etc. pero ChatGPT me pareció un cambio de paradigma que tenía que atacar desde el principio. Fue una señal de que me estaba perdiendo algo importante y debía empezar a aprender más seriamente sobre el tema. Una de las cosas que hago es seguir leyendo y haciendo cursos sobre Python, ML, LLMs, pero los cursos siempre me parecen demasiado dirigidos, para mi es importante también tener un proyecto libre que me permita experimentar y aprender a mi ritmo y ver el por qué y el cómo.
+Llevo un tiempo siguiendo la pista a los avances de la IA, IAs generativas, modelos de lenguaje, etc. pero ChatGPT me pareció un cambio de paradigma que tenía que atacar desde el principio. Fue una señal de que me estaba perdiendo algo importante y debía empezar a aprender más seriamente sobre el tema. 
+
+Una de las cosas que hago es seguir leyendo y haciendo cursos sobre Python, ML, LLMs. Pero los cursos siempre me parecen demasiado dirigidos, para mi es importante también tener un proyecto libre que me permita experimentar y aprender a mi ritmo y ver el por qué y el cómo.
 
 Para eso empecé un [proyecto personal](https://github.com/juanmirod/chatgpt_cli) en el que la propuesta es crear mi propio asistente personal. Idealmente uno que sepa cosas sobre mi y tenga memoria sobre nuestras conversaciones anteriores y aún más idealmente que se ejecute en mi ordenador personal. Todavía estoy lejos de expectativas y puede que nunca llegue a conseguirlas pero es una forma de forzarme a aprender sobre el tema.
 
@@ -16,10 +18,10 @@ Todo esto lo convierte en algo bastante meta, que es algo que me encanta, uso Ch
 **Por ahora la experiencia es genial. Desarrollo nuevas funcionalidades muy rápido, ChatGPT me desbloquea muchísimo y me mantiene mucho más en el flow** que tener que estar leyendo documentación o buscando en Google y en general la sensación de velocidad y de satisfacción es muy buena. También creo que esto es así porque estoy usando ChatGPT en el escenario ideal:
 
 - Un proyecto nuevo y pequeño.
-- Python
 - Una app de línea de comandos, con lo que añadir funcionalidad es muy fácil, no necesitas frameworks ni componentes ni grandes arquitecturas.
 - En un lenguaje que no domino, con lo que ChatGPT es muy útil para solventar dudas.
 - El propio dominio es la especialidad de ChatGPT.
+- Python es un lenguaje especialmente adecuado para LLMs, porque no tiene tanta sintaxis y es dinámico. Propiedades que lo hacen ideal para humanos y para LLMs porque ahora mismo es lo más parecido a que teníamos a programar en lenguaje natural.
 
 Sin todos estos factores la utilidad ahora mismo de ChatGPT pierde puntos. De hecho en el trabajo lo uso mucho menos, simplemente es más difícil explicar lo que quiero que hacerlo yo. Pero por eso creo que todos acabaremos con nuestro propio asistente personal o de empresa que conozca los entresijos de nuestros proyectos y pueda ayudarnos con más contexto...
 
