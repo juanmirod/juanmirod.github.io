@@ -47,10 +47,9 @@ A parte de la conversión directa a chatbot+contexto del ámbito que sea, creo q
 En una aplicación, la demostración de Microsoft con Office es una muestra de hacia donde podría ir la industria. Asistentes inteligentes en las aplicaciones de forma que ya no hace falta aprenderse todas las opciones de la UI, le dices al modelo lo que quieres y él se encarga de ejecutar.
 
 Otra aplicación en la misma línea pero enfocada al desarrollo sería permitir a los usuarios crear código y automatizaciones mediante lenguaje natural. Un poco lo que ya vemos con el plugin de Zappier para ChatGPT pero a nivel de herramientas de desarrollo. Imagina un IDE o un lenguaje que incluyen un LLM que corre en local como parte
-propia del lenguaje... En [este podcast de The Technium](https://technium.transistor.fm/episodes/llms-eat-software-development) exploran esa idea desde varios puntos de vista y cómo podría también permitir a los usuarios de una app crear plugins o funcionalidades o automatismos en lenguaje natural.
+propia del lenguaje... En [este podcast de The Technium](https://technium.transistor.fm/episodes/llms-eat-software-development) exploran esa idea desde varios puntos de vista y cómo podría también permitir a los usuarios de una app crear plugins o funcionalidades o personalizaciones en lenguaje natural.
 
 La otra aplicación muy comentada es como generador de contenidos. Ya existen start-ups como [Jasper](https://www.jasper.ai/) o [copy.io](https://www.copy.ai/) que utilizan a GPT3 para generar copys, blogposts, emails, redacciones, resúmenes...
-
 
 Por último, aún no tienen la velocidad necesaria, pero cuando whisper y chatGPT sean más rápidos, podremos hablarle a los NPJ de un juego y que nos respondan o ejecuten nuestras órdenes sin necesidad de nada más, se acabaron las conversaciones enlatadas y la selección de diálogos fijos. Los diseñadores podrían darle un papel y un guión a ChatGPT y a partir de ahí el jugador podrá preguntar lo que quiera y tener una respuesta coherente. Se me ocurre que podría revolucionar el campo de las aventuras gráficas, donde ya telltale avanzó mucho gracias al lenguaje chatscript de Bruce Wilcox, pero esto es otro nivel totalmente. 
 
