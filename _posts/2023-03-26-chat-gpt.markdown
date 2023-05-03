@@ -14,12 +14,14 @@ Pero esta es la primera vez que el gran público puede interactuar con uno de fo
 
 ## ¿Por qué es esto tan importante?           
 
-ChatGPT es un salto cuantitativo respecto a lo que teníamos hasta ahora en cuanto a potencia y usabilidad.
+ChatGPT es un salto cualitativo respecto a lo que teníamos hasta ahora en cuanto a potencia y usabilidad.
 Especialmente el modelo GPT4, que acaba de salir, tiene una ventana de contexto mucho más grande que sus predecesores y ha sido capaz de superar una gran cantidad de exámenes del nivel de bachillerato o de pruebas de evaluación para puestos de trabajo. Por estos motivos hay quien habla de que ChatGPT podría ser un primer paso hacia una AGI (del inglés Artificial General Intelligence) o inteligencia artificial general.
 
 Para mi esto es demasiado, ChatGPT es impresionante, pero aún dista mucho de poder hacer muchas tareas de
 forma independiente y no tiene ningún tipo de persistencia ni de agencia, con lo que ahora mismo es sólo
-un sistema que responde bastante bien una gran batería de preguntas. Pero sus aplicaciones como asistente virtual y para educación son enormes, y es ahí donde estamos viendo a muchas startups y aficionados tratar de sacarle partido. Desde Khan Academy, Duolingo, Quizlet, hasta Microsoft, todos anuncian nuevas funcionalidades que aprovechan esta tecnología.
+un sistema que responde bastante bien una gran batería de preguntas. 
+
+Pero sus aplicaciones como asistente virtual y para educación son enormes, y es ahí donde estamos viendo a muchas startups y aficionados tratar de sacarle partido. Desde Khan Academy, Duolingo, Quizlet, hasta Microsoft, todos anuncian nuevas funcionalidades que aprovechan esta tecnología.
 
 **Hacía años que no veíamos una reacción así por parte de las empresas tecnológicas.** Incluso durante el confinamiento, cuando era evidente que había una oportunidad de mercado en aplicaciones de videoconferencia, la mayoría fueron demasiado lentas en reaccionar. Pero apenas días o semanas tras el anuncio de OpenAI de ChatGPT ya había integraciones de todo tipo.
 
@@ -28,7 +30,7 @@ Esto se debe a dos cosas:
 1. **En OpenAI hicieron muy bien su trabajo** y ChatGPT pudo soportar un crecimiento nunca visto y a millones de usuarios desde el segundo día. Además la API también está disponible desde el día 1 y es extremadamente simple de usar, apenas 1 endpoint y 2 o 3 parámetros son suficiente para interactuar con ChatGPT de forma programática.
 2. La gente ve el potencial nada más probarlo. Puedes notar que no había nada parecido a esto hasta ahora. Llevamos años teniendo asistentes en los móviles, en la televisión, en los relojes, en altavoces de salón... y no los usábamos más que para darles órdenes simples y concretas. En el momento en el que pruebas 5 minutos ChatGPT te das cuenta de que es otra cosa, puede mantener el hilo de una conversación, responde con sentido a casi cualquier cosa que le preguntas, le puedes pedir una canción, una poesía un trozo de código o un cuento infantil y puedes ver que la respuesta no ha sido programada ni es una elección aleatoria de una base de datos, es algo dentro del contexto de la conversación y a lo que le puedes pedir que haga cambios o mejoras.
 
-Esto ha enganchado a muchas gente y sorprendido a la mayoría. Pero para mi sigue sin ser lo más importante. **Lo más importante es que te entiende.** Voy a dejar de lado el si realmente piensa o no o si razona o no o si miente o se inventa cosas, porque para mi todo eso es más o menos irrelevante. **El verdadero cambio de paradigma no es usar ChatGPT como una IA que todo lo sabe, es usarla como interface.**
+Esto ha enganchado a muchos y sorprendido a la mayoría. Pero para mi sigue sin ser lo más importante. **Lo más importante es que te entiende.** Voy a dejar de lado el si realmente piensa o no o si razona o no o si miente o se inventa cosas, porque para mi todo eso es más o menos irrelevante. **El verdadero cambio de paradigma no es usar ChatGPT como una IA que todo lo sabe, es usarla como interface.**
 
 ## ChatGPT como interface
 
