@@ -32,6 +32,7 @@ Pero vayamos un poco al grano, voy a listar algunos ejemplos de cómo he usado C
   - **TTS:** El asistente tiene una opción de text-to-speech para que puedas escucha sus respuestas, aunque por defecto lo tengo desactivado (es más rádpido leer y el código no tiene sentido escucharlo) La primera versión de nuevo fue suya, luego estuve probando varias voces y librerías, al final me quedé con una que no era la que me había sugerido ChatGPT.
   - **Subir conversación a un gist.** El fichero upload también se lo pedí a ChatGPT, luego yo metí el código en una función para usarlo desde la app en lugar de como un script.[Conversación](https://gist.github.com/juanmirod/8b6044b0071bdcc5cb0bbcf933b7a576)
   - **Recuperar una conversación** desde el fichero markdown. Esto aún no lo tengo integrado, pero ya he peloteado con ChatGPT y tengo el código inicial que debería hacerlo posible. [Conversación](https://gist.github.com/juanmirod/4f0e8687b4620831afb1446aed027b0c)
+  - **Hablando de embeddings y cómo usarlos** Para poder guardar información de texto y hacer búsquedas semánticas. [Conversación](https://gist.github.com/juanmirod/6429d962b6ffb71f2bc9a3cdb27cbd71)
   - **Refactors.** He hecho varios refactors donde le he dado una función grande y le he pedido que me parta en funciones más pequeñas.
   - **Tests.** Los primeros tests de la clase ChatGPT los hizo ChatGPT, los del módulo de actions los he hecho con ayuda de copilot.
 
