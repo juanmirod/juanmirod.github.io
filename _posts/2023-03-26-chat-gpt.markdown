@@ -2,7 +2,7 @@
 published: true
 title: ¿Por qué es tan importante ChatGPT?
 layout: post
-tags: [opinión, Inteligencia Artifical, LLM] 
+tags: [opinión, Inteligencia Artificial, LLM] 
 ---
 
 ## ¿Qué es ChatGPT?
