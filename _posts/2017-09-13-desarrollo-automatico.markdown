@@ -4,7 +4,7 @@ title: Generadores de código, desarrollo automático y por qué es difícil una
 description: Artículo de opinión sobre por qué es difícil crear programas que desarrollen aplicaciones y cómo esto enlaza con los problemas de la Inteligencia Artificial General.
 layout: post
 image: /public/img/architect.png
-tags: [opinion]
+tags: [opinion, Inteligencia Artificial]
 ---
 
 Es evidente, que gran parte de lo que hacemos los desarrolladores es suplantarnos a nosotros mismos. O dicho de otra forma, automatizar procesos que podríamos hacer a mano, pero que podemos automatizar, mejorando en velocidad, eficiencia, tolerancia a errores, reproducibilidad, portabilidad, independencia... 

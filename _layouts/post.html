@@ -34,10 +34,28 @@ layout: default
 </div>
 {% endif %}
 
+{% if page.tags contains "Inteligencia Artificial" %}
+<div class="related">
+    <h2>Más artículos de Inteligencia Artificial</h2>
+    <ul class="related-posts">
+    {% for post in site.tags["Inteligencia Artificial"] %}
+      <li>
+        <h3>
+          <a href="{{ post.url }}">
+            {{ post.title }}
+            <small>{{ post.date | date_to_string }}</small>
+          </a>
+        </h3>
+      </li>
+    {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
 <div class="related">
   <h2>Últimos artículos</h2>
   <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
+    {% for post in site.related_posts limit:5 %}
       <li>
         <h3>
           <a href="{{ post.url }}">

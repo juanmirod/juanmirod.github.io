@@ -2,7 +2,7 @@
 published: true
 title: Artículo de investigación sobre redes neuronales y procesamiento de imágenes
 layout: post
-tags: [research, neural networks] 
+tags: [research, neural networks, Inteligencia Artificial] 
 ---
 
 En realidad es el primero y por ahora el único, pero quien sabe, a lo mejor algún día vendrán más...

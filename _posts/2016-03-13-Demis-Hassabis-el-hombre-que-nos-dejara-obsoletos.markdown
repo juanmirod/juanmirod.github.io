@@ -2,7 +2,7 @@
 published: true
 title: Demis Hassabis, el hombre que dejará obsoleto al género humano
 layout: post
-tags: [Inteligencia Artifical]
+tags: [Inteligencia Artificial]
 ---
 
 ![Primer plano de Demis Hassabis mirándo a la cámara con una media sonrisa](/public/img/demis-hassabis-640x360.jpg)
