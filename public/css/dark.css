@@ -6,6 +6,7 @@
   --secondary-accent-color: #652ec7;
   --background-color: #33135c;
   --text-color: #f2f2f2;
+  --black: #0f021f;
 }
 
 html {
@@ -15,7 +16,7 @@ html {
 
 /* Body */
 body {
-  background-color: var(--background-color);
+  background-color: var(--black);
   color: var(--text-color);
 }
 
@@ -33,7 +34,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
-  color: var(--secondary-accent-color);
+  color: var(--primary-color);
 }
 
 blockquote {
@@ -49,16 +50,8 @@ blockquote {
 }
 
 .page-title, .post-title, .post-title a {
+  color: var(--primary-color);
   text-shadow: 2px 2px 2px var(--accent-color);
-}
-
-.masthead {
-  background: rgb(255,42,119); 
-  background: linear-gradient(90deg, rgb(255,42,119) 5%, rgb(178, 61, 242) 15%, rgb(0,188,212) 30%);
-}
-
-.masthead-title a {
-  text-shadow: 2px 2px 2px #080808;
 }
 
 .masthead-title a img {
@@ -76,11 +69,11 @@ blockquote {
   top: 12px;
   right: 55px;
   border-radius: 50%;
-  border: 5px solid white;
+  border: 5px solid var(--primary-color);
 }
 
 .sidebar-icons {
-  background-color: #f8f4f8;
+  background-color: var(--primary-color);
   padding-left: 20px;
 }
 
@@ -98,12 +91,12 @@ blockquote {
 }
 
 a {
-  color: #0093aa;
+  color: var(--primary-color);
 }
 
 a:focus, a:hover {
-  color: #080808;
-  background-color: #bff8ff;
+  color: var(--text-color);
+  background-color: var(--secondary-accent-color);
   text-decoration: none;
   transition: all 300ms ease;
 }
@@ -145,7 +138,8 @@ img {
 }
 
 strong {
-  background-color: #bff8ff;
+  background-color: var(--secondary-accent-color);
+  color: var(--text-color);
   font-weight: normal;
 }
 
