@@ -1,109 +1,158 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300);
+
+:root {
+  --primary-color: #ffd300;
+  --accent-color: #de38c8;
+  --secondary-accent-color: #652ec7;
+  --background-color: #33135c;
+  --text-color: #f2f2f2;
+}
+
+html {
+  font-family: "Merriweather", serif;
+  font-size: 18px;
+}
+
 /* Body */
 body {
-  background-color: #1a1a1a;
-  color: #f2f2f2;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 /* Header */
 .masthead {
   background: rgb(0, 0, 0);
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 5%,
-    rgba(34, 34, 34, 1) 15%,
-    rgba(26, 26, 26, 1) 30%
-  );
+  background: linear-gradient( 90deg, var(--primary-color) 5%, var(--accent-color) 10%, var(--secondary-accent-color) 35% );
 }
 
 .masthead-title a {
-  color: #f2f2f2;
+  color: var(--primary-color);
   text-shadow: none;
 }
 
-.masthead-title a img {
-  filter: invert(1);
-}
-
-/* Sidebar */
-.sidebar-icons {
-  background-color: #333;
-}
-
-.sidebar-icons .icon {
-  filter: invert(1);
-}
-
-.sidebar-item,
-.sidebar-nav-item {
-  background-color: #262626;
-  color: #f2f2f2;
-}
-
-.sidebar-item a,
-.sidebar-nav-item a,
-.sidebar a {
-  color: #f2f2f2;
-}
-
-.sidebar-nav-item.active {
-  background-color: #333;
-  color: #f2f2f2;
-}
-
-a.sidebar-nav-item:hover,
-a.sidebar-nav-item:focus {
-  background-color: #333;
-  color: #f2f2f2;
-  transition: all 100ms ease-in-out;
-  border-left: 5px solid #00838f;
-  text-shadow: none;
-}
-
-/* Posts */
-.post-title a {
-  color: #f2f2f2;
-  text-shadow: none;
-}
-
-.post-date {
-  color: #a5a5a5;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  color: var(--secondary-accent-color);
 }
 
 blockquote {
-  color: #f2f2f2;
-  border-left: .25rem solid #00bcd4;
+  color: #006d80;
+  border-left: .25rem solid #00bcd4;  
 }
 
-/* Links */
+.post-date {
+  display: block;
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
+  color: #616161;
+}
+
+.page-title, .post-title, .post-title a {
+  text-shadow: 2px 2px 2px var(--accent-color);
+}
+
+.masthead {
+  background: rgb(255,42,119); 
+  background: linear-gradient(90deg, rgb(255,42,119) 5%, rgb(178, 61, 242) 15%, rgb(0,188,212) 30%);
+}
+
+.masthead-title a {
+  text-shadow: 2px 2px 2px #080808;
+}
+
+.masthead-title a img {
+  width: 28px;
+  margin-right: 5px;
+  float: left;
+}
+
+.author-picture {
+  background: url("/public/img/juanmirod.jpg");
+  background-size: contain;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 12px;
+  right: 55px;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+.sidebar-icons {
+  background-color: #f8f4f8;
+  padding-left: 20px;
+}
+
+.sidebar-icons .icon {
+  width: 36px;
+  display: inline;
+}
+
+.masthead-title a {
+  color: white;
+}
+
+.masthead-title small {
+  color: black;
+}
+
 a {
-  color: #00bcd4;
+  color: #0093aa;
 }
 
-a:focus,
-a:hover {
-  color: #f2f2f2;
-  background-color: #333;
+a:focus, a:hover {
+  color: #080808;
+  background-color: #bff8ff;
   text-decoration: none;
   transition: all 300ms ease;
 }
 
-/* Images */
-img {
-  filter: brightness(80%);
+.sidebar-toggle {
+  background-color: #006064;
+  color: white;
 }
 
-/* Text styles */
+.sidebar-toggle:active, #sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color: #00838f;
+  color: white;
+}
+
+.sidebar-item, .sidebar-nav-item {
+  background-color: #f8f4f8;
+  color: #232323;
+}
+
+.sidebar-item a, .sidebar-nav-item a, .sidebar a {
+  color: #232323;
+}
+
+.sidebar-nav-item.active{
+  background-color: #bff8ff;
+  color: #232323;
+} 
+
+a.sidebar-nav-item:hover, a.sidebar-nav-item:focus {
+  background-color: #f8f4f8;
+  color: black;
+  transition: all 100ms ease-in-out;
+  border-left: 5px solid #00838f;
+  text-shadow: 1px 1px 0px silver;
+}
+
+img {
+  width: 100%;
+}
+
 strong {
-  background-color: #333;
+  background-color: #bff8ff;
   font-weight: normal;
 }
 
-/* Pagination */
 .pagination {
-  color: #a5a5a5;
+  color: #616161;
 }
 
-/* Responsive styles */
 @media only screen and (max-width: 550px) {
   .masthead-title {
     text-align: left;
