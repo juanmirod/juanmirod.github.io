@@ -3,7 +3,7 @@
 :root {
   --primary-color: #ffd300;
   --accent-color: #de38c8;
-  --secondary-accent-color: #652ec7;
+  --secondary-accent-color: ##2d115f;
   --background-color: #33135c;
   --text-color: #f2f2f2;
   --black: #0f021f;
@@ -27,9 +27,14 @@ body {
 }
 
 .masthead-title a {
-  color: var(--primary-color);
-  text-shadow: none;
+	color: var(--primary-color);
+	text-shadow: 0px 0px 5px;
 }
+
+.masthead-title small {
+  color: var(--text-color);
+}
+
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", sans-serif;
@@ -50,8 +55,8 @@ blockquote {
 }
 
 .page-title, .post-title, .post-title a {
-  color: var(--primary-color);
-  text-shadow: 2px 2px 2px var(--accent-color);
+	color: var(--primary-color);
+	text-shadow: 0px 0px 10px var(--accent-color);
 }
 
 .masthead-title a img {
@@ -61,15 +66,16 @@ blockquote {
 }
 
 .author-picture {
-  background: url("/public/img/juanmirod.jpg");
-  background-size: contain;
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 12px;
-  right: 55px;
-  border-radius: 50%;
-  border: 5px solid var(--primary-color);
+	background: url("/public/img/juanmirod.jpg");
+	background-size: contain;
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	top: 12px;
+	right: 55px;
+	border-radius: 50%;
+	border: 5px solid var(--accent-color);
+	box-shadow: 0px 0px 15px var(--accent-color);
 }
 
 .sidebar-icons {
@@ -80,14 +86,6 @@ blockquote {
 .sidebar-icons .icon {
   width: 36px;
   display: inline;
-}
-
-.masthead-title a {
-  color: white;
-}
-
-.masthead-title small {
-  color: black;
 }
 
 a {
@@ -145,6 +143,10 @@ strong {
 
 .pagination {
   color: #616161;
+}
+
+a.pagination-item:hover {
+	background-color: var(--secondary-accent-color);
 }
 
 @media only screen and (max-width: 550px) {
