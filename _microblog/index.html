@@ -1,0 +1,15 @@
+---
+layout: default
+title: Home
+---
+
+<div class="posts">
+  {% for post in site.microblog %}
+  <div class="post">
+    <a href="{{ post.url }}">
+      <span class="post-date">{{ post.date | date_to_string }}</span>
+    </a>
+    {{ post.content | markdownify }}
+  </div>
+  {% endfor %}
+</div>

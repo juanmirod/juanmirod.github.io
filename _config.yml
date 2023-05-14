@@ -20,3 +20,7 @@ github:
   repo: https://github.com/juanmirod/juanmirod.github.io
 plugins:
   - jekyll-seo-tag
+collections:
+  microblog:
+    output: true
+    permalink: /:collection/:path
