@@ -5,11 +5,13 @@ title: Home
 
 <div class="posts">
   {% for post in site.microblog %}
+  {% if post.title != "Home" %}
   <div class="post">
     <a href="{{ post.url }}">
       <span class="post-date">{{ post.date | date_to_string }}</span>
     </a>
     {{ post.content | markdownify }}
   </div>
+  {% endif %}
   {% endfor %}
 </div>
