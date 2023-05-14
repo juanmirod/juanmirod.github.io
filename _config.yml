@@ -23,4 +23,3 @@ plugins:
 collections:
   microblog:
     output: true
-    permalink: /:collection/:path
