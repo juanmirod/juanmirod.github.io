@@ -8,7 +8,7 @@ title: Home
   {% if post.title != "Home" %}
   <div class="post">
     <a href="{{ post.url }}">
-      <span class="post-date">{{ post.date | date_to_string }}</span>
+      <span class="post-date">{{ post.date }}</span>
     </a>
     {{ post.content | markdownify }}
   </div>
