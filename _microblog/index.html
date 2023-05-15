@@ -11,7 +11,7 @@ title: Home
 </p>
 
 <div class="posts">
-  {% assign micros = collection.microblog | sort: "date" | reverse | truncate: 10 %}
+  {% assign micros = site.microblog | sort: "date" | reverse | truncate: 10 %}
   {% for post in micros %}
   {% if post.title != "Home" %}
   <div class="post">
