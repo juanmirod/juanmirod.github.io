@@ -11,8 +11,9 @@ title: Home
 </p>
 
 <div class="posts">
-  {% for post in site.microblog %}
-  {% if post.title != "Home" and forloop.index < 10 %}
+  {% assign micros = collection.microblog | sort: "date" | reverse | truncate: 10 %}
+  {% for post in micros %}
+  {% if post.title != "Home" %}
   <div class="post">
     <a href="{{ post.url }}">
       <span class="post-date">{{ post.date | date_to_string }}</span>
@@ -25,7 +26,6 @@ title: Home
 
 <div class="pagination">
   <a 
-    class="pagination-item older" 
     href="https://github.com/juanmirod/juanmirod.github.io/tree/master/_microblog">
     See all posts in the github repo
   </a>
