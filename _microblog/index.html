@@ -1,17 +1,46 @@
 ---
 layout: default
 title: Home
+pagination:
+  enabled: true
+  collection: microblog
+  per_page: 50
+  permalink: "page/:num/"
+  sort_reverse: true
 ---
 
+<h2>Timeline</h2>
+<p> 
+  This posts or notes are intended to be low effort, stream of thought type of writing.
+  I was a bit tired of writing on twitter. I got little to zero feedback anyway and the tweets
+  were lost in the void after a few days.
+</p>
 <div class="posts">
-  {% for post in site.microblog %}
+  {% for post in paginator.microblog %}
   {% if post.title != "Home" %}
   <div class="post">
     <a href="{{ post.url }}">
-      <span class="post-date">{{ post.date }}</span>
+      <span class="post-date">{{ post.date | date_to_string }}</span>
     </a>
     {{ post.content | markdownify }}
   </div>
   {% endif %}
   {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="/">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
 </div>
