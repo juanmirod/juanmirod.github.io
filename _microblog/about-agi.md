@@ -1,6 +1,6 @@
 ---
 layout: micro
-date: 05-16-2023
+date: 16/05/2023
 ---
 
 El otro día en una conversación con alguien que lleva en ML varias décadas me confirmó una intuición que yo tenía con chatGPT y GPT4: estos modelos "piensan" con el output, es decir su memoria de trabajo es el output que van generando y que va guiando el resto del output...
