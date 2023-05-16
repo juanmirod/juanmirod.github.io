@@ -29,3 +29,19 @@ Fuentes de inspiración para este blog, a las que les debo mucho por todo lo que
 ## Colabora
 
 Cualquier aportación, corrección o sugerencia es bien recibida, puedes crear un nuevo *issue* para cualquier comentario sobre un artículo.
+
+## Ejecutar el blog en local con docker
+
+El blog se puede compilar y ejecutar en local usando docker con un par de comandos. Para crear el docker ejecuta:
+
+```
+docker build -t juanmirodblog .
+```
+
+Una vez creada la imagen puedes ejecutarla con:
+
+```
+docker run -p 4000:4000 -v $(pwd):/site juanmirodblog
+```
+
+Y podrás ver el blog en `localhost:4000`
