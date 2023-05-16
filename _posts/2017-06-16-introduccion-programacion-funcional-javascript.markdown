@@ -29,7 +29,7 @@ Puedes introducir este código desde YA en tus proyectos y no tendrás que cambi
 
 Antes de nada me gustaría aclarar este concepto. En este caso vamos a entender como programación funcional aquella que utiliza las funciones como piedra angular del desarrollo en lugar de los objetos o las clases. Además daremos prioridad a escribir funciones puras siempre que sea posible, aislando los efectos colaterales y utilizando librerías o módulos para separarlos del resto de la lógica.
 
-|> ¿Funciones puras, efectos colaterales?
+> ¿Funciones puras, efectos colaterales?
 
 Son dos términos directamente relacionados. Se puede entender muy fácilmente lo que es una función pura si se sabe lo que son los efectos colaterales o secundarios (side-effects en inglés):
 
