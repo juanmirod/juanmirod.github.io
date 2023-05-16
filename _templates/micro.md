@@ -1,5 +1,5 @@
 ---
 published: true
-layout: microblog
+layout: micro
 ---
 
