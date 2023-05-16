@@ -11,11 +11,15 @@
          content to avoid any CSS collisions with our real content. -->
     <div class="wrap">
       <div class="masthead">
-        <div class="container">
+        <div class="container" style="display: flex;">
           <h3 class="masthead-title">
             <a href="/" title="Home">{{ site.title }}</a>
             <small>{{ site.tagline }}</small>
           </h3>
+          <span class="theme-toggle-container">
+            <input type="checkbox" id="theme-toggle">
+            <label for="theme-toggle"></label>
+          </span>
         </div>
       </div>
 
@@ -28,5 +32,23 @@
 
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
+    <script lang="javascript">
+      var lightThemeEnabled = localStorage.getItem('light-theme-enabled') === 'true';
+      const theme = document.querySelector("#theme-link");
+  
+      if (lightThemeEnabled) {
+        theme.href = "/public/css/light.css";
+        document.getElementById('theme-toggle').checked = true;
+      }
+      document.getElementById('theme-toggle').addEventListener('click', (e) => {
+        const checked = e.target.checked;
+        theme.href = `/public/css/${checked ? 'light' : 'dark'}.css`;
+        if(checked) {
+          localStorage.setItem('light-theme-enabled', true)
+        } else {
+          localStorage.removeItem('light-theme-enabled')
+        }
+      });
+    </script>  
   </body>
 </html>

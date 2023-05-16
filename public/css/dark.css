@@ -3,9 +3,9 @@
 :root {
   --primary-color: #ffd300;
   --accent-color: #de38c8;
-  --secondary-accent-color: ##2d115f;
+  --secondary-accent-color: #470554;
   --background-color: #33135c;
-  --text-color: #f2f2f2;
+  --text-color: #e0e0e0;
   --black: #0f021f;
 }
 
@@ -43,8 +43,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 blockquote {
-  color: #006d80;
-  border-left: .25rem solid #00bcd4;  
+  color: var(--accent-color);
+  border-left: .25rem solid var(--primary-color);  
 }
 
 .post-date {
@@ -79,8 +79,9 @@ blockquote {
 }
 
 .sidebar-icons {
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
   padding-left: 20px;
+  color: var(--text-color);
 }
 
 .sidebar-icons .icon {
@@ -100,35 +101,35 @@ a:focus, a:hover {
 }
 
 .sidebar-toggle {
-  background-color: #006064;
-  color: white;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .sidebar-toggle:active, #sidebar-checkbox:checked ~ .sidebar-toggle {
-  background-color: #00838f;
-  color: white;
+  background-color: var(--accent-color);
+  color: var(--text-color);
 }
 
 .sidebar-item, .sidebar-nav-item {
-  background-color: #f8f4f8;
-  color: #232323;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .sidebar-item a, .sidebar-nav-item a, .sidebar a {
-  color: #232323;
+  color: var(--text-color);
 }
 
 .sidebar-nav-item.active{
-  background-color: #bff8ff;
-  color: #232323;
+  background-color: var(--secondary-accent-color);
+  color: var(--text-color);
 } 
 
 a.sidebar-nav-item:hover, a.sidebar-nav-item:focus {
-  background-color: #f8f4f8;
-  color: black;
+  background-color: var(--secondary-accent-color);
+  color: var(--primary-color);
   transition: all 100ms ease-in-out;
-  border-left: 5px solid #00838f;
-  text-shadow: 1px 1px 0px silver;
+  border-left: 5px solid var(--accent-color);
+  text-shadow: 0px 0px 2px var(--accent-color);
 }
 
 img {
@@ -138,7 +139,7 @@ img {
 strong {
   background-color: var(--secondary-accent-color);
   color: var(--text-color);
-  font-weight: normal;
+  font-weight: bold;
 }
 
 .pagination {
@@ -149,13 +150,7 @@ a.pagination-item:hover {
 	background-color: var(--secondary-accent-color);
 }
 
-@media only screen and (max-width: 550px) {
-  .masthead-title {
-    text-align: left;
-    margin-left: 60px;
-  }
-
-  .author-picture {
-    display: none;
-  }
+code {
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
