@@ -20,6 +20,7 @@ github:
   repo: https://github.com/juanmirod/juanmirod.github.io
 plugins:
   - jekyll-seo-tag
+  - jekyll-paginate
 collections:
   microblog:
     output: true
