@@ -63,16 +63,15 @@ CMD ["jekyll", "serve", "--watch", "--force_polling", "--incremental", "-H", "0.
 
 Para usar el dockerfile primero compilamos la imagen con el siguiente comando:
 
+```sh
+docker build -t myblog .
+```
 
 (La primera vez que ejecutes el build se creará un fichero `Gemfile.lock` que guarda la versión de las
 dependencias de ruby instaladas, te recomiendo añadirlo a tu repo para tener las dependencias apuntando
 a versiones fijas)
 
-```sh
-docker build -t myblog .
-```
-
-Y ya podemos ejecutar el contenedor y ver nuestra web en localhost:
+Y ya podemos ejecutar el contenedor:
 
 ```sh
 docker run -p 4000:4000 -v $(pwd):/site myblog
