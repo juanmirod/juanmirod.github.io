@@ -24,7 +24,7 @@ configuración en el repo de esta página, pero lo copio también aquí para má
 Lo primero es añadir el `Gemfile` con las dependencias que tiene github-pages, incluidos los plugins
 que estés utilizando, en mi caso sólo uso dos plugins y el Gemfile queda así:
 
-```Gemfile
+```
 source 'https://rubygems.org'
 
 require 'json'
