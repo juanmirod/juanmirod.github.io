@@ -21,7 +21,7 @@ configuración en el repo de esta página, pero lo copio también aquí para má
 
 ## Dependencias
 
-Lo primero es añadir el `Gemfile` con las dependencias que tiene github-pages, incluídos los plugins
+Lo primero es añadir el `Gemfile` con las dependencias que tiene github-pages, incluidos los plugins
 que estés utilizando, en mi caso sólo uso dos plugins y el Gemfile queda así:
 
 ```Gemfile
