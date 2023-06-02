@@ -11,11 +11,11 @@ title: Timeline
 </p>
 
 <blockquote><p>BEWARE! Mostly un-edited, bilingual (ES/EN) posts in here</p></blockquote>
-
+<br />
 <div class="posts">
   {% assign micros = site.microblog | sort: "date" | reverse %}
   {% for post in micros %}
-  {% if post.title != "Home" %}
+  {% if post.title != "Timeline" %}
   <div class="post">
     <a href="{{ post.url }}">
       <span class="post-date">{{ post.date | date_to_string }}</span>
