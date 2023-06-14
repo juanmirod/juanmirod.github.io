@@ -5,5 +5,5 @@ POST_FILE := _microblog/$(POST_DATE)_$(POST_TIME).md
 .PHONY: new-micro
 new-microblog:
 	@cat $(MICROBLOG_TEMPLATE) | \
-	sed "s/%CURRENT_DATE%/$(POST_TIME)/g" > ${POST_FILE} && \
+	sed "s/%CURRENT_DATE%/$(POST_DATE)/g" > ${POST_FILE} && \
 	nano ${POST_FILE}
