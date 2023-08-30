@@ -5,6 +5,13 @@ layout: post
 tags: [opinión, Inteligencia Artificial, NLP] 
 ---
 
+<figure>
+    <img src="/public/img/med-badr-chemmaoui-ZSPBhokqDMc-unsplash.jpg"
+         alt="An image of a block with some wireframes and a pen">
+    <figcaption>Photo by <a href="https://unsplash.com/@medbadrc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Med Badr  Chemmaoui</a> on <a href="https://unsplash.com/photos/ZSPBhokqDMc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+</figcaption>
+</figure>
+  
 Hace tiempo que quiero contar esta historia bien contada y creo que es ahora o nunca. Mi experiencia personal con el NLP tiene varios años y creo que explica por qué me ha interesado tanto ChatGPT y por qué creo que esta tecnología tiene tanto potencial. Pero empecemos por el principio:
 
 > Warning! tengo muy mala memoria, cualquier parecido con la realidad será casi accidental, voy a tratar de resumir varios años de trabajo a grosomodo en un post por dejar constancia de mi viaje y por ordenar un poco mis pensamientos, pero como todo este blog, es público por si a alguien más le puede servir.
@@ -14,6 +21,8 @@ Alrededor de 2017 empecé a trabajar en una empresa en un proyecto de NLP casi p
 A esta empresa y su forma de trabajar le encajó bastante, porque aunque había varios desarrolladores, cada uno trabajábamos de forma independiente en nuestro proyecto, en nuestra oficina personal. En este caso la infra no había que gestionarla (oh yeah) pero todo lo demás sí. Incluso, en mi caso, la planificación del proyecto y la gran mayoría de las decisiones caían de mi parte. Digamos que era una especie de investigación y desarrollo muy aplicado, sin ser yo investigador y sin publicar nada, pero sí que un royo bastante libre de "tienes que hacer esto y tú te apañas el cómo lo consigues"
 
 La tarea por aquel entonces ya empezaba a estar de moda pero aun todo lo que había era muy tosco: programar un asistente virtual. Google tenía Home, Amazon Alexa, iPhone a Siri, no es que fueran super útiles, pero ahí estaban. Y muchas empresas se embarcaron en la tarea de tener su propio chatbot, aunque no tenían muy claro cómo se hacía eso.
+
+![A 3d render of a virtual robot on top of a phone - generated with Ideogram](/public/img/chatbot.jpeg)
 
 En mi caso, al tener mucha libertad y tiempo para desarrollar (no había prácticamente reuniones ni necesidad de coordinación) me empecé a meter en el mundo NLP y en cómo programar un Chatbot.
 
