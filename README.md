@@ -24,7 +24,10 @@ Fuentes de inspiración para este blog, a las que les debo mucho por todo lo que
 
 > Assume that you have a million words inside you that are actually rubbish, and you need to get them out before you get to the good ones, and if you get there early, that's great. (https://youtu.be/1Z4mwSdcLoc?t=36m25s)
 
-(Contar todas las palabras del blog :smile:: cat _posts/* | wc -w)
+
+> Contar todas las palabras del blog :smile:: 
+> `find . \( -wholename './_posts/*' -o -wholename './books/*' -o -wholename './_microblog/*' \) -exec cat {} \; | wc -w` 
+
 
 ## Colabora
 
