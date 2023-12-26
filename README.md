@@ -1,6 +1,6 @@
 # Por amor al código
 
-*Por amor al código* es un blog de código abierto escrito utilizando Jenkins y Github. Aquí puedes encontrar tanto los posts publicados como los borradores, el código que compila el blog y los estilos css.
+_Por amor al código_ es un blog de código abierto escrito utilizando Jenkins y Github. Aquí puedes encontrar tanto los posts publicados como los borradores, el código que compila el blog y los estilos css.
 
 El blog está dedicado a explicaciones de fragmentos de código, técnicas y patrones de programación y artículos de opinión sobre informática en general.
 
@@ -18,20 +18,18 @@ Fuentes de inspiración para este blog, a las que les debo mucho por todo lo que
 
 - [Joel on Software](https://www.joelonsoftware.com/) Junto con Coding Horror uno de los blogs más conocidos y nombrados de desarrolladores.
 
-- [Brain Pickings](https://www.brainpickings.org/) Maria Popova ha creado un proyecto de vida que es a la vez su sustento, su hobbie y su legado. Cuando alguien pone tanto tiempo y esfuerzo en algo puedes notarlo desde el primer momento. 
+- [The Marginalian](https://www.themarginalian.org/) Maria Popova ha creado un proyecto de vida que es a la vez su sustento, su hobbie y su legado. Cuando alguien pone tanto tiempo y esfuerzo en algo puedes notarlo desde el primer momento.
 
 - [Neil Gaiman así en general](http://journal.neilgaiman.com/) Porque su consejo para todos aquellos que le preguntan como ser escritor o cómo escribir un libro siempre es: Escribe, ya. Termínalo, publícalo y escribe otro. Escribe y lee todo lo que puedas:
 
 > Assume that you have a million words inside you that are actually rubbish, and you need to get them out before you get to the good ones, and if you get there early, that's great. (https://youtu.be/1Z4mwSdcLoc?t=36m25s)
 
-
-> Contar todas las palabras del blog :smile:: 
-> `find . \( -wholename './_posts/*' -o -wholename './books/*' -o -wholename './_microblog/*' \) -exec cat {} \; | wc -w` 
-
+> Contar todas las palabras del blog :smile::
+> `find . \( -wholename './_posts/*' -o -wholename './books/*' -o -wholename './_microblog/*' \) -exec cat {} \; | wc -w`
 
 ## Colabora
 
-Cualquier aportación, corrección o sugerencia es bien recibida, puedes crear un nuevo *issue* para cualquier comentario sobre un artículo.
+Cualquier aportación, corrección o sugerencia es bien recibida, puedes crear un nuevo _issue_ para cualquier comentario sobre un artículo.
 
 ## Ejecutar el blog en local con docker
 
