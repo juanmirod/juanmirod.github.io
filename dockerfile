@@ -5,6 +5,7 @@ WORKDIR /site
 COPY . .
 
 RUN chmod a+w Gemfile.lock 
+RUN chmod a+w /site
 
 RUN bundle install
 RUN jekyll build

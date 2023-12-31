@@ -22,6 +22,14 @@
   box-shadow: inset -6px -2px 1px 1px var(--accent-color);
 }
 
+.audio-version {
+  margin: 0 0 20px 0;
+}
+
+.audio-version audio {
+  width: 100%;
+}
+
 @media only screen and (max-width: 550px) {
   .masthead-title {
     text-align: left;

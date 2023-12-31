@@ -3,20 +3,27 @@ published: true
 title: ¿Por qué Linux?
 layout: post
 image: /public/img/gnulinux.png
-tags: [linux, opinion] 
+tags: [linux, opinion]
 ---
+
+<figure class="audio-version">
+  <figcaption>Listen to this post:</figcaption>
+  <audio controls src="/public/media/gnu_linux.mp3">
+    <a href="/public/media/gnu_linux.mp3"> Download audio </a>
+  </audio>
+</figure>
 
 ![Logos de GNU y Linux](/public/img/gnulinux.jpg)
 
-Desde hace años uso Linux, tanto en el trabajo como en casa. Cambié a Linux gradualmente, no soy una persona de extremos y tardo un poco en sacarle el jugo a las cosas. 
+Desde hace años uso Linux, tanto en el trabajo como en casa. Cambié a Linux gradualmente, no soy una persona de extremos y tardo un poco en sacarle el jugo a las cosas.
 
-Al principio solo era curiosidad por probar un sistema operativo más seguro y más fiable. La primera vez que probé la línea de comandos en la facultad me pareció todo anticuado y sin sentido, pero poco a poco fui familiarizándome con los comandos para manejar archivos, con la estructura de directorios de Linux y con los gestores de paquetes. 
+Al principio solo era curiosidad por probar un sistema operativo más seguro y más fiable. La primera vez que probé la línea de comandos en la facultad me pareció todo anticuado y sin sentido, pero poco a poco fui familiarizándome con los comandos para manejar archivos, con la estructura de directorios de Linux y con los gestores de paquetes.
 
 **Poco a poco te das cuenta de que puedes modificar y configurar TODO. Linux no es simplemente un Sistema Operativo, es un sistema libre, que puedes leer, modificar y replicar.** Hay más código y documentación del que podrás leer, más comandos de los que puedes aprender, más libertad de la que podrías soñar con cualquier otro sistema operativo.
 
-He escrito comandos en una línea que me costaría cientos escribir en JavaScript o en Python para tener la misma funcionalidad. La línea de comandos tiene herramientas increíbles y lo mejor es que cuando aprendes algo puedes guardar el comando, o ponerlo en un script y lo tienes **para siempre**. 
+He escrito comandos en una línea que me costaría cientos escribir en JavaScript o en Python para tener la misma funcionalidad. La línea de comandos tiene herramientas increíbles y lo mejor es que cuando aprendes algo puedes guardar el comando, o ponerlo en un script y lo tienes **para siempre**.
 
-Imaginemos una situación típica: Tienes un montón de fotos que quieres convertir a blanco y negro con un filtro concreto para ver como quedan, porque estás buscando la mejor o quieres decidir cuál imprimir o lo que sea. Abres tu programa de edición gráfico favorito (por ejemplo GIMP) seleccionas el filtro que quieres, los valores, ves como queda y guardas la foto. Si te sabes los atajos de teclado, tal vez guardar la foto o incluso abrir la siguiente foto para aplicarle el mismo filtro puede que sea un par de golpes de teclado. Si no, tienes que hacer todo esto otra vez para cada foto, persiguiendo iconos minúsculos con el ratón. De cualquier forma tienes que abrir, editar y guardar CADA FOTO. A veces haces click sin querer en la opción que no es, o te equivocas al guardar y machacas la foto original... Creo que es fácil que te resulte familiar esta escena. Lo que muchos pensamos cuando hacemos esto es **"¿No hay una forma mejor? ¿Por que no puedo decirle al ordenador que haga con todas esas fotos lo que acabo de hacer con esa?"** La conclusión suele ser que el ordenador es imbécil, cuando no es así, simplemente estamos usando la herramienta errónea. 
+Imaginemos una situación típica: Tienes un montón de fotos que quieres convertir a blanco y negro con un filtro concreto para ver como quedan, porque estás buscando la mejor o quieres decidir cuál imprimir o lo que sea. Abres tu programa de edición gráfico favorito (por ejemplo GIMP) seleccionas el filtro que quieres, los valores, ves como queda y guardas la foto. Si te sabes los atajos de teclado, tal vez guardar la foto o incluso abrir la siguiente foto para aplicarle el mismo filtro puede que sea un par de golpes de teclado. Si no, tienes que hacer todo esto otra vez para cada foto, persiguiendo iconos minúsculos con el ratón. De cualquier forma tienes que abrir, editar y guardar CADA FOTO. A veces haces click sin querer en la opción que no es, o te equivocas al guardar y machacas la foto original... Creo que es fácil que te resulte familiar esta escena. Lo que muchos pensamos cuando hacemos esto es **"¿No hay una forma mejor? ¿Por que no puedo decirle al ordenador que haga con todas esas fotos lo que acabo de hacer con esa?"** La conclusión suele ser que el ordenador es imbécil, cuando no es así, simplemente estamos usando la herramienta errónea.
 
 En la línea de comandos buscas el comando una vez, lo pruebas, y podrás usarlo un millón de veces. Podrás usar un comodín para ejecutarlo sobre todas tus imágenes, o meterlo en un bucle, en un script, usarlo dentro de seis meses sobre una nueva remesa de fotografías simplemente invocando un alias.
 
