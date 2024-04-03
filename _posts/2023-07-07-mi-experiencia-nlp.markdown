@@ -4,7 +4,8 @@ title: Mi experiencia en NLP
 description: Cuento cómo me interesé en NLP y en LLMs desarrollando un chabot
 image: /public/img/med-badr-chemmaoui-ZSPBhokqDMc-unsplash.jpg
 layout: post
-tags: [opinión, Inteligencia Artificial, NLP]
+audio: experiencia-nlp_nova.mp3
+tags: [opinión, Inteligencia Artificial, NLP, audio]
 ---
 
 <figure>

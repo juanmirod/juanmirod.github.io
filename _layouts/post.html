@@ -3,8 +3,16 @@ layout: default
 ---
 
 <div class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
+  <h1 class="post-title" data-text="{{ page.title }}">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }}</span>
+  {% if page.tags contains "audio" %}
+  <figure class="audio-version">
+    <figcaption><small>Escuchar este artículo: (audio generado con la API de tts de OpenAI)</small></figcaption>
+    <audio controls src="/public/media/{{ page.audio }}">
+      <a href="/public/media/{{ page.audio }}"> Download audio </a>
+    </audio>
+  </figure>  
+  {% endif %}
   {{ content }}
 </div>
 

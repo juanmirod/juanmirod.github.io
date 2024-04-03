@@ -2,7 +2,8 @@
 published: true
 title: Ingeniería del software
 layout: post
-tags: [programación,ingeniería] 
+audio: ingenieria-del-software_nova.mp3
+tags: [programación, ingeniería, audio]
 ---
 
 ![foto del ENIAC uno de los primeros ordenadores, 1946, fuente: wikipedia](/public/img/ENIAC.jpg "Foto del ENIAC, 1946, fuente: wikipedia")
@@ -29,9 +30,9 @@ Un diagrama en ocasiones es la mejor chuleta de apoyo a la documentación, es un
 
 Todo tiene su lugar. No se me ocurriría tratar de crear un documento de especificacion para la aplicación que estoy desarrollando **¡Si ni quiera me han dado unos requisitos concretos! Estoy trabajando sobre unas cuantas frases de "quiero algo que haga esto y se parezca a aquello"** lo que suele ser habitual en los trabajos que he tenido, de ahí a unas especificaciones va un mundo ya no digamos a tratar de modelar todo en UML.
 
-En mi experiencia, los clientes, la gente de márketing o los propios CEOs o jefes de proyecto no tienen unas especificaciones concretas. Quieren algo que les solucione un problema o que mejore una forma de trabajar, pero no saben cómo hacerlo. 
+En mi experiencia, los clientes, la gente de márketing o los propios CEOs o jefes de proyecto no tienen unas especificaciones concretas. Quieren algo que les solucione un problema o que mejore una forma de trabajar, pero no saben cómo hacerlo.
 
-Hoy en día, si la solución es algo concreto a lo que pueden poner nombre (un blog, un gestor de contabilidad, un ERM, un CSM, una tienda online, etc...) Ya existirá una solución paquetizada o un servicio que cubra esa necesidad. Cuando vamos al detalle, a donde hay que desarrollar algo a medida o nuevo, el cliente no sabe la funcionalidad que ese algo tendrá que tener, no sabe como alcanzarlo y normalmente no sabe ni la forma que debería tener. 
+Hoy en día, si la solución es algo concreto a lo que pueden poner nombre (un blog, un gestor de contabilidad, un ERM, un CSM, una tienda online, etc...) Ya existirá una solución paquetizada o un servicio que cubra esa necesidad. Cuando vamos al detalle, a donde hay que desarrollar algo a medida o nuevo, el cliente no sabe la funcionalidad que ese algo tendrá que tener, no sabe como alcanzarlo y normalmente no sabe ni la forma que debería tener.
 
 De ahí las metodologías ágiles: Hay que reducir el ciclo de retroalimentación lo más posible. Enseñar una funcionalidad al cliente, escuchar su opinión e iterar. Iterar rápido y corregir el rumbo en cada iteración para ir acercándonos mediante gradientes a la solución que busca el cliente, en lugar de salirnos por la tangente de un diseño que ideamos tras las primera semana de reuniones y que meses después no se parece en nada a lo que el cliente espera.
 
@@ -41,7 +42,7 @@ El análisis y el diseño no es una parte previa al desarrollo, es necesariament
 
 Desarrollar software tampoco es como construir edificios o coches en el sentido de que o hay una cadena de montaje que cueste millones parar ni un enorme bloque de hormigón que no se pueda mover. No existe una forma concreta de hacer las cosas, no porque no exista, sino porque **en eso es en lo que somos mejores: cada vez que encontramos una buena metodología o una un buen algoritmo convertimos esas partes en librerías, frameworks, automatismos, etc para poder reutilizarlo y no tener que preocuparnos más por eso**. Lo convertimos en un _comodity_ y pasamos al problema siguiente. Nunca habrá una cadena de montaje porque las partes que se pueden automatizar son asimiladas sobre capas de arquitecturas y lenguajes y el desarrollador siempre se encarga de resolver problemas _"encima"_ de esas capas. Nadie se preocupa hoy en día del protocolo TCP/IP al hacer una web.
 
-El software es flexible, es reutilizable, es portable y es caduco. No podemos poner de ejemplo los planos de un edificio porque en nuestro caso los usuarios vendrán y querrán mover la puerta de entrada, conectar la segunda planta con la sexta mediante un pasillo (no, un ascensor no, un pasillo), cambiar el tamaño del ascensor mientras está en uso y usar la piscina como pista de padel porque resulta que las piscinas ya no se llevan. Todo eso en el primer mes de uso. 
+El software es flexible, es reutilizable, es portable y es caduco. No podemos poner de ejemplo los planos de un edificio porque en nuestro caso los usuarios vendrán y querrán mover la puerta de entrada, conectar la segunda planta con la sexta mediante un pasillo (no, un ascensor no, un pasillo), cambiar el tamaño del ascensor mientras está en uso y usar la piscina como pista de padel porque resulta que las piscinas ya no se llevan. Todo eso en el primer mes de uso.
 
 **El software cambia muy rápido**, cambia constantemente y toda la teoría detrás del ciclo de vida en cascada está bien para desarrollar standards, para desarrollar hardware o para otro tipo de producto no moldeable, pero no para la mayoría del software.
 
@@ -53,7 +54,6 @@ Esto no es algo que diga solo yo aquí, es algo que han dicho otros ingenieros y
 
 [Martin Fowler: Is Design Dead?](https://www.martinfowler.com/articles/designDead.html)
 
-[Neal Ford: Investigating Architecture and design](https://www.ibm.com/developerworks/java/library/j-eaed1/index.html)*
+[Neal Ford: Investigating Architecture and design](https://www.ibm.com/developerworks/java/library/j-eaed1/index.html)\*
 
 [Michael Feathers: Emergent Optimization in Test Driven Design](https://drive.google.com/file/d/0B8ZX1RoWHuiJandXOHRSSG1BV1U/view)
-

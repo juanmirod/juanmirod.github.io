@@ -2,7 +2,7 @@
 published: false
 title: Educación y talento
 layout: post
-tags: [education, opinion] 
+tags: [educación, opinión]
 ---
 
 Voy a ir recomilando aquí algunas citas y enlaces sobre educación de gente importante para ver si puedo darle forma a un artículo sobre el tema. Nombres que ir revisando sobre el tema:
@@ -14,7 +14,6 @@ Alan Kay (http://www.vpri.org/pdf/rn2007006a_olpc.pdf)
 Ken Robinson
 
 Shinichi Suzuki - Educar con amor
-
 
 Émile Jaques-Dalcroze
 Jerome_Bruner
