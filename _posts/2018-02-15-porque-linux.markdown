@@ -3,15 +3,9 @@ published: true
 title: ¿Por qué Linux?
 layout: post
 image: /public/img/gnulinux.png
-tags: [linux, opinion]
+audio: por-que-linux.mp3
+tags: [linux, opinión, audio]
 ---
-
-<figure class="audio-version">
-  <figcaption>Listen to this post:</figcaption>
-  <audio controls src="/public/media/gnu_linux.mp3">
-    <a href="/public/media/gnu_linux.mp3"> Download audio </a>
-  </audio>
-</figure>
 
 ![Logos de GNU y Linux](/public/img/gnulinux.jpg)
 
