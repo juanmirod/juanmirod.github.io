@@ -8,7 +8,7 @@ layout: default
   {% if page.tags contains "audio" %}
   <figure class="audio-version">
     <figcaption><small>Escuchar este artículo: (audio generado con la API de tts de OpenAI)</small></figcaption>
-    <audio controls src="/public/media/{{ page.audio }}">
+    <audio controls preload="metadata" src="/public/media/{{ page.audio }}">
       <a href="/public/media/{{ page.audio }}"> Download audio </a>
     </audio>
   </figure>  
