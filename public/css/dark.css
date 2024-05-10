@@ -123,6 +123,7 @@ blockquote {
 .sidebar-icons .icon {
   width: 36px;
   display: inline;
+  filter: invert();
 }
 
 a {
