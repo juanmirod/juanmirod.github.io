@@ -8,6 +8,8 @@ audio: desarrollo-automatico_nova.mp3
 tags: [opinión, Inteligencia Artificial, audio]
 ---
 
+> ACTUALIZACIÓN: Este post tiene unos años, y aunque todo lo que digo en él sigue siendo válido, el campo de la IA ha avanzado mucho en los últimos años. Para más detalles sobre desarrollo asistido con chatgpt y otras herramientas generativas puedes leer mi post sobre [Desarrollo con ChatGPT](http://juanmirod.github.io/2023/04/16/trabajando-con-chat-gpt.html) para leer más sobre hacia dónde creo que irá esta tecnología tengo varios artículos sobre la importancia de ChatGPT y de las nuevas [IAs en el trabajo](http://juanmirod.github.io/2024/04/23/ia-y-trabajo.html)
+
 Es evidente, que gran parte de lo que hacemos los desarrolladores es suplantarnos a nosotros mismos. O dicho de otra forma, automatizar procesos que podríamos hacer a mano, pero que podemos automatizar, mejorando en velocidad, eficiencia, tolerancia a errores, reproducibilidad, portabilidad, independencia...
 
 En todos los proyectos hay partes del desarrollo tediosas o repetitivas que solemos automatizar: tests runners, compilación, generadores de clases o componentes, procesos de empaquetado, implantación, etc, etc.
