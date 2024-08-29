@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello, World!</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body x-data="{ code: '\'Podemos usar split para obtener las palabras de una oración\'.split(\' \')'}">
+    <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1>
+    <textarea x-model="code"></textarea>
+    <p>Result:</p>
+    <textarea x-model="JSON.stringify(eval(code), 2)"></textarea>
+</body>
+</html>
