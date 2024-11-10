@@ -15,9 +15,9 @@ Como todas las medias, tiene sus problemas. Porque una persona puede ser brillan
 
 Con todo eso para tener en cuenta como disclaimers, vayamos al meollo del asunto:
 
-## ¿Cómo de inteligentes somos en conjunto los humanos y hasta dónde pueden llegar las máquinas?
+## ¿Puede la IA sobrepasar a los humanos?
 
-Volvamos al tema: pero entonces, ¿cómo de inteligentes somos? Para mí esta es la clave, y quiero esbozar primero los dos bandos principales que veo entre los expertos:
+Para mí esta es la clave, y quiero esbozar primero los dos bandos principales que veo entre los expertos:
 
 En el primer grupo, a los que llamaré "humanistas" por falta de una palabra mejor, estarían los expertos en AI que consideran que los humanos somos el pináculo de la inteligencia, que la evolución nos ha dotado con una capacidad de abstracción, razonamiento y meta-cognición que no es alcanzable por medios artificiales.
 
@@ -31,7 +31,9 @@ Para mí estamos ante dos campos diametralmente opuestos que, sin embargo, nunca
 
 Mi pequeño intento de reflexión, por tanto, es el de exponer estos puntos de vista y tratar de analizarlos desde fuera, para ver dónde se sitúan en realidad.
 
-Empecemos por el rango de inteligencias humanas. Porque para mí no existe una inteligencia humana, como ambos bandos asumen, sino muchas. Incluso dentro del, más o menos socialmente aceptado IQ, tenemos todo un rango donde las personas con un IQ de 70 o inferior se consideran dependientes ya que no pueden llevar una vida normal por sí solas, hasta las personas con IQ 150 o superior, que se consideran genios por encima del 99.9% de la población. (Aún así, estos individuos son, teóricamente, uno de cada 1000, con lo que solo en España debería haber varias decenas de miles de ellos...) Pero claro, está no es todo el IQ, la situación socioeconómica y cultural, las redes sociales y la suerte de ese individuo tienen mucho que decir en su futuro. Y vaya por delante, no siente más, ni es más, una persona con más IQ ni siente menos ni es menos una persona con menos IQ.
+## ¿Cómo de inteligentes somos en conjunto los humanos y hasta dónde pueden llegar las máquinas?
+
+Empecemos por el rango de inteligencias humanas. Porque para mí no existe una inteligencia humana, como ambos bandos asumen, sino muchas. Incluso dentro del, más o menos socialmente aceptado IQ, tenemos todo un rango donde las personas con un IQ de 70 o inferior se consideran dependientes ya que no pueden llevar una vida normal por sí solas, hasta las personas con IQ 150 o superior, que se consideran genios por encima del 99.9% de la población. (Aún así, estos individuos son, teóricamente, uno de cada 1000, con lo que solo en España debería haber varias decenas de miles de ellos...) Pero, claro está, no es todo el IQ. La situación socioeconómica y cultural, sus conexiones sociales y la suerte de ese individuo tienen mucho que decir en su futuro. Y vaya por delante, no siente más, ni es más, una persona con más IQ ni siente menos ni es menos una persona con menos IQ.
 
 ![alt text](/public/img/iq_chart.png)
 
@@ -46,7 +48,7 @@ Pero ¿entonces qué? ¿Somos "el tope" de la inteligencia? Visto toda esta vari
 
 Los animales no encajan en nuestros tests de IQ, pero sí demuestran inteligencia de muchas formas [cada vez mejor documentadas][4]. Hay registros de cuervos resolviendo rompecabezas, de chimpancés recordando grupos de números en un abrir y cerrar de ojos (en el video de arriba), de orcas organizando planes de caza complejos, simios usando herramientas, lenguajes y dialectos animales, y animales "bilingües" (que son capaces de entender dos dialectos de regiones diferentes cuando se les muda de una a otra)... Y eso son solo inteligencias que nosotros podemos apreciar. Cada vez está más claro que los animales no tienen el cerebro solo para llevarlo de un sitio para otro o para gestionar sus órganos internos, sino que muchos de ellos son capaces de recordar, planificar, reconocerse, orientarse o coordinarse a niveles que no comprendemos.
 
-Todo esto pinta una foto de la inteligencia mucho más rica y variada. Pero entonces, ¿qué puede hacer la IA? ¿Dónde cae en todo este espectro? ¿Hasta dónde llegará? Una calculadora es órdenes de magnitud más rápida y fiable que el mejor ser humano haciendo aritmética o cálculo diferencial. Una base de datos es mucho más fiable, repetible y transparente que la memoria humana. Entonces... ¿tienen razón los doomers? ¿la IA nos va a pasar de largo?
+Todo esto pinta una foto de la inteligencia mucho más rica y variada. La inteligencia no es un monolito, es más bien un conjunto de habilidades, agudezas, capacidades, conocimientos y competencias. Un chimpacé tiene más memoria de trabajo que nosotros y más agilidad, pero los chimpancés no han podido crear culturas y acumular conocimiento como nosotros. Una calculadora es órdenes de magnitud más rápida y fiable que el mejor ser humano haciendo aritmética o cálculo diferencial. Una base de datos es mucho más fiable, repetible y transparente que la memoria humana. Pero ambos carecen totalmente de agencia o de capacidad de interactuar con el mundo. Pero entonces, ¿qué puede hacer la IA? ¿Dónde cae en todo este espectro? ¿Hasta dónde llegará?
 
 Ese es el siguiente problema. Voy a intentar reflejar en un par de gráficos lo que yo veo cuando los miembros de uno y otro bando hablan del tema.
 
@@ -68,9 +70,9 @@ Solo el tiempo lo dirá. Pero después de ver toda la variabilidad que hay en lo
 
 ![Visión intermedia](/public/img/middle_ground.jpg)
 
-Para mí la Inteligencia Artificial General, o por sus siglas en inglés: AGI, será algo que estará en medio de todo ese espectro de inteligencias que exhibimos los humanos. Habrá muchas AGIs, con diferentes cualidades, y **seguramente la llamada "velocidad de escape" no sea tan fácil de alcanzar, igual que un humano más inteligente no es necesariamente más feliz o más exitoso y no siempre consigue lo que quiere**. Podríamos incluso argumentar que sistemas como O1 o Claude 3.5 ya son una forma, si bien limitada, de AGI. Ya que pueden ejecutar muchas tareas a nivel humano, e incluso de ASI, ya que tienen una capacidad de argumentación, una resistencia, velocidad y multiplicidad sobrehumanas. Pero todos estamos de acuerdo en que no son entidades independientes y no van a conquistar el mundo.
+Para mí la Inteligencia Artificial General, o por sus siglas en inglés: AGI, será algo que estará en medio de todo ese espectro de inteligencias que exhibimos los humanos. Habrá muchas AGIs, con diferentes cualidades, y **seguramente la llamada "velocidad de escape" no sea tan fácil de alcanzar, igual que un humano más inteligente no es necesariamente más feliz o más exitoso y no siempre consigue lo que quiere**. Podríamos incluso argumentar que sistemas como O1 o Claude 3.5 ya son una forma, si bien limitada, de AGI. Ya que pueden ejecutar muchas tareas a nivel humano, e incluso de ASI, ya que tienen un dominio de los idiomas, velocidad y multiplicidad sobrehumanas. Pero todos estamos de acuerdo en que no son entidades independientes y no van a conquistar el mundo.
 
-La realidad suele ser gris y estar llena de detalles. De pequeños gránulos de colores y de grandes zonas uniformes, de texturas y estructuras complejas, que no se pueden clasificar en blanco o negro. Por eso me parece tan chocante la visión tanto de uno como el otro campo y no entiendo esta batalla argumentativa que no empieza por reconocer que es reduccionista y que el objetivo del ejercicio mental es otro.
+La realidad suele ser gris y estar llena de detalles. De pequeños gránulos de colores y de grandes zonas uniformes, de texturas y estructuras complejas, que no se pueden clasificar en blanco o negro. Por eso me parece tan chocante la visión tanto de uno como el otro campo y no entiendo esta batalla argumentativa que no empieza por reconocer que es reduccionista al asumir que todos los humanos tenemos un sólo nivel de inteligencia y que todos estamos de acuerdo en lo que significa.
 
 [1]: https://dl.acm.org/doi/10.1145/3442188.3445922
 [2]: https://arxiv.org/abs/2210.13589
