@@ -2,7 +2,7 @@
 published: true
 title: Sobre inteligencia
 layout: post
-tags: [Inteligencia Artificial, IQ, opinion]
+tags: [Inteligencia Artificial, IQ, opinión]
 ---
 
 Me gustaría tratar de esbozar aquí una discusión que parece que no tiene fin entre los expertos en IA que escucho y leo en las redes sociales. Me refiero a la discusión sobre qué es la inteligencia general, dónde están los humanos, dónde están las máquinas e incluso dónde están los animales si nos pusiéramos todos en una escala.
@@ -25,9 +25,13 @@ Las más conocidas defensoras de esta postura son **Timnit Grebu y Emily M. Bend
 
 Es importante notar que cuando estos expertos hablan de la imposibilidad de que las máquinas alcancen la inteligencia humana, no se refieren necesariamente a un "alma" o consciencia inefable, sino a diferencias fundamentales en cómo procesan la información los sistemas actuales de IA versus cómo lo hacen los cerebros biológicos. Su argumento principal es que el reconocimiento de patrones estadísticos, por muy sofisticado que sea, es cualitativamente diferente de la _comprensión genuina_ que exhiben los humanos.
 
+![Meme from I robot where Will Smith ask a robot if they can create a symfony and the robot asks back: can you?](/public/img/i_robot_meme.png)
+
 En el otro lado del espectro están aquellos que dicen que los humanos no somos más que un montón de heurísticas y sesgos cognitivos pegados y revueltos por la evolución a base de ensayo y error y que más que el pináculo de la inteligencia somos el mínimo viable para crear y mantener una cultura común. Este lado incluye a investigadores y emprendedores conocidos como **Sam Altman, Dario Amodei, Ilya Sutskever o Geoffrey Hinton**. Aunque normalmente no lo argumenten de la misma forma, su conclusión es que a mayor escala y mayor cantidad de datos, estos sistemas se harán más inteligentes y podrán realizar tareas más complejas, mucho más complejas de lo que cualquier persona podrá entender y a una velocidad mucho mayor.
 
 Para ellos, la cultura y las relaciones entre conceptos son la verdadera inteligencia que nos propulsa hacia adelante como especie y nos permite crear sociedades, instituciones, compañías y demás agrupaciones y expresiones culturales que se perpetúan a sí mismas y que culminan en la IA. La IA no es más que la expansión de esa inteligencia colectiva, de esa cultura que se ha perdurado y que nos sobrevive a todos como humanos y por tanto puede alcanzar cotas mucho más altas si le damos entidad. A estos es a los que podríamos llamar trans-humanistas o doomers, según si piensan que la IA es una bendición o un riesgo existencial. Este es el grupo al que los medios dan más altavoz y el que escribe más libros, crea más hype y hace más lobby, pero nada de eso lo hace tener razón, y más cuando dentro del propio grupo hay tanta diferencia de opiniones en cuanto a lo que la IA supone para el progreso. Pero ese es un tema que no me interesa tanto como el hecho de que todos consideran que la IA será muy superior en inteligencia al ser humano.
+
+![Image from Ex Machina where one characters talks about IA looking at humans like we look at australopitecus](/public/img/ex_machina_meme.png)
 
 Para mí estamos ante dos campos diametralmente opuestos que, sin embargo, nunca lo externalizan así. Ambos campos hablan como si su punto de vista fuera la única realidad posible y como si el otro estuviera también en esa realidad, pero no la entendiera del todo bien...
 
