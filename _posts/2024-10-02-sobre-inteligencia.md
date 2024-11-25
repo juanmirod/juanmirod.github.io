@@ -70,6 +70,12 @@ Mientras que los trans-humanistas y doomers ven algo así:
 
 Para ellos **es evidente que la IA más temprano que tarde superará a las personas y entonces no habrá retorno. En poco tiempo alcanzará velocidad de escape, no entenderemos lo que hace ni sus motivos para hacerlo y estaremos bajo su merced o su bendición eterna**, según el sub-bando.
 
+De hecho, después de hacer ese gráfico, encontré este otro, que es un gráfico de Leopold Aschenbrenner, uno de los niños prodigios de OpenAI que ahora está creando su propia empresa sobre superinteligencia:
+
+![Gráfico extrapolando la explosión de inteligencia con márgenes de error](/public/img/intelligence_explosion.png)
+
+En su ensayo ["La década siguiente"](https://situational-awareness.ai/from-agi-to-superintelligence/) Aschenbrenner asegura que la ASI es inevitable y que la escalada tanto en energía como en dinero y recursos para conseguirla seguirá imparable sin darse con ningún muro físico, económico ni social...
+
 ## ¿Quién tiene razón?
 
 Solo el tiempo lo dirá. Pero después de ver toda la variabilidad que hay en los humanos y los animales, yo me inclino a pensar que la gráfica, en realidad es algo así:
