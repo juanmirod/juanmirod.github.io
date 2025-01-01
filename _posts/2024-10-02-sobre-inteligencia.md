@@ -106,9 +106,17 @@ Geoffrey Hinton dió una charla a principios de 2024 donde expone las razones po
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Es6yuMlyfPw?si=lavmHEBFhBbXGPaR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Sabine Hossenfelder es una física y divulgadora en youtube que escribe sobre temas difíciles como este, hace poco hizo un video sobre AI escaling y cómo es una inevitabilidad física debido al llamado "decoupling of scales":
+Un video muy aclaratorio sobre AI ethics y el discurso que hay en este campo de ética vs riesgos de la IA es esta entrevista a Anca Dragan, responsable de seguridad en IA en Google Deepmind. Me gusta porque va desde los problemas éticos de decidir qué puede y qué no puede responder una IA (que sería parte del discurso de Timnit Gebru y los humanistas) hasta los problemas que puede presentar una IA con agencia para ejecutar acciones en el mundo en tu nombre o incluso de forma totalmente independiente (que es donde se centran los doomers) Me gusta mucho esta entrevista porque es un pequeño vistazo a todos los problemas que puede haber ahí detrás y puede verse claramente que esto no es un problema de blanco o negro, si no de un amplio espectro de dificultades con una gran dificultad:
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZXA2dmFxXmg?si=gEbWj18xSfHDXRxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Sabine Hossenfelder es una física y divulgadora en youtube que escribe sobre temas difíciles como este, hace poco hizo un video sobre AI escaling y cómo es una inevitabilidad física que se de con un muro debido al llamado "decoupling of scales":
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AqwSZEQkknU?si=0cX78ai6_C1D0PlE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Por último, estas navidades OpenAI ha presentado un modelo que supera el benchmark Arc AGI, un benchmark que lleva en su nombre AGI y que François Chollet (que podríamos situar dentro del campo de los "humanistas" tal u como los he definido en este artículo) ha estado publicitando durante años como una prueba definitiva de generalización a la hora de resolver problemas. Creo que esto es un hito en el camino a la AGI y aunque el propio Chollet y otros humanistas ya estén empezando a mover la meta de nuevo y a declarar que necesitamos un benchmark mejor para medir la inteligencia, la verdad es que este era al que señalaban hasta ahora y este modelo de OpenAI demuestra que los modelos siguen saturando todos los benchmarks y sin encontrar un muro real.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SKBG1sqdyIU?si=KqgjwRooVN0yduuP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 [1]: https://dl.acm.org/doi/10.1145/3442188.3445922
 [2]: https://arxiv.org/abs/2210.13589
