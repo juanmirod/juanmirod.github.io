@@ -2,6 +2,7 @@
 published: true
 title: Sobre inteligencia
 layout: post
+audio: sobre_inteligencia.mp3
 tags: [Inteligencia Artificial, IQ, opinión]
 ---
 
