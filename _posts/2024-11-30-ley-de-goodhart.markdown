@@ -27,12 +27,34 @@ Este ejemplo parece muy tonto, la tarea es demasiado simple y podríamos especif
 
 También pasa con los niños, con animales... Hay cientos de historias y anécdotas en la misma línea, seguramente puedas pensar en alguna. Por ejemplo hay una historia en la que los monitores de los delfines de un acuario decidieron enseñar a los delfines a recoger la basura que caía al acuario. A cambio de traer un vaso, una bolsa o una botella que se hubiera caído, le daban un pez al delfín. Los delfines, para conseguir más peces, empezaron a romper la basura en pedazos más pequeños y así llevarla en más viajes.
 
-No es necesaria mucha inteligencia para que la ley de Goodhart empiece a aplicar, estoy seguro de que hay ejemplos con insectos y este es uno de los principales argumentos que dificultan la alineación de inteligencias artificiales. En este campo tiene otro nombre: _reward hacking_ y también hay cientos de ejemplos. Cualquiera que haya entrenado un sistema de ML te dirá que si no tienes cuidado con limpiar los datos y diseñar bien el entrenamiento, el modelo aprenderá "heurísticas" o "atajos" para obtener los resultados esperados.
+No es necesaria mucha inteligencia para que la ley de Goodhart empiece a aplicar. Estoy seguro de que hay ejemplos con insectos y este es uno de los principales argumentos que dificultan la alineación de inteligencias artificiales. En este campo tiene otro nombre: [_reward hacking_](https://ui.stampy.ai/questions/8SIU/What-is-reward-hacking) y también hay cientos de ejemplos. Cualquiera que haya entrenado un sistema de ML te dirá que si no tienes cuidado con limpiar los datos y diseñar bien el entrenamiento, el modelo aprenderá "heurísticas" o "atajos" para obtener los resultados esperados.
 
 El problema subyacente siempre es el mismo: la métrica se puede optimizar de muchas formas y además esa métrica normalmente es un proxy un objetivo cercano al final, pero no es el objetivo final:
 
 ![alt text](image-2.png)
 
-En la mayoría de los casos no conocemos el objetivo final o no sabemos cómo llegar a él o es muy difícil de medir. En el ejemplo de los alumnos y los exámenes. Sería mejor hacer una entrevista personal a cada alumno para entener hasta donde ha aprendido el material y lo ha interiorizado, pero eso es muy costoso y puede llevar a problemas de sesgos, y por tanto necesitar otro tipo de auditorías... Así que la mayoría de los profesores recurren a los trabajos y exámenes, pero todos sabemos que no es lo mismo estudiar para un examen que para comprender la asignatura.
+En la mayoría de los casos no conocemos el objetivo final o no sabemos cómo llegar a él o es muy difícil de medir.
+
+En el ejemplo de los alumnos y los exámenes. Sería mejor hacer una entrevista personal a cada alumno para entener hasta donde ha aprendido el material y lo ha interiorizado, pero eso es muy costoso y puede llevar a problemas de sesgos, y por tanto necesitar otro tipo de auditorías... Así que la mayoría de los profesores recurren a los trabajos y exámenes, pero todos sabemos que no es lo mismo estudiar para un examen que para comprender la asignatura.
+
+Otro ejemplo típico es en atención al cliente: si premiamos al operador que más clientes atienen, los trabajadores tendrán interés en llamadas rápidas, no en solventar el problema del cliente. Si premiamos al que más tiempo está hablando, puede que se pongan a darle conversación al cliente en lugar de resolver su problema. ¿Cómo medimos que las llamadas son profesionales, resuelven el problema y no se van por las ramas? Muchas empresas recurren a la puntuación del cliente, y muchos trabajadores pedirán al cliente por favor que les ponga buena nota...
+
+Es decir, siempre que tomamos una métrica y la establecemos como objetivo para un agente, ese agente tenderá a alcanzar la meta, independientemente de nuestras intenciones iniciales. Es la historia del rey midas y el genio. El genio siempre te dará lo que has pedido, no lo que querías decir.
+
+Pero las métricas son útiles, ¿cómo si no sabemos dónde estamos? Si queremos saber nuestro progreso hacia un objetivo tenemos que medirlo de alguna forma. El problema no está en medir: está en establecer la métrica como objetivo, en recompensar de alguna forma al agente por mejorar esa métrica. En el caso de los humanos la recompensa puede ser incluso simplemente ver que esa métrica mejora, la mayoría de la gente siente satisfación al saber que está haciendo un buen trabajo. Entonces, ¿cómo podemos hacer para que combatir la ley de Goodhart?
+
+## Cómo evitar la ley de Goodhart
+
+Hay varias estrategias que nos pueden ayudar a evitar que la ley de Goodhart hackee nuestras métricas. Voy a explicarlas de menos a más útil según mi experiencia:
+
+### Mantener la métrica en secreto
+
+Si los agentes no saben que la métrica existe, no pueden optimizarla. Esto puede ser más difícil de lo que parece con humanos adultos ya que somos muy buenos detectanto este tipo de cosas e incluso si no decimos nada pero recompensamos a aquellas personas que mejoran la métrica elegida, el resto del equipo se fijará en los comportamientos e intereses de esa persona para tratar de obtener también la misma recompensa.
+
+### Dejar claro que el objetivo no es optimizar la métrica
+
+### Cambiar/revisar la métrica a menudo
+
+### Tener varias métricas para un mismo objetivo
 
 tldraw: https://www.tldraw.com/r/qtHaS1irG47k0c6cZGWE_?d=v480.-138.1537.844.page

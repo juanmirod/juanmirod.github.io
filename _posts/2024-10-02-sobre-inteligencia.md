@@ -3,7 +3,7 @@ published: true
 title: Sobre inteligencia
 layout: post
 audio: sobre_inteligencia.mp3
-tags: [Inteligencia Artificial, IQ, opinión]
+tags: [Inteligencia Artificial, IQ, opinión, audio]
 ---
 
 Me gustaría tratar de esbozar aquí una discusión que parece que no tiene fin entre los expertos en IA que escucho y leo en las redes sociales. Me refiero a la discusión sobre qué es la inteligencia general, dónde están los humanos, dónde están las máquinas e incluso dónde están los animales si nos pusiéramos todos en una escala.
