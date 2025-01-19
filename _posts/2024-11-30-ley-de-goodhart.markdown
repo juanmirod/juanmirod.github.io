@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Ley de Goodhart
 layout: post
 tags: [opinión, economía]
