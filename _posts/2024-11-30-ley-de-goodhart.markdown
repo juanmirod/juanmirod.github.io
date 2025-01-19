@@ -31,7 +31,7 @@ No es necesaria mucha inteligencia para que la ley de Goodhart empiece a aplicar
 
 El problema subyacente siempre es el mismo: la métrica se puede optimizar de muchas formas y además esa métrica normalmente es un proxy un objetivo cercano al final, pero no es el objetivo final:
 
-![alt text](image-2.png)
+![El agente en su estado actual intenta acercarse a un proxy](/public/img/proxy1.png)
 
 En la mayoría de los casos no conocemos el objetivo final o no sabemos cómo llegar a él o es muy difícil de medir.
 
@@ -47,14 +47,36 @@ Pero las métricas son útiles, ¿cómo si no sabemos dónde estamos? Si queremo
 
 Hay varias estrategias que nos pueden ayudar a evitar que la ley de Goodhart hackee nuestras métricas. Voy a explicarlas de menos a más útil según mi experiencia:
 
+### Dejar claro que el objetivo no es optimizar la métrica
+
+![La métrica no es alentada como objetivo](/public/img/metric_not_encouraged.png)
+
+Para mi esta es la estrategia menos efectiva con personas en un ambiente de trabajo. Desde el momento en el que creas una métrica, las personas afectadas van a tratar de mejorarla, ya sea por que piensan que es lo correcto, porque piensan que serán recompensados o símplemente por sentise bien consigo mismos. Aunque expliquemos que la métrica es sólo una forma de tener una medida, pero que no es el objetivo final, todo el mundo lo interpretará como: _"Si hago que mejore la métrica, estaré trabajando en la dirección correcta"_ Aunque esto a veces no sea cierto.
+
+Volviendo al ejemplo de la covertura de código, si tenemos en nuestro repositorio la covertura actual actualizada, subirla se interpretará como estar mejorando la calidad de la suite de tests, mientras bajarla se verá como empeorarla, aunque todos sabemos que la relación no es directa y que se puede perfectamente mejorar la covertura con tests que en realidad no estén probando lo que queremos y que por tanto no mejoren la calidad del código.
+
 ### Mantener la métrica en secreto
+
+![Mantener la métrica en secreto](/public/img/secret_metric.png)
 
 Si los agentes no saben que la métrica existe, no pueden optimizarla. Esto puede ser más difícil de lo que parece con humanos adultos ya que somos muy buenos detectanto este tipo de cosas e incluso si no decimos nada pero recompensamos a aquellas personas que mejoran la métrica elegida, el resto del equipo se fijará en los comportamientos e intereses de esa persona para tratar de obtener también la misma recompensa.
 
-### Dejar claro que el objetivo no es optimizar la métrica
+Esto puede ser incluso más perjudicial que el primer caso. porque en este caso tendríamos un proxy de un proxy. Imaginemos que en una clase un profesor pide hacer un trabajo de desarrollo escrito y no especifica el método de evaluación. El profesor pretende que los alumnos no se centren en detalles de presentación o de formato, si no en el desarrollo de la materia. Supongamos ahora que el alumno que mejor trabajo presenta en cuando a contenido, legibilidad, comprensión de la materia... resulta que también entrega su trabajo encuadernado y con una portada ilustrada. Cuando ven las notas, todos los alumnos ven que el que entregó el libro con portada obtiene la mejor nota, con lo que suponen que la encuadernación y la portada son importantes para el trabajo. En el siguiente trabajo muchos más harán una portada ilustrada y encuadernarán su trabajo aunque se esfuercen lo mismo o menos en el contenido.
 
 ### Cambiar/revisar la métrica a menudo
 
+![El agente en su estado actual intenta acercarse a un proxy](/public/img/proxy1.png)
+
+![Revisión de la métrica por otro proxy](/public/img/step2.png)
+
+Cambiar la métrica hace que las mecánicas que se habían construído alrededor de esa métrica tengan que cambiar. Además revisar la métrica nos permite obtener aquella que más nos acerca al objetivo en cada momento. Este es el escenario en el que se encuentran ahora las empresas de IA que intentan alcanzar lo que llaman Inteligencia Artificial General (IAG). Los proxies en este caso son los benchmarks que utilizan estas empresas. Como los LLMs son capaces de mantener conversaciones a nivel humano, el test de turing parece superado, encima de este ya hace años aparecieron otros benchmarks como [Winograd](/public/papers/winograd_2201.02387v3.pdf), [MMLU](/public/papers/mmlu_2009.03300v3.pdf), o GSM8k. Cuando, a su vez, esos benchmarks se consideraron "saturados" (los modelos puntúan al nivel humano) se siguío buscando y construyendo otros benchmarks, como el [ARC AGI Challenge](/public/papers/arc-AGI_.pdf) o el [SWE-bench](/public/papers/swe-bench_2310.06770v3.pdf)
+
+Ninguno de estos benchmarks o los muchos otros que se han utilizado hasta ahora mide realmente todos los aspectos de la inteligencia humana. pero ir añadiendo nuevos benchmarks permite que seguir midiendo y no quedarse atascado en un límite local o no saber si realmente los modelos están mejorando.
+
 ### Tener varias métricas para un mismo objetivo
 
-tldraw: https://www.tldraw.com/r/qtHaS1irG47k0c6cZGWE_?d=v480.-138.1537.844.page
+![Intentar acercarse a varias métricas a la vez](/public/img/multiple_metrics.png)
+
+Esta estrategia es parecida a la anterior, de hecho también es la que utilizan las empresas de IA para medir sus nuevos modelos. No utilizan sólo un becnhmark, sino muchos. Y normalmente un modelo nuevo será el mejor en algunos de ellos, pero no en todos. O tal vez sea muy bueno en uno o dos, pero esté por debajo de los últimos modelos en todos los demás.
+
+En el caso en el que las métricas no se saturen, es decir, podamos seguir mejorándolas, podemos tener varias simultáneamente. Esto nos permite no caer en heurísticas o mecánicas que obtimicen sólo una métrica y seguramente nos haga generalizar más la solución y acercarnos más a trabajar hacia el objetivo final.
