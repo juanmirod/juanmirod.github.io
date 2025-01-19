@@ -5,7 +5,7 @@ layout: post
 tags: [opinión, economía]
 ---
 
-La ley de Goodhart es el nombre de un proverbio económico que dice algo así:
+La medición del progreso y el rendimiento es fundamental en prácticamente cualquier actividad humana organizada. Sin embargo, **existe una paradoja interesante que surge cuando intentamos usar estas mediciones para mejorar: en el momento en que establecemos una métrica como objetivo, esta tiende a perder su utilidad como indicador**. Este fenómeno, conocido como la ley de Goodhart es un proverbio económico que dice algo así:
 
 > Cuando una medida se convierte en objetivo, deja de ser una buena medida. [1](https://en.wikipedia.org/wiki/Goodhart%27s_law)
 
@@ -17,7 +17,7 @@ Aunque no se le pueda dar el estatus de ley natural, ha sido referenciada y re-e
 
 ## ¿Qué quiere decir?
 
-La ley de Goodhart no es una ley natural porque no se da espontáneamente, no es parte de la física ni la matemática, es un fenómeno que solo aparece en presencia de cierto grado de inteligencia. Es decir, si a un termostato le damos como objetivo una temperatura concreta es lógico que el termostato mida la temperatura cada X segundos y modifique la potencia en función de la diferencia entre la temperatura actual y la temperatura objetivo...
+La ley de Goodhart no es una ley natural porque no se da espontáneamente. No es parte de la física ni la matemática, es un fenómeno que solo aparece en presencia de cierto grado de inteligencia. Es decir, si a un termostato le damos como objetivo una temperatura concreta es lógico que el termostato mida la temperatura cada X segundos y modifique la potencia en función de la diferencia entre la temperatura actual y la temperatura objetivo...
 
 Pero ¿qué pasa si en lugar de un termostato tenemos una persona encargada de regular la temperatura y le pagamos en función del tiempo que está regulando? Si a esa persona le decimos que el objetivo es alcanzar X temperatura, a lo mejor decide tardar más en alcanzarla para que le paguemos más... Entonces podemos cambiar el objetivo, le pagamos lo mismo independientemente de lo que tarde, siempre que llegue a la temperatura indicada. Cualquiera en lugar de esa persona le daría al máximo a la calefacción, pero claro seguramente eso sea demasiado si no paramos antes de alcanzar la temperatura objetivo...
 
@@ -41,7 +41,7 @@ Otro ejemplo típico es en atención al cliente: si premiamos al operador que m�
 
 Es decir, siempre que tomamos una métrica y la establecemos como objetivo para un agente, ese agente tenderá a alcanzar la meta, independientemente de nuestras intenciones iniciales. Es la historia del rey Midas y el genio. El genio siempre te dará lo que has pedido, no lo que querías decir.
 
-Pero las métricas son útiles, ¿cómo si no sabemos dónde estamos? Si queremos saber nuestro progreso hacia un objetivo tenemos que medirlo de alguna forma. El problema no está en medir: está en establecer la métrica como objetivo, en recompensar de alguna forma al agente por mejorar esa métrica. En el caso de los humanos la recompensa puede ser incluso simplemente ver que esa métrica mejora, la mayoría de la gente siente satisfacción al saber que está haciendo un buen trabajo. Entonces, ¿cómo podemos hacer para combatir la ley de Goodhart?
+Pero las métricas son útiles, **¿cómo si no sabemos dónde estamos? Si queremos saber nuestro progreso hacia un objetivo tenemos que medirlo de alguna forma.** El problema no está en medir: está en establecer la métrica como objetivo, en recompensar de alguna forma al agente por mejorar esa métrica. En el caso de los humanos la recompensa puede ser incluso simplemente ver que esa métrica mejora, la mayoría de la gente siente satisfacción al saber que está haciendo un buen trabajo. Entonces, ¿cómo podemos hacer para combatir la ley de Goodhart?
 
 ## Cómo evitar la ley de Goodhart
 
@@ -80,3 +80,11 @@ Ninguno de estos benchmarks o los muchos otros que se han utilizado hasta ahora 
 Esta estrategia es parecida a la anterior, de hecho también es la que utilizan las empresas de IA para medir sus nuevos modelos. No utilizan solo un benchmark, sino muchos. Y normalmente un modelo nuevo será el mejor en algunos de ellos, pero no en todos. O tal vez sea muy bueno en uno o dos, pero esté por debajo de los últimos modelos en todos los demás.
 
 En el caso en el que las métricas no se saturen, es decir, podamos seguir mejorándolas, podemos tener varias simultáneamente. Esto nos permite no caer en heurísticas o mecánicas que optimicen solo una métrica y seguramente nos haga generalizar más la solución y acercarnos más a trabajar hacia el objetivo final.
+
+Esto también es lo que hacen algunos profesores al medir a los alumnos no sólo por un examen final, si no por varios exámenes y trabajos de diferentes características, que permitan tener una imagen más completa del aprendizaje del alumno.
+
+## Conclusión
+
+La ley de Goodhart nos recuerda algo fundamental sobre la naturaleza de la medición y los objetivos: la realidad es siempre más compleja que nuestras métricas. Ya sea en educación, gestión empresarial, desarrollo de software o incluso en inteligencia artificial, necesitamos ser conscientes de que cualquier sistema de medición puede ser "hackeado" si se convierte en el objetivo principal.
+
+La solución no está en dejar de medir - las métricas son herramientas valiosas que nos ayudan a entender y mejorar nuestros sistemas. La clave está en utilizarlas de manera inteligente: combinando múltiples métricas, revisándolas periódicamente y, sobre todo, recordando que son indicadores aproximados de lo que realmente queremos lograr, no el objetivo en sí mismo.
