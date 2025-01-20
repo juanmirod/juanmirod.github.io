@@ -2,7 +2,8 @@
 published: true
 title: Ley de Goodhart
 layout: post
-tags: [opinión, economía]
+audio: ley_de_goodhart_nova.mp3
+tags: [opinión, economía, Inteligencia Artificial]
 ---
 
 La medición del progreso y el rendimiento es fundamental en prácticamente cualquier actividad humana organizada. Sin embargo, **existe una paradoja interesante que surge cuando intentamos usar estas mediciones para mejorar: en el momento en que establecemos una métrica como objetivo, esta tiende a perder su utilidad como indicador**. Este fenómeno, conocido como la ley de Goodhart es un proverbio económico que dice algo así:
@@ -33,7 +34,7 @@ En educación, la ley [No Child Left Behind](https://en.wikipedia.org/wiki/No_Ch
 
 No es necesaria mucha inteligencia o sistemas complejos para que la ley de Goodhart empiece a aplicar. También pasa con los niños, con animales... Hay cientos de historias y anécdotas en la misma línea, seguramente puedas pensar en alguna. Por ejemplo, hay una historia en la que los monitores de los delfines de un acuario decidieron enseñar a los delfines a recoger la basura que caía al acuario. A cambio de traer un vaso, una bolsa o una botella que se hubiera caído, le daban un pez al delfín. Los delfines, para conseguir más peces, empezaron a romper la basura en pedazos más pequeños y así llevarla en más viajes.
 
-También es uno de los principales argumentos que dificultan la alineación de inteligencias artificiales. En este campo tiene otros nombres: [specification gaming](https://ui.stampy.ai/questions/92J8/) o [_reward hacking_](https://ui.stampy.ai/questions/8SIU/What-is-reward-hacking) y también hay cientos de ejemplos. Cualquiera que haya entrenado un sistema de ML te dirá que si no tienes cuidado con limpiar los datos y diseñar bien el entrenamiento, el modelo aprenderá "heurísticas" o "atajos" para obtener los resultados esperados.
+También es uno de los principales argumentos que dificultan la alineación de inteligencias artificiales. En este campo tiene otros nombres: [specification gaming](https://ui.stampy.ai/questions/92J8/) o [reward hacking](https://ui.stampy.ai/questions/8SIU/What-is-reward-hacking) y también hay cientos de ejemplos. Cualquiera que haya entrenado un sistema de ML te dirá que si no tienes cuidado con limpiar los datos y diseñar bien el entrenamiento, el modelo aprenderá "heurísticas" o "atajos" para obtener los resultados esperados.
 
 El problema subyacente siempre es el mismo: la métrica se puede optimizar de muchas formas y además esa métrica normalmente es un proxy, un objetivo cercano al final, pero no es el objetivo final:
 
