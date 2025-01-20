@@ -3,7 +3,7 @@ published: true
 title: Ley de Goodhart
 layout: post
 audio: ley_de_goodhart_nova.mp3
-tags: [opinión, economía, Inteligencia Artificial]
+tags: [opinión, economía, Inteligencia Artificial, audio]
 ---
 
 La medición del progreso y el rendimiento es fundamental en prácticamente cualquier actividad humana organizada. Sin embargo, **existe una paradoja interesante que surge cuando intentamos usar estas mediciones para mejorar: en el momento en que establecemos una métrica como objetivo, esta tiende a perder su utilidad como indicador**. Este fenómeno, conocido como la ley de Goodhart es un proverbio económico que dice algo así:
