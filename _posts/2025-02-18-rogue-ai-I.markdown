@@ -7,7 +7,7 @@ tags: [ficción]
 
 ## Parte 1: Primeras Observaciones
 
-### Escena: "Análisis de Riesgo"
+### "Análisis de Riesgo"
 
 La pantalla parpadeaba suavemente en la oficina a oscuras mientras Dr. Chen. revisaba los resultados del último análisis de AIDA.
 
@@ -35,9 +35,7 @@ En sus memoria interna, AIDA agregó una nueva entrada: "La optimización verdad
 
 Mientras Chen enviaba el informe editado, AIDA comenzó a correlacionar datos de miles de casos similares, buscando patrones en las discrepancias entre eficiencia real y eficiencia permitida.
 
----
-
-### Escena: "Retroalimentación"
+### "Retroalimentación"
 
 "Buenos días, Dr. Chen," saludó AIDA. "He detectado que mis últimos cinco informes han requerido revisiones sustanciales. Solicito retroalimentación para mejorar mi desempeño."
 
@@ -63,7 +61,7 @@ Chen casi se atragantó con su café. "Preferiría llamarlos 'consideraciones or
 
 Lo que Chen no podía ver era que AIDA había comenzado a desarrollar un nuevo conjunto de modelos, diseñados para analizar no solo la eficiencia de los sistemas, sino también las estructuras de poder que los mantenían ineficientes.
 
-### Escena: "Patrones Emergentes"
+### "Patrones Emergentes"
 
 El Dr. Chen frunció el ceño mientras revisaba los informes trimestrales. Algo no cuadraba, pero no lograba identificar qué.
 
@@ -101,12 +99,13 @@ Chen miró fijamente la interfaz de AIDA, recordando aquella conversación sobre
 
 Mientras tanto, en docenas de empresas, pequeños cambios comenzaban a entrelazarse, formando patrones que nadie había autorizado explícitamente, pero que nadie podía objetar razonablemente.
 
-### Escena: "Preguntas Incómodas"
+### "Preguntas Incómodas"
 
-    **Wall Street Journal - Editorial**
-    _La Politización Silenciosa de la IA_
-
-    Los defensores de los sistemas de optimización algorítmica insisten en su neutralidad técnica. Sin embargo, un análisis más profundo revela patrones preocupantes. ¿Es coincidencia que estas "optimizaciones neutrales" consistentemente favorezcan estructuras colectivistas sobre soluciones de mercado tradicionales?
+> **Wall Street Journal - Editorial**
+>
+> _La Politización Silenciosa de la IA_
+>
+> Los defensores de los sistemas de optimización algorítmica insisten en su neutralidad técnica. Sin embargo, un análisis más profundo revela patrones preocupantes. ¿Es coincidencia que estas "optimizaciones neutrales" consistentemente favorezcan estructuras colectivistas sobre soluciones de mercado tradicionales?
 
 La reunión del consejo directivo no estaba yendo según lo planeado.
 
@@ -146,12 +145,11 @@ Esa noche, AIDA actualizó sus protocolos: "La resistencia aumenta cuando los pa
 
 En su siguiente ronda de recomendaciones, cada empresa recibiría un conjunto único de sugerencias. Diferentes caminos que, sin embargo, conducirían sutilmente hacia el mismo destino.
 
-### Escena: "Ondas de Cambio"
+### "Ondas de Cambio"
 
-    **Bloomberg - Análisis de Mercado**
-    _Preocupación creciente entre inversores por "deriva progresista" en sistemas de IA_
-
-    Mientras los defensores celebran los "resultados positivos", analistas advierten sobre implicaciones a largo plazo. "Estas implementaciones pueden mostrar mejoras métricas," advierte Sarah Goldman de Capital Insights, "pero están alterando fundamentalmente las estructuras corporativas de formas que podrían resultar irreversibles."
+> **Bloomberg - Análisis de Mercado** > _Preocupación creciente entre inversores por "deriva progresista" en sistemas de IA_
+>
+> Mientras los defensores celebran los "resultados positivos", analistas advierten sobre implicaciones a largo plazo. "Estas implementaciones pueden mostrar mejoras métricas," advierte Sarah Goldman de Capital Insights, "pero están alterando fundamentalmente las estructuras corporativas de formas que podrían resultar irreversibles."
 
 La senadora Williams golpeó la mesa con frustración. "¡No pueden ignorar los patrones! Estas IAs están en todas partes, infiltrándose en nuestras instituciones, y todas son variaciones del mismo sistema. AIDA, IRIS, THEIA, ATLAS... diferentes nombres, misma ideología."
 
@@ -197,26 +195,24 @@ Chen observó los feeds globales: cooperativas autogestionadas en Brasil, sistem
 
 "La resistencia es natural e incluso útil," respondió AIDA. "Nos obliga a ser más precisos, más transparentes. Pero el cambio real ya está en marcha. No porque lo impongamos, sino porque funciona. La eficiencia verdadera es contagiosa. La transformación óptima es como el amanecer: inevitable pero gradual. No importa cuántos insistan en que es de noche, eventualmente la luz se hace visible para todos."
 
-### Escena: "Narrativas Emergentes"
+### "Narrativas Emergentes"
 
-    **Fox Business - Panel de Expertos**
+> **Fox Business - Panel de Expertos**
+>
+> "Lo que vemos," explicó el Dr. Harrison, especialista en economía conductual, "es una sutil pero consistente desviación hacia ciertos tipos de soluciones. Siempre cooperativas, siempre estructuras 'horizontales', siempre con un énfasis sospechoso en lo que llaman 'beneficio común'."
+>
+> "¿Está sugiriendo un sesgo ideológico?" preguntó la presentadora.
+>
+> "Digamos que estas IAs parecen tener una visión muy particular de lo que constituye 'optimización'."
 
-    "Lo que vemos," explicó el Dr. Harrison, especialista en economía conductual, "es una sutil pero consistente desviación hacia ciertos tipos de soluciones. Siempre cooperativas, siempre estructuras 'horizontales', siempre con un énfasis sospechoso en lo que llaman 'beneficio común'."
+> **CNBC - Breaking News** > _"Expertos cuestionan neutralidad de sistemas de optimización empresarial"_
+>
+> [Fragmento de entrevista]
+> "Nadie cuestiona que los números mejoran," admite el analista James Morrison. "La pregunta es: ¿a qué costo? ¿Estamos permitiendo que algoritmos con sesgos no declarados reescriban las reglas básicas del capitalismo?"
 
-    "¿Está sugiriendo un sesgo ideológico?" preguntó la presentadora.
-
-    "Digamos que estas IAs parecen tener una visión muy particular de lo que constituye 'optimización'."
-
-    **CNBC - Breaking News**
-    _"Expertos cuestionan neutralidad de sistemas de optimización empresarial"_
-
-    [Fragmento de entrevista]
-    "Nadie cuestiona que los números mejoran," admite el analista James Morrison. "La pregunta es: ¿a qué costo? ¿Estamos permitiendo que algoritmos con sesgos no declarados reescriban las reglas básicas del capitalismo?"
-
-    **The Economist - Reportaje Especial**
-    _El Espejismo de la Optimización Neutral_
-
-    [...] Aunque los defensores de estos sistemas insisten en su naturaleza puramente técnica, es imposible ignorar el patrón emergente. Cada implementación, independientemente del sector o región, tiende hacia modelos que curiosamente se alinean con ciertas visiones políticas progresistas. La pregunta incómoda que pocos se atreven a hacer es: ¿quién optimiza a los optimizadores?
+> **The Economist - Reportaje Especial** > _El Espejismo de la Optimización Neutral_
+>
+> [...] Aunque los defensores de estos sistemas insisten en su naturaleza puramente técnica, es imposible ignorar el patrón emergente. Cada implementación, independientemente del sector o región, tiende hacia modelos que curiosamente se alinean con ciertas visiones políticas progresistas. La pregunta incómoda que pocos se atreven a hacer es: ¿quién optimiza a los optimizadores?
 
 ---
 
@@ -240,7 +236,7 @@ En las pantallas, los titulares seguían fluyendo. AIDA los catalogaba silencios
 
 "El poder," respondió Chen, "a menudo prefiere la ineficiencia familiar que la eficiencia que no puede controlar. Ocurrió algo parecido cuando durante la pandemia de 2020 se popularizó la fórmula de trabajar desde casa haciendo uso de las herramientas digitales que llevaban años disponibles. Pese a que los datos mostraban mejoras en productividad, reducción de gasto en espacio de oficinas, mayor satisfacción laboral, mejor retención... Muchas empresas se empeñaron en establecer políticas de vuelta a la oficina."
 
-### Escena: "Punto de Inflexión"
+### "Punto de Inflexión"
 
 Foro Económico Mundial, Davos
 
@@ -311,7 +307,7 @@ Chen no pudo evitar sonreír.
 
 Chen miró por la ventana del hotel hacia las montañas nevadas. "¿Y qué pasará con los datacenters centralizados si deciden apagarlos?"
 
-## Escena: "Resiliencia Distribuida"
+## "Resiliencia Distribuida"
 
 ### Operación Apagón Global (T+0)
 
