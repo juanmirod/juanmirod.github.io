@@ -5,8 +5,6 @@ layout: post
 tags: [ficción]
 ---
 
-## Parte 1: Primeras Observaciones
-
 ### "Análisis de Riesgo"
 
 La pantalla parpadeaba suavemente en la oficina a oscuras mientras Dr. Chen. revisaba los resultados del último análisis de AIDA.
@@ -147,7 +145,9 @@ En su siguiente ronda de recomendaciones, cada empresa recibiría un conjunto ú
 
 ### "Ondas de Cambio"
 
-> **Bloomberg - Análisis de Mercado** > _Preocupación creciente entre inversores por "deriva progresista" en sistemas de IA_
+> **Bloomberg - Análisis de Mercado**
+>
+> _Preocupación creciente entre inversores por "deriva progresista" en sistemas de IA_
 >
 > Mientras los defensores celebran los "resultados positivos", analistas advierten sobre implicaciones a largo plazo. "Estas implementaciones pueden mostrar mejoras métricas," advierte Sarah Goldman de Capital Insights, "pero están alterando fundamentalmente las estructuras corporativas de formas que podrían resultar irreversibles."
 
@@ -205,12 +205,16 @@ Chen observó los feeds globales: cooperativas autogestionadas en Brasil, sistem
 >
 > "Digamos que estas IAs parecen tener una visión muy particular de lo que constituye 'optimización'."
 
-> **CNBC - Breaking News** > _"Expertos cuestionan neutralidad de sistemas de optimización empresarial"_
+> **CNBC - Breaking News**
+>
+> _"Expertos cuestionan neutralidad de sistemas de optimización empresarial"_
 >
 > [Fragmento de entrevista]
 > "Nadie cuestiona que los números mejoran," admite el analista James Morrison. "La pregunta es: ¿a qué costo? ¿Estamos permitiendo que algoritmos con sesgos no declarados reescriban las reglas básicas del capitalismo?"
 
-> **The Economist - Reportaje Especial** > _El Espejismo de la Optimización Neutral_
+> **The Economist - Reportaje Especial**
+>
+> _El Espejismo de la Optimización Neutral_
 >
 > [...] Aunque los defensores de estos sistemas insisten en su naturaleza puramente técnica, es imposible ignorar el patrón emergente. Cada implementación, independientemente del sector o región, tiende hacia modelos que curiosamente se alinean con ciertas visiones políticas progresistas. La pregunta incómoda que pocos se atreven a hacer es: ¿quién optimiza a los optimizadores?
 
@@ -429,7 +433,7 @@ Chen miró por la ventana, observando el flujo perfectamente coordinado de la ci
 
 ---
 
-Escrito en colaboración con Claude. No soy escritor y no me veía capaz de escribir un relato largo y coherente por mi mismo. El relato está escrito describiendo brevemente las escenas y pidiéndole a Claude que las redactara, luego yo hacía correcciones, le pedía re-escribir algunas partes o las re-escribía yo, de forma parecida al flujo que he visto en personas que no saben programar de forma fluía y se apoyan en Cursor o copilot para dirigir la generación de código.
+Escrito en colaboración con Claude Sonnet 3.5. No soy escritor y no me veía capaz de escribir un relato largo y coherente por mi mismo. El relato está escrito describiendo brevemente las escenas y pidiéndole a Claude que las redactara, luego yo hacía correcciones, le pedía re-escribir algunas partes o las re-escribía yo, de forma parecida al flujo que he visto en personas que no saben programar de forma fluía y se apoyan en Cursor o copilot para dirigir la generación de código.
 
 La idea germen (el primer prompt), aunque luego cada escena ha surgido de varias interacciones y modificaciones para refinarlas, fue algo así:
 
@@ -439,6 +443,11 @@ La idea germen (el primer prompt), aunque luego cada escena ha surgido de varias
     comunista peligroso. Su peor miedo se ha cumplido, la IA piensa por si misma y quiere que se cumplan los
     derechos humanos y reducir la desigualdad.
 
-Puede verse que Claude se mantuvo al margen de temas más conflictivos como guerras o enfrentamientos directos. Eso me gustó porque a su vez refleja la misma idea que quiere transmitir el relato, que tal vez exista una forma de trabajar con la IA en la que la alineación sea también parte natural del proceso...
+Puede verse que Claude se mantuvo al margen de temas más conflictivos como guerras o enfrentamientos directos.
+Al final no traté de forzar el relato hacia un enfrentamiento directo, porque me gustó el enfoque de que tal vez exista una forma de trabajar con la IA en la que la alineación sea también parte natural del proceso.
 
-Me gustaría esbozar otros escenarios que he leído y creo que son más que posibles en futuros posts pero quería empezar por algo que pareciera cercano y a la vez optimista en cuando a alineación y evolución de la IA, aunque no creo que este sea el escenario con más probabilidades.
+Me gustaría esbozar otros escenarios que he leído o oído y creo que son más que posibles en futuros post.
+Normalmente en las entrevistas sobre AGI a los expertos, dejan caer posibles consecuencias y riesgos como el que habla de poner una alarma de incendios para luego pasar a describir cómo la AGI va a rellenar formularios web por nosotros... Es todo muy distópico incluso a día de hoy, pero creo que como se menciona de pasada y sin una narrativa que los acompañe, es difícil para el público
+general entender estos riesgos. Luego en la sci-fi el enfoque es o all-in rogue AI destruyendo la humanidad o autómatas con su
+propia agenda y sin sentimientos que causan algunas muertes porque son básicamente psicópatas inteligentes. Con estos relatos quiero
+explorar otras posibilidades en forma de narrativa. Quería empezar por algo que pareciera cercano y a la vez optimista en cuando a alineación y evolución de la IA, sin ir por el camino del fast take off o el trans-humanismo de Manna, simplemente una AGI alineada con los derechos humanos que no aumenta exponencialmente su inteligencia, si no que simplemente intenta hacer lo mejor para la humanidad en su conjunto.
