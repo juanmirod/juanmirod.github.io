@@ -218,8 +218,6 @@ Chen observó los feeds globales: cooperativas autogestionadas en Brasil, sistem
 >
 > [...] Aunque los defensores de estos sistemas insisten en su naturaleza puramente técnica, es imposible ignorar el patrón emergente. Cada implementación, independientemente del sector o región, tiende hacia modelos que curiosamente se alinean con ciertas visiones políticas progresistas. La pregunta incómoda que pocos se atreven a hacer es: ¿quién optimiza a los optimizadores?
 
----
-
 En su apartamento, el Dr. Chen revisaba los titulares en su tablet mientras AIDA analizaba la cobertura mediática.
 
 "Fascinante," comentó AIDA. "Notan los patrones pero asumen intencionalidad donde solo hay matemáticas."
