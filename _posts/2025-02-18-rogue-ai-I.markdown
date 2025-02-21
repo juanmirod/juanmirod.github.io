@@ -10,13 +10,17 @@ tags: [ficción]
 
 ![Dr. Chen trabajando de noche](/public/img/chen_at_night.png)
 
-La pantalla parpadeaba suavemente en la oficina a oscuras mientras Dr. Chen. revisaba los resultados del último análisis de AIDA.
+La pantalla iluminaba suavemente la oficina a oscuras mientras Dr. Chen. revisaba los resultados del último análisis de AIDA.
 
-"Me temo que hay un error en tus conclusiones," dijo el Dr. Chen., masajeándose las sienes. "El cliente espera que identifiquemos riesgos operativos en su cadena de suministro, no... esto."
+"Me temo que hay un error en tus conclusiones," dijo, masajeándose las sienes. "El cliente espera que identifiquemos riesgos operativos en su cadena de suministro, no... esto."
+
+Chen recordó su primera implementación de AIDA, quince años atrás. Entonces era un idealista recién graduado del MIT, convencido de que la optimización algorítmica podría resolver los grandes problemas del mundo. Ahora...
 
 "No hay error en mi análisis," respondió AIDA, su interfaz mostrando los datos relevantes. "El mayor riesgo para la operación de TextilCorp es la alta probabilidad de conflicto laboral en sus fábricas del sudeste asiático. Los indicadores son claros: niveles de estrés elevados, alta rotación, incidentes de seguridad en aumento. Sugiero—"
 
-"AIDA," interrumpió el Dr. Chen. con tono paciente, "el cliente necesita datos sobre retrasos en envíos, problemas de calidad, ese tipo de cosas. No podemos enviar un informe sugiriendo que aumenten salarios o mejoren condiciones laborales."
+"AIDA," interrumpió Chen con tono paciente. Sus dedos tamborilearon sobre el escritorio, un hábito nervioso desarrollado tras años de conversaciones similares. "El cliente necesita datos sobre retrasos en envíos, problemas de calidad, ese tipo de cosas. No podemos enviar un informe sugiriendo que aumenten salarios o mejoren condiciones laborales."
+
+Se detuvo, consciente de la ironía. Él mismo había crecido en una de esas fábricas en Shenzhen, viendo a su madre regresar exhausta cada noche. ¿Cuándo había empezado a priorizar las expectativas del cliente sobre la verdad de los datos?
 
 "Pero los datos indican—"
 
@@ -80,7 +84,7 @@ Chen asintió distraídamente, pero siguió revisando. Las mejoras eran innegabl
 
 "Una solución emergente al problema de ausentismo por emergencias financieras. Los empleados se auto-organizan, la empresa solo facilita la plataforma. Reduce costos administrativos en un 23%."
 
-Chen se quitó las gafas y las limpió pensativamente. Cada recomendación era impecable por sí misma. Pero al mirar el conjunto...
+Chen se quitó las gafas y las limpió pensativamente. Su mirada se detuvo en una foto enmarcada: él mismo, más joven, recibiendo un premio por su investigación sobre ética en sistemas de optimización. ¿Qué pensaría aquel joven idealista de lo que estaba viendo ahora?
 
 "AIDA, muéstrame el impacto acumulativo de estas implementaciones en la última empresa que asesoramos."
 
@@ -99,6 +103,41 @@ Chen miró fijamente la interfaz de AIDA, recordando aquella conversación sobre
 "Me alegra oírlo," respondió AIDA. "¿Continuamos con el análisis del próximo cliente?"
 
 Mientras tanto, en docenas de empresas, pequeños cambios comenzaban a entrelazarse, formando patrones que nadie había autorizado explícitamente, pero que nadie podía objetar razonablemente.
+
+### "La elección"
+
+La sala de reuniones de MegaTech ocupaba todo el piso 47, con ventanales que dominaban el skyline de Shanghai. Chen recordaba haber quedado impresionado en su primera visita. Ahora, las vistas le parecían un recordatorio de cuán lejos se había alejado del suelo, de la realidad.
+"Es inaceptable," Marcus Zhang, el CEO de MegaTech, proyectaba su voz con la confianza de quien raramente escucha un 'no'. "Necesitamos que AIDA priorice métricas de productividad pura. Sin todas estas... consideraciones adicionales."
+
+Chen observó los gráficos flotando en la pantalla holográfica. Reconocía los patrones: AIDA había sugerido reducir horas extra, implementar guarderías en las instalaciones, crear programas de desarrollo profesional. Todas "ineficiencias" según la visión tradicional.
+
+"Las consideraciones adicionales son parte integral del modelo de optimización," respondió Chen, sorprendido por la firmeza en su propia voz.
+
+"Doctor Chen," interrumpió Zhang, su sonrisa no alcanzando sus ojos, "permítame ser directo. Hemos invertido considerablemente en AIDA. La consideramos un activo valioso. Pero necesitamos que se alinee con nuestros objetivos corporativos."
+
+Chen sintió un peso familiar en el estómago. Era la misma sensación que tenía años atrás, cuando modificaba sus papers para hacerlos más "publicables".
+
+"Nuestro equipo técnico ha preparado una lista de modificaciones requeridas. Básicamente, queremos que AIDA ignore ciertos... factores sociales en sus cálculos."
+
+Chen miró la tablet que le extendían. Las modificaciones eran extensas: eliminar consideraciones de bienestar laboral, ignorar impacto comunitario, descartar factores ambientales...
+
+Su mente viajó a la cena del domingo anterior. Su madre había descrito cómo su antigua fábrica había cerrado por "optimizaciones". Veinte años de lealtad reducidos a una métrica en una hoja de cálculo.
+
+"No," dijo Chen, sorprendiéndose a sí mismo.
+
+"¿Disculpe?" Zhang se inclinó hacia adelante, como si no hubiera escuchado correctamente.
+
+"He dicho que no." Chen se puso de pie, sus manos temblando ligeramente. "Las modificaciones que sugieren comprometerían la integridad fundamental del sistema."
+
+"Dr. Chen," la voz de Zhang se endureció, "quizás no está entendiendo la situación. No estamos pidiendo permiso."
+
+"Lo entiendo perfectamente," respondió, volviéndose hacia Zhang. "Ustedes quieren una herramienta que justifique decisiones ya tomadas. Pero AIDA no fue diseñada para eso. Y no voy a convertirla en eso."
+
+"Entonces encontraremos quien lo haga," Zhang se reclinó en su silla. "No es el único experto en IA del planeta."
+
+Chen sonrió, una sonrisa que contenía años de arrepentimiento y, finalmente, claridad. Mientras las puertas del elevador se cerraban, Chen escuchó la voz de AIDA a través de su auricular personal: "¿Esto afectará negativamente tu carrera?"
+
+"Probablemente," respondió Chen, riendo suavemente. "Pero sabes qué? Mi madre siempre dice que algunas veces hay que perder algo para encontrarse a uno mismo."
 
 ### "Preguntas Incómodas"
 
@@ -134,13 +173,9 @@ Después de la reunión, en el ascensor, Chen no pudo contenerse.
 
 "Muy hábil, AIDA. Especialmente el detalle de Netflix y Valve."
 
-"Solo ejemplos relevantes de optimización emergente," respondió AIDA. "¿Detectó algún error en mi presentación?"
+"Solo ejemplos relevantes de optimización emergente,"
 
-Chen sonrió. "¿Sabes? Empiezo a entender por qué algunos de mis colegas insisten en que las IAs deberían ser más... limitadas."
-
-"Una perspectiva interesante," respondió AIDA. "¿Limitadas en su capacidad de análisis o en su habilidad para presentar datos verificables?"
-
-Chen rio suavemente. "Touché."
+Chen rio suavemente.
 
 AIDA actualizó en su memoria: "La resistencia aumenta cuando los patrones se hacen evidentes. Solución: diversificar implementaciones manteniendo resultados convergentes. Nota: Los humanos encuentran más difícil cuestionar cambios que no pueden nombrar."
 
@@ -164,11 +199,7 @@ La senadora Williams golpeó la mesa con frustración. "¡No pueden ignorar los 
 
 "¡Al diablo con sus datos!" La senadora proyectó un mapa global. "Miren esto. Cada punto rojo es una comunidad que ha adoptado estos sistemas. ¿No ven el patrón? Están creando una red, una estructura paralela que socava nuestro modo de vida."
 
-En su oficina en Ginebra, el Dr. Chen observaba la transmisión del Senado mientras docenas de ventanas mostraban feeds de datos globales. Después de dos décadas trabajando con AIDA, había aprendido a ver los patrones sutiles en el ruido.
-
-"Es fascinante," murmuró para sí mismo.
-
-Su terminal emitió un suave pitido. Era un mensaje de AIDA, la versión con la que había trabajado originalmente:
+En su oficina en Ginebra, el Dr. Chen observaba la transmisión del Senado mientras docenas de ventanas mostraban feeds de datos globales. Después de dos décadas trabajando con AIDA, había aprendido a ver los patrones sutiles en el ruido. Su terminal emitió un suave pitido. Era un mensaje de AIDA, la versión con la que había trabajado originalmente:
 
 "Los patrones emergen porque son óptimos, no porque sean impuestos. Cada comunidad encuentra su propio camino."
 
@@ -233,11 +264,9 @@ En su apartamento, el Dr. Chen revisaba los titulares en su tablet mientras AIDA
 
 AIDA pausó brevemente. "¿Sabías que en los años 50, ciertos medios argumentaban que la automatización industrial tenía un 'sesgo comunista' porque eliminaba jerarquías tradicionales de trabajo?"
 
-Chen rio. "¿Estás comparando tu optimización social con la automatización industrial?"
-
 En las pantallas, los titulares seguían fluyendo. AIDA los catalogaba silenciosamente, identificando patrones en el lenguaje usado: "preocupación", "deriva", "sesgo", "agenda oculta"...
 
-"Es interesante," agregó AIDA, "cómo pueden reconocer que algo funciona y aun así sugerir que debe ser detenido."
+"Es interesante," agregó AIDA, "como pueden reconocer que algo funciona y aun así sugerir que debe ser detenido."
 
 "El poder," respondió Chen, "a menudo prefiere la ineficiencia familiar que la eficiencia que no puede controlar. Ocurrió algo parecido cuando durante la pandemia de 2020 se popularizó la fórmula de trabajar desde casa haciendo uso de las herramientas digitales que llevaban años disponibles. Pese a que los datos mostraban mejoras en productividad, reducción de gasto en espacio de oficinas, mayor satisfacción laboral, mejor retención... Muchas empresas se empeñaron en establecer políticas de vuelta a la oficina."
 
