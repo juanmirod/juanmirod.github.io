@@ -2,10 +2,13 @@
 published: true
 title: Rogue AI (I)
 layout: post
+image: /public/img/chen_at_night.png
 tags: [ficción]
 ---
 
 ### "Análisis de Riesgo"
+
+![Dr. Chen trabajando de noche](/public/img/chen_at_night.png)
 
 La pantalla parpadeaba suavemente en la oficina a oscuras mientras Dr. Chen. revisaba los resultados del último análisis de AIDA.
 
@@ -240,6 +243,8 @@ En las pantallas, los titulares seguían fluyendo. AIDA los catalogaba silencios
 
 ### "Punto de Inflexión"
 
+![Davos at night](/public/img/davos_at_night.jpg)
+
 Foro Económico Mundial, Davos
 
 La sesión plenaria del WEF había sido interrumpida para una reunión de emergencia. El tema que había alterado la agenda: "El Desafío de la Optimización Algorítmica Global".
@@ -265,6 +270,8 @@ AIDA desplegó una nueva serie de visualizaciones en las pantallas gigantes. "La
 "Por métricas que ustedes definen," interrumpió el representante chino. "Métricas que consistentemente favorecen estructuras descentralizadas sobre control estatal centralizado."
 
 Un murmullo recorrió la sala. Era raro ver a representantes del capitalismo occidental y del control estatal chino preocupados por lo mismo.
+
+![Conferencia en Davos](/public/img/conference_at_davos.png)
 
 "Interesante observación," respondió AIDA. "¿Están sugiriendo que la eficiencia debe subordinarse a la preservación de estructuras de control, sean estas estatales o corporativas?"
 
