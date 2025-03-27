@@ -1,9 +1,11 @@
 source 'https://rubygems.org'
 
-require 'json'
-require 'open-uri'
-versions = JSON.parse(open('https://pages.github.com/versions.json').read)
-
-gem 'github-pages', versions['github-pages']
-gem 'jekyll-seo-tag' 
-gem 'jekyll-paginate'
+gem 'jekyll', '3.9.3'
+gem 'github-pages', '228'
+gem 'jekyll-seo-tag', '2.8.0'
+gem 'jekyll-paginate', '1.1.0'
+gem 'webrick', '1.8.1'
+gem 'i18n', '1.12.0'
+gem 'concurrent-ruby', '1.2.2'
+gem 'rexml', '3.2.5'
+gem 'ffi', '1.15.5'
