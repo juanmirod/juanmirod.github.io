@@ -30,6 +30,13 @@
   width: 100%;
 }
 
+.sidebar .btn-container {
+  width: 100%;
+}
+
+.sidebar a.kofi-button {
+  width: 100%;
+}
 
 
 @media only screen and (max-width: 550px) {
