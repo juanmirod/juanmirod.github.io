@@ -25,7 +25,7 @@ Segundo y más importante, ¿Alguna vez has escrito un test para tu código? Si 
 
 Cuando tienes una batería de tests y sabes cómo escribirlos, añadir un test que defina un nuevo requisito antes de escribir el código no parece tan difícil. De hecho si ahora algunos se plantean si el [TDD sigue sirviéndoles](http://martinfowler.com/articles/is-tdd-dead/), es por que lo tienen totalmente asimilado. 
 
-Por eso mi propuesta de hoy es que si aun no escribes tests **NO HAGAS TDD**. 
+Por eso mi propuesta de hoy es que si aún no escribes tests **NO HAGAS TDD**. 
 
 Al menos no todavía. 
 
@@ -35,7 +35,7 @@ Comienza por lo que sea más fácil testear, algún módulo independiente o un s
 
 Luego sigue desde ahí. Añade más tests para el resto de clases, añade un test cada vez que te encuentres probando algo manualmente. Añade un test cuando te reporten un bug, de forma que puedas reproducir el bug sin ir tener que seguir una serie de pasos manualmente hasta que salte.
 
-Cuando hagas eso todo eso en un par de proyectos, cuando te encuentres cómodo escribiendo tests y corriéndolos cada vez que modificas tu código para comprobar que no has roto nada, ya habrás ganado MUCHO en confianza sobre tus habilidades y tu código y el TDD no te parecerá tan lejano.
+Cuando hagas todo eso en un par de proyectos, cuando te encuentres cómodo escribiendo tests y corriéndolos cada vez que modificas tu código para comprobar que no has roto nada, ya habrás ganado MUCHO en confianza sobre tus habilidades y tu código y el TDD no te parecerá tan lejano.
 
 Para mi es como un viaje, como un camino hacia una meta que es ser capaz de desarrollar con confianza de que lo que desarrollo funciona, se puede modificar y es legible y sensato para otros desarrolladores.
 
