@@ -22,6 +22,9 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate
 collections:
+  fiction:
+    output: true
+    sort_by: 'date'
   microblog:
     output: true
     sort_by: 'date'
