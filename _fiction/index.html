@@ -3,14 +3,6 @@ layout: default
 title: Relatos
 ---
 
-<p> 
-  This posts or notes are intended to be low effort, stream of thought type of writing.
-  I was a bit tired of writing on twitter. I got little to zero feedback anyway and the tweets
-  were lost in the void after a few days.
-</p>
-
-<blockquote><p>BEWARE! Mostly un-edited, bilingual (ES/EN) posts in here</p></blockquote>
-<br />
 <div class="posts">
   {% assign stories = site.fiction | sort: "date" | reverse %}
   {% for post in stories %}
