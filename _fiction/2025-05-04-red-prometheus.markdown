@@ -1,6 +1,6 @@
 ---
 published: true
-title: Projecto Prometeo Rojo
+title: Proyecto Prometeo Rojo
 layout: post
 tags: [ficción, relato]
 ---
