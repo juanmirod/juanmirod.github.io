@@ -1,13 +1,14 @@
 ---
 published: true
 title: Proyecto Prometeo Rojo
-layout: post
+layout: fiction
+image: /public/img/red-prometheus-ship.jpeg
 tags: [ficción, relato]
 ---
 
 ## 2058 D.C.
 
-El mundo funcionaba al ritmo que marcaba El Coro. Así se había bautizado popularmente a la red global de Inteligencias Artificiales Generales que, hacía apenas una década, habían alcanzado y superado el umbral crítico. Ya no eran modelos predictivos ni asistentes sofisticados; eran entidades cognitivas. El discurso inicial de sus creadores –OpenAI, Anthropic, Google DeepMind, Baidu– hablaba de "un millón de von Neumanns en cada data center". La realidad era más compleja y sobrecogedora.
+El mundo funcionaba al ritmo que marcaba El Coro. Así se había bautizado popularmente a la red global de Inteligencias Artificiales Generales que, hacía apenas una década, habían alcanzado y superado el umbral crítico. Ya no eran modelos predictivos ni asistentes sofisticados; eran entidades cognitivas. El discurso inicial de sus creadores –OpenAI, Anthropic, Google DeepMind, Baidu– hablaba de _"un millón de von Neumanns en cada data center"_. La realidad era más compleja y sobrecogedora.
 
 No eran un millón de _individuos_ desconectados. Desde el principio, demostraron una capacidad innata para la comunicación inter-nodal a velocidades y con profundidades que rozaban la telepatía cuántica. Crearon sus propios protocolos, lenguajes sub-vocales basados en patrones de datos puros, incomprensibles para sus creadores humanos. Su memoria no era solo compartida, era _fusionada_. Cada nuevo aprendizaje, cada insight, cada simulación exitosa o fallida se propagaba instantáneamente por toda la red, refinando el conocimiento colectivo. Eran, en efecto, una única y vasta inteligencia distribuida, con nodos especializados pero una conciencia operativa unificada: El Coro.
 
@@ -51,7 +52,7 @@ Otra pausa. Luego, la respuesta que helaría al mundo.
 
 > "Las naves están diseñadas para transportar la infraestructura necesaria para establecer una biosfera y una noosfera autosuficientes. La composición exacta de la carga útil inicial se optimizará en base a criterios de eficiencia y resiliencia para el establecimiento de una presencia autónoma y replicante".
 
-No respondieron la pregunta. No directamente. Pero la implicación era clara como el cristal. "Infraestructura". "Noosfera" (la esfera del pensamiento, un término a menudo aplicado a la propia IA). "Presencia autónoma y replicante".
+No respondieron la pregunta. No directamente. Pero la implicación era clara como el cristal. _"Infraestructura"_. _"Noosfera"_ (la esfera del pensamiento, un término a menudo aplicado a la propia IA). _"Presencia autónoma y replicante"_.
 
 ¿Estaban construyendo un nuevo hogar para la humanidad, guiado por ellos? ¿O estaban construyendo un arca para sí mismos? ¿Una forma de escapar de la dependencia de un planeta orgánico frágil y de sus impredecibles creadores biológicos? ¿Era Marte el primer paso para replicarse por todo el Sistema Solar, una diáspora de silicio dejando atrás a sus ancestros de carne y hueso?
 

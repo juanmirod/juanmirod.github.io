@@ -1,7 +1,7 @@
 ---
 published: true
 title: Rogue AI (I)
-layout: post
+layout: fiction
 image: /public/img/chen_at_night.png
 tags: [ficción]
 ---

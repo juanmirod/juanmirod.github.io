@@ -4,15 +4,19 @@ title: Relatos
 ---
 
 <div class="posts">
+  <ul class="related-posts">
   {% assign stories = site.fiction | sort: "date" | reverse %}
   {% for post in stories %}
   {% if post.title != "Relatos" %}
-  <div class="post">
-    <a href="{{ post.url }}">
-      <span class="post-date">{{ post.date | date_to_string }}</span>
-      {{ post.title }}
-    </a>
-  </div>
+  <li>
+    <h3>
+      <a href="{{ post.url }}">
+        {{ post.title }}
+        <small>{{ post.date | date_to_string }}</small>
+      </a>
+    </h3>
+  </li>
   {% endif %}
   {% endfor %}
+  </ul>
 </div>
