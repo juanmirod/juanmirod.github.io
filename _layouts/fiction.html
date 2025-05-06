@@ -26,6 +26,7 @@ layout: default
 <div class="related">
   <h2>Otros relatos de ciencia ficción:</h2>
   <ul class="related-posts">
+    {% assign stories = site.fiction | sort: "date" | reverse %}
     {% for post in stories %}
     {% if post.title != "Relatos" %}
     <li>
