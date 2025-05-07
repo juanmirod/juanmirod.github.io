@@ -2,24 +2,24 @@
 published: true
 title: ¿Por qué es tan importante ChatGPT?
 layout: post
-tags: [opinión, Inteligencia Artificial, LLM] 
+tags: [opinión, Inteligencia Artificial, LLM]
 ---
 
 ## ¿Qué es ChatGPT?
 
 Tal vez haz llegado aquí por una búsqueda orgánica o desde un futuro donde ChatGPT
-ya no es la noticia del momento, así que por completitud lo repetiré una vez más: ChatGPT es un modelo de lenguaje entrenado para interactuar con personas en conversaciones de chat. Hace algunos años que los expertos en el campo han estado probando y usando estos LLMs (del inglés Large Language Model) para diferentes tareas como detección de intención, detección de sentimientos, clasificación de comentarios, predicción de textos en herramientas como el teclado del teléfono móvil o el email, generación de texto, etc. 
+ya no es la noticia del momento, así que por completitud lo repetiré una vez más: ChatGPT es un modelo de lenguaje entrenado para interactuar con personas en conversaciones de chat. Hace algunos años que los expertos en el campo han estado probando y usando estos LLMs (del inglés Large Language Model) para diferentes tareas como detección de intención, detección de sentimientos, clasificación de comentarios, predicción de textos en herramientas como el teclado del teléfono móvil o el email, generación de texto, etc.
 
 Pero esta es la primera vez que el gran público puede interactuar con uno de forma fácil y abierta, y gracias al entrenamiento especial que ha tenido, es capaz de mantener conversaciones, entender y responder preguntas, corregir errores en sus respuestas anteriores... y ahora conforme la gente empieza a aprender a darle instrucciones también usar APIs de terceros y lenguajes de programación como Wolfram Alpha para responder a las preguntas.
 
-## ¿Por qué es esto tan importante?           
+## ¿Por qué es esto tan importante?
 
 ChatGPT es un salto cualitativo respecto a lo que teníamos hasta ahora en cuanto a potencia y usabilidad.
 Especialmente el modelo GPT4, que acaba de salir, tiene una ventana de contexto mucho más grande que sus predecesores y ha sido capaz de superar una gran cantidad de exámenes del nivel de bachillerato o de pruebas de evaluación para puestos de trabajo. Por estos motivos hay quien habla de que ChatGPT podría ser un primer paso hacia una AGI (del inglés Artificial General Intelligence) o inteligencia artificial general.
 
 Para mi esto es demasiado, ChatGPT es impresionante, pero aún dista mucho de poder hacer muchas tareas de
 forma independiente y no tiene ningún tipo de persistencia ni de agencia, con lo que ahora mismo es sólo
-un sistema que responde bastante bien una gran batería de preguntas. 
+un sistema que responde bastante bien una gran batería de preguntas.
 
 Pero sus aplicaciones como asistente virtual y para educación son enormes, y es ahí donde estamos viendo a muchas startups y aficionados tratar de sacarle partido. Desde Khan Academy, Duolingo, Quizlet, hasta Microsoft, todos anuncian nuevas funcionalidades que aprovechan esta tecnología.
 
@@ -40,11 +40,11 @@ Pero ahora, de repente, tenemos un sistema que entiende lenguaje natural, (¡En 
 
 Creo que esto es realmente lo que atrapa a la mayoría, aunque no sepan muy bien qué hacer con él o qué preguntarle, podemos notar que aquí hay potencial.
 
-**Cualquier persona sin conocimientos de programación puede sacar partido inmediato de esto.** De hecho yo por ahora le he dado tres usos principales: usarlo en lugar o como complemento a Google para buscar cosas, usarlo como tutor para aprender (en lugar de leer un libro o una documentación le vas preguntando cosas y te las va contestando, aprendizaje totalmente personalizado) y sólo como curiosidad le he pedido que me genere funciones o tests (normalmente tardo menos en escribirlo yo mismo que en explicarle lo que quiero, pero si que es verdad que a veces ahorra boilerplate).
+**Cualquier persona sin conocimientos de programación puede sacar partido inmediato de esto.** De hecho yo por ahora le he dado tres usos principales: usarlo en lugar o como complemento a Google para buscar cosas, usarlo como tutor para aprender (en lugar de leer un libro o una documentación le vas preguntando cosas y te las va contestando, aprendizaje totalmente personalizado) y sólo como curiosidad le he pedido que me genere funciones o tests (normalmente tardo menos en escribirlo yo mismo que en explicarle lo que quiero, pero sí que es verdad que a veces ahorra boilerplate).
 
 ## ¿Qué usos podrán tener los LLMs en un futuro próximo?
 
-A parte de la conversión directa a chatbot+contexto del ámbito que sea, creo que los LLMs tienen un potencial enorme como interface de aplicaciones y como generadores de contenido para videojuegos. 
+A parte de la conversión directa a chatbot+contexto del ámbito que sea, creo que los LLMs tienen un potencial enorme como interface de aplicaciones y como generadores de contenido para videojuegos.
 
 En una aplicación, la demostración de Microsoft con Office es una muestra de hacia donde podría ir la industria. Asistentes inteligentes en las aplicaciones de forma que ya no hace falta aprenderse todas las opciones de la UI, le dices al modelo lo que quieres y él se encarga de ejecutar.
 
@@ -53,11 +53,11 @@ propia del lenguaje... En [este podcast de The Technium](https://technium.transi
 
 La otra aplicación muy comentada es como generador de contenidos. Ya existen start-ups como [Jasper](https://www.jasper.ai/) o [copy.io](https://www.copy.ai/) que utilizan a GPT3 para generar copys, blogposts, emails, redacciones, resúmenes...
 
-Por último, aún no tienen la velocidad necesaria, pero cuando whisper y chatGPT sean más rápidos, podremos hablarle a los NPJ de un juego y que nos respondan o ejecuten nuestras órdenes sin necesidad de nada más, se acabaron las conversaciones enlatadas y la selección de diálogos fijos. Los diseñadores podrían darle un papel y un guión a ChatGPT y a partir de ahí el jugador podrá preguntar lo que quiera y tener una respuesta coherente. Se me ocurre que podría revolucionar el campo de las aventuras gráficas, donde ya telltale avanzó mucho gracias al lenguaje chatscript de Bruce Wilcox, pero esto es otro nivel totalmente. 
+Por último, aún no tienen la velocidad necesaria, pero cuando whisper y chatGPT sean más rápidos, podremos hablarle a los NPJ de un juego y que nos respondan o ejecuten nuestras órdenes sin necesidad de nada más, se acabaron las conversaciones enlatadas y la selección de diálogos fijos. Los diseñadores podrían darle un papel y un guión a ChatGPT y a partir de ahí el jugador podrá preguntar lo que quiera y tener una respuesta coherente. Se me ocurre que podría revolucionar el campo de las aventuras gráficas, donde ya telltale avanzó mucho gracias al lenguaje chatscript de Bruce Wilcox, pero esto es otro nivel totalmente.
 
 ## ¿Van a quitarme el trabajo?
 
-**Esta tecnología va a suponer una revolución en el software comparable al de internet, seguramente mayor.** Muchos trabajos desaparecerán, otros cambiarán. ChatGPT no tiene capacidad para sustituir a nadie por si sólo, esa es una premisa absurda a la que mucha gente se agarra para decir que la IA no va a sustituir a ningún profesional, pero me parece un señuelo para desestimar un tema de vital importancia. 
+**Esta tecnología va a suponer una revolución en el software comparable al de internet, seguramente mayor.** Muchos trabajos desaparecerán, otros cambiarán. ChatGPT no tiene capacidad para sustituir a nadie por si sólo, esa es una premisa absurda a la que mucha gente se agarra para decir que la IA no va a sustituir a ningún profesional, pero me parece un señuelo para desestimar un tema de vital importancia.
 
 Las mejoras de productividad, las nuevas automatizaciones y los cambios en cómo interactuamos con muchas herramientas por su puesto que van a hacer a muchos trabajadores irrelevantes. No directamente en el sentido de quito a fulanito para poner a chatGPT a hacer su trabajo, pero está claro que así será.
 
@@ -66,4 +66,3 @@ El software hace eso todo el rato, automatizamos procesos, trabajos, tareas... q
 ## ¿Y qué puedo hacer?
 
 Para mi la mejor estrategia es aprender a usar esta tecnología a tu favor para, en lugar de quedarte obsoleto, ser tú quien tome ventaja de ella. Sé que es la misma carrera hacia adelante de siempre, este correr cada vez más, la rueda de hamster del capitalismo... Pero por ahora no tengo una respuesta mejor. Los modelos como ChatGPT no van a ir a ningún lado, lo más probable es que se hagan totalmente ubicuos y cada vez más capaces, sólo nos queda adaptarnos y tratar de sacarle partido.
-

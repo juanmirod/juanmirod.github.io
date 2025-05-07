@@ -1,6 +1,6 @@
 ---
 published: true
-title: Ley de Goodhart
+title: La ley de Goodhart
 layout: post
 audio: ley_de_goodhart_nova.mp3
 tags: [opinión, economía, Inteligencia Artificial, audio]

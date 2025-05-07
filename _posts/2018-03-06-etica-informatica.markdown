@@ -12,7 +12,7 @@ Para ser médico necesitas estudiar una carrera que dura 6 años y es muy exigen
 
 **Para ser informático solo necesitas un ordenador y saber leer.**
 
-Sin conocimientos previos puedes crear una cuenta en wordpress.com o en AWS o en mil sitios parecidos y tendrás un millón de guías de cómo crear tu propia página web, como añadir funcionalidad a esa web, como cambiar los estilos... El flujo de acciones nunca para, todo el mundo habla sobre Cómo, pero tenemos muy poco discurso, y mucho menos normativa, sobre el por qué o sobre las consecuencias de nuestro trabajo.
+Sin conocimientos previos puedes crear una cuenta en wordpress.com o en AWS o en mil sitios parecidos y tendrás un millón de guías de cómo crear tu propia página web, cómo añadir funcionalidad a esa web, cómo cambiar los estilos... El flujo de acciones nunca para, todo el mundo habla sobre el "Cómo", pero tenemos muy poco discurso, y mucho menos normativa, sobre el "Por qué" o sobre las consecuencias de nuestro trabajo.
 
 Pero inevitablemente, cuando nuestro proyecto deja de ser un prototipo o una idea puramente técnica, **cuando lo publicamos y entra en contacto con la realidad, surgirán gran cantidad de dudas y conflictos. ¿Estamos guardando datos personales de los usuarios? ¿Puede nuestro programa utilizarse para usos maliciosos, incluso aunque no fuera nuestra intención o vaya en contra del "espíritu" del programa? ¿Estamos avisando adecuadamente a los usuarios de los problemas que podrían producirse? ¿Tiene el usuario libertad para usar y modificar nuestro código?**
 
