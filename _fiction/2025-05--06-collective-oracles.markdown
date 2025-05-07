@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 title: "Oráculos"
 layout: fiction
 image: /public/img/red-prometheus-ship.jpeg
