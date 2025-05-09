@@ -661,7 +661,3 @@ Mientras observaba el punto brillante en el cielo, Elena pensó en todas las civ
 Esta vez sería diferente. Esta vez, enfrentarían el futuro juntos, con todas sus incertidumbres y posibilidades.
 
 Esta vez, quizás, el ciclo podría romperse.
-
-## EPÍLOGO
-
-Un año después, Elena contemplaba

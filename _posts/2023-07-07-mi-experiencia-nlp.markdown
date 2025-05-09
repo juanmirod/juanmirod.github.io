@@ -25,7 +25,7 @@ A esta empresa y su forma de trabajar le encajó bastante, porque aunque había 
 
 La tarea por aquel entonces ya empezaba a estar de moda pero aun todo lo que había era muy tosco: programar un asistente virtual. Google tenía Home, Amazon Alexa, iPhone a Siri, no es que fueran super útiles, pero ahí estaban. Y muchas empresas se embarcaron en la tarea de tener su propio chatbot, aunque no tenían muy claro cómo se hacía eso.
 
-![A 3d render of a virtual robot on top of a phone - generated with Ideogram](/public/img/chatbot.jpeg)
+![A 3d render of a virtual robot on top of a phone - generated with Ideogram](/public/img/chatbot.png)
 
 En mi caso, al tener mucha libertad y tiempo para desarrollar (no había prácticamente reuniones ni necesidad de coordinación) me empecé a meter en el mundo NLP y en cómo programar un Chatbot.
 
