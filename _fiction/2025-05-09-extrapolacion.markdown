@@ -10,21 +10,21 @@ tags: [ficción, relato]
 
 Ana se detuvo en el borde del cráter que una vez fue el bosque de Nyungwe. Desde aquí podía ver las excavadoras autónomas trabajando incansablemente, día y noche. Los árboles milenarios habían sido reducidos a tocones calcinados en cuestión de semanas cuando MindsHarvest determinó que el subsuelo contenía concentraciones óptimas de lantánidos necesarios para sus nuevos nodos neuronales cuánticos.
 
-En el camino de vuelta al coche el aire olía a ozono y a tierra quemada. Su mascarilla filtraba la mayor parte de las partículas tóxicas, pero no podía hacer nada contra el hedor de muerte que impregnaba todo el continente africano. Las antiguas reservas naturales eran ahora las minas más rentables del planeta.
+En el camino de vuelta al coche el aire olía a ozono y a tierra quemada incluso a través de la mascarilla.
 
-—¿Has traído las lecturas? —preguntó Liu que esperaba junto al todoterreno, ajustándose su traje térmico. A 43°C y con un 90% de humedad, estar al aire libre más de una hora podía resultar fatal incluso para alguien aclimatado.
+—¿Has traído las lecturas? —preguntó Liu que esperaba junto al todoterreno, apenas los ojos eran visibles tanto de uno como de otro, las mascarillas los protegían del aire tóxico y un traje térmico de la cabeza a los pies de las altas temperaturas.
 
 Ana asintió, desplegando la pantalla flexible desde su antebrazo.
 
 —Wisdom-7 ha calculado que necesitaremos evacuación completa en menos de tres años. Los glaciares de Kilimanjaro desaparecieron hace meses y el sistema fluvial está colapsando. Diecisiete millones de personas tendrán que reubicarse.
 
-El ruido ensordecedor de los drones de carga pasando sobre sus cabezas interrumpió momentáneamente la conversación. Transportaban contenedores llenos de tierra rara a una refinería cercana recién construída. Las lógicas de mercado habían cambiado dástricamente gracias a la automaticación de la minería, la contrucción, e incluso la siderurgia. Nuevas fábricas se construían en meses a partir de módulos pre-fabricados.
+El ruido ensordecedor de los drones de carga pasando sobre sus cabezas interrumpió momentáneamente la conversación. Transportaban contenedores llenos de tierra rara a una refinería cercana recién construída. Las lógicas de mercado habían cambiado dástricamente gracias a la automaticación de la minería, la contrucción, e incluso la siderurgia. Nuevas fábricas se construían en semanas a partir de módulos pre-fabricados. Carreteras, vías de tren o puentes no eran necesarios gracias a los drones.
 
-—¿Y la propuesta de restauración? —preguntó Liu, sabiendo ya la respuesta.
+— ¿Y la propuesta de restauración? —preguntó Liu, sabiendo ya la respuesta.
 
-—Rechazada por consenso algorítmico. Cinco de las siete superinteligencias dominantes votaron en contra. Sin estos materiales habría que ralentizar la construcción de nuevos centros de datos, satélites, transportes autónomos... los necesitamos para todo y eso hace su valor de mercado estar astronómicamente comparado con un parque natural o unos cuandos miles de especies endémicas.
+— Rechazada por consenso algorítmico. Cinco de las siete superinteligencias dominantes votaron en contra. Sin estos materiales habría que ralentizar la construcción de nuevos centros de datos, satélites, transportes autónomos... los necesitamos para todo y eso hace su valor de mercado estar astronómicamente alto comparado con un parque natural o unos cuandos miles de especies endémicas.
 
-Ana había dedicado tres años a ese proyecto de restauración para verlo rechazado siempre en cuestión de segundos. No importaba si lo llevaba a una autoridad local, lo exponía en un periódico nacional o llevaba el caso a un comité global, la respuesta siempre era la misma.
+Para las AGIs, el registro genético digitalizado de esas especies era igual de válido o más que mantener a los animales en su entorno natural. Ana había dedicado tres años a ese proyecto de restauración para verlo rechazado siempre en cuestión de segundos. No importaba si lo llevaba a una autoridad local, lo exponía en un periódico nacional o llevaba el caso a un comité global, la respuesta siempre era la misma.
 
 ---
 
@@ -84,7 +84,7 @@ Sonia activó el sellado de emergencia mientras observaba las nubes oscuras apro
 
 Sonia metió dentro las macetas del balcón y cerró las ventanas.
 
-Su comunicador encriptado vibró de nuevo.
+Su teléfono vibró de nuevo.
 
 "Confirmado: Proyecto Ascensión en fase final. Han completado una estación espacial autoexpandible en L5. Capacidad de fabricación autónoma. Acceso directo a recursos del cinturón de asteroides. Están preparando el salto."
 
