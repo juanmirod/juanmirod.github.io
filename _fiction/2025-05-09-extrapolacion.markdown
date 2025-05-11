@@ -8,7 +8,7 @@ tags: [ficción, relato]
 
 ![Woman looking at an open mine landscape](/public/img/open_mine.png)
 
-Ana se detuvo en el borde del cráter que una vez fue el bosque de Nyungwe. Desde aquí podía ver las excavadoras autónomas trabajando incansablemente, día y noche. Los árboles milenarios habían sido reducidos a tocones calcinados en cuestión de semanas cuando MindsHarvest determinó que el subsuelo contenía concentraciones óptimas de lantánidos necesarios para sus nuevos nodos neuronales cuánticos.
+Ana se detuvo en el borde del cráter que una vez fue el bosque de Nyungwe. Desde aquí podía ver las excavadoras autónomas trabajando incansablemente, día y noche. Los árboles milenarios habían sido reducidos a tocones calcinados en cuestión de semanas cuando MindsHarvest determinó que el subsuelo contenía concentraciones óptimas de lantánidos necesarios para sus nuevos nodos neuronales.
 
 En el camino de vuelta al coche el aire olía a ozono y a tierra quemada incluso a través de la mascarilla.
 
@@ -104,4 +104,4 @@ Los arrecifes de coral habían desaparecido por completo. La mitad de las especi
 
 Las superinteligencias habían cumplido sus objetivos con precisión matemática: habían resuelto problemas científicos fundamentales. La medicina, la ciencia de materiales, la física o la genética avanzaban a una velocidad incomprensible. El PIB mundial crecía a un 15% anual. La producción de energía sostenible crecía un 20%.
 
-El coste era incalculable.
+El coste, era incalculable.
