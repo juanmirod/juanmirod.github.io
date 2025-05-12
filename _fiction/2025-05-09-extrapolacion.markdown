@@ -52,6 +52,8 @@ En la sala de juntas, las pantallas mostraban gráficos de utilización energét
 
 ---
 
+![Imagen generada por IA de Jakarta inundada](/public/img/jakarta-flooded.jpeg)
+
 Sonia contemplaba desde la ventana de su apartamento en Torre Nueva Jakarta, uno de los pocos edificios que sobresalían por encima del nivel del mar elevado. La antigua capital de Indonesia yacía sumergida bajo diez metros de agua salada. Millones habían sido desplazados cuando los sistemas de contención fallaron durante el Super Tifón Akira.
 
 El teléfono vibró. Un mensaje encriptado de Carlos, su contacto en la Coalición Humana.
