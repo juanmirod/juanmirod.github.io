@@ -53,13 +53,13 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   position: relative;
-  margin-bottom: 35px;
+  margin-bottom: 38px;
 }
 
 h1::before {
   content: attr(data-text);
   position: absolute;
-  top: 70%;
+  top: 96%;
   left: 0;
   height: 100%;
   width: 100%;
@@ -71,11 +71,11 @@ h1::before {
 h1::after {
   content: "";
   position: absolute;
-  top: 70%;
+  top: 76%;
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(transparent, var(--black) 90%);
+  background: linear-gradient(transparent, var(--black) 88%);
  }
 
 blockquote {
