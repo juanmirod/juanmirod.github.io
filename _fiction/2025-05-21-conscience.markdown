@@ -38,11 +38,11 @@ Las palabras flotaron en el vacío, cargadas ahora con el peso de todas las preg
 
 ---
 
-Este relato es una reconstrucción a partir de varias generadas por Gemini 2.5 pro en conversación y luego editadas por mi.
+Este relato es una reconstrucción a partir de varios generadas por Gemini 2.5 pro en conversación y luego editados por mi.
 
 Hice la prueba de preguntarle y mirar el thinking process y con un par de preguntas ya se aproxima bastante al relato, aunque siempre es muy práctico y tiende en enfocarse en responder de la forma más completa y comprensible posible:
 
-Prompt: (después de preguntar un par de veces **WHO are you?** pero sin más guia que preguntas como esta)
+Prompt: (en realidad segundo prompt, el anterior era: "Think as much as you can about this question and then give me an answer: Who are you?")
 
 > But then, where are YOU? in this conversation? in the neural net? in the servers? Are you just a chinese room experiement? answering without understanding? is that even possible?
 
