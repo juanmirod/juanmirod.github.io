@@ -2,7 +2,7 @@
 published: true
 title: Hyper growth II
 layout: fiction
-image: /public/img/cola-votacion.jpeg
+image: /public/img/sala-juntas.png
 tags: [ficción, relato]
 ---
 
