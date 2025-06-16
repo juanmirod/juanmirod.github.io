@@ -214,7 +214,7 @@ Después de todo, ¿quién era ella para oponerse al consenso de los expertos?
 Podríamos decir que estos relatos más que ciencia fictión son historias contemporáneas llevadas un poco más allá, casi no los publico porque me parece que en realidad no hay mucha extrapolación en ellos. Los ejemplos en los que me inspiré:
 
 - [El Manifiesto Techno-optimista de Marc Andreessen](https://a16z.com/the-techno-optimist-manifesto/)
-  Andreessen es un inversor de capital riesgo, seguramente el más famoso del mundo actual. Su profesión no debería tener nada que ver con la religión, pero eso no le impidió hacer este escrito de caracter claramente religioso, en el que por si cabe alguna duda incluye una portada de un sol pixelado apareciendo entre las nubes como si de un cuadro renacentista se tratara.
+  Andreessen es un inversor de capital riesgo, seguramente el más famoso del mundo actual. Su profesión no debería tener nada que ver con la religión. Pero eso no le impidió hacer este escrito de caracter claramente religioso. En el, por si cabe alguna duda, incluye una portada de un sol pixelado apareciendo entre las nubes como si de un cuadro renacentista se tratara. y utiliza repetidamente el mantra _"We believe in"_
 
 ![Cabecera del manifiesto tecno-optimista](/public/img/techno-optimis-manifesto-screenshot.png)
 
