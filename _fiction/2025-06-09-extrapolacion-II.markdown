@@ -211,11 +211,15 @@ Después de todo, ¿quién era ella para oponerse al consenso de los expertos?
 
 ## Referencias en el mundo real:
 
-- El Manifiesto Techno-optimista de Marc Andreessen:
+Podríamos decir que estos relatos más que ciencia fictión son historias contemporáneas llevadas un poco más allá, casi no los publico porque me parece que en realidad no hay mucha extrapolación en ellos. Los ejemplos en los que me inspiré:
 
-https://a16z.com/the-techno-optimist-manifesto/
+- [El Manifiesto Techno-optimista de Marc Andreessen](https://a16z.com/the-techno-optimist-manifesto/)
+  Andreessen es un inversor de capital riesgo, seguramente el más famoso del mundo actual. Su profesión no debería tener nada que ver con la religión, pero eso no le impidió hacer este escrito de caracter claramente religioso, en el que por si cabe alguna duda incluye una portada de un sol pixelado apareciendo entre las nubes como si de un cuadro renacentista se tratara.
+
+![Cabecera del manifiesto tecno-optimista](/public/img/techno-optimis-manifesto-screenshot.png)
 
 - La cerámica japonesa en youtube:
+  Hay decenas de videos, de vez en cuando aparece alguno en mi feed porque youtube sabe que me gusta la artesanía en general. Este me gustó este al buscar un ejemplo porque el artesano/artista realiza la pieza en una instalación en públido donde la gente va a admirar el proceso:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/OQI71Iea-5U?si=L5ykvjRwwlUzfqtO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
