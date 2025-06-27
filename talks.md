@@ -12,7 +12,9 @@ _April - 2025_
 
 Update on agentic tools for augmented development.
 
-[Link to the related blogpost](https://medium.com/clarityai-engineering/ai-assisted-coding-in-2025-6e800e4e61b5)
+- [Related post in the company blog](https://medium.com/clarityai-engineering/ai-assisted-coding-in-2025-6e800e4e61b5)
+
+---
 
 ### LLMs for programmers
 
@@ -20,8 +22,10 @@ _February - 2024_
 
 Samples and round table on how to use LLMs in our daily work. Some related blog posts (in Spanish):
 
-[Desarrollando con ChatGPT](https://juanmirod.github.io/2023/04/16/trabajando-con-chat-gpt.html)
-[¿Por qué es tan importante ChatGPT?](https://juanmirod.github.io/2023/03/26/chat-gpt.html)
+- [Desarrollando con ChatGPT](https://juanmirod.github.io/2023/04/16/trabajando-con-chat-gpt.html)
+- [¿Por qué es tan importante ChatGPT?](https://juanmirod.github.io/2023/03/26/chat-gpt.html)
+
+---
 
 ### Vue3 and Primefaces
 
@@ -29,11 +33,15 @@ _February - 2023_
 
 Review of the experience of building and MVP with Vue3 and PrimeVue
 
+---
+
 ### Interactive data visualizations with ObservableHQ
 
 _June - 2022_
 
 Review of the features of ObservableHQ for interactive data visualizations and live coding examples
+
+---
 
 ### TDD with Javascript
 
