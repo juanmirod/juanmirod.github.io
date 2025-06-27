@@ -18,7 +18,10 @@ Update on agentic tools for augmented development.
 
 _February - 2024_
 
-Samples and round table on how to use LLMs in our daily work
+Samples and round table on how to use LLMs in our daily work. Some related blog posts (in Spanish):
+
+[Desarrollando con ChatGPT](https://juanmirod.github.io/2023/04/16/trabajando-con-chat-gpt.html)
+[¿Por qué es tan importante ChatGPT?](https://juanmirod.github.io/2023/03/26/chat-gpt.html)
 
 ### Vue3 and Primefaces
 
