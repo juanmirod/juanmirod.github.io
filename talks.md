@@ -4,7 +4,7 @@ title: Tech Talks
 permalink: /talks/
 ---
 
-During the last years I did some Brownbag TechTalks at Clarity. This tech-talks are a way to share your side projects and tech passions with your colleages in a low-risk environment.
+During the last years I did some Brownbag Tech-Talks at Clarity. This Tech-Talks are a way to share your side projects and tech passions with your colleagues in a low-risk environment.
 
 ### AI coding in 2025
 
