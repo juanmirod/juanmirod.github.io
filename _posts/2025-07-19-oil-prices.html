@@ -1,3 +1,10 @@
+---
+published: true
+title: Evolución precios del diesel en España
+layout: post
+tags: [opinión, finanzas, sostenibilidad, dataviz]
+---
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +17,16 @@
 <link rel="preload" as="style" href="/public/oil-prices/observablehq/theme-air,near-midnight,alt,wide.db1cdf55.css">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
 <link rel="stylesheet" type="text/css" href="/public/oil-prices/observablehq/theme-air,near-midnight,alt,wide.db1cdf55.css">
+
+<link rel="stylesheet" href="/public/css/poole.css">
+<link rel="stylesheet" href="/public/css/syntax.css">
+<link rel="stylesheet" href="/public/css/lanyon.css">
+
+<link id="theme-link" rel="stylesheet" href="/public/css/dark.css">
+<link rel="stylesheet" href="/public/css/common.css">
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+
 <link rel="modulepreload" href="/public/oil-prices/observablehq/client.d5e61d4a.js">
 <link rel="modulepreload" href="/public/oil-prices/observablehq/runtime.e080113b.js">
 <link rel="modulepreload" href="/public/oil-prices/observablehq/stdlib.24b62b2e.js">
@@ -53,7 +70,6 @@
 <link rel="modulepreload" href="/public/oil-prices/npm/robust-predicates@3.0.2/aa00730b.js">
 <link rel="icon" href="/public/oil-prices/file/observable.1af93621.png" type="image/png" sizes="32x32">
 <script type="module">
-
 import {define} from "/public/oil-prices/observablehq/client.d5e61d4a.js";
 import {registerFile} from "/public/oil-prices/observablehq/stdlib.24b62b2e.js";
 
@@ -368,14 +384,14 @@ return {priceDifferenceChart};
 </script>
 </head>
 <body>
-<div id="observablehq-center">
-<main id="observablehq-main" class="observablehq">
+<div>
+<article id="observablehq-main">
 <style>
   g[aria-label="tip"] {
     color: white;
   }
 </style>
-<h1 id="diferencia-de-precios-entre-el-petroleo-y-el-diesel-en-espana" tabindex="-1"><a class="observablehq-header-anchor" href="#diferencia-de-precios-entre-el-petroleo-y-el-diesel-en-espana">Diferencia de precios entre el petróleo y el diesel en España</a></h1>
+
 <p>Tenía una intuición que quería comprobar si era cierta y tal vez tú también hayas tenido. Cuando los precios del petróleo se dispararon al empezar la guerra de Rusia y Ucrania, los precios del diesel y la gasolina subieron a unos niveles que parecían insostenibles. El diesel llegó a 2€ el litro en muchos puntos de España, pero mi memoría me decía que el precio del brent no parecía haber subido tanto...</p>
 <p>Más tarde, cuando el mercado se estabilizó y el precio del petróleo pareció volver a niveles anteriores a la invasión de Rusia, los precios del diesel y la gasolina no me pareció que volvieran también a los niveles anteriores a la guerra. Desde entonces pagamos más por el diesel, aunque el petróleo bajó, no bajó tanto el diesel. Otra diferencia es que la diferencia de precio entre gasolineras es mucho mayor también que antes de la subida, supongo que depende de mil factores aunque antes de la guerra la diferencia de precios no iba cais nunca más allá de los 8 o 10 céntimos y ahora puedes ver diferencias de 15-20 céntimos fácilmente.</p>
 <p>Como quería comprobarlo y ahora tenemos la ayuda de herramientas de desarrollo increíbles que nos permiten sacar pequeños proyectos como este mucho más fácilmente, me he puesto a buscar un poco los datos y a pintarlos.</p>
@@ -398,9 +414,9 @@ return {priceDifferenceChart};
 <!-- Plot of history -->
 <div class="observablehq observablehq--block"><!--:2a9770a3:--></div>
 <div class="observablehq observablehq--block"><!--:855674e2:--></div>
-</main>
-<footer id="observablehq-footer">
-<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2025-07-19T16:52:53">Jul 19, 2025</a>.</div>
+</article>
+<footer>
+<small>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2025-07-19T16:52:53">Jul 19, 2025</a>.</small>
 </footer>
 </div>
 </body>
