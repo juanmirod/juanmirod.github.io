@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.3">
+<title>dashboard | Evolución del precio del gasoil</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="/public/oil-prices/observablehq/theme-air,near-midnight,alt,wide.db1cdf55.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="/public/oil-prices/observablehq/theme-air,near-midnight,alt,wide.db1cdf55.css">
+<link rel="modulepreload" href="/public/oil-prices/observablehq/client.d5e61d4a.js">
+<link rel="modulepreload" href="/public/oil-prices/observablehq/runtime.e080113b.js">
+<link rel="modulepreload" href="/public/oil-prices/observablehq/stdlib.24b62b2e.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3@7.9.0/e780feca.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/@observablehq/plot@0.6.17/d761ef9b.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-array@3.2.4/e93ca09f.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-axis@3.0.0/0f2de24d.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-brush@3.0.0/65eb105b.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-chord@3.0.1/7ef8fb2e.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-color@3.1.0/aeb57b94.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-contour@4.0.2/1d2aed74.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-delaunay@6.0.4/5ced1d52.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-dispatch@3.0.1/9ba9c7f3.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-drag@3.0.0/4202580c.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-dsv@3.0.1/9cffc2bd.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-ease@3.0.1/cdd7e898.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-fetch@3.0.1/b4e2ad9a.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-force@3.0.0/5e804d15.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-format@3.1.0/86074ef6.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-geo@3.1.1/40599fb3.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-hierarchy@3.1.2/e49e792c.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-interpolate@3.0.1/8d1e5425.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-path@3.1.0/20d3f133.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-polygon@3.0.1/7553081f.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-quadtree@3.0.1/0dfd751c.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-random@3.0.1/3c90ee06.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-scale@4.0.2/843b6a76.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-scale-chromatic@3.1.0/ba24c2e7.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-selection@3.0.0/4d94e5b7.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-shape@3.2.0/6d3a6726.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-time@3.1.0/9f03c579.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-time-format@4.1.0/07c9626f.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-timer@3.0.1/b58a267d.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-transition@3.0.1/004da2ac.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/d3-zoom@3.0.0/b5786b3f.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/isoformat@0.2.1/18cbf477.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/interval-tree-1d@1.0.4/53fe8176.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/internmap@2.0.3/e08981d9.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/delaunator@5.0.1/02d43215.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/binary-search-bounds@2.0.5/cbf6ba23.js">
+<link rel="modulepreload" href="/public/oil-prices/npm/robust-predicates@3.0.2/aa00730b.js">
+<link rel="icon" href="/public/oil-prices/file/observable.1af93621.png" type="image/png" sizes="32x32">
+<script type="module">
+
+import {define} from "/public/oil-prices/observablehq/client.d5e61d4a.js";
+import {registerFile} from "/public/oil-prices/observablehq/stdlib.24b62b2e.js";
+
+registerFile("./data/gasoil_prices.csv", {"name":"./data/gasoil_prices.csv","mimeType":"text/csv","path":"/public/oil-prices/file/data/gasoil_prices.dede80a2.csv","lastModified":1752680940103,"size":1229});
+registerFile("./data/oil_brent_price.csv", {"name":"./data/oil_brent_price.csv","mimeType":"text/csv","path":"/public/oil-prices/file/data/oil_brent_price.28b9020d.csv","lastModified":1752602237221,"size":8701});
+
+define({id: "8a1f3920", mode: "inline", inputs: ["resize","launchTimeline","diesel","brentOil","display"], body: async (resize,launchTimeline,diesel,brentOil,display) => {
+display(await(
+resize((width) => launchTimeline(diesel, brentOil, {width}))
+))
+}});
+
+define({id: "f8fce4ee", mode: "inline", inputs: ["resize","priceDifferenceChart","diesel","brentOil","display"], body: async (resize,priceDifferenceChart,diesel,brentOil,display) => {
+display(await(
+resize((width) => priceDifferenceChart(diesel, brentOil, {width}))
+))
+}});
+
+define({id: "810023bb", inputs: ["d3","FileAttachment"], outputs: ["tooltipBg","diesel","brentOil"], body: async (d3,FileAttachment) => {
+const tooltipBg = "#666666";
+
+const diesel = d3
+  .dsvFormat(";")
+  .parse(await FileAttachment("./data/gasoil_prices.csv").text())
+  .map((d) => ({
+    date: new Date(`${d.date.slice(3)}-${d.date.slice(0, 2)}-01`), // Convert MM/YYYY to Date
+    price: +d.price,
+  }));
+
+const brentOil = d3
+  .csvParse(await FileAttachment("./data/oil_brent_price.csv").text())
+  .map((d) => ({
+    date: new Date(d.Date), // MM/DD/YYYY format
+    price: (+d.Value * 0.85) / 159, // Convert USD/barrel to EUR/liter (rough conversion: 0.85 EUR/USD, 159 L/barrel)
+  }))
+  .filter(
+    (d) => d.date >= new Date("2019-07-01") && d.date <= new Date("2025-06-30")
+  ); // Filter to match diesel date range
+return {tooltipBg,diesel,brentOil};
+}});
+
+define({id: "2a9770a3", inputs: ["Plot","tooltipBg"], outputs: ["launchTimeline"], body: (Plot,tooltipBg) => {
+// show a line chart of the prices over time
+function launchTimeline(dieselData, brentData, { width } = {}) {
+  // Add series labels to the data
+  const dieselWithLabel = dieselData.map((d) => ({
+    ...d,
+    series: "Gasoil (Spain)",
+  }));
+  const brentWithLabel = brentData.map((d) => ({
+    ...d,
+    series: "Brent Oil (converted)",
+  }));
+  const combinedData = [...dieselWithLabel, ...brentWithLabel];
+
+  // Create data for the area between lines by matching dates
+  const areaData = [];
+  dieselData.forEach((dieselPoint) => {
+    const brentPoint = brentData.find(
+      (b) => Math.abs(b.date - dieselPoint.date) < 7 * 24 * 60 * 60 * 1000 // within 7 days
+    );
+    if (brentPoint) {
+      areaData.push({
+        date: dieselPoint.date,
+        dieselPrice: dieselPoint.price,
+        brentPrice: brentPoint.price,
+        difference: dieselPoint.price - brentPoint.price,
+      });
+    }
+  });
+
+  return Plot.plot({
+    title:
+      "Oil Prices Comparison: Gasoil (Spain) vs Brent Crude (converted) - EUR/Liter",
+    width,
+    height: 400,
+    x: { type: "time", label: "Date" },
+    y: { grid: true, label: "Price (€/L)" },
+    color: {
+      legend: true,
+      domain: ["Gasoil (Spain)", "Brent Oil (converted)"],
+      range: ["#2563eb", "#dc2626"],
+    },
+    marks: [
+      // Area between the lines to show price difference
+      Plot.areaY(areaData, {
+        x: "date",
+        y1: "dieselPrice",
+        y2: "brentPrice",
+        fill: "#fbbf24",
+        fillOpacity: 0.3,
+      }),
+      // Line plots
+      Plot.line(combinedData, {
+        x: "date",
+        y: "price",
+        stroke: "series",
+        strokeWidth: 2,
+      }),
+      // Data points
+      Plot.dot(combinedData, {
+        x: "date",
+        y: "price",
+        fill: "series",
+        r: 3,
+        stroke: "white",
+        strokeWidth: 1,
+      }),
+      // Floating tooltips for data points
+      Plot.tip(
+        combinedData,
+        Plot.pointer({
+          x: "date",
+          y: "price",
+          title: (d) =>
+            [
+              d.series,
+              `€${d.price.toFixed(3)}/L`,
+              d.date.toLocaleDateString("es-ES", {
+                day: "numeric",
+                month: "long",
+                year: "numeric",
+              }),
+            ].join("\n"),
+          fill: tooltipBg,
+          stroke: "series",
+          strokeWidth: 2,
+          fontSize: 12,
+          fontWeight: "500",
+        })
+      ),
+      // Floating tooltips for area (price difference)
+      Plot.tip(
+        areaData,
+        Plot.pointer({
+          x: "date",
+          y: (d) => (d.dieselPrice + d.brentPrice) / 2,
+          title: (d) =>
+            [
+              "💰 Diferencia de precio",
+              `€${Math.abs(d.difference).toFixed(3)}/L`,
+              `${
+                d.difference > 0 ? "⬆️ Diesel más alto" : "⬇️ Brent más alto"
+              }`,
+              d.date.toLocaleDateString("es-ES", {
+                day: "numeric",
+                month: "long",
+                year: "numeric",
+              }),
+            ].join("\n"),
+          fill: tooltipBg,
+          stroke: "#f59e0b",
+          strokeWidth: 2,
+          fontSize: 12,
+          fontWeight: "500",
+        })
+      ),
+      // Event markers
+      Plot.ruleX([new Date("2020-03-01")], {
+        stroke: "#ef4444",
+        strokeWidth: 2,
+        strokeDasharray: "5,5",
+        opacity: 0.7,
+      }),
+      Plot.ruleX([new Date("2022-02-24")], {
+        stroke: "#ef4444",
+        strokeWidth: 2,
+        strokeDasharray: "5,5",
+        opacity: 0.7,
+      }),
+      // Event labels
+      Plot.text([{ date: new Date("2020-03-01"), label: "COVID-19" }], {
+        x: "date",
+        y: 2,
+        text: "label",
+        fill: "#ef4444",
+        fontSize: 10,
+        textAnchor: "start",
+      }),
+      Plot.text(
+        [
+          {
+            date: new Date("2022-02-24"),
+            label: "Invasión de\n Rusia a Ucrania\n (24/02/2022)",
+          },
+        ],
+        {
+          x: "date",
+          y: 2,
+          text: "label",
+          fill: "#ef4444",
+          fontSize: 10,
+          textAnchor: "start",
+        }
+      ),
+    ],
+  });
+}
+return {launchTimeline};
+}});
+
+define({id: "855674e2", inputs: ["Plot","tooltipBg"], outputs: ["priceDifferenceChart"], body: (Plot,tooltipBg) => {
+// Bar chart showing price differences
+function priceDifferenceChart(dieselData, brentData, { width } = {}) {
+  // Create data for the price differences by matching dates
+  const differenceData = [];
+  dieselData.forEach((dieselPoint) => {
+    const brentPoint = brentData.find(
+      (b) => Math.abs(b.date - dieselPoint.date) < 7 * 24 * 60 * 60 * 1000 // within 7 days
+    );
+    if (brentPoint) {
+      differenceData.push({
+        date: dieselPoint.date,
+        difference: dieselPoint.price - brentPoint.price,
+        dieselPrice: dieselPoint.price,
+        brentPrice: brentPoint.price,
+      });
+    }
+  });
+
+  return Plot.plot({
+    title: "Diferencia de precio mensual: Diesel vs Brent Oil (en EUR/L)",
+    width,
+    height: 300,
+    x: { type: "time", label: "Fecha" },
+    y: { grid: true, label: "Diferencia de precio (€/L)", zero: true },
+    color: {
+      type: "diverging",
+      scheme: "RdBu",
+      symmetric: false,
+      legend: true,
+      label: "Diferencia de precio (€/L)",
+      tickFormat: (d) => (d > 0 ? `+€${d.toFixed(3)}` : `€${d.toFixed(3)}`),
+    },
+    marks: [
+      Plot.ruleY([0], { stroke: "#666", strokeDasharray: "2,2" }), // Zero line
+      Plot.rectY(differenceData, {
+        x: "date",
+        y: "difference",
+        interval: "month",
+        fill: (d) => d.difference,
+        stroke: "#666",
+        strokeWidth: 0.5,
+      }),
+      // Floating tooltips for bars
+      Plot.tip(
+        differenceData,
+        Plot.pointer({
+          x: "date",
+          y: "difference",
+          title: (d) =>
+            [
+              `📅 ${d.date.toLocaleDateString("es-ES", {
+                month: "long",
+                year: "numeric",
+              })}`,
+              `💰 Diferencia de precio: €${d.difference.toFixed(3)}/L`,
+              `${d.difference > 0 ? "⬆️" : "⬇️"} ${
+                d.difference > 0
+                  ? `Diesel €${Math.abs(d.difference).toFixed(3)}/L más alto`
+                  : `Brent €${Math.abs(d.difference).toFixed(3)}/L más alto`
+              }`,
+              `🛢️ Diesel: €${d.dieselPrice.toFixed(3)}/L`,
+              `🛢️ Brent: €${d.brentPrice.toFixed(3)}/L`,
+            ].join("\n"),
+          fill: tooltipBg,
+          stroke: "#666",
+          strokeWidth: 2,
+          fontSize: 12,
+          fontWeight: "500",
+        })
+      ),
+      // Event markers
+      Plot.ruleX([new Date("2020-03-01")], {
+        stroke: "#ef4444",
+        strokeWidth: 2,
+        strokeDasharray: "5,5",
+        opacity: 0.7,
+      }),
+      Plot.ruleX([new Date("2022-02-24")], {
+        stroke: "#ef4444",
+        strokeWidth: 2,
+        strokeDasharray: "5,5",
+        opacity: 0.7,
+      }),
+      // Event labels
+      Plot.text([{ date: new Date("2020-03-01"), label: "COVID-19" }], {
+        x: "date",
+        y: 1.4,
+        text: "label",
+        fill: "#ef4444",
+        fontSize: 10,
+        textAnchor: "start",
+      }),
+      Plot.text(
+        [{ date: new Date("2022-02-24"), label: "Rusia-Ucrania 24/02/2022" }],
+        {
+          x: "date",
+          y: 1.4,
+          text: "label",
+          fill: "#ef4444",
+          fontSize: 10,
+          textAnchor: "start",
+        }
+      ),
+    ],
+  });
+}
+return {priceDifferenceChart};
+}});
+
+</script>
+</head>
+<body>
+<div id="observablehq-center">
+<main id="observablehq-main" class="observablehq">
+<style>
+  g[aria-label="tip"] {
+    color: white;
+  }
+</style>
+<h1 id="diferencia-de-precios-entre-el-petroleo-y-el-diesel-en-espana" tabindex="-1"><a class="observablehq-header-anchor" href="#diferencia-de-precios-entre-el-petroleo-y-el-diesel-en-espana">Diferencia de precios entre el petróleo y el diesel en España</a></h1>
+<p>Tenía una intuición que quería comprobar si era cierta y tal vez tú también hayas tenido. Cuando los precios del petróleo se dispararon al empezar la guerra de Rusia y Ucrania, los precios del diesel y la gasolina subieron a unos niveles que parecían insostenibles. El diesel llegó a 2€ el litro en muchos puntos de España, pero mi memoría me decía que el precio del brent no parecía haber subido tanto...</p>
+<p>Más tarde, cuando el mercado se estabilizó y el precio del petróleo pareció volver a niveles anteriores a la invasión de Rusia, los precios del diesel y la gasolina no me pareció que volvieran también a los niveles anteriores a la guerra. Desde entonces pagamos más por el diesel, aunque el petróleo bajó, no bajó tanto el diesel. Otra diferencia es que la diferencia de precio entre gasolineras es mucho mayor también que antes de la subida, supongo que depende de mil factores aunque antes de la guerra la diferencia de precios no iba cais nunca más allá de los 8 o 10 céntimos y ahora puedes ver diferencias de 15-20 céntimos fácilmente.</p>
+<p>Como quería comprobarlo y ahora tenemos la ayuda de herramientas de desarrollo increíbles que nos permiten sacar pequeños proyectos como este mucho más fácilmente, me he puesto a buscar un poco los datos y a pintarlos.</p>
+<p>Las fuentes de los datos son públicas. Para los precios del brent usé <a href="./">esta web</a> y para los precios del diesel usé <a href="./">la web oficial del ministerio</a></p>
+<p>Ahora vamos a los datos:</p>
+<div class="grid grid-cols-1">
+  <div class="card">
+    <observablehq-loading></observablehq-loading><!--:8a1f3920:-->
+  </div>
+</div>
+<p>Como se puede ver en este primer gráfico, mi intuición tenía fundamento, y es que el precio del diesel rondaba el 1,2-1,3€ el año antes del ataque ruso y luego tardó meses en bajar del 1,5€ después incluso de que el precio del petroleo se estabilizara.</p>
+<p>En ese gráfico no se aprecia tanto la diferencia a simple vista (aunque puedes pasar el ratón por encima del area anaranjada para ver los valores) Así que el siguiente gráfico ilustra esa diferencia. El tono de azúl es más oscuro cuanta mayor es la diferencia:</p>
+<div class="grid grid-cols-1">
+  <div class="card">
+    <observablehq-loading></observablehq-loading><!--:f8fce4ee:-->
+  </div>
+</div>
+<p>Aquí no estoy teniendo en cuenta los impuestos ni los gastos de distribución ni nada, no pretendo decir que las distribuidoras se embolsen toda esa diferencia como beneficios. Es más, no sé el motivo de que esa diferencia persista. Puede que sea el aumento de la demanda de disel para usos bélicos o de electricidad, o los mayores costes de distribución derivados de los problemas geopolíticos que afectan a la logística...Sé que esa diferencia a aumentado desde el ataque y sobre todo se acentuó durante todo el año 2022. Aunque a partir de enero de 2023 la diferencia disminuyó un poco, no hemos llegado a ponernos en los niveles anteriores a la guerra. Yo lo había notado en el día a día, pero no podía encontrar en ningún sitio una comparativa así que me permitiera comprobarlo.</p>
+<div class="observablehq observablehq--block"><!--:810023bb:--></div>
+<!-- Plot of history -->
+<div class="observablehq observablehq--block"><!--:2a9770a3:--></div>
+<div class="observablehq observablehq--block"><!--:855674e2:--></div>
+</main>
+<footer id="observablehq-footer">
+<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2025-07-19T16:52:53">Jul 19, 2025</a>.</div>
+</footer>
+</div>
+</body>
+</html>
