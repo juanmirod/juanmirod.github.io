@@ -53,3 +53,34 @@ Gary Marcus is considered a "doomer" and he has an unusually hard and moderate v
 This talk by Jodie Burchell is really an amazingly well delivered summary of the evolution of ML until now, how LLMs work, when they work best and a skeptic view on AGI and ASI, very well defended. She finishes with how to use them with a sample RAG application in a notebook. She also has the notebook and all the references from the talk [in this repo](https://github.com/t-redactyl/simple-rag-document-qa/tree/main)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Pv0cfsastFs?si=Vlx0i5TpF226AOQm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+# Andrej Karpathy
+
+Great talk from Andrej Karpathy about the evolution in software in the last years
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/LCEmiRjPEtQ?si=tLKYTCf8s1HvE2aU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+**Key insights for me:**
+
+- This is decade of agents, not the year, it's going to take time to integrate them (think Waymo)
+- Models ate part of the software stack: tasks that required lots of code are now done with a call to a model.
+- Prompt/context is like programming the models, but in plain English.
+- We need to keep humans in the loop (and agents on a leash) and build tools that allow this loop to be faster and easier (like Cursor)
+- We are still building the Ironman suit, we can't pretend we can build completely autonomous robots (yet)
+- GUIs are still highly valuable for humans
+- Markdown documentation and tools like MCP for agents
+
+# Laura Tacho
+
+Measuring the impact of AI on software engineering – with Laura Tacho
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xHHlhoRC8W4?si=3UPwtoDEuR2qxVxc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+To me this conversation validates some things I have experience myself and talk about:
+
+- The productivity improvements is not in lines of code, typing speed never was the bottleneck.
+- But they see compounding improvements in DevEx, complexity of the tasks that one developer can accomplish and in other tasks like inspecting stack traces, debugging, understanding the code or doing big refactors.
+- Documenting is good for humans and for AI, but documentation has to be optimized for AI (code examples instead of screenshots, programatic ways to do things instead of GUI's How To)
+- Adoption is important, having the tools and licenses for everyone is important to get everyone on board and not only the early adopters.
+- AI is good at tasks with a lot of structure like YAML config files, unit tests and refactoring, no so good at "frontier" work where there is not many examples or any line of code counts.
+- When writing code is cheaper, you end up doing more of the rest of the job: alignment, meetings, design, monitoring, gathering feedback... so the future looks like more like product engineering and less like all day coding.
