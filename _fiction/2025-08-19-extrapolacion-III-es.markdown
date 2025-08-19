@@ -2,8 +2,11 @@
 published: true
 title: Hyper growth III
 layout: fiction
+image: /public/img/mieres_cubierto_en_cenica.png
 tags: [ficción, relato]
 ---
+
+![Imagen de Mieres cubierto en cenicas](/public/img/mieres_cubierto_en_cenica.png)
 
 ## Lo que la ceniza sabe
 
