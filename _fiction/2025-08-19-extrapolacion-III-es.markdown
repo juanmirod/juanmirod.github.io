@@ -6,8 +6,6 @@ image: /public/img/mieres_cubierto_en_cenica.png
 tags: [ficción, relato]
 ---
 
-![Imagen de Mieres cubierto en cenicas](/public/img/mieres_cubierto_en_cenica.png)
-
 ## Lo que la ceniza sabe
 
 Carmen aplastó la nariz contra el cristal helado de la Cápsula de Transporte 7429, un sarcófago mag-lev que se arrastraba sobre un lecho de interferencia magnética. Afuera, la ceniza no caía: se quedaba. Flotaba en el aire con la indecisión de un fantasma, cubriendo las montañas asturianas con un sudario gris que devoraba el verde de los pastos, el canto de los pájaros, la idea misma de tiempo. Hace tres días aquello era un paisaje. Ahora era un borrador de Dios.
@@ -46,6 +44,8 @@ Proyectó un mapa antiguo: un laberinto de calles y plazas.
 —Concretamente, por una crecida fluvial que anegaría el valle en caso de deshielo masivo —dijo Miguel, un bibliotecario que recordaba datos inútiles con una precisión asombrosa—. Algo me dice que el deshielo no es nuestro problema más inmediato.
 
 El viaje a Mieres fue un paseo por el sueño de un escultor loco. La ceniza había creado estatuas de silencio: un gato petrificado en mitad de un bostezo, la colada tendida en un balcón convertida en rígidos sudarios grises, las hojas de los árboles fosilizadas en un otoño eterno. El mundo estaba en pausa. Al llegar, encontraron que no eran los únicos "errores de redondeo". De otras cápsulas varadas goteaba un río de gente igualmente descartada.
+
+![Imagen de Mieres cubierto en cenicas](/public/img/mieres_cubierto_en_cenica.png)
 
 Mieres los acogió con el abrazo hueco de sus edificios vacíos. Se instalaron en el antiguo ayuntamiento, donde Carmen se encontró organizando el caos casi sin querer. Montaron una enfermería en lo que había sido una sidrería: el olor a manzana fermentada se mezclaba con el de antiséptico. Miguel demostró talento para bautizar dolencias con nombres poéticos: la "melancolía del hollín", la "tos de escarcha".
 
