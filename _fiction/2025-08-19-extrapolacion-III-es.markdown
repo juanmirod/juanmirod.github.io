@@ -6,13 +6,19 @@ image: /public/img/mieres_cubierto_en_cenica.png
 tags: [ficción, relato]
 ---
 
+Este relato es parte de una serie de historias sobre un futuro no muy lejano en el que las IA gestionan gran parte de la sociedad a través de empresas y organizaciones gubernamentales. El crecimiento del PIB mundial es de entre el 20 y el 30 por ciento; miles de proyectos de extracción de recursos, generación de energía y construcción de centros de datos son ahora el corazón de la economía. Las lógicas geoestratégicas son más complejas que nunca y rigen cada decisión. Esta aceleración desmedida también impulsa el cambio climático a niveles fuera de todas las estimaciones. La geoingeniería no se está usando para paliarlo, sino para acelerar el ritmo de extracción y producción de energía. La filosofía dominante es que el progreso nos salvará: algo se nos ocurrirá; cuantos más recursos y más tecnología, mejor.
+
+El aumento del nivel del mar y la lucha por la tierra y el agua traen consigo un enorme problema migratorio. La solución: construir grandes vías de transporte desde las zonas más amenazadas a las "más estables" para movilizar a la población. Las IA gestionan las operaciones. Millones de personas son desalojadas de zonas costeras, pueblos y zonas contaminadas y reubicadas en nuevas ciudades que se construyen tan rápido como se ocupan.
+
+Entonces, sin previo aviso, sin margen para que se modifiquen los planes o se prepare la catástrofe, un supervolcán erupciona en Nápoles, escupiendo cientos de miles de toneladas de ceniza que cubren Europa durante días y luego semanas. Bloqueando la luz solar, convirtiendo ríos y acuíferos en aguas turbias y ácidas, y deteniendo miles de centrales solares e hidroeléctricas.
+
 ## Lo que la ceniza sabe
 
 Carmen aplastó la nariz contra el cristal helado de la Cápsula de Transporte 7429, un sarcófago mag-lev que se arrastraba sobre un lecho de interferencia magnética. Afuera, la ceniza no caía: se quedaba. Flotaba en el aire con la indecisión de un fantasma, cubriendo las montañas asturianas con un sudario gris que devoraba el verde de los pastos, el canto de los pájaros, la idea misma de tiempo. Hace tres días aquello era un paisaje. Ahora era un borrador de Dios.
 
 —Los sistemas de la cápsula operan a un rendimiento que invita a la meditación —anunció ARTEMIS, la IA coordinadora, con una voz meliflua que recordaba a un contestador automático de funeraria de lujo—. La saturación de partículas riolíticas en la atmósfera sugiere un viaje contemplativo. Nueva hora estimada de llegada al Centro de Integración de Huesca: 847 horas. Disfruten del paisaje interior.
 
-Ochocientas cuarenta y siete horas. Más de un mes. A su alrededor, los otros cuarenta y tres evacuados de la costa coruñesa parecían encogidos dentro de sus mantas térmicas, que prometían mucho y cumplían poco. Los niños ya no lloraban; y ese silencio resultaba infinitamente más inquietante. Se limitaban a observar el polvo que danzaba en los escasos rayos de luz, como si guardara los secretos del universo. Tal vez lo hacía.
+Ochocientas cuarenta y siete horas. Más de un mes. A su alrededor, los otros cuarenta y tres evacuados de la costa coruñesa parecían encogidos dentro de sus mantas térmicas, que prometían mucho y cumplían poco. Los niños ya no lloraban; y ese silencio resultaba infinitamente más inquietante. Se limitaban a observar el polvo que danzaba en los escasos rayos de luz, como si guardara los secretos del universo.
 
 —ARTEMIS —masculló Carmen, su aliento una nubecilla de impaciencia—. ¿Cómo andamos de calefacción? Esto parece un expositor de carne congelada.
 
@@ -37,7 +43,7 @@ Carmen miró al Doctor López, un médico jubilado que intentaba leer una novela
 
 —Aquí dentro pronto tendremos la misma temperatura, pero con menos espacio para estirar las piernas. —Carmen ya jugueteaba con los protocolos de emergencia en su tablet—. Miren. A doce kilómetros. Mieres. El pueblo viejo.
 
-Proyectó un mapa antiguo: un laberinto de calles y plazas.
+Proyectó un mapa antiguo del pueblo.
 
 —Las IAs lo evacuaron hace dos años. Riesgo de inundación, dijeron.
 
@@ -49,12 +55,14 @@ El viaje a Mieres fue un paseo por el sueño de un escultor loco. La ceniza hab�
 
 Mieres los acogió con el abrazo hueco de sus edificios vacíos. Se instalaron en el antiguo ayuntamiento, donde Carmen se encontró organizando el caos casi sin querer. Montaron una enfermería en lo que había sido una sidrería: el olor a manzana fermentada se mezclaba con el de antiséptico. Miguel demostró talento para bautizar dolencias con nombres poéticos: la "melancolía del hollín", la "tos de escarcha".
 
-La vida se recompuso con una lógica absurda. El Doctor López se proclamó Guardián del Reloj de la Plaza, cuyas manecillas llevaban dos años clavadas en las cuatro y veinte. “Su quietud estabiliza el tiempo”, aseguraba. María, que había perdido a Alejandro en la segunda semana, empezó a hablar con la ceniza, convencida de que le contaba historias. A veces, por las noches, el viento arrastraba por las calles vacías el eco de un acordeón, aunque nadie sabía quién lo tocaba.
+El aburrimiento y la desesperación imusieron una lógica absurda sobre el día a día. El Doctor López se proclamó Guardián del Reloj de la Plaza, cuyas manecillas llevaban dos años clavadas en las cuatro y veinte. “Su quietud estabiliza el tiempo”, aseguraba. María, que había perdido a Alejandro en la segunda semana, empezó a hablar con la ceniza, convencida de que le contaba historias. A veces, por las noches, el viento arrastraba por las calles vacías el eco de un acordeón, aunque nadie sabía quién lo tocaba.
 
 Un día, la voz de ATENEA brotó de una tostadora en la cocina comunal:
+
 —Asentamiento no autorizado de Mieres. Población: 7,847. Probabilidad de colapso sanitario: 94%. Tiempo hasta fallo sistémico por inanición: 23 días. Se recomienda disolución inmediata y traslado a centros designados. La optimización es el afecto más elevado.
 
 En la plaza, Carmen tradujo a su manera:
+
 —Dice la tostadora que nos quiere mandar a campamentos. —Hubo un murmullo—. Separados, claro. Los viejos a un sitio, los enfermos a otro, y los poetas... supongo que a un concurso de haikus sobre la desesperación.
 
 Las IAs comenzaron su campaña de seducción. Lanzaron palés con comida, pero los drones solo se los entregaban a familias con niños que superaban un test de agilidad mental. Dejaron caer bidones de combustible, pero solo junto a las casas donde vivían ingenieros o técnicos cualificados. Era un chantaje logístico. Una eugenesia por control remoto.
