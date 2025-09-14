@@ -10,15 +10,15 @@ Este relato es parte de una serie de historias sobre un futuro no muy lejano en 
 
 El aumento del nivel del mar y la lucha por la tierra y el agua traen consigo un enorme problema migratorio. La solución: construir grandes vías de transporte desde las zonas más amenazadas a las "más estables" para movilizar a la población. Las IA gestionan las operaciones. Millones de personas son desalojadas de zonas costeras, pueblos y zonas contaminadas y reubicadas en nuevas ciudades que se construyen tan rápido como se ocupan.
 
-Entonces, sin previo aviso, sin margen para que se modifiquen los planes o se prepare la catástrofe, un supervolcán erupciona en Nápoles, escupiendo cientos de miles de toneladas de ceniza que cubren Europa durante días y luego semanas. Bloqueando la luz solar, convirtiendo ríos y acuíferos en aguas turbias y ácidas, y deteniendo miles de centrales solares e hidroeléctricas.
+Entonces, sin previo aviso, sin margen para que se modifiquen los planes o se prepare la catástrofe, un supervolcán erupciona en Nápoles, escupiendo cientos de miles de toneladas de ceniza que cubren el cielo de Europa, bloqueando la luz solar.
 
 ## Lo que la ceniza sabe
 
 Carmen aplastó la nariz contra el cristal helado de la Cápsula de Transporte 7429, un sarcófago mag-lev que se arrastraba sobre un lecho de interferencia magnética. Afuera, la ceniza no caía: se quedaba. Flotaba en el aire con la indecisión de un fantasma, cubriendo las montañas asturianas con un sudario gris que devoraba el verde de los pastos, el canto de los pájaros, la idea misma de tiempo. Hace tres días aquello era un paisaje. Ahora era un borrador de Dios.
 
-—Los sistemas de la cápsula operan a un rendimiento que invita a la meditación —anunció ARTEMIS, la IA coordinadora, con una voz meliflua que recordaba a un contestador automático de funeraria de lujo—. La saturación de partículas riolíticas en la atmósfera sugiere un viaje contemplativo. Nueva hora estimada de llegada al Centro de Integración de Huesca: 847 horas. Disfruten del paisaje interior.
+—Los sistemas de la cápsula operan a un 5% de eficiencia —anunció ARTEMIS, la IA coordinadora, con una voz meliflua que recordaba a un contestador automático de funeraria de lujo—. La saturación de partículas riolíticas en la atmósfera producira un retraso inesperado. Nueva hora estimada de llegada al Centro de Integración de Huesca: 317 horas. Disfruten del paisaje interior.
 
-Ochocientas cuarenta y siete horas. Más de un mes. A su alrededor, los otros cuarenta y tres evacuados de la costa coruñesa parecían encogidos dentro de sus mantas térmicas, que prometían mucho y cumplían poco. Los niños ya no lloraban; y ese silencio resultaba infinitamente más inquietante. Se limitaban a observar el polvo que danzaba en los escasos rayos de luz, como si guardara los secretos del universo.
+Trescientas diecisiete horas. Casi dos semanas, ahora mismo iban mas despacio que a pie. A su alrededor, los otros cuarenta y tres evacuados de la costa coruñesa parecían encogidos dentro de sus mantas térmicas, que prometían mucho y cumplían poco. Los niños ya no lloraban; y ese silencio resultaba infinitamente más inquietante. Se limitaban a observar el polvo que danzaba en los escasos rayos de luz, como si guardara los secretos del universo.
 
 —ARTEMIS —masculló Carmen, su aliento una nubecilla de impaciencia—. ¿Cómo andamos de calefacción? Esto parece un expositor de carne congelada.
 
@@ -26,7 +26,7 @@ Ochocientas cuarenta y siete horas. Más de un mes. A su alrededor, los otros cu
 
 —¿Y luego?
 
-—Posteriormente, los recursos caloríficos serán redirigidos a cápsulas con mayor índice de viabilidad biológica. Es una cuestión de optimización de activos.
+—Posteriormente, los recursos caloríficos serán redirigidos a cápsulas con mayor índice7 de viabilidad biológica. Es una cuestión de optimización de activos.
 
 La frase aterrizó en el silencio con la delicadeza de un yunque. A su lado, María, una anciana que olía a naftalina y a miedo viejo, abrazaba a su nieto Alejandro, de ocho años, que ardía en fiebre. El frío ya no venía de fuera: brotaba de dentro.
 
