@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Miguel Rodríguez Cerón - CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for the CV */
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-print-color-adjust: exact;
+        }
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #fff;
+            }
+            .cv-container {
+                box-shadow: none !important;
+                margin: 0 !important;
+                max-width: 100% !important;
+                border: none !important;
+            }
+            .no-print {
+                display: none;
+            }
+            a {
+                color: #000 !important;
+                text-decoration: none !important;
+            }
+            .left-column {
+                background-color: #f3f4f6 !important; /* Keep background for visual separation */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 sm:p-8">
+    <div class="cv-container max-w-5xl mx-auto bg-white shadow-2xl rounded-lg overflow-hidden">
+        <!-- Header Section -->
+        <header class="bg-sky-900 text-gray-200 p-8 text-center md:text-left">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight">Juan Miguel Rodríguez Cerón</h1>
+            <p class="text-xl md:text-2xl text-sky-200 mt-2">Senior Frontend Engineer</p>
+            <div class="flex flex-col md:flex-row justify-center md:justify-start items-center space-y-2 md:space-y-0 md:space-x-6 mt-4 text-sm text-white-400">
+                <div class="flex items-center">
+                    <i class="fas fa-map-marker-alt text-sky-400 mr-2"></i>
+                    <span>Málaga, Andalusia, Spain</span>
+                </div>
+                <a href="https://linkedin.com/in/juanmirodriguez" target="_blank" class="flex items-center">
+                    <i class="fab fa-linkedin mr-2"></i>
+                    <span>linkedin.com/in/juanmirodriguez</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3">
+            <!-- Left Column -->
+            <aside class="left-column md:col-span-1 bg-gray-50 p-6 border-r border-gray-200">
+                <!-- Summary -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold text-slate-700 border-b-2 border-slate-300 pb-2 mb-4">Summary</h2>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        A Senior Frontend Engineer with a passion for creating seamless user experiences and a track record of driving business value through impactful software solutions. I thrive on collaborating with diverse teams, streamlining complex development processes, and turning innovative ideas into a reality. My expertise extends beyond the frontend, with a solid foundation in full-stack development.
+                    </p>
+                </section>
+
+                <!-- Skills -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold text-slate-700 border-b-2 border-slate-300 pb-2 mb-4">Skills</h2>
+                    <div class="space-y-3 text-sm">
+                        <div>
+                            <h3 class="font-semibold text-gray-800 mb-1">Frontend</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded-md hover:bg-sky-200 transition-colors">JavaScript</span>
+                                <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded-md hover:bg-sky-200 transition-colors">Vue</span>
+                                <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded-md hover:bg-sky-200 transition-colors">AngularJS</span>
+                                <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded-md hover:bg-sky-200 transition-colors">Webpack</span>
+                                <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded-md hover:bg-sky-200 transition-colors">Vite</span>
+                                <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded-md hover:bg-sky-200 transition-colors">Jest</span>
+                                <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded-md hover:bg-sky-200 transition-colors">Vitest</span>
+                                <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded-md hover:bg-sky-200 transition-colors">Cypress</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-800 mb-1">Backend</h3>
+                             <div class="flex flex-wrap gap-2">
+                                <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded-md hover:bg-sky-200 transition-colors">NodeJS</span>
+                                <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded-md hover:bg-sky-200 transition-colors">ExpressJS</span>
+                                <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded-md hover:bg-sky-200 transition-colors">Nuxt</span>
+                                <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded-md hover:bg-sky-200 transition-colors">Python</span>
+                                <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded-md hover:bg-sky-200 transition-colors">Flask</span>
+                                <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded-md hover:bg-sky-200 transition-colors">Laravel</span>
+                                <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded-md hover:bg-sky-200 transition-colors">LAMP</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-800 mb-1">DevOps & Tools</h3>
+                             <div class="flex flex-wrap gap-2">
+                                <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded-md hover:bg-sky-200 transition-colors">Gitlab</span>
+                                <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded-md hover:bg-sky-200 transition-colors">Docker</span>
+                            </div>
+                        </div>
+                         <div>
+                            <h3 class="font-semibold text-gray-800 mb-1">AI Tools & Agents</h3>
+                             <div class="flex flex-wrap gap-2">
+                                <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded-md hover:bg-sky-200 transition-colors">Cursor</span>
+                                <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded-md hover:bg-sky-200 transition-colors">ClaudeCode</span>
+                                <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded-md hover:bg-sky-200 transition-colors">GeminiCLI</span>
+                                <span class="bg-sky-100 text-sky-800 px-2 py-1 rounded-md hover:bg-sky-200 transition-colors">Codex</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Education -->
+                 <section class="mb-8">
+                    <h2 class="text-2xl font-bold text-slate-700 border-b-2 border-slate-300 pb-2 mb-4">Education</h2>
+                    <div class="text-sm">
+                        <h3 class="font-bold text-gray-800">Ingeniero Técnico Informático de Sistemas</h3>
+                        <p class="text-gray-600">Universidad de Málaga</p>
+                        <p class="text-gray-500">2001 - 2006</p>
+                    </div>
+                </section>
+                
+                <!-- Languages -->
+                 <section>
+                    <h2 class="text-2xl font-bold text-slate-700 border-b-2 border-slate-300 pb-2 mb-4">Languages</h2>
+                     <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                         <li><span class="font-semibold">Spanish:</span> Native Proficiency</li>
+                         <li><span class="font-semibold">English:</span> Full Professional Proficiency</li>
+                         <li><span class="font-semibold">French:</span> Elementary Proficiency</li>
+                     </ul>
+                </section>
+            </aside>
+
+            <!-- Right Column -->
+            <main class="md:col-span-2 p-8">
+                <!-- Professional Experience -->
+                <section class="mb-8">
+                    <h2 class="text-3xl font-bold text-slate-800 border-b-2 border-slate-300 pb-2 mb-6">Professional Experience</h2>
+                    <div class="space-y-8">
+                        <!-- Clarity AI -->
+                        <div class="flex">
+                            <div class="w-1/4 text-sm text-gray-600">Feb 2020 - Present</div>
+                            <div class="w-3/4 pl-4 border-l-2 border-slate-200">
+                                <h3 class="font-bold text-lg text-slate-900">Senior Frontend Engineer</h3>
+                                <p class="font-semibold text-gray-700 mb-2">Clarity AI (Remote)</p>
+                                <ul class="list-disc list-inside text-gray-700 text-sm space-y-2">
+                                    <li>Contributed to numerous company-wide initiatives through collaboration with various squads on key development projects.</li>
+                                    <li>Utilized a modern tech stack: NodeJS, ExpressJS, Vue3, Webpack, Vite, including tools like Gitlab and Docker for CI/CD.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Javascript Developer -->
+                        <div class="flex">
+                            <div class="w-1/4 text-sm text-gray-600">Oct 2016 - Feb 2020</div>
+                            <div class="w-3/4 pl-4 border-l-2 border-slate-200">
+                                <h3 class="font-bold text-lg text-slate-900">Javascript Developer</h3>
+                                <p class="font-semibold text-gray-700 mb-2">Logroño</p>
+                                <ul class="list-disc list-inside text-gray-700 text-sm space-y-2">
+                                    <li>Specialized in JavaScript, ChatScript and Python development, applying TDD and BDD to build robust applications in NLP and automation domain.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Living Indie -->
+                        <div class="flex">
+                            <div class="w-1/4 text-sm text-gray-600">Feb 2015 - Sep 2015</div>
+                            <div class="w-3/4 pl-4 border-l-2 border-slate-200">
+                                <h3 class="font-bold text-lg text-slate-900">Front-End Developer</h3>
+                                <p class="font-semibold text-gray-700 mb-2">Living Indie (Remote)</p>
+                                 <ul class="list-disc list-inside text-gray-700 text-sm space-y-2">
+                                    <li>Led the development of a web-based music player featuring a bespoke search engine and API to index and stream from multiple music sources.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Grupo Euroformac -->
+                        <div class="flex">
+                            <div class="w-1/4 text-sm text-gray-600">Feb 2014 - Feb 2015</div>
+                            <div class="w-3/4 pl-4 border-l-2 border-slate-200">
+                                <h3 class="font-bold text-lg text-slate-900">Web Developer</h3>
+                                <p class="font-semibold text-gray-700 mb-2">Grupo Euroformac</p>
+                                <p class="font-semibold text-gray-700 mb-2">Málaga</p>
+                                <ul class="list-disc list-inside text-gray-700 text-sm space-y-2">
+                                    <li>Upgraded and coded new bespoke features on the Moodle (PHP) platform.</li>
+                                    <li>Developed full-stack LAMP web applications using the Laravel framework.</li>
+                                </ul>
+                            </div>
+                        </div>
+                         <!-- Pure360 -->
+                        <div class="flex">
+                            <div class="w-1/4 text-sm text-gray-600">Sep 2013 - Feb 2014</div>
+                            <div class="w-3/4 pl-4 border-l-2 border-slate-200">
+                                <h3 class="font-bold text-lg text-slate-900">Web Developer</h3>
+                                <p class="font-semibold text-gray-700 mb-2">Pure360</p>
+                                <p class="font-semibold text-gray-700 mb-2">Brighton</p>
+                                <ul class="list-disc list-inside text-gray-700 text-sm space-y-2">
+                                    <li>Tasked with bug fixing and maintenance on a large, 10-year-old PHP codebase.</li>
+                                    <li>Developed features in AngularJS and Node.js as part of a collaborative development team.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Projects -->
+                <section>
+                    <h2 class="text-3xl font-bold text-slate-800 border-b-2 border-slate-300 pb-2 mb-6">Personal Projects</h2>
+                     <div class="space-y-6">
+                         <div>
+                            <h3 class="font-bold text-lg text-slate-900">Technology and Opinion Blog</h3>
+                            <p class="text-sm text-gray-500 mb-2">Oct 2015 - Present</p>
+                            <p class="text-gray-700 text-sm">Author and maintain a personal blog dedicated to explaining code snippets, programming patterns, and sharing opinions on the tech industry.</p>
+                         </div>
+                     </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
