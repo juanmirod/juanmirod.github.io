@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Memoria Secuencial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            touch-action: manipulation; /* Evita el zoom al tocar dos veces en móviles */
+        }
+        .symbol-card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .symbol-card.highlight {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.7);
+            background-color: #3b82f6;
+            color: white;
+        }
+        .symbol-card.correct {
+            background-color: #22c55e;
+            color: white;
+            transform: scale(1.05);
+        }
+        .symbol-card.incorrect {
+            background-color: #ef4444;
+            color: white;
+            animation: shake 0.5s;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+            20%, 40%, 60%, 80% { transform: translateX(10px); }
+        }
+        .star-container {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .star-svg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        .score-text {
+            position: relative;
+            z-index: 2;
+            font-weight: 700;
+            color: #4a4a4a;
+        }
+        h1,h2 {
+            font-family: 'Chewy';
+        }
+        /* Ocultar scrollbars */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    </style>
+</head>
+<body class="bg-blue-50 text-gray-800 flex items-center justify-center min-h-screen">
+<body class="bg-blue-50 text-gray-800 min-h-screen">
+    <!-- Header Bar -->
+    <header class="w-full fixed top-0 left-0 bg-blue-600 text-white shadow-lg z-50">
+        <div class="max-w-2xl mx-auto px-4 py-3 flex items-center justify-center">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-wide">Fruits Memory</h1>
+        </div>
+    </header>
+
+    <!-- Main Content (add top padding for header) -->
+    <div class="flex items-center justify-center w-full pt-20">
+    <div id="game-container" class="w-full max-w-2xl mx-auto p-4 md:p-6 text-center">
+        
+        <!-- Pantalla de Inicio -->
+        <div id="start-screen" class="flex flex-col items-center justify-center h-full">
+            <!-- Removed duplicate game name, now in header -->
+            <p class="text-lg text-gray-600 mb-8 max-w-md">Observa la secuencia de símbolos y repítela en el mismo orden. ¡Veamos cuántos puedes recordar!</p>
+            <button id="start-button" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full text-xl shadow-lg transform hover:scale-105 transition-transform duration-200">
+                Empezar a Jugar
+            </button>
+        </div>
+
+        <!-- Pantalla de Juego -->
+        <div id="game-screen" class="hidden">
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-2xl md:text-3xl font-bold text-blue-600">Nivel: <span id="level-display">1</span></h1>
+                <p id="message-display" class="text-lg font-semibold text-gray-700 h-8"></p>
+            </div>
+
+            <!-- Contenedor para mostrar la secuencia -->
+            <div id="sequence-display" class="mb-6 bg-white rounded-2xl shadow-inner p-4 min-h-[80px] flex items-center justify-center">
+                 <!-- El símbolo actual de la secuencia se mostrará aquí -->
+            </div>
+
+            <!-- Contenedor para los botones de respuesta -->
+            <div id="input-grid" class="grid grid-cols-3 sm:grid-cols-4 gap-3 md:gap-4">
+                <!-- Los botones se generan con JS -->
+            </div>
+        </div>
+
+        <!-- Pantalla Final -->
+        <div id="game-over-screen" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4">
+            <div class="bg-white rounded-3xl shadow-2xl p-8 text-center flex flex-col items-center max-w-sm w-full">
+                <h2 class="text-4xl font-bold text-yellow-500 mb-2">¡Felicidades!</h2>
+                <p class="text-gray-600 mb-4">Has logrado memorizar una secuencia de:</p>
+                
+                <div class="star-container mb-4">
+                    <svg class="star-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#FFD700" stroke="#FFD700" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" />
+                    </svg>
+                    <span id="final-score" class="score-text text-6xl">0</span>
+                </div>
+                 <p class="text-gray-600 mb-6 text-xl font-medium">frutas</p>
+
+                <button id="play-again-button" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition-transform duration-200">
+                    Jugar de nuevo
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // --- Elementos del DOM ---
+        const startScreen = document.getElementById('start-screen');
+        const gameScreen = document.getElementById('game-screen');
+        const gameOverScreen = document.getElementById('game-over-screen');
+        
+        const startButton = document.getElementById('start-button');
+        const playAgainButton = document.getElementById('play-again-button');
+        
+        const levelDisplay = document.getElementById('level-display');
+        const messageDisplay = document.getElementById('message-display');
+        const sequenceDisplay = document.getElementById('sequence-display');
+        const inputGrid = document.getElementById('input-grid');
+        const finalScore = document.getElementById('final-score');
+
+        // --- Símbolos del juego ---
+        // Usamos emojis por ser visualmente distintos y atractivos
+        const SYMBOLS = ['🍎', '🍌', '🍇', '🍉', '🍓', '🍑', '🥝', '🍍', '🥥', '🥭', '🍋', '🍊'];
+
+        // --- Estado del juego ---
+        let sequence = [];
+        let playerSequence = [];
+        let level = 0;
+        let isPlayerTurn = false;
+        let isShowingSequence = false;
+
+        // --- Lógica del juego ---
+
+        function initializeGame() {
+            // Genera los botones de símbolos una sola vez
+            inputGrid.innerHTML = '';
+            SYMBOLS.forEach(symbol => {
+                const button = document.createElement('button');
+                button.classList.add('symbol-card', 'text-4xl', 'md:text-5xl', 'p-4', 'bg-white', 'rounded-2xl', 'shadow-md', 'focus:outline-none', 'focus:ring-2', 'focus:ring-blue-400', 'disabled:opacity-50', 'disabled:cursor-not-allowed');
+                button.textContent = symbol;
+                button.dataset.symbol = symbol;
+                button.disabled = true;
+                button.addEventListener('click', () => handlePlayerInput(symbol));
+                inputGrid.appendChild(button);
+            });
+
+            startButton.addEventListener('click', startGame);
+            playAgainButton.addEventListener('click', startGame);
+        }
+
+        function startGame() {
+            sequence = [];
+            playerSequence = [];
+            level = 0;
+            startScreen.classList.add('hidden');
+            gameOverScreen.classList.add('hidden');
+            gameScreen.classList.remove('hidden');
+            nextTurn();
+        }
+
+        function nextTurn() {
+            isPlayerTurn = false;
+            playerSequence = [];
+            level++;
+            levelDisplay.textContent = level;
+            messageDisplay.textContent = 'Observa...';
+            disableInputButtons();
+
+            // Añadir un nuevo símbolo a la secuencia
+            const randomSymbol = SYMBOLS[Math.floor(Math.random() * SYMBOLS.length)];
+            sequence.push(randomSymbol);
+
+            // Mostrar la secuencia al jugador
+            showSequence();
+        }
+
+        async function showSequence() {
+            isShowingSequence = true;
+            await sleep(500); // Pausa antes de empezar
+            
+            for (const symbol of sequence) {
+                sequenceDisplay.textContent = symbol;
+                sequenceDisplay.classList.add('text-6xl', 'font-bold');
+                
+                // Resaltar el botón correspondiente
+                const button = document.querySelector(`[data-symbol="${symbol}"]`);
+                if (button) button.classList.add('highlight');
+
+                await sleep(800); // Tiempo que se muestra el símbolo
+
+                sequenceDisplay.textContent = '';
+                if (button) button.classList.remove('highlight');
+                
+                await sleep(200); // Pausa entre símbolos
+            }
+            
+            isShowingSequence = false;
+            startPlayerTurn();
+        }
+
+        function startPlayerTurn() {
+            isPlayerTurn = true;
+            messageDisplay.textContent = '¡Tu turno!';
+            enableInputButtons();
+        }
+
+        function handlePlayerInput(symbol) {
+            if (!isPlayerTurn || isShowingSequence) return;
+
+            playerSequence.push(symbol);
+            const currentStep = playerSequence.length - 1;
+
+            const button = document.querySelector(`[data-symbol="${symbol}"]`);
+
+            // Comprobar si el símbolo es correcto
+            if (playerSequence[currentStep] === sequence[currentStep]) {
+                // Feedback visual de acierto
+                button.classList.add('correct');
+                setTimeout(() => button.classList.remove('correct'), 300);
+
+                // Si ha completado la secuencia, pasar de turno
+                if (playerSequence.length === sequence.length) {
+                    isPlayerTurn = false;
+                    messageDisplay.textContent = '¡Correcto!';
+                    disableInputButtons();
+                    setTimeout(nextTurn, 1000);
+                }
+            } else {
+                // Feedback visual de error
+                button.classList.add('incorrect');
+                setTimeout(() => button.classList.remove('incorrect'), 500);
+                
+                // Fin del juego
+                endGame();
+            }
+        }
+        
+        function endGame() {
+            isPlayerTurn = false;
+            messageDisplay.textContent = '¡Oh no! Inténtalo de nuevo.';
+            finalScore.textContent = level - 1;
+            gameScreen.classList.add('hidden');
+            gameOverScreen.classList.remove('hidden');
+        }
+
+        // --- Funciones de Utilidad ---
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        function enableInputButtons() {
+            document.querySelectorAll('.symbol-card').forEach(btn => btn.disabled = false);
+        }
+
+        function disableInputButtons() {
+            document.querySelectorAll('.symbol-card').forEach(btn => btn.disabled = true);
+        }
+
+        // --- Iniciar el juego ---
+        document.addEventListener('DOMContentLoaded', initializeGame);
+    </script>
+</body>
+</html>
