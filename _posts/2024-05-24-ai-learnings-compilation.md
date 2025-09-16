@@ -19,6 +19,10 @@ In the same line but more code intensive it is really illustrative the video [Le
 
 And another complementary material is the [playlist in 3Blue1Brown about neural networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) it is great to have a visual explanation and a better mental model of what a neural network is, how it works conceptually and mathematically and bottom up, from an example with a couple of layers of NN to transformers and attention.
 
+---
+
+# Video recommendations/reviews
+
 ## Geoffrey Hinton
 
 I watched the other day an interview to Geoffrey Hinton, it's interesting to listen to him because he has a lot of perspective from many years of experience and working with a lot of people, the interview is:
