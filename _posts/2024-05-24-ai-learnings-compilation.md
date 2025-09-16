@@ -9,6 +9,16 @@ It's been years since I am interested in AI, I read and I listen to podcasts and
 it this way, because it is the way that works for me and motivates me, but I want to try to be more intentional and write down what I do and what I learn. This is an informal journal of those learnings,
 maybe in the future I will decide to do some kind of curriculum, but this is good enough to start.
 
+## Learning about LLMs
+
+To learn more about LLMs and embeddings' models and how they really are trained and a little bit of the theory so I have a more complete understanding I am reading:
+
+[Hands-On Large Language Models](https://www.llm-book.com/) - This book by Jay Alammar is a great step by step guide through the different types of models, their applications, how to use them and a bit of the theory. Complementary to the book there are a lot of resources linked in the book and created by Jay Alammar like [The ilustrated transformer](https://jalammar.github.io/illustrated-transformer/) or the course in Deeplearning [How transformers work](https://www.deeplearning.ai/short-courses/how-transformer-llms-work/). I recommend all of them as this is a pretty dense topic and seeing it in different formats will help to digest it.
+
+In the same line but more code intensive it is really illustrative the video [Let's build GPT](https://www.youtube.com/watch?v=kCc8FmEb1nY) by Andrej Karpathy. If you have no idea of Pytorch I recommend reading first the [60 minutes blitz to pytorch](https://docs.pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html) and playing a bit with the examples or even continue with the pytorch tutorials. That way you will understand much better the code that Karpathy explains in the video.
+
+And another complementary material is the [playlist in 3Blue1Brown about neural networks](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) it is great to have a visual explanation and a better mental model of what a neural network is, how it works conceptually and mathematically and bottom up, from an example with a couple of layers of NN to transformers and attention.
+
 ## Geoffrey Hinton
 
 I watched the other day an interview to Geoffrey Hinton, it's interesting to listen to him because he has a lot of perspective from many years of experience and working with a lot of people, the interview is:
