@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: ¿Por qué hay gente en contra de "la IA"?
 layout: post
 tags: [opinión]
