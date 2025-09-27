@@ -15,6 +15,16 @@
         body {
             font-family: 'Inter', sans-serif;
             -webkit-print-color-adjust: exact;
+            background-color: #c7c7c7;
+            background-image:  
+            linear-gradient(30deg, #f9f9f9 12%, transparent 12.5%, transparent 87%, #f9f9f9 87.5%, #f9f9f9), 
+            linear-gradient(150deg, #f9f9f9 12%, transparent 12.5%, transparent 87%, #f9f9f9 87.5%, #f9f9f9), 
+            linear-gradient(30deg, #f9f9f9 12%, transparent 12.5%, transparent 87%, #f9f9f9 87.5%, #f9f9f9), 
+            linear-gradient(150deg, #f9f9f9 12%, transparent 12.5%, transparent 87%, #f9f9f9 87.5%, #f9f9f9), 
+            linear-gradient(60deg, #e8e8e8 25%, transparent 25.5%, transparent 75%, #e8e8e8 75%, #e8e8e8), 
+            linear-gradient(60deg, #e8e8e8 25%, transparent 25.5%, transparent 75%, #e8e8e8 75%, #e8e8e8);
+            background-size: 38px 67px;
+            background-position: 0 0, 0 0, 19px 33px, 19px 33px, 0 0, 19px 33px;
         }
         @media print {
             body {
@@ -55,6 +65,10 @@
                 <a href="https://linkedin.com/in/juanmirodriguez" target="_blank" class="flex items-center">
                     <i class="fab fa-linkedin mr-2"></i>
                     <span>linkedin.com/in/juanmirodriguez</span>
+                </a>
+                <a href="https://github.com/juanmirod" target="_blank" class="flex items-center">
+                    <i class="fab fa-github mr-2"></i>
+                    <span>https://github.com/juanmirod</span>
                 </a>
             </div>
         </header>
@@ -213,7 +227,12 @@
                     <h2 class="text-3xl font-bold text-slate-800 border-b-2 border-slate-300 pb-2 mb-6">Personal Projects</h2>
                      <div class="space-y-6">
                          <div>
-                            <h3 class="font-bold text-lg text-slate-900">Technology and Opinion Blog</h3>
+                            <h3 class="font-bold text-lg text-slate-900">
+                                <a target="_blank" class="flex items-center text-gray-700" href="http://juanmirod.github.io/">
+                                    <i class="fa-solid fa-globe mr-2"> </i>
+                                    <span>Technology and Opinion Blog</span>
+                                </a>
+                            </h3>
                             <p class="text-sm text-gray-500 mb-2">Oct 2015 - Present</p>
                             <p class="text-gray-700 text-sm">Author and maintain a personal blog dedicated to explaining code snippets, programming patterns, and sharing opinions on the tech industry.</p>
                          </div>
