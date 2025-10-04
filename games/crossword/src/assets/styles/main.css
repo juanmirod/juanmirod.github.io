@@ -1,0 +1,461 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Color palette */
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --success: #059669;
+  --error: #dc2626;
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --text: #1e293b;
+  --text-light: #64748b;
+  --border: #cbd5e1;
+  --border-light: #e2e8f0;
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* Typography */
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.game-layout {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .game-layout {
+    grid-template-columns: 1fr 300px;
+  }
+}
+
+/* Game grid styles */
+.crossword-grid {
+  display: grid;
+  gap: 2px;
+  background-color: var(--background);
+  padding: 2px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.grid-square {
+  width: 100%;
+  aspect-ratio: 1;
+  min-width: 32px;
+  max-width: 50px;
+  border: 2px solid var(--border-light);
+  background-color: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(0.875rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  user-select: none;
+}
+
+@media (min-width: 480px) {
+  .grid-square {
+    min-width: 36px;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-square {
+    min-width: 40px;
+  }
+}
+
+.grid-square.empty {
+  background-color: var(--background);
+  border-color: var(--background);
+  cursor: default;
+  opacity: 0.3;
+}
+
+.grid-square.unfilled {
+  background-color: var(--surface);
+  border-color: var(--border);
+}
+
+.grid-square.unfilled:hover {
+  border-color: var(--primary);
+  transform: scale(1.05);
+}
+
+.grid-square.selected {
+  border-color: var(--primary);
+  background-color: #dbeafe;
+  box-shadow: 0 0 0 2px var(--primary);
+  transform: scale(1.05);
+}
+
+.grid-square.correct {
+  border-color: var(--success);
+  background-color: #dcfce7;
+  color: var(--success);
+  animation: correctPulse 0.6s ease-out;
+}
+
+.grid-square.incorrect {
+  border-color: var(--error);
+  background-color: #fee2e2;
+  color: var(--error);
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes correctPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+@keyframes celebration {
+  0% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.1) rotate(5deg); }
+  50% { transform: scale(1.2) rotate(-5deg); }
+  75% { transform: scale(1.1) rotate(5deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+/* Word list styles */
+.word-list {
+  background-color: var(--surface);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.word-list h2 {
+  color: var(--primary);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.words {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.word-item {
+  padding: 0.75rem;
+  background-color: var(--background);
+  border-radius: 6px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+}
+
+.word-item.completed {
+  background-color: #dcfce7;
+  color: var(--success);
+  text-decoration: line-through;
+  animation: celebration 0.8s ease-out;
+}
+
+/* Progress bar */
+.progress-container {
+  background-color: var(--surface);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background-color: var(--border-light);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--success));
+  border-radius: 6px;
+  transition: width 0.5s ease;
+}
+
+/* On-screen keyboard */
+.keyboard-overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 1rem;
+  box-shadow: var(--shadow-lg);
+  z-index: 100;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.keyboard-overlay.show {
+  transform: translateY(0);
+}
+
+.keyboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.keyboard-title {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.keyboard-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-light);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.keyboard-close:hover {
+  background-color: var(--border-light);
+}
+
+.keyboard-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.keyboard-key {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 44px;
+  text-transform: uppercase;
+}
+
+.keyboard-key:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.keyboard-key:active {
+  transform: translateY(0);
+}
+
+.keyboard-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.keyboard-action {
+  background-color: var(--text-light);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.keyboard-action:hover {
+  background-color: var(--text);
+}
+
+.keyboard-action.clear {
+  background-color: var(--error);
+}
+
+.keyboard-action.clear:hover {
+  background-color: #b91c1c;
+}
+
+/* Game status and completion */
+.game-status {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.completion-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 1rem;
+}
+
+.completion-content {
+  background-color: var(--surface);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: var(--shadow-lg);
+  animation: celebration 1s ease-out;
+}
+
+.completion-title {
+  font-size: 2rem;
+  color: var(--success);
+  margin-bottom: 1rem;
+}
+
+.completion-message {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  color: var(--text-light);
+}
+
+/* Buttons */
+.btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 44px;
+}
+
+.btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn.success {
+  background-color: var(--success);
+}
+
+.btn.success:hover {
+  background-color: #047857;
+}
+
+/* Responsive design */
+@media (max-width: 767px) {
+  .container {
+    padding: 0.5rem;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  .keyboard-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .keyboard-key {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles for keyboard navigation */
+.grid-square:focus,
+.keyboard-key:focus,
+.btn:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --border: #000000;
+    --text: #000000;
+    --background: #ffffff;
+  }
+}
