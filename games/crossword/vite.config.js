@@ -4,10 +4,8 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [vue()],
   base: './', // Relative paths instead of absolute
-  entry: 'crossword.html',
   build: {
-    outDir: '../',
-    emptyOutDir: false, // Don't delete the entire folder
+    outDir: 'dist',
     assetsDir: 'assets', // Put JS/CSS in an assets subfolder
     rollupOptions: {
       input: {
@@ -17,6 +15,6 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-    open: '/games/crossword/crossword.html'
+    open: true
   }
 })

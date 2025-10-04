@@ -55,6 +55,8 @@ jobs:
       - name: Build crossword game
         run: npm run build
         working-directory: games/crossword
+      - name: Clean up crossword build artifacts
+        run: rm -rf games/crossword/dist
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
