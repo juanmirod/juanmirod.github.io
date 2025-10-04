@@ -86,14 +86,14 @@ h2 {
 .grid-square {
   width: 100%;
   aspect-ratio: 1;
-  min-width: 32px;
+  min-width: 24px;
   max-width: 50px;
   border: 2px solid var(--border-light);
   background-color: var(--surface);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(0.875rem, 2.5vw, 1.5rem);
+  font-size: clamp(0.75rem, 2.5vw, 1.5rem);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -424,13 +424,35 @@ h2 {
     font-size: 1.5rem;
   }
   
+  .crossword-grid {
+    padding: 1px;
+    gap: 1px;
+  }
+  
+  .grid-square {
+    min-width: 20px;
+    font-size: clamp(0.625rem, 2vw, 1rem);
+    border-width: 1px;
+  }
+  
+  .keyboard-overlay {
+    padding: 0.75rem;
+  }
+  
   .keyboard-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.2rem;
   }
   
   .keyboard-key {
-    padding: 0.75rem;
-    font-size: 1rem;
+    padding: 0.5rem;
+    font-size: 0.5rem;
+    min-height: 36px;
+  }
+  
+  .keyboard-action {
+    padding: 0.5rem;
+    font-size: 0.875rem;
   }
 }
 
