@@ -1,5 +1,5 @@
 # Use a newer Ruby version for better compatibility
-FROM ruby:3.2
+FROM ruby:3.2-slim
 
 # Set environment variables
 ENV LANG=C.UTF-8 \
