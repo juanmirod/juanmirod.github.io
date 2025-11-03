@@ -51,7 +51,7 @@ Imagen que muestra dónde cae el [IQ de Terence Tao dentro de la gráfica de IQ]
 
 Pero ¿entonces qué? ¿Somos "el tope" de la inteligencia? Visto toda esta variación no parece que sea así. Parece más bien que hay muchas inteligencias y que unas serán mejores para ciertas tareas que otras.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zsXP8qeFF6A?si=8CEMQGEaYFrtgDgK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nTgeLEWr614?si=k3T5lOHnEmJxYz2Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Los animales no encajan en nuestros tests de IQ, pero sí demuestran inteligencia de muchas formas [cada vez mejor documentadas][4]. Hay registros de cuervos resolviendo rompecabezas, de chimpancés recordando grupos de números en un abrir y cerrar de ojos (en el video de arriba), de orcas organizando planes de caza complejos, simios usando herramientas, lenguajes y dialectos animales, y animales "bilingües" (que son capaces de entender dos dialectos de regiones diferentes cuando se les muda de una a otra)... Y eso son solo inteligencias que nosotros podemos apreciar. Cada vez está más claro que los animales no tienen el cerebro solo para llevarlo de un sitio para otro o para gestionar sus órganos internos, sino que muchos de ellos son capaces de recordar, planificar, reconocerse, orientarse o coordinarse a niveles que no comprendemos.
 
@@ -79,9 +79,13 @@ En su ensayo ["La década siguiente"](https://situational-awareness.ai/from-agi-
 
 ## ¿Quién tiene razón?
 
-Solo el tiempo lo dirá. Creo que esta gran diferencia de opiniones, a parte del puro interés personal, está una visión diferente de lo que nos hace humanos e inteligentes. Unos miran las habilidades donde las IAs cometen errores y dicen "¿véis? nunca serán como nosotros, no entienden lo que están haciendo" otros miran aquellas tareas en las que la IA destaca o sobrepasa a los humanos y dicen "¿veis? cuando sea así en todas las demás disciplinas será imparable". Pero después de ver toda la variabilidad que hay en los humanos y los animales, y de años de trabajo de ingeniería yo me inclino a pensar que es una cuestión siempre de compromisos, mejorar cada habilidad tiene un coste, determinadas tareas requieren de uso herramientas concretas o de un contexto o de unos datos que la IA aún no ha visto... La gráfica, para mi, será en realidad algo así:
+Solo el tiempo lo dirá. Creo que esta gran diferencia de opiniones, a parte del puro interés personal, está una visión diferente de lo que nos hace humanos e inteligentes. Unos miran las habilidades donde las IAs cometen errores y dicen "¿véis? nunca serán como nosotros, no entienden lo que están haciendo" otros miran aquellas tareas en las que la IA destaca o sobrepasa a los humanos y dicen "¿veis? cuando sea así en todas las demás disciplinas será imparable". Pero después de ver toda la variabilidad que hay en los humanos y los animales, y de años de trabajo de ingeniería yo me inclino a pensar que es una cuestión siempre de compromisos, mejorar cada habilidad tiene un coste, determinadas tareas requieren de uso herramientas concretas o de un contexto o de unos datos que la IA aún no ha visto... La gráfica, para mi, es en realidad algo así:
 
-![Visión intermedia](/public/img/middle_ground.jpg)
+![Visión intermedia](/public/img/inteligencia_star_chart.png)
+
+<small>Gŕafico generado con Google Gemini 2.5 pro (https://gemini.google.com/share/bb37aabfa351)</small>
+
+Es lo que Adrej Karpathy llamó ["Jagged intelligence"](https://x.com/karpathy/status/1816531576228053133?lang=en)
 
 La Inteligencia Artificial General, o por sus siglas en inglés: AGI, será algo que estará en medio de todo ese espectro de inteligencias que exhibimos los humanos. Unas serán buenas en matemáticas y otras en reconocer y hablar sobre enfermedades. Habrá AGIs que no podrán ser "autónomas" aunque tengan algún tipo de memoria persistente y agencia. Como niños a los que hay que cuidar.
 
