@@ -28,9 +28,9 @@ Amara pulled up the holographic display, and the data bloomed between them in la
 
 "But it never crosses the threshold. The chemistry stays complex but never becomes alive. It's like..." she searched for the words, "like watching someone walk toward a door forever without ever reaching it."
 
-Marcus studied the data, his enhanced eyes—grown from his own stem cells in a lab on Mars—scanning faster than she could follow. "Titan, Europa, Enceladus."
+Marcus studied the data, his enhanced eyes, grown from his own stem cells in a lab on Mars, scanning faster than she could follow. "Mars, Titan, Europa, Enceladus."
 
-"Sterile worlds with all the right conditions. Maybe in a few millions years, if the conditions don't change... but we won't be here to see it." Amara felt something cold settle deeper in her chest. "I asked the ASI collective to run the full probability analysis again. I gave it every data point we have—every dead ocean, every silent planet, every empty radio frequency we've monitored for eighty years."
+"Sterile worlds with all the right conditions. Maybe in a few millions years, if the conditions don't change... but we won't be here to see it." Amara felt something cold settle deeper in her chest. "Looking in another solar system would take decades... I asked the ASI collective to run the full probability analysis again. I gave it every data point we have—every dead ocean, every silent planet, every empty radio frequency we've monitored for more than a hundered years."
 
 "Amara—"
 
