@@ -38,6 +38,14 @@
   width: 100%;
 }
 
+.dialogue-line {
+  color: var(--primary-color);
+  font-style: italic;
+}
+
+.dialogue-line::before {
+  content: "- ";
+}
 
 @media only screen and (max-width: 550px) {
   .masthead-title {
