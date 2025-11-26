@@ -12,15 +12,15 @@ Dr. Amara Osei pressed her palm against the observation deck's bio-responsive gl
 
 Behind her, the fusion cores of _Prometheus Station_ maintained their perfect hum, their deuterium-helium reactions so precisely controlled they could run for years without any human maintenance required.
 
-"You've been standing here for two hours."
+> You've been standing here for two hours.
 
 She turned to find Dr. Marcus Reeves floating through the doorway, his pale skin lined with the kind of age that people chose now rather than endure. He'd opted to look seventy because he said it made younger colleagues take him seriously. His silver hair was tied back, and he moved with the practiced grace of someone who'd spent forty years in space.
 
-"The Enceladus probe sent its final data burst," Amara said.
+> The Enceladus probe sent its final data burst.
 
 Marcus stopped his forward momentum with one hand on the wall rail. He was quiet for a moment, and she watched him understand without having to say it. They'd worked together for ten years. He knew what she'd been hoping to find.
 
-"Tell me," he said finally.
+> Tell me
 
 Amara pulled up the holographic display, and the data bloomed between them in layers of spectroscopic analysis and molecular mapping. "The subsurface ocean is there, just like the models predicted. 273 Kelvin, liquid water, complex carbon chains forming spontaneously in hydrothermal vent systems. We found amino acid precursors, lipid-like structures, everything that should lead to self-replicating chemistry."
 
