@@ -99,6 +99,12 @@ La visión humanista no se equivoca en que los millones de años de evolución h
 
 La realidad es que la inteligencia, tanto humana como artificial, es multidimensional, multisensorial y contextual. Un sistema puede ser extraordinariamente capaz en un dominio mientras es básico o incompetente en otro. Por eso me parece tan chocante la visión tanto de uno como el otro campo y no entiendo esta batalla argumentativa que no empieza por reconocer que es reduccionista al asumir que todos los humanos tenemos un sólo nivel de inteligencia y que todos estamos de acuerdo en lo que significa.
 
+## Actualización 04/12/2025
+
+Blaise Agüera y Arcas toca este tema en sus charlas y en su libro "What is intelligence?" que es una teoría sobre cómo la vida y la inteligencia son computacionales, fundamentada en un montón de experimentos y en trabajos académicos. Es una locura y una maravilla de libro lo que llevo hasta ahora, increíblemente bien documentado y fundamentado, con cientos de referencias y además se puede leer online! https://whatisintelligence.antikythera.org/ El TLDR en su charlas por ejemplo en LongNow:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KhSJuqDUJME?si=5RwI-XMA6gN0eMUa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Referencias
 
 Voy a añadir aquí al final algunos videos y enlaces más, además de los que he dejado salpicados por el artículo, para quien quiera seguir aprendiendo sobre estas dos visiones:
