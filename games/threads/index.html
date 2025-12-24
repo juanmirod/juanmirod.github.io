@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shift & Stitch</title>
+    <style>
+        :root {
+            --bg-color: #23212b;
+            --panel-bg: #2c2a35;
+            --fabric-dark: #1a1921;
+            --thread-white: #e0e0e0;
+            --wool-red: #e05555;
+            --wool-blue: #5a8fd6;
+            --wool-green: #5dd889;
+            --wool-yellow: #e8c75a;
+            --accent: #6c63ff;
+            --shadow-soft: 0 8px 20px rgba(0,0,0,0.4);
+            --shadow-inset: inset 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--thread-white);
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            user-select: none;
+        }
+
+        h1 {
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin: 0 0 5px 0;
+            text-transform: uppercase;
+            font-size: 1.8rem;
+            text-shadow: 0 2px 0 rgba(0,0,0,0.5);
+        }
+
+        .subtitle {
+            font-size: 0.85rem;
+            opacity: 0.6;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        /* --- Menu System --- */
+        .menu-screen {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            /* Soft cloth texture - matching loom container */
+            background: 
+                /* Woven horizontal threads */
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 1px,
+                    rgba(255,255,255,0.03) 1px,
+                    rgba(255,255,255,0.03) 2px
+                ),
+                /* Woven vertical threads */
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 1px,
+                    rgba(0,0,0,0.05) 1px,
+                    rgba(0,0,0,0.05) 2px
+                ),
+                /* Subtle fabric grain */
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 4px,
+                    rgba(255,255,255,0.01) 4px,
+                    rgba(255,255,255,0.01) 8px
+                ),
+                /* Base color */
+                linear-gradient(180deg, #2a2835 0%, #23212b 50%, #1e1c25 100%);
+            z-index: 50;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            overflow-y: auto;
+            transition: transform 0.3s ease;
+        }
+        
+        .menu-screen.hidden {
+            transform: translateY(-100%);
+            pointer-events: none;
+        }
+
+        .level-group {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .level-group h3 {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
+        .level-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Level buttons - Clothing button style */
+        .level-btn {
+            width: 46px;
+            height: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Same button gradient as ctrl-btn */
+            background: 
+                radial-gradient(ellipse 60% 40% at 50% 25%, rgba(255,255,255,0.35), transparent 50%),
+                radial-gradient(ellipse 80% 60% at 50% 75%, rgba(0,0,0,0.2), transparent 50%),
+                linear-gradient(160deg, #d4b87a 0%, #c9a86c 30%, #a88a52 70%, #8b7045 100%);
+            border: 3px solid;
+            border-color: #a08060 #7a6040 #6a5030 #9a7050;
+            border-radius: 50%;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+            color: #3d2f1a;
+            transition: all 0.15s ease;
+            box-shadow: 
+                0 4px 0 #5a4530,
+                0 5px 2px rgba(0,0,0,0.4),
+                0 8px 12px rgba(0,0,0,0.3),
+                inset 0 1px 2px rgba(255,255,255,0.4),
+                inset 0 -2px 4px rgba(0,0,0,0.2);
+            text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+        }
+
+        .level-btn:hover {
+            background: 
+                radial-gradient(ellipse 60% 40% at 50% 25%, rgba(255,255,255,0.45), transparent 50%),
+                radial-gradient(ellipse 80% 60% at 50% 75%, rgba(0,0,0,0.15), transparent 50%),
+                linear-gradient(160deg, #e0c88a 0%, #d4b87a 30%, #b89a60 70%, #9a8050 100%);
+            transform: translateY(-2px);
+            box-shadow: 
+                0 6px 0 #5a4530,
+                0 7px 3px rgba(0,0,0,0.4),
+                0 10px 16px rgba(0,0,0,0.35),
+                inset 0 1px 2px rgba(255,255,255,0.5),
+                inset 0 -2px 4px rgba(0,0,0,0.15);
+        }
+        
+        .level-btn:active {
+            transform: translateY(3px);
+            box-shadow: 
+                0 1px 0 #5a4530,
+                0 2px 4px rgba(0,0,0,0.3),
+                inset 0 2px 4px rgba(0,0,0,0.25);
+        }
+
+        .level-btn.completed {
+            background: 
+                radial-gradient(ellipse 60% 40% at 50% 25%, rgba(255,255,255,0.4), transparent 50%),
+                radial-gradient(ellipse 80% 60% at 50% 75%, rgba(0,0,0,0.2), transparent 50%),
+                linear-gradient(160deg, #7ac98a 0%, #5dd889 30%, #4bb872 70%, #3a9860 100%);
+            border-color: #6ab87a #4a9860 #3a8850 #5aa86a;
+            color: #1a3d20;
+            box-shadow: 
+                0 4px 0 #2a6838,
+                0 5px 2px rgba(0,0,0,0.4),
+                0 8px 12px rgba(0,0,0,0.3),
+                inset 0 1px 2px rgba(255,255,255,0.4),
+                inset 0 -2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .level-btn.completed:hover {
+            background: 
+                radial-gradient(ellipse 60% 40% at 50% 25%, rgba(255,255,255,0.5), transparent 50%),
+                radial-gradient(ellipse 80% 60% at 50% 75%, rgba(0,0,0,0.15), transparent 50%),
+                linear-gradient(160deg, #8ad99a 0%, #6de899 30%, #5bc882 70%, #4aa870 100%);
+            box-shadow: 
+                0 6px 0 #2a6838,
+                0 7px 3px rgba(0,0,0,0.4),
+                0 10px 16px rgba(0,0,0,0.35),
+                inset 0 1px 2px rgba(255,255,255,0.5),
+                inset 0 -2px 4px rgba(0,0,0,0.15);
+        }
+
+        .level-btn.locked {
+            opacity: 0.4;
+            pointer-events: none;
+            filter: grayscale(0.6);
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 18px;
+            background: 
+                radial-gradient(ellipse 60% 40% at 50% 25%, rgba(255,255,255,0.3), transparent 50%),
+                linear-gradient(160deg, #d4b87a 0%, #c9a86c 30%, #a88a52 70%, #8b7045 100%);
+            border: 2px solid;
+            border-color: #a08060 #7a6040 #6a5030 #9a7050;
+            color: #3d2f1a;
+            border-radius: 20px;
+            cursor: pointer;
+            z-index: 60;
+            font-weight: bold;
+            font-family: inherit;
+            font-size: 0.85rem;
+            box-shadow: 
+                0 3px 0 #5a4530,
+                0 4px 6px rgba(0,0,0,0.3),
+                inset 0 1px 2px rgba(255,255,255,0.3);
+            transition: all 0.15s ease;
+            text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+        }
+        .back-btn:hover { 
+            transform: translateY(-1px);
+            background: 
+                radial-gradient(ellipse 60% 40% at 50% 25%, rgba(255,255,255,0.4), transparent 50%),
+                linear-gradient(160deg, #e0c88a 0%, #d4b87a 30%, #b89a60 70%, #9a8050 100%);
+            box-shadow: 
+                0 4px 0 #5a4530,
+                0 5px 8px rgba(0,0,0,0.35),
+                inset 0 1px 2px rgba(255,255,255,0.4);
+        }
+        .back-btn:active {
+            transform: translateY(2px);
+            box-shadow: 
+                0 1px 0 #5a4530,
+                inset 0 2px 3px rgba(0,0,0,0.2);
+        }
+
+        .game-layout {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* --- The Main Loom (Center) --- */
+        .loom-container {
+            position: relative;
+            /* Soft cloth texture - linen/canvas look */
+            background: 
+                /* Woven horizontal threads */
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 1px,
+                    rgba(255,255,255,0.03) 1px,
+                    rgba(255,255,255,0.03) 2px
+                ),
+                /* Woven vertical threads */
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 1px,
+                    rgba(0,0,0,0.05) 1px,
+                    rgba(0,0,0,0.05) 2px
+                ),
+                /* Subtle fabric grain */
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 4px,
+                    rgba(255,255,255,0.01) 4px,
+                    rgba(255,255,255,0.01) 8px
+                ),
+                /* Base color with warm tint */
+                linear-gradient(145deg, #3a3845 0%, #2c2a35 50%, #252330 100%);
+            padding: 50px; /* Space for buttons */
+            border-radius: 20px;
+            box-shadow: 
+                var(--shadow-soft),
+                inset 0 1px 0 rgba(255,255,255,0.05),
+                inset 0 -1px 0 rgba(0,0,0,0.2);
+            border: 3px solid #4a4858;
+            border-bottom-color: #2a2835;
+            border-right-color: #2a2835;
+        }
+
+        .grid {
+            position: relative; /* For absolute clones */
+            display: grid;
+            grid-template-columns: repeat(4, 60px);
+            grid-template-rows: repeat(4, 60px);
+            gap: 8px;
+            /* Dark felt/velvet fabric texture */
+            background: 
+                /* Fine woven pattern */
+                repeating-linear-gradient(
+                    0deg,
+                    rgba(255,255,255,0.02) 0px,
+                    transparent 1px,
+                    transparent 3px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.02) 0px,
+                    transparent 1px,
+                    transparent 3px
+                ),
+                /* Soft fuzzy texture */
+                repeating-linear-gradient(
+                    135deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0,0,0,0.1) 2px,
+                    rgba(0,0,0,0.1) 4px
+                ),
+                /* Subtle highlight for depth */
+                radial-gradient(
+                    ellipse 100% 60% at 50% 0%,
+                    rgba(255,255,255,0.04),
+                    transparent 50%
+                ),
+                /* Base dark fabric color */
+                linear-gradient(180deg, #1e1c25 0%, #1a1921 50%, #16141c 100%);
+            padding: 8px;
+            border-radius: 12px;
+            box-shadow: 
+                var(--shadow-inset),
+                inset 0 0 20px rgba(0,0,0,0.3),
+                0 2px 0 rgba(255,255,255,0.03);
+            overflow: hidden; /* Clips the sliding animations */
+            border: 1px solid rgba(0,0,0,0.3);
+        }
+
+        .cell {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            position: relative;
+            /* Transition handles the smooth slide */
+            transition: transform 0.2s ease, filter 0.2s, box-shadow 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Wool/Yarn Texture - fuzzy fibers effect */
+            background-image: 
+                /* Horizontal yarn strands */
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(255,255,255,0.08) 2px,
+                    rgba(255,255,255,0.08) 4px
+                ),
+                /* Vertical yarn strands */
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0,0,0,0.06) 2px,
+                    rgba(0,0,0,0.06) 4px
+                ),
+                /* Fuzzy fiber noise */
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 1px,
+                    rgba(255,255,255,0.05) 1px,
+                    rgba(255,255,255,0.05) 2px
+                ),
+                repeating-linear-gradient(
+                    -45deg,
+                    transparent,
+                    transparent 1px,
+                    rgba(0,0,0,0.04) 1px,
+                    rgba(0,0,0,0.04) 2px
+                ),
+                /* Soft highlight for roundness */
+                radial-gradient(
+                    ellipse 80% 50% at 30% 20%,
+                    rgba(255,255,255,0.2),
+                    transparent 50%
+                ),
+                /* Soft shadow for depth */
+                radial-gradient(
+                    ellipse 80% 50% at 70% 80%,
+                    rgba(0,0,0,0.15),
+                    transparent 50%
+                );
+            box-shadow: 
+                0 4px 0 rgba(0,0,0,0.2),
+                inset 0 1px 2px rgba(255,255,255,0.15),
+                inset 0 -2px 4px rgba(0,0,0,0.1);
+            z-index: 1;
+            /* Soft fuzzy edge */
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .clone-cell {
+            z-index: 5;
+            transition: transform 0.2s ease;
+        }
+
+        /* The "Stitch" look - yarn cross pattern */
+        .cell::after, .clone-cell::after {
+            content: ' ';
+            font-size: 22px;
+            color: rgba(255,255,255,0.25);
+            font-weight: bold;
+            font-family: sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+        }
+
+        /* --- Colors --- */
+        .color-0 { background-color: var(--wool-red); }
+        .color-1 { background-color: var(--wool-blue); }
+        .color-2 { background-color: var(--wool-green); }
+        .color-3 { background-color: var(--wool-yellow); }
+
+        /* --- Controls (Arrows) - Clothes Button Style --- */
+        .ctrl-btn {
+            position: absolute;
+            width: 36px;
+            height: 36px;
+            background: 
+                radial-gradient(ellipse 60% 40% at 50% 25%, rgba(255,255,255,0.35), transparent 50%),
+                radial-gradient(ellipse 80% 60% at 50% 75%, rgba(0,0,0,0.2), transparent 50%),
+                linear-gradient(160deg, #d4b87a 0%, #c9a86c 30%, #a88a52 70%, #8b7045 100%);
+            color: #3d2f1a;
+            border: 3px solid;
+            border-color: #a08060 #7a6040 #6a5030 #9a7050;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 11px;
+            transition: all 0.15s ease;
+            box-shadow: 
+                0 4px 0 #5a4530,
+                0 5px 2px rgba(0,0,0,0.4),
+                0 8px 12px rgba(0,0,0,0.3),
+                inset 0 1px 2px rgba(255,255,255,0.4),
+                inset 0 -2px 4px rgba(0,0,0,0.2);
+            /* Button rim - two holes effect */
+            text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+        }
+        
+        /* Inner button holes decoration */
+        .ctrl-btn::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 50%;
+            box-shadow: 
+                8px 0 0 rgba(0,0,0,0.3),
+                0 8px 0 rgba(0,0,0,0.3),
+                8px 8px 0 rgba(0,0,0,0.3),
+                1px 1px 0 rgba(255,255,255,0.2),
+                9px 1px 0 rgba(255,255,255,0.2),
+                1px 9px 0 rgba(255,255,255,0.2),
+                9px 9px 0 rgba(255,255,255,0.2);
+            top: 50%;
+            left: 50%;
+            transform: translate(-6px, -6px);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .ctrl-btn:hover { 
+            background: 
+                radial-gradient(ellipse 60% 40% at 50% 25%, rgba(255,255,255,0.45), transparent 50%),
+                radial-gradient(ellipse 80% 60% at 50% 75%, rgba(0,0,0,0.15), transparent 50%),
+                linear-gradient(160deg, #e0c88a 0%, #d4b87a 30%, #b89a60 70%, #9a8050 100%);
+            transform: translateY(-2px);
+            box-shadow: 
+                0 6px 0 #5a4530,
+                0 7px 3px rgba(0,0,0,0.4),
+                0 10px 16px rgba(0,0,0,0.35),
+                inset 0 1px 2px rgba(255,255,255,0.5),
+                inset 0 -2px 4px rgba(0,0,0,0.15);
+        }
+        .ctrl-btn:active { 
+            transform: translateY(3px); 
+            box-shadow: 
+                0 1px 0 #5a4530,
+                0 2px 4px rgba(0,0,0,0.3),
+                inset 0 2px 4px rgba(0,0,0,0.25);
+        }
+        
+        /* Disabled state during animation */
+        .ctrl-btn.disabled {
+            opacity: 0.5;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        /* Control Positioning Calculation */
+        /* Top Row - centered with cells */
+        .btn-col-up { top: 7px; }
+        .c0 { left: 70px; } .c1 { left: 138px; } .c2 { left: 206px; } .c3 { left: 274px; }
+
+        /* Bottom Row */
+        .btn-col-down { bottom: 7px; }
+
+        /* Left Column */
+        .btn-row-right { left: 7px; }
+        .r0 { top: 70px; } .r1 { top: 138px; } .r2 { top: 206px; } .r3 { top: 274px; }
+
+        /* Right Column */
+        .btn-row-left { right: 7px; }
+
+        /* --- Target Card --- */
+        .card-panel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: var(--panel-bg);
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-soft);
+            border: 1px dashed rgba(255,255,255,0.2);
+            min-width: 140px;
+        }
+
+        .target-label {
+            font-size: 0.75rem;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #8a8899;
+        }
+
+        .mini-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2px;
+            width: 100px;
+            height: 100px;
+            background: var(--fabric-dark);
+            padding: 4px;
+            border-radius: 4px;
+        }
+
+        .mini-cell {
+            width: 100%;
+            height: 100%;
+            border-radius: 3px;
+            /* Simplified wool texture for mini preview */
+            background-image: 
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 1px,
+                    rgba(255,255,255,0.1) 1px,
+                    rgba(255,255,255,0.1) 2px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 1px,
+                    rgba(0,0,0,0.08) 1px,
+                    rgba(0,0,0,0.08) 2px
+                );
+            box-shadow: inset 0 1px 1px rgba(255,255,255,0.1);
+        }
+
+        .level-badge {
+            margin-top: 15px;
+            background: rgba(255,255,255,0.1);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        /* --- Highlight & Win States --- */
+        .linked-highlight {
+            filter: brightness(1.4);
+            transform: scale(0.92);
+            box-shadow: 0 0 15px rgba(255,255,255,0.2);
+            z-index: 10;
+        }
+
+        .win-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(35, 33, 43, 0.95);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+            z-index: 20;
+            backdrop-filter: blur(4px);
+        }
+        
+        .win-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .win-title {
+            font-size: 1.5rem;
+            color: var(--wool-green);
+            margin-bottom: 10px;
+        }
+
+        .next-btn {
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: var(--accent);
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1rem;
+            box-shadow: 0 4px 10px rgba(108, 99, 255, 0.4);
+            transition: transform 0.2s;
+        }
+
+        .next-btn:hover { transform: scale(1.05); }
+
+        /* Mobile tweaks */
+        @media (max-width: 600px) {
+            .game-layout { flex-direction: column-reverse; gap: 30px; }
+            .grid { 
+                grid-template-columns: repeat(4, 45px);
+                grid-template-rows: repeat(4, 45px);
+            }
+            .cell, .clone-cell { width: 45px; height: 45px; }
+            .loom-container { padding: 45px; }
+            .ctrl-btn { width: 30px; height: 30px; font-size: 9px; }
+            .ctrl-btn::before { 
+                width: 3px; height: 3px; 
+                box-shadow: 
+                    6px 0 0 rgba(0,0,0,0.3),
+                    0 6px 0 rgba(0,0,0,0.3),
+                    6px 6px 0 rgba(0,0,0,0.3);
+                transform: translate(-4.5px, -4.5px);
+            }
+            
+            .btn-col-up { top: 7px; }
+            .btn-col-down { bottom: 7px; }
+            .btn-row-right { left: 7px; }
+            .btn-row-left { right: 7px; }
+            .c0 { left: 60px; } .c1 { left: 113px; } .c2 { left: 166px; } .c3 { left: 219px; }
+            .r0 { top: 60px; } .r1 { top: 113px; } .r2 { top: 166px; } .r3 { top: 219px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div style="text-align: center;">
+        <h1>Shift & Stitch</h1>
+        <div class="subtitle">Match the pattern. Threads are connected.</div>
+    </div>
+
+    <!-- Level Selection Menu -->
+    <div id="menuScreen" class="menu-screen">
+        <div style="text-align: center; margin-bottom: 20px;">
+            <h1>Shift & Stitch</h1>
+            <div class="subtitle">Match the pattern. Threads are connected.</div>
+        </div>
+        <h2 style="font-size: 1.2rem; margin-bottom: 25px; opacity: 0.8; letter-spacing: 2px; text-transform: uppercase;">Select Level</h2>
+        <div id="levelContainer" style="width: 100%; display: flex; flex-direction: column; align-items: center;"></div>
+    </div>
+
+    <button id="backToMenuBtn" class="back-btn" onclick="showMenu()" style="display: none;">← Menu</button>
+
+    <div class="game-layout" id="gameLayout" style="opacity: 0; pointer-events: none; transition: opacity 0.3s;">
+        
+        <!-- The Main Loom Game -->
+        <div class="loom-container">
+            <div id="grid" class="grid"></div>
+
+            <!-- Top Controls (Cols Down) -->
+            <button class="ctrl-btn btn-col-up c0" onmouseenter="highlightCol(0)" onmouseleave="clearHighlight()" onclick="shiftCol(0, 1)"></button>
+            <button class="ctrl-btn btn-col-up c1" onmouseenter="highlightCol(1)" onmouseleave="clearHighlight()" onclick="shiftCol(1, 1)"></button>
+            <button class="ctrl-btn btn-col-up c2" onmouseenter="highlightCol(2)" onmouseleave="clearHighlight()" onclick="shiftCol(2, 1)"></button>
+            <button class="ctrl-btn btn-col-up c3" onmouseenter="highlightCol(3)" onmouseleave="clearHighlight()" onclick="shiftCol(3, 1)"></button>
+
+            <!-- Bottom Controls (Cols Up) -->
+            <button class="ctrl-btn btn-col-down c0" onmouseenter="highlightCol(0)" onmouseleave="clearHighlight()" onclick="shiftCol(0, -1)"></button>
+            <button class="ctrl-btn btn-col-down c1" onmouseenter="highlightCol(1)" onmouseleave="clearHighlight()" onclick="shiftCol(1, -1)"></button>
+            <button class="ctrl-btn btn-col-down c2" onmouseenter="highlightCol(2)" onmouseleave="clearHighlight()" onclick="shiftCol(2, -1)"></button>
+            <button class="ctrl-btn btn-col-down c3" onmouseenter="highlightCol(3)" onmouseleave="clearHighlight()" onclick="shiftCol(3, -1)"></button>
+
+            <!-- Left Controls (Rows Right) -->
+            <button class="ctrl-btn btn-row-right r0" onmouseenter="highlightRow(0)" onmouseleave="clearHighlight()" onclick="shiftRow(0, 1)"></button>
+            <button class="ctrl-btn btn-row-right r1" onmouseenter="highlightRow(1)" onmouseleave="clearHighlight()" onclick="shiftRow(1, 1)"></button>
+            <button class="ctrl-btn btn-row-right r2" onmouseenter="highlightRow(2)" onmouseleave="clearHighlight()" onclick="shiftRow(2, 1)"></button>
+            <button class="ctrl-btn btn-row-right r3" onmouseenter="highlightRow(3)" onmouseleave="clearHighlight()" onclick="shiftRow(3, 1)"></button>
+
+            <!-- Right Controls (Rows Left) -->
+            <button class="ctrl-btn btn-row-left r0" onmouseenter="highlightRow(0)" onmouseleave="clearHighlight()" onclick="shiftRow(0, -1)"></button>
+            <button class="ctrl-btn btn-row-left r1" onmouseenter="highlightRow(1)" onmouseleave="clearHighlight()" onclick="shiftRow(1, -1)"></button>
+            <button class="ctrl-btn btn-row-left r2" onmouseenter="highlightRow(2)" onmouseleave="clearHighlight()" onclick="shiftRow(2, -1)"></button>
+            <button class="ctrl-btn btn-row-left r3" onmouseenter="highlightRow(3)" onmouseleave="clearHighlight()" onclick="shiftRow(3, -1)"></button>
+
+            <!-- Win Modal -->
+            <div id="winScreen" class="win-overlay">
+                <div class="win-title">Pattern Matched!</div>
+                <div id="moveCountDisplay" style="color: #ccc;">Moves: 0</div>
+                <button class="next-btn" onclick="nextLevel()">Next Pattern</button>
+            </div>
+        </div>
+
+        <!-- The Target Card -->
+        <div class="card-panel">
+            <div class="target-label">Target Pattern</div>
+            <div id="targetGrid" class="mini-grid"></div>
+            <div class="level-badge" id="levelDisplay">Level 1</div>
+            <div id="scrambleDisplay" style="font-size: 0.85rem; opacity: 0.7; margin-top: 10px; letter-spacing: 1px;">Scrambles: 0</div>
+        </div>
+
+    </div>
+
+    <script>
+        const GRID_SIZE = 4;
+        let gridState = [];
+        let targetState = [];
+        let moves = 0;
+        let currentLevelIndex = 0; // Index in the flat levels array
+        let allLevels = [];
+        let isAnimating = false;
+        const ANIM_DURATION = 200; // Match CSS transition time
+        
+        // --- Game Setup ---
+
+        async function initApp() {
+            try {
+                const response = await fetch('levels.json');
+                allLevels = await response.json();
+                renderMenu();
+            } catch (e) {
+                console.error("Failed to load levels", e);
+                alert("Error loading levels.json");
+            }
+        }
+
+        function getProgress() {
+            const saved = localStorage.getItem('threads_game_progress');
+            return saved ? JSON.parse(saved) : { completed: [] };
+        }
+
+        function saveLevelComplete(levelId) {
+            const progress = getProgress();
+            if (!progress.completed.includes(levelId)) {
+                progress.completed.push(levelId);
+                localStorage.setItem('threads_game_progress', JSON.stringify(progress));
+            }
+        }
+
+        function showMenu() {
+            document.getElementById('menuScreen').classList.remove('hidden');
+            document.getElementById('gameLayout').style.opacity = '0';
+            document.getElementById('gameLayout').style.pointerEvents = 'none';
+            document.getElementById('backToMenuBtn').style.display = 'none';
+            renderMenu(); // Re-render to update status
+        }
+
+        function renderMenu() {
+            const container = document.getElementById('levelContainer');
+            container.innerHTML = '';
+            const progress = getProgress();
+            
+            const gridDiv = document.createElement('div');
+            gridDiv.className = 'level-grid';
+
+            allLevels.forEach((lvl, idx) => {
+                const btn = document.createElement('div');
+                btn.className = 'level-btn';
+                btn.innerText = idx + 1; // Correlative number
+                
+                const isCompleted = progress.completed.includes(lvl.id);
+                // Lock logic: Unlocked if it's the first level OR previous level is completed
+                const prevLevel = allLevels[idx - 1];
+                const isLocked = idx > 0 && !progress.completed.includes(prevLevel?.id);
+
+                if (isCompleted) btn.classList.add('completed');
+                if (isLocked && !isCompleted) btn.classList.add('locked');
+                
+                if (!isLocked || isCompleted) {
+                    btn.onclick = () => startLevel(idx);
+                }
+
+                gridDiv.appendChild(btn);
+            });
+
+            container.appendChild(gridDiv);
+        }
+
+        function startLevel(index) {
+            currentLevelIndex = index;
+            const levelData = allLevels[index];
+            
+            // Set State
+            // Deep copy to avoid mutating the master list
+            targetState = levelData.targetState.map(row => [...row]);
+            gridState = levelData.initialState.map(row => [...row]);
+            moves = 0;
+            
+            // UI Update
+            document.getElementById('levelDisplay').innerText = `Level ${index + 1}`;
+            document.getElementById('scrambleDisplay').innerText = `Scrambles: ${levelData.scrambleCount}`;
+            document.getElementById('menuScreen').classList.add('hidden');
+            
+            const gameLayout = document.getElementById('gameLayout');
+            gameLayout.style.opacity = '1';
+            gameLayout.style.pointerEvents = 'all';
+            document.getElementById('backToMenuBtn').style.display = 'block';
+            
+            document.getElementById('winScreen').classList.remove('active');
+
+            renderGrid();
+            renderTarget();
+        }
+
+        function nextLevel() {
+            const nextIndex = currentLevelIndex + 1;
+            if (nextIndex < allLevels.length) {
+                startLevel(nextIndex);
+            } else {
+                alert("All levels completed! returning to menu.");
+                showMenu();
+            }
+        }
+
+        // --- Logic & Animation ---
+
+        function getLinkedIndices(index) {
+            return (index % 2 === 0) ? [0, 2] : [1, 3];
+        }
+
+        function setControlsEnabled(enabled) {
+            const btns = document.querySelectorAll('.ctrl-btn');
+            btns.forEach(b => {
+                if(enabled) b.classList.remove('disabled');
+                else b.classList.add('disabled');
+            });
+        }
+
+        // Helper to get exact shift distance
+        function getStepSize() {
+            const c0 = document.getElementById('cell-0-0');
+            const c1 = document.getElementById('cell-0-1');
+            const r1 = document.getElementById('cell-1-0');
+            // Distance between left edge of Col 0 and left edge of Col 1
+            const dx = c1.offsetLeft - c0.offsetLeft;
+            const dy = r1.offsetTop - c0.offsetTop;
+            return { x: dx, y: dy };
+        }
+
+        function shiftRow(rowIndex, direction) {
+            if (isAnimating) return;
+            isAnimating = true;
+            setControlsEnabled(false);
+
+            let rowsToMove = getLinkedIndices(rowIndex);
+            
+            // 1. Trigger Animation for all affected rows
+            rowsToMove.forEach(r => animateRow(r, direction));
+
+            // 2. Wait for animation to finish, then commit state
+            setTimeout(() => {
+                rowsToMove.forEach(r => performShiftRow(r, direction));
+                moves++;
+                renderGrid();
+                
+                // Cleanup clones
+                document.querySelectorAll('.clone-cell').forEach(el => el.remove());
+                
+                checkWin();
+                isAnimating = false;
+                setControlsEnabled(true);
+            }, ANIM_DURATION + 20); // slight buffer
+        }
+
+        function shiftCol(colIndex, direction) {
+            if (isAnimating) return;
+            isAnimating = true;
+            setControlsEnabled(false);
+
+            let colsToMove = getLinkedIndices(colIndex);
+            
+            // 1. Animate
+            colsToMove.forEach(c => animateCol(c, direction));
+
+            // 2. Commit
+            setTimeout(() => {
+                colsToMove.forEach(c => performShiftCol(c, direction));
+                moves++;
+                renderGrid();
+
+                document.querySelectorAll('.clone-cell').forEach(el => el.remove());
+
+                checkWin();
+                isAnimating = false;
+                setControlsEnabled(true);
+            }, ANIM_DURATION + 20);
+        }
+
+        function animateRow(r, dir) {
+            const step = getStepSize();
+            const cells = [];
+            for(let c=0; c<GRID_SIZE; c++) cells.push(document.getElementById(`cell-${r}-${c}`));
+
+            // Slide existing cells
+            cells.forEach(cell => {
+                cell.style.transform = `translate(${dir * step.x}px, 0)`;
+            });
+
+            // Handle Wrap (Create Clone)
+            let destIndex = (dir === 1) ? 0 : GRID_SIZE - 1;
+            let sourceIndex = (dir === 1) ? GRID_SIZE - 1 : 0; // The cell being copied
+            
+            const sourceCell = cells[sourceIndex];
+            const destCell = cells[destIndex];
+
+            // Create Clone
+            let clone = sourceCell.cloneNode(true);
+            clone.id = '';
+            clone.classList.add('clone-cell');
+            clone.classList.remove('linked-highlight'); // Don't highlight clone if active
+            clone.style.position = 'absolute';
+            clone.style.margin = '0'; // reset grid margin if any
+            
+            let startX = (dir === 1) ? -step.x : step.x;
+            
+            // Position at Destination visually
+            clone.style.left = destCell.offsetLeft + 'px';
+            clone.style.top = destCell.offsetTop + 'px';
+            
+            // Apply start offset
+            clone.style.transform = `translate(${startX}px, 0)`;
+            
+            // Append to Grid
+            document.getElementById('grid').appendChild(clone);
+            
+            // Force Reflow
+            void clone.offsetWidth;
+            
+            // Animate to 0 (Final position matches destination cell)
+            clone.style.transform = `translate(0, 0)`;
+        }
+
+        function animateCol(c, dir) {
+            const step = getStepSize();
+            const cells = [];
+            for(let r=0; r<GRID_SIZE; r++) cells.push(document.getElementById(`cell-${r}-${c}`));
+
+            // Slide existing
+            cells.forEach(cell => {
+                cell.style.transform = `translate(0, ${dir * step.y}px)`;
+            });
+
+            let destIndex = (dir === 1) ? 0 : GRID_SIZE - 1;
+            let sourceIndex = (dir === 1) ? GRID_SIZE - 1 : 0;
+            
+            const sourceCell = cells[sourceIndex];
+            const destCell = cells[destIndex];
+
+            let clone = sourceCell.cloneNode(true);
+            clone.id = '';
+            clone.classList.add('clone-cell');
+            clone.classList.remove('linked-highlight');
+            clone.style.position = 'absolute';
+            clone.style.margin = '0';
+
+            // Position at Destination
+            clone.style.left = destCell.offsetLeft + 'px';
+            clone.style.top = destCell.offsetTop + 'px';
+
+            // Start offset
+            let startY = (dir === 1) ? -step.y : step.y;
+            clone.style.transform = `translate(0, ${startY}px)`;
+
+            document.getElementById('grid').appendChild(clone);
+            void clone.offsetWidth;
+
+            // Animate
+            clone.style.transform = `translate(0, 0)`;
+        }
+
+
+        // Internal logic - Data manipulation only
+        function performShiftRow(r, dir) {
+            if (dir === 1) { // Right
+                let last = gridState[r].pop();
+                gridState[r].unshift(last);
+            } else { // Left
+                let first = gridState[r].shift();
+                gridState[r].push(first);
+            }
+        }
+
+        function performShiftCol(c, dir) {
+            let colData = [];
+            for(let r=0; r<GRID_SIZE; r++) colData.push(gridState[r][c]);
+
+            if (dir === 1) { // Down
+                let last = colData.pop();
+                colData.unshift(last);
+            } else { // Up
+                let first = colData.shift();
+                colData.push(first);
+            }
+
+            for(let r=0; r<GRID_SIZE; r++) gridState[r][c] = colData[r];
+        }
+
+        // --- Rendering ---
+
+        function renderGrid() {
+            const gridEl = document.getElementById('grid');
+            gridEl.innerHTML = '';
+            
+            for (let r = 0; r < GRID_SIZE; r++) {
+                for (let c = 0; c < GRID_SIZE; c++) {
+                    let div = document.createElement('div');
+                    div.className = `cell color-${gridState[r][c]}`;
+                    div.id = `cell-${r}-${c}`;
+                    gridEl.appendChild(div);
+                }
+            }
+        }
+
+        function renderTarget() {
+            const targetEl = document.getElementById('targetGrid');
+            targetEl.innerHTML = '';
+            for (let r = 0; r < GRID_SIZE; r++) {
+                for (let c = 0; c < GRID_SIZE; c++) {
+                    let div = document.createElement('div');
+                    div.className = `mini-cell color-${targetState[r][c]}`;
+                    targetEl.appendChild(div);
+                }
+            }
+        }
+
+        // --- Interaction Feedback ---
+
+        function highlightRow(r) {
+            if(isAnimating) return;
+            let linked = getLinkedIndices(r);
+            linked.forEach(rowIndex => {
+                for(let c=0; c<GRID_SIZE; c++) {
+                    const cell = document.getElementById(`cell-${rowIndex}-${c}`);
+                    if(cell) cell.classList.add('linked-highlight');
+                }
+            });
+        }
+
+        function highlightCol(c) {
+            if(isAnimating) return;
+            let linked = getLinkedIndices(c);
+            linked.forEach(colIndex => {
+                for(let r=0; r<GRID_SIZE; r++) {
+                    const cell = document.getElementById(`cell-${r}-${colIndex}`);
+                    if(cell) cell.classList.add('linked-highlight');
+                }
+            });
+        }
+
+        function clearHighlight() {
+            document.querySelectorAll('.cell').forEach(el => el.classList.remove('linked-highlight'));
+        }
+
+        function checkWin() {
+            let isMatch = true;
+            for(let r=0; r<GRID_SIZE; r++) {
+                for(let c=0; c<GRID_SIZE; c++) {
+                    if (gridState[r][c] !== targetState[r][c]) {
+                        isMatch = false;
+                        break;
+                    }
+                }
+            }
+
+            if (isMatch) {
+                // Save Progress
+                const levelData = allLevels[currentLevelIndex];
+                saveLevelComplete(levelData.id);
+
+                document.getElementById('moveCountDisplay').innerText = `Moves: ${moves}`;
+                document.getElementById('winScreen').classList.add('active');
+            }
+        }
+
+        // Initialize
+        initApp();
+
+    </script>
+</body>
+</html>
