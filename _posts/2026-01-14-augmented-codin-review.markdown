@@ -1,5 +1,5 @@
 ---
-title: "Augmented coding, review of 2025"
+title: "Review de 2025 en desarrollo 'asistido'"
 layout: post
 published: true
 tags: [ai, Inteligencia Artificial, opinión]
@@ -29,7 +29,7 @@ Para mi ha sido un viaje parecido. Empecé hablando de los agentes [en primavera
 
 # 2026
 
-Entonces, ¿Cómo veo 2026? Para mi este será el año de integrar los agentes a gran escala en muchas verticales. Querremos integrarlos por fin en la revisión de código (o pasar completamente de ellas como he leído ya por ahí a [Simon Willinson]()) Querremos usarlos para hacer exploratory testing, mutation testing, para simular usuarios reales, para preguntarles por nuestros logs y generar gráficas y dashboards a partir de ellos... Rápidamente empezarán también a integrarse en otras profesiones. Los veremos en toda la suite ofimática y también en otras aplicaciones propietarias más nicho. No me atrevo a aventurar más, pero creo que los agentes alcanzarán el mainstream como hasta ahora han hecho en el desarrollo software y a principios de 2027, todo el mundo estará acostumbrado y verá totalmente normal pedir tareas complejas a agentes en diferentes aplicaciones y verticales.
+Entonces, ¿Cómo veo 2026? Para mi este será el año de integrar los agentes a gran escala en muchas verticales. Querremos integrarlos por fin en la revisión de código (o pasar completamente de ellas como he leído ya por ahí a [Simon Willinson](https://lobste.rs/s/cmsfbu/don_t_fall_into_anti_ai_hype#c_kgtuhs)) Querremos usarlos para hacer exploratory testing, mutation testing, para simular usuarios reales, para preguntarles por nuestros logs y generar gráficas y dashboards a partir de ellos... Rápidamente empezarán también a integrarse en otras profesiones. Los veremos en toda la suite ofimática y también en otras aplicaciones propietarias más nicho. No me atrevo a aventurar más, pero creo que los agentes alcanzarán el mainstream como hasta ahora han hecho en el desarrollo software y a principios de 2027, todo el mundo estará acostumbrado y verá totalmente normal pedir tareas complejas a agentes en diferentes aplicaciones y verticales.
 
 ¿Qué significará esto? ¿Más trabajo para nosotros? ¿Más despidos? ¿Explotará la burbuja? Son preguntas sin respuesta, la situación es totalmente impredecible. Y o me estoy haciendo mayor o el mundo en general es mucho más loco e impredecible.
 
