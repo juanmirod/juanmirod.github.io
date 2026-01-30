@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Untangle - Planar Theory</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+
+        #root {
+            width: 100%;
+            height: 100%;
+        }
+
+        .game-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+            background-color: #0f0f1b;
+            cursor: grab;
+            touch-action: none;
+        }
+
+        canvas.grabbing {
+            cursor: grabbing;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.9; }
+        }
+        
+        .animate-pulse-btn {
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        .theory-scroll::-webkit-scrollbar, .modal-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+        .theory-scroll::-webkit-scrollbar-track, .modal-scroll::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .theory-scroll::-webkit-scrollbar-thumb, .modal-scroll::-webkit-scrollbar-thumb {
+            background: rgba(72, 219, 251, 0.3);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
+
+        function UntangleGame() {
+            const canvasRef = useRef(null);
+            
+            // UI State
+            const [level, setLevel] = useState(1);
+            const [crossingsDisplay, setCrossingsDisplay] = useState(0);
+            const [won, setWon] = useState(false);
+            const [showTheory, setShowTheory] = useState(false);
+            const [showShare, setShowShare] = useState(false);
+            const [shareImg, setShareImg] = useState(null);
+            
+            // Game State Refs
+            const nodesRef = useRef([]);
+            const edgesRef = useRef([]);
+            const dragRef = useRef(null);
+            const requestRef = useRef();
+            const phaseRef = useRef(0);
+            const wonRef = useRef(false);
+            
+            // Physics Constants
+            const SPRING_K = 0.15;
+            const DAMPING = 0.82;
+
+            // Robust Intersection Detection (CCW method)
+            function ccw(A, B, C) {
+                return (C.y - A.y) * (B.x - A.x) > (B.y - A.y) * (C.x - A.x);
+            }
+
+            function checkIntersection(p1, p2, p3, p4) {
+                return ccw(p1, p3, p4) !== ccw(p2, p3, p4) && ccw(p1, p2, p3) !== ccw(p1, p2, p4);
+            }
+
+            function countCrossings(currentNodes, currentEdges) {
+                let count = 0;
+                for (let i = 0; i < currentEdges.length; i++) {
+                    for (let j = i + 1; j < currentEdges.length; j++) {
+                        const e1 = currentEdges[i];
+                        const e2 = currentEdges[j];
+                        if (e1.from === e2.from || e1.from === e2.to || e1.to === e2.from || e1.to === e2.to) continue;
+                        if (checkIntersection(currentNodes[e1.from], currentNodes[e1.to], currentNodes[e2.from], currentNodes[e2.to])) {
+                            count++;
+                        }
+                    }
+                }
+                return count;
+            }
+
+            function generateLevel(levelNum) {
+                const canvas = canvasRef.current;
+                if (!canvas) return;
+
+                const nodeCount = Math.min(6 + levelNum, 25);
+                const w = canvas.width;
+                const h = canvas.height;
+                const padding = 120;
+
+                const solvedPositions = [];
+                for (let i = 0; i < nodeCount; i++) {
+                    solvedPositions.push({
+                        x: padding + Math.random() * (w - padding * 2),
+                        y: padding + Math.random() * (h - padding * 2)
+                    });
+                }
+
+                const newEdges = [];
+                const maxEdges = Math.floor(nodeCount * 1.6);
+                const allPossiblePairs = [];
+                for (let i = 0; i < nodeCount; i++) {
+                    for (let j = i + 1; j < nodeCount; j++) {
+                        allPossiblePairs.push({ from: i, to: j });
+                    }
+                }
+                
+                for (let i = allPossiblePairs.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [allPossiblePairs[i], allPossiblePairs[j]] = [allPossiblePairs[j], allPossiblePairs[i]];
+                }
+
+                for (const pair of allPossiblePairs) {
+                    if (newEdges.length >= maxEdges) break;
+                    let intersects = false;
+                    for (const existingEdge of newEdges) {
+                        if (checkIntersection(solvedPositions[pair.from], solvedPositions[pair.to], solvedPositions[existingEdge.from], solvedPositions[existingEdge.to])) {
+                            intersects = true;
+                            break;
+                        }
+                    }
+                    if (!intersects) newEdges.push(pair);
+                }
+
+                const centerX = w / 2;
+                const centerY = h / 2;
+                const radius = Math.min(w, h) * 0.35;
+                const newNodes = [];
+
+                for (let i = 0; i < nodeCount; i++) {
+                    const angle = (i / nodeCount) * Math.PI * 2;
+                    newNodes.push({ 
+                        id: i, 
+                        x: centerX + Math.cos(angle) * radius + (Math.random() - 0.5) * 60, 
+                        y: centerY + Math.sin(angle) * radius + (Math.random() - 0.5) * 60, 
+                        vx: 0, vy: 0, 
+                        ox: 0, oy: 0
+                    });
+                }
+
+                nodesRef.current = newNodes;
+                edgesRef.current = newEdges;
+                dragRef.current = null;
+                wonRef.current = false;
+                setWon(false);
+                setCrossingsDisplay(countCrossings(newNodes, newEdges));
+            }
+
+            const generateShareImage = () => {
+                const tempCanvas = document.createElement('canvas');
+                const tCtx = tempCanvas.getContext('2d');
+                tempCanvas.width = 1080;
+                tempCanvas.height = 1080;
+
+                // Background
+                const grad = tCtx.createLinearGradient(0, 0, 1080, 1080);
+                grad.addColorStop(0, '#1a1a2e');
+                grad.addColorStop(1, '#16213e');
+                tCtx.fillStyle = grad;
+                tCtx.fillRect(0, 0, 1080, 1080);
+
+                // Title & Message
+                tCtx.fillStyle = '#48dbfb';
+                tCtx.font = 'bold 80px sans-serif';
+                tCtx.textAlign = 'center';
+                tCtx.fillText('UNTANGLED!', 540, 180);
+                
+                tCtx.fillStyle = '#ffffff';
+                tCtx.font = '40px sans-serif';
+                tCtx.fillText(`I just beat Level ${level}! Can you beat me?`, 540, 260);
+
+                // Draw Graph
+                const nodes = nodesRef.current;
+                const edges = edgesRef.current;
+                
+                // Scale factor for the square canvas
+                const gameW = canvasRef.current.width;
+                const gameH = canvasRef.current.height;
+                const scale = Math.min(800 / gameW, 800 / gameH);
+                const offX = (1080 - gameW * scale) / 2;
+                const offY = 400 + (600 - gameH * scale) / 2;
+
+                const getCanvasX = (x) => x * scale + offX;
+                const getCanvasY = (y) => y * scale + offY;
+
+                edges.forEach(edge => {
+                    const p1 = nodes[edge.from];
+                    const p2 = nodes[edge.to];
+                    tCtx.strokeStyle = '#feca57';
+                    tCtx.lineWidth = 6;
+                    tCtx.lineCap = 'round';
+                    tCtx.beginPath();
+                    tCtx.moveTo(getCanvasX(p1.x), getCanvasY(p1.y));
+                    tCtx.lineTo(getCanvasX(p2.x), getCanvasY(p2.y));
+                    tCtx.stroke();
+                });
+
+                nodes.forEach(node => {
+                    tCtx.fillStyle = '#ff6b9d';
+                    tCtx.beginPath();
+                    tCtx.arc(getCanvasX(node.x), getCanvasY(node.y), 25, 0, Math.PI * 2);
+                    tCtx.fill();
+                });
+
+                setShareImg(tempCanvas.toDataURL('image/png'));
+                setShowShare(true);
+            };
+
+            const copyShareMessage = () => {
+                const msg = `I untangled level ${level} in this amazing math puzzle game! Can you beat my record? 🧠✨ #UntanglePuzzle #PlanarTheory`;
+                const textArea = document.createElement("textarea");
+                textArea.value = msg;
+                document.body.appendChild(textArea);
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                } catch (err) {}
+                document.body.removeChild(textArea);
+            };
+
+            const animate = () => {
+                const canvas = canvasRef.current;
+                if (!canvas) return;
+                const ctx = canvas.getContext('2d');
+                const nodes = nodesRef.current;
+                const edges = edgesRef.current;
+                phaseRef.current += 0.05;
+
+                nodes.forEach(node => {
+                    if (dragRef.current && dragRef.current.id === node.id) {
+                        node.vx *= 0.5; node.vy *= 0.5;
+                        node.ox *= 0.5; node.oy *= 0.5;
+                    } else {
+                        const ax = -SPRING_K * node.ox;
+                        const ay = -SPRING_K * node.oy;
+                        node.vx = (node.vx + ax) * DAMPING;
+                        node.vy = (node.vy + ay) * DAMPING;
+                        node.ox += node.vx;
+                        node.oy += node.vy;
+                    }
+                });
+
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                edges.forEach((edge, i) => {
+                    const fromNode = nodes[edge.from];
+                    const toNode = nodes[edge.to];
+                    const fX = fromNode.x + fromNode.ox;
+                    const fY = fromNode.y + fromNode.oy;
+                    const tX = toNode.x + toNode.ox;
+                    const tY = toNode.y + toNode.oy;
+
+                    let isCrossing = false;
+                    for (let j = 0; j < edges.length; j++) {
+                        if (i === j) continue;
+                        const e2 = edges[j];
+                        if (e2.from === edge.from || e2.from === edge.to || e2.to === edge.from || e2.to === edge.to) continue;
+                        if (checkIntersection(fromNode, toNode, nodes[e2.from], nodes[e2.to])) {
+                            isCrossing = true;
+                            break;
+                        }
+                    }
+
+                    if (!isCrossing) {
+                        ctx.strokeStyle = 'rgba(254, 202, 87, 0.2)';
+                        ctx.lineWidth = 10;
+                        ctx.lineCap = 'round';
+                        ctx.beginPath();
+                        ctx.moveTo(fX, fY); ctx.lineTo(tX, tY);
+                        ctx.stroke();
+                    }
+
+                    ctx.strokeStyle = isCrossing ? '#ff4757' : '#feca57';
+                    ctx.lineWidth = 3.5;
+                    ctx.beginPath();
+                    ctx.moveTo(fX, fY); ctx.lineTo(tX, tY);
+                    ctx.stroke();
+                });
+
+                nodes.forEach(node => {
+                    const isDragged = dragRef.current && dragRef.current.id === node.id;
+                    const r = isDragged ? 22 : 16;
+                    const vX = node.x + node.ox;
+                    const vY = node.y + node.oy;
+
+                    const gradient = ctx.createRadialGradient(vX, vY, r, vX, vY, r + 15);
+                    gradient.addColorStop(0, 'rgba(255, 107, 157, 0.4)');
+                    gradient.addColorStop(1, 'rgba(255, 107, 157, 0)');
+                    ctx.fillStyle = gradient;
+                    ctx.beginPath();
+                    ctx.arc(vX, vY, r + 15, 0, Math.PI * 2);
+                    ctx.fill();
+
+                    ctx.fillStyle = '#ff6b9d';
+                    ctx.beginPath();
+                    ctx.arc(vX, vY, r, 0, Math.PI * 2);
+                    ctx.fill();
+                    
+                    if (isDragged) {
+                        ctx.strokeStyle = `rgba(255, 255, 255, ${0.5 + Math.sin(phaseRef.current) * 0.2})`;
+                        ctx.lineWidth = 2;
+                        ctx.beginPath();
+                        ctx.arc(vX, vY, r + 5, 0, Math.PI * 2);
+                        ctx.stroke();
+                    }
+                });
+                
+                if (wonRef.current) {
+                    ctx.fillStyle = 'rgba(0, 0, 0, 0.6)';
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                    ctx.save();
+                    ctx.translate(canvas.width/2, canvas.height/2);
+                    const scale = 1 + Math.sin(phaseRef.current) * 0.05;
+                    ctx.scale(scale, scale);
+                    ctx.font = 'bold 48px sans-serif';
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillStyle = '#48dbfb';
+                    ctx.shadowBlur = 15;
+                    ctx.shadowColor = '#48dbfb';
+                    ctx.fillText('UNTANGLED!', 0, 0);
+                    ctx.restore();
+                }
+
+                requestRef.current = requestAnimationFrame(animate);
+            };
+
+            useEffect(() => {
+                const canvas = canvasRef.current;
+                function handleResize() {
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
+                }
+                window.addEventListener('resize', handleResize);
+                handleResize();
+                generateLevel(level);
+                requestRef.current = requestAnimationFrame(animate);
+                return () => {
+                    window.removeEventListener('resize', handleResize);
+                    cancelAnimationFrame(requestRef.current);
+                };
+            }, [level]);
+
+            function getPointerPos(e) {
+                const canvas = canvasRef.current;
+                const rect = canvas.getBoundingClientRect();
+                const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+                return { x: clientX - rect.left, y: clientY - rect.top };
+            }
+
+            function handleStart(e) {
+                if (showTheory || showShare || wonRef.current) return;
+                const pos = getPointerPos(e);
+                const hitNode = nodesRef.current.find(node => Math.hypot(node.x - pos.x, node.y - pos.y) < 35);
+                if (hitNode) {
+                    dragRef.current = {
+                        id: hitNode.id,
+                        offsetX: pos.x - hitNode.x,
+                        offsetY: pos.y - hitNode.y,
+                        lastX: pos.x, lastY: pos.y,
+                        velocity: { x: 0, y: 0 }
+                    };
+                    canvasRef.current.classList.add('grabbing');
+                }
+            }
+
+            function handleMove(e) {
+                if (!dragRef.current) return;
+                e.preventDefault();
+                const pos = getPointerPos(e);
+                dragRef.current.velocity = { x: pos.x - dragRef.current.lastX, y: pos.y - dragRef.current.lastY };
+                dragRef.current.lastX = pos.x; dragRef.current.lastY = pos.y;
+                const node = nodesRef.current.find(n => n.id === dragRef.current.id);
+                if (node) {
+                    node.x = Math.max(25, Math.min(canvasRef.current.width - 25, pos.x - dragRef.current.offsetX));
+                    node.y = Math.max(25, Math.min(canvasRef.current.height - 25, pos.y - dragRef.current.offsetY));
+                    node.ox = 0; node.oy = 0; node.vx = 0; node.vy = 0;
+                }
+            }
+
+            function handleEnd() {
+                if (dragRef.current) {
+                    const node = nodesRef.current.find(n => n.id === dragRef.current.id);
+                    if (node) {
+                        const impulse = 1.3;
+                        node.vx = dragRef.current.velocity.x * impulse;
+                        node.vy = dragRef.current.velocity.y * impulse;
+                        node.ox = node.vx * 1.5; node.oy = node.vy * 1.5;
+                    }
+                    const crossCount = countCrossings(nodesRef.current, edgesRef.current);
+                    setCrossingsDisplay(crossCount);
+                    if (crossCount === 0 && edgesRef.current.length > 0) {
+                        wonRef.current = true;
+                        setWon(true);
+                    }
+                }
+                dragRef.current = null;
+                if (canvasRef.current) canvasRef.current.classList.remove('grabbing');
+            }
+
+            return (
+                <div className="game-container">
+                    {/* UI Overlay */}
+                    <div className="absolute top-5 left-5 text-white z-10 pointer-events-none select-none">
+                        <div className="text-2xl font-bold drop-shadow-md text-[#48dbfb]">Level {level}</div>
+                        <div className="text-lg opacity-80 drop-shadow-md">
+                            Crossings: {crossingsDisplay}
+                            {dragRef.current && <span className="text-xs ml-2 opacity-50 font-normal italic">(moving...)</span>}
+                        </div>
+                    </div>
+                    
+                    <div className="absolute top-5 right-5 text-white/40 text-sm italic z-10 flex items-center gap-2">
+                        Mathematically Planar
+                        <button 
+                            onClick={(e) => { e.stopPropagation(); setShowTheory(true); }}
+                            className="w-6 h-6 rounded-full border border-white/40 flex items-center justify-center hover:bg-white/10 hover:text-white transition-all not-italic text-xs font-bold cursor-pointer"
+                        >
+                            ?
+                        </button>
+                    </div>
+
+                    <canvas
+                        ref={canvasRef}
+                        onMouseDown={handleStart} onMouseMove={handleMove} onMouseUp={handleEnd} onMouseLeave={handleEnd}
+                        onTouchStart={handleStart} onTouchMove={handleMove} onTouchEnd={handleEnd}
+                    />
+                    
+                    <div className="button-container absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-4 z-10 w-full max-w-sm px-4">
+                        <div className="flex gap-4 w-full justify-center">
+                            <button 
+                                className="flex-1 px-4 py-3 bg-white/10 backdrop-blur-md text-white border border-white/20 rounded-xl hover:bg-white/20 transition font-semibold" 
+                                onClick={() => generateLevel(level)}
+                            >
+                                Reset Level
+                            </button>
+                            {won && (
+                                <button 
+                                    className="flex-1 px-4 py-3 bg-[#feca57] text-black rounded-xl font-bold hover:brightness-110 transition shadow-lg" 
+                                    onClick={generateShareImage}
+                                >
+                                    Share Card ✨
+                                </button>
+                            )}
+                        </div>
+                        {won && (
+                            <button 
+                                className="w-full px-8 py-4 bg-[#48dbfb] text-black rounded-xl font-black animate-pulse-btn hover:bg-[#0abde3] transition shadow-[0_0_20px_rgba(72,219,251,0.5)] text-lg" 
+                                onClick={() => setLevel(level + 1)}
+                            >
+                                Next Level →
+                            </button>
+                        )}
+                    </div>
+
+                    {/* Share Modal */}
+                    {showShare && (
+                        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/90 backdrop-blur-lg animate-in fade-in duration-300">
+                            <div className="bg-[#1a1a2e] border border-white/10 p-6 rounded-3xl max-w-md w-full text-white shadow-2xl relative flex flex-col max-h-[90vh]">
+                                <button onClick={() => setShowShare(false)} className="absolute top-6 right-6 text-white/30 hover:text-white transition-colors">✕</button>
+                                <h2 className="text-xl font-bold mb-4 text-[#48dbfb]">Achievement Unlocked!</h2>
+                                
+                                <div className="overflow-hidden rounded-2xl border border-white/10 mb-6 aspect-square bg-[#0f0f1b]">
+                                    {shareImg && <img src={shareImg} className="w-full h-full object-contain" alt="Untangle Achievement" />}
+                                </div>
+
+                                <div className="space-y-3">
+                                    <button 
+                                        onClick={copyShareMessage}
+                                        className="w-full py-3 bg-white/10 text-white rounded-xl hover:bg-white/20 transition font-semibold flex items-center justify-center gap-2"
+                                    >
+                                        📋 Copy Message
+                                    </button>
+                                    <a 
+                                        href={shareImg} 
+                                        download={`untangle-level-${level}.png`}
+                                        className="w-full py-3 bg-[#48dbfb] text-black rounded-xl font-bold hover:brightness-110 transition flex items-center justify-center gap-2"
+                                    >
+                                        📥 Download Card
+                                    </a>
+                                </div>
+                                <p className="mt-4 text-[10px] text-center opacity-40">Share this image to challenge your friends!</p>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Theory Modal */}
+                    {showTheory && (
+                        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-300">
+                            <div className="bg-[#0f0f1b] border border-white/10 p-8 rounded-3xl max-w-lg w-full text-white shadow-2xl relative flex flex-col max-h-[85vh]">
+                                <button onClick={() => setShowTheory(false)} className="absolute top-6 right-6 text-white/30 hover:text-white transition-colors">✕</button>
+                                <h2 className="text-2xl font-bold mb-6 text-[#48dbfb] flex items-center gap-2">📐 Planar Theory</h2>
+                                <div className="theory-scroll space-y-5 text-sm opacity-80 leading-relaxed overflow-y-auto pr-4">
+                                    <p>A <strong>Planar Graph</strong> is one that can be drawn on a plane without any edges intersecting.</p>
+                                    <div>
+                                        <h3 className="font-bold text-[#feca57] mb-2">Kuratowski's Theorem</h3>
+                                        <p>Graphs are non-planar if they contain "forbidden subgraphs" like $K_5$ or $K_{3,3}$.</p>
+                                    </div>
+                                    <div>
+                                        <h3 className="font-bold text-[#feca57] mb-2">Euler's Formula</h3>
+                                        <p>For connected planar graphs: <span className="text-[#48dbfb] font-mono font-bold">$V - E + F = 2$</span>.</p>
+                                    </div>
+                                    <div className="p-4 bg-white/5 rounded-xl border border-white/10">
+                                        <p className="italic">Every level starts as a perfectly untangled set of coordinates hidden in memory. Your task is to find a new planar embedding by dragging nodes.</p>
+                                    </div>
+                                </div>
+                                <button onClick={() => setShowTheory(false)} className="mt-8 w-full py-4 bg-[#48dbfb] text-black font-bold rounded-2xl hover:brightness-110 transition">Got it!</button>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<UntangleGame />);
+    </script>
+</body>
+</html>
