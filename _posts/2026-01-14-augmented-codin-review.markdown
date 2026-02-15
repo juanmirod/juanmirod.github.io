@@ -38,3 +38,29 @@ En cuanto al desarrollo, por un lado mucha más gente va a poder hacer sus propi
 ![2026 es una incertidumbre](/public/img/2026plus.png)
 
 Seguramente actualice este post con más pensamientos como de costumbre, como siempre, puedes dejar tus comentarios en github o escribirme en [bluesky](https://bsky.app/profile/juanmirod.bsky.social).
+
+---
+
+_[Actualización: 15/02/2026]_
+
+Una predicción a medio-largo plazo, tal vez no este año:
+(https://bsky.app/profile/juanmirod.bsky.social/post/3me7rg37os22g)
+
+Cuando los modelos de código abierto lleguen al nivel de Opus 4.5, la gente los preferirá para muchas tareas agénticas y los proveedores de modelos iniciarán una carrera de optimización para hacer los modelos más baratos y rápidos, incluso cuando no sean más capaces, para tratar de recuperar a esos usuarios.
+
+Quizás veremos una división más drástica entre modelos baratos vs modelos de frontera. La mayoría de la gente no necesita un modelo capaz de demostrar problemas matemáticos imposibles. Pero algunas personas estarán dispuestas a pagar mucho por ese tipo de inteligencia, modelos que resuelvan grandes problemas de optimización o logística.
+
+Para el resto, cuando los modelos OSS sean suficientes, los grandes proveedores necesitarán competir en velocidad, conveniencia, coste, personalización...
+
+Y relacionado con lo de arriba:
+(https://bsky.app/profile/juanmirod.bsky.social/post/3meqmxehsv22f)
+
+No es seguro que podamos conseguir modelos abiertos al nivel de Opus 4.5. Anthropic no ha abierto que yo sepa ninguno de sus modelos, y los laboratorios se han vuelto cada vez más recelosos de desvelar sus procesos y sus invetigaciones.
+
+Claude Code es la verdadera "bicicleta para la mente". Creo que ha habido en la comunidad de desarrolladores un antes y un después estas navidades, Claude Code, Open Code, OpenClaw... Los smartphones nos permitieron llevar internet con nosotros todo el tiempo, pero estas nuevas herramientas nos permiten construir cualquier cosa y aprender cualquier cosa. La diferencia clave es que cuando pides algo, lo hace frente a ti y tú conservas todos los artefactos.
+
+Esto es tan transformador que creo que no durará para siempre. Necesitamos poner los modelos de código abierto al nivel de Opus 4.5 al menos, o perderemos la oportunidad de mantener esta experiencia. Pronto las empresas intentarán capitalizar los artefactos también y mantener el código en la nube detrás de puertas cerradas.
+
+Si sumamos las dos reflexiones, y creo que no será el único que estará pensando en esto, habrá mucha gente intentando conseguir una versión abierta de un modelo equivalente a Claude Code, que puedan usar en OpenCode con su propia nube o en local. Y cuando eso ocurra tendremos una carrera por optimizar los modelos agénticos y hacerlos cada vez más pequeños y rápidos, incluso a coste de que pierdan cierto conocimiento del mundo (no necesito que un modelo de código se sepa la historia de todos los paises o todas las novelas que se han escrito...)
+
+Creo que es posible tener modelos agénticos muy capaces y pequeños como para que los podamos ejecutar en local en un ordenador medio o un móvil. Tal vez en un par de años todo el mundo dentrá un asistente personal que maneje su correo, whatsapp, telegram, fotos, ficheros, etc en su bolsillo. Algo muy parecido a JARVIS, pero no tan inteligente, que para preguntas difíciles o problemas de código más complicado delegue en un modelo frontera, pero que el resto del tiempo funcione en local y sobre el que tengas total control de su configuración...
