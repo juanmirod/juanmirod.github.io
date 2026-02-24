@@ -42,3 +42,9 @@ Sin modificar el artículo, (cosa que hago a menudo y es parte de la filosofía 
 Por supuesto el equipo de Deepmind no sólo ha hecho eso, sino que tiene un proyecto de igual importancia en física de materiales y otros tantos en otros campos científicos. Creo que lo más adecuado era acabar este post con la charla de DH donde él mismo explica su trayectoria y hace un guiño a lo que está por venir:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yxAJohm0l_g?si=NQqbuDil_b7ua923" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Actualización feb 2026
+
+En este documental sobre Hassabis y Deepmind se cuenta esta historia mucho mejor y con imágenes y pequeños testimonios de su infancia, incluído Peter Molineux. Me gusta que, aunque muy centrado en Demis Hassabis, también mencionan y entrevistan a otros compañeros de DeepMind como Shane Legg, David Silver y por supuesto John Jumper, el otro galardonado del premio Nobel de química.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/d95J8yzvjbQ?si=eGIGDkU-uzt1BAxC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
