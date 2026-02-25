@@ -56,28 +56,6 @@ h1 {
   margin-bottom: 38px;
 }
 
-h1::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 96%;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  transform: rotate(180deg) scaleX(-1);
-  opacity: 0.2;
-  text-shadow: 0px 0px 10px var(--accent-color);
-}
-
-h1::after {
-  content: "";
-  position: absolute;
-  top: 76%;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(transparent, var(--black) 88%);
- }
-
 blockquote {
   color: var(--accent-color);
   border-left: .25rem solid var(--primary-color);  
