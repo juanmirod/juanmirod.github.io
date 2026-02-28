@@ -2,6 +2,7 @@
 title: "¿Por qué los LLMs no son loros estocásticos?"
 layout: post
 published: true
+image: /public/img/2026-training.png
 tags: [LLMs, inteligencia artificial]
 ---
 
