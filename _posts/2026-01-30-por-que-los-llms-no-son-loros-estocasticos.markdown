@@ -2,7 +2,7 @@
 title: "¿Por qué los LLMs no son loros estocásticos?"
 layout: post
 published: true
-image: /public/img/2026-training.png
+image: /public/img/loro_estocastico_intentando_programar.png
 tags: [LLMs, inteligencia artificial]
 ---
 
@@ -90,6 +90,8 @@ Breve inciso volviendo al punto inicial sobre el _"grounding"_ de los modelos: S
 Dependiendo del tamaño del modelo y de la compañía, unas u otras fases tomarán más peso, hay técnicas de entrenamiento diferentes y otros indicadores que se dan al modelo como si debe dedicar más o menos tiempo de inferencia (tokens) a una respuesta (low/medium/high effort en los Modelos Claude por ejemplo) Dejo también por aquí los pdfs a la [System Card de Opus 4.5](/public/papers/Claude%20Opus%204.5%20System%20Card.pdf) y al [paper de DeepSeekR2](/public/papers/2511.22570v1.pdf) para quien quiera profundizar.
 
 El paper de Bender y Gebru planteó preguntas legítimas en 2021. El problema es que se ha convertido en un meme que se aplica a modelos que no existían cuando se escribió, para argumentos que el paper ni siquiera hacía. Vale la pena leerlo y muchos de los argumentos sobre el impacto de los modelos y la amplificación de sesgos siguen siendo válidos. La tecnología sin embargo ha avanzado mucho en cuanto a fiabilidad, control, funcionalidad, capacidad de resolver problemas lógicos y de código. La imagen del loro estocástico se ha quedado anticuada para los modelos actuales.
+
+![Loro estocástico intentando programar y mirando a la cámara con confianza](/public/img/loro_estocastico_intentando_programar.png)
 
 ### Apéndice: Definiciones de los acrónimos
 
