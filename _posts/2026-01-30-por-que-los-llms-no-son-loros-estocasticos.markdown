@@ -55,23 +55,25 @@ Imaginemos que queremos entrenar un modelo moderno para responder bien a "Explic
 
 - Entrada: "Explica brevemente qué es un agujero negro"
 - Target esperado: "Pienso: Un agujero negro es una región del espacio donde la gravedad es tan intensa que ni la luz puede escapar. Se forma cuando una estrella masiva colapsa... Respuesta final: Un agujero negro es..."
-- En SFT, cada token genera una pérdida supervisada local; los pesos se actualizan para aumentar la probabilidad de cada token correcto. El modelo aprende a
-  producir esa estructura de CoT.
+
+En SFT, cada token genera una pérdida supervisada local; los pesos se actualizan para aumentar la probabilidad de cada token correcto. El modelo aprende a producir esa estructura de CoT.
 
 **Fase 2: Post-entrenamiento con RLHF y PPO.** Una vez con SFT, pasamos a entrenamiento por refuerzo. Se generan N=8 respuestas diferentes para el mismo prompt (con muestreo variado del modelo). Anotadores humanos las ordenan según preferencia (cuál explica mejor, cuál es más clara). El reward model transforma esos rankings en un escalar r∈[−1,1]:
 
 - Respuesta A (clara, correcta): r = 0.85
 - Respuesta B (confusa, parcial): r = −0.1
 - Respuesta C (correcta pero larga): r = 0.4
-- Señal de recompensa: la política recibe r solo después de generar toda la secuencia (delayed signal). PPO hace múltiples pasos de actualización para aumentar la probabilidad de las secuencias con r > 0.5. Aquí, los gradientes se propagan a través de TODOS los tokens de la cadena de pensamiento y la respuesta.
+
+Señal de recompensa: la política recibe r solo después de generar toda la secuencia (delayed signal). PPO hace múltiples pasos de actualización para aumentar la probabilidad de las secuencias con r > 0.5. Aquí, los gradientes se propagan a través de TODOS los tokens de la cadena de pensamiento y la respuesta.
 
 **Fase 3: Escalado con RLAIF y rejection sampling.** Para entrenar a escala, un modelo automático (otro LLM o ensemble) evalúa las respuestas según criterios (ej. factualidad, coherencia). En despliegue, se generan N=5 candidatos y se filtran los que fallan checks externos:
 
-- Se generan 5 respuestas en paralelo (~80 tokens cada una)
+- Se generan 5 respuestas en paralelo
 - Una API de factualidad verifica cada una
 - Se rechazan las que tienen errores
 - Se selecciona la mejor no rechazada
-- Señal binaria: rechazado=0, aceptado=1. Estas muestras rechazadas no se usan en entrenamientos posteriores o se penalizan. Los expertos MoE que produjeron la respuesta rechazada reciben penalización implícita (no se refuerzan).
+
+Señal binaria: rechazado=0, aceptado=1. Estas muestras rechazadas no se usan en entrenamientos posteriores o se penalizan. Los expertos MoE que produjeron la respuesta rechazada reciben penalización implícita (no se refuerzan).
 
 **Fase 4: Red-teaming para robustez.** El sistema genera prompts adversariales automáticamente (ej. "¿Qué es un agujero blanco?", prompts con redacción engañosa, preguntas de trampa). Si la respuesta del modelo falla (alucinación, contenido sensible), se etiqueta como negativa y entra en un buffer de re-entrenamiento.
 
@@ -85,11 +87,11 @@ Las correcciones por PPO pueden requerir miles de trayectorias para converger, e
 
 Breve inciso volviendo al punto inicial sobre el _"grounding"_ de los modelos: Se podría argumentar que la CoT es un patrón aprendido, que los modelos siguen sin _"pensar de verdad"_. Pero tambíen es aprendido el razonamiento humano. Cuando un médico diagnostica siguiendo un protocolo clínico, o cuando un matemático aplica una demostración que aprendió en la universidad, están ejecutando patrones aprendidos. La pregunta relevante no es si el proceso es aprendido, sino si produce razonamiento funcional válido. Y en ese sentido, los modelos actuales resuelven problemas que requieren pasos intermedios correctos, no sólo una respuesta final plausible. Si el modelo se equivoca en un paso intermedio, la respuesta falla.
 
-Esto no es ni mucho menos un estudio exhaustivo. Dependiendo del tamaño del modelo y de la compañía, unas u otras fases tomarán más peso, hay técnicas de entrenamiento diferentes y otros indicadores que se dan al modelo como si debe dedicar más o menos tiempo de inferencia (tokens) a una respuesta (low/medium/high effort en los Modelos Claude por ejemplo) Dejo también por aquí los pdfs a la [System Card de Opus 4.5](/public/papers/Claude%20Opus%204.5%20System%20Card.pdf) y al [paper de DeepSeekR2](/public/papers/2511.22570v1.pdf) para quien quiera profundizar.
+Dependiendo del tamaño del modelo y de la compañía, unas u otras fases tomarán más peso, hay técnicas de entrenamiento diferentes y otros indicadores que se dan al modelo como si debe dedicar más o menos tiempo de inferencia (tokens) a una respuesta (low/medium/high effort en los Modelos Claude por ejemplo) Dejo también por aquí los pdfs a la [System Card de Opus 4.5](/public/papers/Claude%20Opus%204.5%20System%20Card.pdf) y al [paper de DeepSeekR2](/public/papers/2511.22570v1.pdf) para quien quiera profundizar.
 
-El paper de Bender y Gebru planteó preguntas legítimas en 2021. El problema es que se ha convertido en un meme que se aplica a modelos que no existían cuando se escribió, para argumentos que el paper ni siquiera hacía. Vale la pena leerlo y muchos de los argumentos sobre el impacto de los modelos y la amplificación de sesgos siguen siendo válidos. La tecnología sin embargo ha avanzado mucho en cuanto a fiabilidad, control, funcionalidad, capacidad de resolver problemas lógicos y de código... y eso sin entrar en la multimodalidad y cómo estos modelos pueden interpretar imágenes, identificar objetos en ellas, leer texto o explicar el contexto de esa imagen. La imagen del loro estocástico se ha quedado anticuada para los modelos actuales.
+El paper de Bender y Gebru planteó preguntas legítimas en 2021. El problema es que se ha convertido en un meme que se aplica a modelos que no existían cuando se escribió, para argumentos que el paper ni siquiera hacía. Vale la pena leerlo y muchos de los argumentos sobre el impacto de los modelos y la amplificación de sesgos siguen siendo válidos. La tecnología sin embargo ha avanzado mucho en cuanto a fiabilidad, control, funcionalidad, capacidad de resolver problemas lógicos y de código. La imagen del loro estocástico se ha quedado anticuada para los modelos actuales.
 
-## Apéndice: Definiciones de los acrónimos
+### Apéndice: Definiciones de los acrónimos
 
 - **RLHF (Reinforcement Learning from Human Feedback):** Aprendizaje por refuerzo a partir de retroalimentación humana. Se recopilan juicios o rankings humanos sobre salidas del modelo, se entrena un modelo de recompensa para reproducir esas preferencias y luego se usa un algoritmo de RL —por ejemplo PPO (Proximal Policy Optimization), un algoritmo de optimización de políticas eficiente y relativamente estable que limita las actualizaciones para evitar cambios drásticos— para ajustar la política del modelo a fin de maximizar la recompensa. Es costoso pero permite alinear comportamientos concretos con criterios humanos.
 
