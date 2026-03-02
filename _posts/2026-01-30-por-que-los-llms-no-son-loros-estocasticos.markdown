@@ -15,7 +15,19 @@ El paper en sí tiene su importancia y valor histórico, en el momento en el que
 
 Es decir el argumento es que, dado que los LLMs no tienen _"intención de comunicación"_ y que no tienen una experiencia en el mundo real, ni un modelo del estado mental de su interlocutor en la que anclar su comunicación, no pueden, de ninguna forma, comunicar nada que merezca la pena.
 
-Pero para predecir el siguiente token, de alguna forma tienes que saber qué hay hasta ese momento y qué es lo más probable a continuación. No es una cuestión de simple estadística o de sintaxis, de alguna forma hay que codificar la semántica. Tienes que codificar el estado mental del interlocutor, tienes que crear un modelo de la conversación. ¿Cómo podrías adaptar tu respuesta, el tono, el formato, el idioma, el vocabulario, si no tuvieras un modelo del interlocutor?. Sobre cómo se codifica la semántica en el espacio geométrico de miles de dimensiones que tienen los LLMs hay muchas fuentes, dejo por aquí la más ilustrativa que conozco: <https://www.youtube.com/shorts/FJtFZwbvkI4>. Si te interesa este video corto de 3Blue1Brown, en su canal tienen toda una playlist sobre cómo funcionan las redes neuronales. Hay todo un campo de estudio dedicado a entender cómo se codifican determinadas intenciones o semántica en los LLMs, llamado _"mechanistic interpretability"_.
+Pero para predecir el siguiente token, de alguna forma tienes que saber qué hay hasta ese momento y qué es lo más probable a continuación. No es una cuestión de simple estadística o de sintaxis, de alguna forma hay que codificar la semántica. Tienes que codificar el estado mental del interlocutor, tienes que crear un modelo de la conversación. ¿Cómo podrías adaptar tu respuesta, el tono, el formato, el idioma, el vocabulario, si no tuvieras un modelo del interlocutor?. Sobre cómo se codifica la semántica en el espacio geométrico de miles de dimensiones que tienen los LLMs hay muchas fuentes, dejo por aquí la más ilustrativa que conozco:
+
+<iframe 
+  width="315" 
+  height="560" 
+  src="https://www.youtube.com/embed/FJtFZwbvkI4" 
+  title="YouTube Short" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  allowfullscreen>
+</iframe>
+
+Si te interesa este video corto de 3Blue1Brown, en su canal tienen toda una playlist sobre cómo funcionan las redes neuronales. Hay todo un campo de estudio dedicado a entender cómo se codifican determinadas intenciones o semántica en los LLMs, llamado _"mechanistic interpretability"_.
 
 Pero, incluso suponiendo que tuvieran razón, ese paper es de hace 5 años. La tesis de que los LLMs solo predicen la siguiente palabra porque los transformers son modelos autoregresivos ya no es fiel al entrenamiento que siguen los modelos actuales.
 
