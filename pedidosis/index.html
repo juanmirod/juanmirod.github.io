@@ -802,6 +802,25 @@ function init() {
   renderGrid();
   const saved = localStorage.getItem('pediatric_weight');
   if (saved) document.getElementById('weight-inp').value = saved;
+
+  // Handle back/forward buttons
+  window.addEventListener('popstate', (e) => {
+    if (e.state && e.state.medId) {
+      selectMed(e.state.medId, false);
+    } else {
+      showSelector(false);
+    }
+  });
+
+  // Load drug from URL if present
+  const params = new URLSearchParams(window.location.search);
+  const medId = params.get('med');
+  if (medId) {
+    const med = MEDS.find(m => m.id === medId);
+    if (med) {
+      selectMed(medId, false);
+    }
+  }
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -847,7 +866,7 @@ function renderGrid() {
 // ═══════════════════════════════════════════════════════════════════════════
 // NAVEGACIÓN
 // ═══════════════════════════════════════════════════════════════════════════
-function selectMed(id) {
+function selectMed(id, updateHistory=true) {
   currentMed = MEDS.find(m => m.id === id);
   currentSchemeIdx = 0;
 
@@ -883,12 +902,30 @@ function selectMed(id) {
   document.getElementById('screen-sel').classList.remove('active');
   document.getElementById('screen-calc').classList.add('active');
   window.scrollTo(0,0);
+
+  // Update URL history
+  if (updateHistory) {
+    const url = new URL(window.location);
+    url.searchParams.set('med', id);
+    window.history.pushState({medId: id}, currentMed.name, url.toString());
+  }
 }
 
-function goBack() {
+function showSelector(updateHistory=true) {
   document.getElementById('screen-calc').classList.remove('active');
   document.getElementById('screen-sel').classList.add('active');
   window.scrollTo(0,0);
+
+  if (updateHistory) {
+    const url = new URL(window.location);
+    url.searchParams.delete('med');
+    window.history.replaceState(null, 'PediDosis', url.origin + url.pathname);
+  }
+}
+
+function goBack() {
+  showSelector(false);
+  window.history.back();
 }
 
 function selectScheme(btn) {
