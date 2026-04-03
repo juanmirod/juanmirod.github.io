@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>PediDosis — Calculadora pediátrica</title>
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Calculadora de dosis pediátricas. Herramienta rápida y precisa para calcular dosis de medicamentos en niños según peso y edad.">
+<meta name="keywords" content="calculadora pediatría, dosis pediátricas, medicamentos niños, calculadora médica, dosificacion pediátrica, paracetamol, ibuprofeno, amoxicilina, cetirizina, dexametasona">
+<meta name="author" content="PediDosis">
+<meta name="robots" content="index, follow">
+<meta name="language" content="es">
+<link rel="canonical" href="https://juanmirod.github.io/pedidosis/index.html">
+
+<!-- Open Graph Tags for Social Media -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="PediDosis — Calculadora pediátrica">
+<meta property="og:description" content="Calculadora de dosis pediátricas. Herramienta rápida y precisa para calcular dosis de medicamentos en niños según peso y edad.">
+<meta property="og:url" content="https://juanmirod.github.io/pedidosis">
+<meta property="og:image" content="https://juanmirod.github.io/pedidosis/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="PediDosis">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PediDosis — Calculadora pediátrica">
+<meta name="twitter:description" content="Calculadora de dosis pediátricas. Herramienta rápida y precisa para calcular dosis de medicamentos en niños.">
+<meta name="twitter:image" content="https://juanmirod.github.io/pedidosis/og-image.png">
+
+<!-- Theme & Branding -->
+<meta name="theme-color" content="#1A6FAA">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="PediDosis">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet">
+<style>
+/* ══ DESIGN TOKENS ══════════════════════════════════════════════════════════ */
+:root{
+  /* Brand */
+  --brand:#1A6FAA;
+  --brand-dark:#0D4F7E;
+  --brand-light:#EAF4FF;
+  --on-brand:#fff;
+
+  /* Category: Fiebre & Dolor — warm amber/orange */
+  --cat-pain:#E8640A;
+  --cat-pain-bg:#FFF4EC;
+  --cat-pain-icon:#FDE8D6;
+
+  /* Category: Antibióticos — teal/green */
+  --cat-anti:#0E7C5A;
+  --cat-anti-bg:#F0FAF5;
+  --cat-anti-icon:#C9EFE0;
+
+  /* Category: Antihistamínicos — calm violet */
+  --cat-hist:#6845A6;
+  --cat-hist-bg:#F5F0FF;
+  --cat-hist-icon:#E2D4F8;
+
+  /* Category: Corticoides — deep crimson */
+  --cat-cort:#C0222A;
+  --cat-cort-bg:#FFF0F0;
+  --cat-cort-icon:#FCCDD0;
+
+  /* Surfaces */
+  --surf:#F8FAFB;
+  --surf-card:#FFFFFF;
+  --on-surf:#1C2028;
+  --on-surf-muted:#5A6172;
+  --outline:#D4D9E2;
+  --err:#BA1A1A;
+  --err-bg:#FFDAD6;
+  --on-err:#410002;
+
+  /* Radii */
+  --r-sm:8px;--r-md:12px;--r-lg:16px;--r-xl:20px;--r-full:50px;
+
+  /* Shadows */
+  --sh-card:0 2px 8px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.08);
+  --sh-card-hover:0 6px 20px rgba(0,0,0,.1),0 2px 6px rgba(0,0,0,.08);
+  --sh-card-active:0 1px 4px rgba(0,0,0,.06);
+}
+
+/* ══ RESET & BASE ════════════════════════════════════════════════════════════ */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--surf);
+  color:var(--on-surf);
+  min-height:100vh;
+}
+
+/* ══ SCREENS ═════════════════════════════════════════════════════════════════ */
+.screen{display:none}
+.screen.active{display:block;animation:fadeIn .24s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* ══ APP BAR ════════════════════════════════════════════════════════════════ */
+.app-bar{
+  position:sticky;top:0;z-index:100;
+  background:var(--brand);
+  padding:0 16px;
+  display:flex;align-items:center;gap:12px;
+  height:62px;
+}
+.app-logo{
+  width:38px;height:38px;
+  background:rgba(255,255,255,.18);
+  border-radius:var(--r-md);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;flex-shrink:0;
+}
+.app-logo .ms{font-size:22px}
+.app-bar-title{
+  font-size:21px;font-weight:700;
+  color:#fff;flex:1;letter-spacing:-.3px;
+  font-family:'DM Sans',sans-serif;
+}
+.app-bar-subtitle{font-size:12px;color:rgba(255,255,255,.75);line-height:1;margin-top:1px}
+
+/* Icon button (back arrow) */
+.icon-btn{
+  width:40px;height:40px;border:none;
+  background:rgba(255,255,255,.15);
+  border-radius:var(--r-full);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;transition:background .15s;
+  -webkit-tap-highlight-color:transparent;
+}
+.icon-btn:hover{background:rgba(255,255,255,.25)}
+
+/* ══ MATERIAL SYMBOLS ════════════════════════════════════════════════════════ */
+.ms{
+  font-family:'Material Symbols Rounded';font-weight:normal;font-style:normal;
+  font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;
+  display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;
+  -webkit-font-feature-settings:'liga';font-feature-settings:'liga';
+  -webkit-font-smoothing:antialiased;
+  font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;
+}
+
+/* ══ CONTENT ════════════════════════════════════════════════════════════════ */
+.content{padding:20px 16px 32px;max-width:600px;margin:0 auto}
+
+/* ══ SECTION HEADERS ════════════════════════════════════════════════════════ */
+.section-label{
+  font-size:11px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;
+  color:var(--on-surf-muted);margin-bottom:10px;padding:0 2px;
+}
+.section-label.primary{
+  color:var(--brand);font-size:12px;letter-spacing:.6px;
+}
+
+/* Category group */
+.cat-group{margin-bottom:24px}
+.cat-header{
+  display:flex;align-items:center;gap:8px;
+  margin-bottom:10px;padding:0 2px;
+}
+.cat-header-dot{
+  width:8px;height:8px;border-radius:50%;flex-shrink:0;
+}
+.cat-header-label{
+  font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;
+}
+
+/* ══ MED GRID ════════════════════════════════════════════════════════════════ */
+.med-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+@media(min-width:460px){.med-grid{grid-template-columns:repeat(3,1fr)}}
+
+.med-card{
+  background:var(--surf-card);
+  border:none;
+  border-radius:var(--r-xl);
+  padding:16px 14px 18px;
+  cursor:pointer;
+  display:flex;flex-direction:column;align-items:flex-start;gap:11px;
+  box-shadow:var(--sh-card);
+  transition:box-shadow .18s,transform .15s;
+  -webkit-tap-highlight-color:transparent;
+  user-select:none;
+  position:relative;
+  overflow:hidden;
+}
+/* Subtle top color stripe */
+.med-card::before{
+  content:'';
+  position:absolute;top:0;left:0;right:0;
+  height:3px;
+  border-radius:var(--r-xl) var(--r-xl) 0 0;
+}
+.med-card[data-cat="pain"]::before{background:var(--cat-pain)}
+.med-card[data-cat="anti"]::before{background:var(--cat-anti)}
+.med-card[data-cat="hist"]::before{background:var(--cat-hist)}
+.med-card[data-cat="cort"]::before{background:var(--cat-cort)}
+
+.med-card:hover{box-shadow:var(--sh-card-hover);transform:translateY(-2px)}
+.med-card:active{transform:scale(.97);box-shadow:var(--sh-card-active)}
+
+.med-icon{
+  width:50px;height:50px;border-radius:var(--r-lg);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.med-icon .ms{font-size:28px}
+
+.med-name{
+  font-size:14px;font-weight:700;line-height:1.25;
+  color:var(--on-surf);letter-spacing:-.2px;
+}
+.med-indication{
+  font-size:11px;color:var(--on-surf-muted);line-height:1.4;margin-top:-4px;
+}
+
+/* Category icon/bg colors */
+.med-card[data-cat="pain"] .med-icon{background:var(--cat-pain-icon);color:var(--cat-pain)}
+.med-card[data-cat="anti"] .med-icon{background:var(--cat-anti-icon);color:var(--cat-anti)}
+.med-card[data-cat="hist"] .med-icon{background:var(--cat-hist-icon);color:var(--cat-hist)}
+.med-card[data-cat="cort"] .med-icon{background:var(--cat-cort-icon);color:var(--cat-cort)}
+
+/* ══ FORM ════════════════════════════════════════════════════════════════════ */
+.form-section{margin-bottom:20px}
+.form-label{display:block;font-size:14px;font-weight:600;color:var(--on-surf);margin-bottom:8px}
+
+.text-field{position:relative}
+.text-field input{
+  width:100%;padding:16px 52px 16px 16px;
+  border:1.5px solid var(--outline);border-radius:var(--r-lg);
+  background:#fff;font-size:16px;font-family:'DM Sans',sans-serif;
+  color:var(--on-surf);outline:none;
+  transition:border-color .15s,box-shadow .15s;
+  -webkit-appearance:none;appearance:none;
+  box-shadow:var(--sh-card);
+}
+.text-field input:focus{
+  border-color:var(--brand);
+  box-shadow:0 0 0 3px rgba(26,111,170,.12);
+}
+.text-field input.error{border-color:var(--err)!important;box-shadow:0 0 0 3px rgba(186,26,26,.1)!important}
+.field-suffix{
+  position:absolute;right:16px;top:50%;transform:translateY(-50%);
+  font-size:15px;font-weight:500;color:var(--on-surf-muted);pointer-events:none;
+}
+.field-hint{font-size:12px;color:var(--err);margin-top:5px;display:none}
+.field-hint.show{display:block}
+
+/* ══ SCHEME CHIPS ═════════════════════════════════════════════════════════════ */
+.chip-row{display:flex;gap:8px;flex-wrap:wrap}
+.filter-chip{
+  padding:8px 16px;
+  border:1.5px solid var(--outline);border-radius:var(--r-full);
+  font-size:13px;font-family:'DM Sans',sans-serif;font-weight:500;
+  cursor:pointer;background:#fff;color:var(--on-surf);
+  transition:all .15s;white-space:nowrap;
+  box-shadow:var(--sh-card);
+  -webkit-tap-highlight-color:transparent;
+}
+.filter-chip:hover{border-color:var(--brand);color:var(--brand)}
+.filter-chip.sel{
+  background:var(--brand);border-color:var(--brand);color:#fff;
+  box-shadow:none;
+}
+
+/* ══ FILLED BUTTON ════════════════════════════════════════════════════════════ */
+.btn-filled{
+  width:100%;padding:15px 24px;
+  background:var(--brand);color:#fff;
+  border:none;border-radius:var(--r-full);
+  font-size:15px;font-weight:600;font-family:'DM Sans',sans-serif;
+  letter-spacing:.1px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  transition:background .15s,box-shadow .15s,transform .1s;
+  -webkit-tap-highlight-color:transparent;
+  box-shadow:0 4px 14px rgba(26,111,170,.35);
+}
+.btn-filled:hover{background:var(--brand-dark);box-shadow:0 6px 18px rgba(26,111,170,.4)}
+.btn-filled:active{transform:scale(.98);box-shadow:none}
+.btn-filled .ms{font-size:20px}
+
+/* ══ RESULTS ═════════════════════════════════════════════════════════════════ */
+#results{margin-top:24px}
+.results-anim{animation:slideUp .3s ease}
+@keyframes slideUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+.res-section-title{
+  font-size:11px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;
+  color:var(--on-surf-muted);
+  margin:20px 0 10px;display:flex;align-items:center;gap:6px;
+}
+.res-section-title .ms{font-size:16px;color:var(--brand)}
+
+/* Dose hero card */
+.dose-card{
+  border-radius:var(--r-xl);padding:22px 20px 20px;
+  margin-bottom:4px;
+}
+.dose-card-eyebrow{
+  font-size:11px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;
+  opacity:.72;margin-bottom:6px;
+}
+.dose-card-value{
+  font-size:38px;font-weight:700;
+  line-height:1;margin-bottom:2px;letter-spacing:-.5px;
+}
+.dose-card-detail{font-size:13px;opacity:.78;margin-top:10px;line-height:1.5}
+
+/* Presentation card */
+.pres-card{
+  background:#fff;border-radius:var(--r-lg);
+  padding:14px 16px;margin-bottom:10px;
+  box-shadow:var(--sh-card);
+}
+.pres-name{
+  font-size:11px;color:var(--on-surf-muted);margin-bottom:4px;
+  font-weight:600;text-transform:uppercase;letter-spacing:.4px;
+}
+.pres-note{font-size:11px;color:var(--on-surf-muted);margin-bottom:6px;font-style:italic}
+.pres-amount{font-size:30px;font-weight:700;display:inline;letter-spacing:-.5px}
+.pres-unit{font-size:14px;font-weight:400;color:var(--on-surf-muted);margin-left:3px}
+.pres-extra{display:block;font-size:12px;color:var(--on-surf-muted);margin-top:3px}
+
+/* Info card */
+.info-card{
+  background:#fff;border-radius:var(--r-lg);
+  padding:2px 16px;margin-bottom:10px;
+  box-shadow:var(--sh-card);
+}
+.info-row{
+  display:flex;align-items:center;gap:14px;
+  padding:13px 0;border-bottom:1px solid var(--outline);
+}
+.info-row:last-child{border:none}
+.info-row-icon{font-size:22px;flex-shrink:0}
+.info-row-label{font-size:11px;color:var(--on-surf-muted);font-weight:600;letter-spacing:.3px;text-transform:uppercase}
+.info-row-val{font-size:15px;color:var(--on-surf);margin-top:1px;font-weight:500}
+
+/* Warning */
+.warning-box{
+  background:var(--err-bg);border-radius:var(--r-md);
+  padding:12px 14px;margin-bottom:10px;
+  display:flex;gap:10px;align-items:flex-start;
+}
+.warning-box .ms{color:var(--on-err);font-size:20px;flex-shrink:0;margin-top:1px}
+.warning-text{font-size:13px;color:var(--on-err);line-height:1.5}
+
+/* Notes */
+.notes-box{
+  background:#fff;border-radius:var(--r-lg);
+  padding:14px 16px;margin-bottom:10px;
+  box-shadow:var(--sh-card);
+}
+.notes-title{
+  font-size:11px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;
+  color:var(--on-surf-muted);margin-bottom:8px;
+}
+.note-item{
+  font-size:13px;color:var(--on-surf);line-height:1.55;
+  padding-left:14px;position:relative;margin-bottom:4px;
+}
+.note-item:last-child{margin-bottom:0}
+.note-item::before{content:'·';position:absolute;left:2px;color:var(--brand);font-size:18px;line-height:1.2}
+
+/* Disclaimer */
+.disclaimer{
+  background:rgba(26,111,170,.06);border-radius:var(--r-lg);
+  border:1px solid rgba(26,111,170,.15);
+  padding:13px 14px;margin:24px 0 8px;
+  display:flex;gap:10px;align-items:flex-start;
+}
+.disclaimer .ms{color:var(--brand);font-size:18px;flex-shrink:0;margin-top:1px}
+.disclaimer-text{font-size:12px;color:var(--on-surf-muted);line-height:1.6}
+.disclaimer-text strong{color:var(--on-surf)}
+
+/* Divider */
+.divider{height:1px;background:var(--outline);margin:4px 0}
+
+/* ══ INTRO BANNER ════════════════════════════════════════════════════════════ */
+.intro-banner{
+  background:linear-gradient(135deg,var(--brand) 0%,var(--brand-dark) 100%);
+  border-radius:var(--r-xl);
+  padding:20px;
+  margin-bottom:24px;
+  display:flex;align-items:center;gap:14px;
+  box-shadow:0 4px 16px rgba(26,111,170,.25);
+}
+.intro-banner .ms{font-size:32px;color:rgba(255,255,255,.85)}
+.intro-banner-text{color:#fff}
+.intro-banner-title{font-size:15px;font-weight:700;margin-bottom:2px}
+.intro-banner-sub{font-size:12px;opacity:.8;line-height:1.4}
+</style>
+</head>
+<body>
+<div id="app">
+
+<!-- ═══ PANTALLA 1: SELECTOR ════════════════════════════════════════════════ -->
+<div id="screen-sel" class="screen active">
+  <div class="app-bar">
+    <div class="app-logo"><span class="ms">medical_services</span></div>
+    <div>
+      <div class="app-bar-title">PediDosis</div>
+      <div class="app-bar-subtitle">Calculadora pediátrica</div>
+    </div>
+  </div>
+  <div class="content">
+
+    <div class="intro-banner" style="margin-top:4px">
+      <span class="ms">child_care</span>
+      <div class="intro-banner-text">
+        <div class="intro-banner-title">Dosis seguras para tu hijo</div>
+        <div class="intro-banner-sub">Selecciona el medicamento y calcula la dosis exacta según el peso</div>
+      </div>
+    </div>
+
+    <div id="med-grid-container"></div>
+
+    <div class="disclaimer">
+      <span class="ms">info</span>
+      <p class="disclaimer-text"><strong>Aviso importante:</strong> Esta aplicación es solo orientativa. Consulta siempre con tu pediatra o farmacéutico antes de administrar cualquier medicamento. Las dosis son aproximaciones basadas en el peso y pueden no ser adecuadas para todos los casos.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PANTALLA 2: CALCULADORA ═════════════════════════════════════════════ -->
+<div id="screen-calc" class="screen">
+  <div class="app-bar">
+    <button class="icon-btn" onclick="goBack()" aria-label="Volver">
+      <span class="ms">arrow_back</span>
+    </button>
+    <div>
+      <div class="app-bar-title" id="calc-title">Medicamento</div>
+      <div class="app-bar-subtitle" id="calc-indication"></div>
+    </div>
+  </div>
+  <div class="content">
+
+    <div class="form-section" style="margin-top:20px">
+      <label class="form-label" for="weight-inp">Peso del niño o niña</label>
+      <div class="text-field">
+        <input type="number" id="weight-inp" placeholder="Ej: 15" min="0.5" max="150" step="0.1" inputmode="decimal" autocomplete="off">
+        <span class="field-suffix">kg</span>
+      </div>
+      <p class="field-hint" id="weight-hint">Introduce un peso válido (en kg).</p>
+    </div>
+
+    <div class="form-section" id="scheme-section" style="display:none">
+      <label class="form-label">Pauta de dosificación</label>
+      <div class="chip-row" id="scheme-chips"></div>
+    </div>
+
+    <button class="btn-filled" onclick="calculate()">
+      <span class="ms">calculate</span>
+      Calcular dosis
+    </button>
+
+    <div id="results" style="display:none"></div>
+
+    <div class="disclaimer">
+      <span class="ms">info</span>
+      <p class="disclaimer-text"><strong>Aviso:</strong> Consulta siempre con tu pediatra o farmacéutico. Esta calculadora no sustituye el consejo médico profesional.</p>
+    </div>
+
+  </div>
+</div>
+
+</div><!-- #app -->
+
+<script>
+// ═══════════════════════════════════════════════════════════════════════════
+// DATOS DE MEDICAMENTOS
+// ═══════════════════════════════════════════════════════════════════════════
+const MEDS = [
+  // ── Fiebre & Dolor ──────────────────────────────────────────────────────
+  {
+    id:'paracetamol', name:'Paracetamol',
+    icon:'medication', cat:'pain',
+    color:'var(--cat-pain)', bg:'var(--cat-pain-bg)',
+    indication:'Fiebre y dolor',
+    minWeightKg:3,
+    presentations:[
+      {name:'Gotas 100 mg/ml',         mgPerMl:100, dropsPerMl:20, dropLabel:'1 gota = 5 mg'},
+      {name:'Suspensión 250 mg/5 ml',  mgPerMl:50},
+    ],
+    dosePerKgMin:10, dosePerKgMax:15,
+    frequency:'Cada 4-6 horas', maxDailyDoses:4,
+    maxDailyMgAbs:4000,
+    notes:[
+      'No superar 4 dosis al día ni 60 mg/kg/día.',
+      'En mayores de 12 años: máximo 1 g por dosis y 4 g/día.',
+    ],
+    warnings:[],
+  },
+  {
+    id:'ibuprofeno', name:'Ibuprofeno',
+    icon:'local_pharmacy', cat:'pain',
+    color:'var(--cat-pain)', bg:'var(--cat-pain-bg)',
+    indication:'Fiebre, dolor e inflamación',
+    minWeightKg:5,
+    presentations:[
+      {name:'Suspensión 20 mg/ml', mgPerMl:20},
+      {name:'Suspensión 40 mg/ml', mgPerMl:40},
+    ],
+    dosePerKgMin:5, dosePerKgMax:10,
+    frequency:'Cada 6-8 horas', maxDailyDoses:4,
+    maxDailyMgAbs:2400,
+    notes:[
+      'No superar 30 mg/kg/día ni 2,4 g/día.',
+      'Administrar con alimentos para reducir la irritación gástrica.',
+    ],
+    warnings:[
+      'Contraindicado en menores de 3 meses o peso inferior a 5 kg.',
+      'No administrar en caso de varicela.',
+    ],
+  },
+  {
+    id:'metamizol', name:'Metamizol',
+    icon:'thermostat', cat:'pain',
+    color:'var(--cat-pain)', bg:'var(--cat-pain-bg)',
+    indication:'Fiebre alta y dolor intenso',
+    minWeightKg:5,
+    presentations:[
+      {name:'Gotas 500 mg/ml', mgPerMl:500, dropsPerMl:20, dropLabel:'1 gota = 25 mg'},
+      {name:'Suspensión 200 mg/5 ml',  mgPerMl:40},
+    ],
+    dosePerKgMin:10, dosePerKgMax:20,
+    frequency:'Cada 6-8 horas', maxDailyDoses:4,
+    maxDailyMgAbs:null,
+    notes:[
+      'No superar 40 mg/kg/día.',
+      'En adultos: máximo 2 g por dosis y 8 g/día.',
+    ],
+    warnings:[
+      'Contraindicado en menores de 3 meses o peso inferior a 5 kg.',
+    ],
+  },
+
+  // ── Antibióticos ─────────────────────────────────────────────────────────
+  {
+    id:'amoxicilina', name:'Amoxicilina',
+    icon:'vaccines', cat:'anti',
+    color:'var(--cat-anti)', bg:'var(--cat-anti-bg)',
+    indication:'Infecciones bacterianas',
+    minWeightKg:3,
+    presentations:[
+      {name:'Suspensión 250 mg/5 ml', mgPerMl:50},
+      {name:'Suspensión 500 mg/5 ml', mgPerMl:100},
+    ],
+    schemes:[
+      {
+        label:'Dosis estándar',
+        dosePerKgMin:13, dosePerKgMax:17,
+        detail:'40–50 mg/kg/día ÷ 3 dosis (infecciones leves-moderadas)',
+        maxDailyMgAbs:3000,
+      },
+      {
+        label:'Dosis alta',
+        dosePerKgMin:27, dosePerKgMax:30,
+        detail:'80–90 mg/kg/día ÷ 3 dosis — otitis, neumonía',
+        maxDailyMgAbs:3000,
+      },
+    ],
+    dosePerKgMin:13, dosePerKgMax:17,
+    frequency:'Cada 8 horas (3 veces al día)', maxDailyDoses:3,
+    maxDailyMgAbs:3000,
+    notes:['Duración habitual: 7-10 días según indicación médica.'],
+    warnings:['Comprobar antecedentes de alergia a penicilinas.'],
+  },
+  {
+    id:'amoxiclavulanico', name:'Amoxicilina-Clavulánico',
+    icon:'biotech', cat:'anti',
+    color:'var(--cat-anti)', bg:'var(--cat-anti-bg)',
+    indication:'Infecciones con posible resistencia',
+    minWeightKg:3,
+    presentations:[
+      {
+        name:'Suspensión 400/57 mg/5 ml',
+        mgPerMl:80,
+        noteLabel:'Volumen calculado sobre el componente amoxicilina (80 mg/ml)',
+      },
+    ],
+    dosePerKgMin:13, dosePerKgMax:22,
+    frequency:'Cada 8-12 horas', maxDailyDoses:3,
+    maxDailyMgAbs:3000,
+    notes:[
+      'Dosis calculada sobre el componente amoxicilina.',
+      'Duración habitual: 7-10 días.',
+      'Administrar al inicio de una comida para mejorar la tolerancia.',
+    ],
+    warnings:['Comprobar antecedentes de alergia a penicilinas.'],
+  },
+  {
+    id:'azitromicina', name:'Azitromicina',
+    icon:'water_drop', cat:'anti',
+    color:'var(--cat-anti)', bg:'var(--cat-anti-bg)',
+    indication:'Infecciones respiratorias atípicas',
+    minWeightKg:3,
+    presentations:[
+      {name:'Suspensión 200 mg/5 ml', mgPerMl:40},
+    ],
+    dosePerKgMin:10, dosePerKgMax:10,
+    frequency:'Una vez al día', maxDailyDoses:1,
+    maxDailyMgAbs:500,
+    notes:[
+      'Duración habitual: 3-5 días según indicación médica.',
+      'Dosis máxima: 500 mg/día.',
+    ],
+    warnings:[],
+  },
+
+  // ── Antihistamínicos ─────────────────────────────────────────────────────
+  {
+    id:'cetirizina', name:'Cetirizina',
+    icon:'masks', cat:'hist',
+    color:'var(--cat-hist)', bg:'var(--cat-hist-bg)',
+    indication:'Alergia y urticaria',
+    minWeightKg:6,
+    presentations:[
+      {name:'Solución 1 mg/ml', mgPerMl:1},
+    ],
+    specialDosing:'cetirizina',
+    frequency:'', maxDailyDoses:null,
+    notes:[
+      '< 10 kg (aprox. < 2 años): 0,25 mg/kg cada 12 h — máx. 2,5 mg/dosis.',
+      '10-30 kg (aprox. 2-6 años): 5 mg una vez al día.',
+      '> 30 kg (aprox. > 6 años): 10 mg una vez al día.',
+    ],
+    warnings:['No recomendado en menores de 6 meses.'],
+  },
+  {
+    id:'loratadina', name:'Loratadina',
+    icon:'nature', cat:'hist',
+    color:'var(--cat-hist)', bg:'var(--cat-hist-bg)',
+    indication:'Alergia y rinitis alérgica',
+    minWeightKg:10,
+    presentations:[
+      {name:'Suspensión 1 mg/ml', mgPerMl:1},
+    ],
+    specialDosing:'loratadina',
+    frequency:'', maxDailyDoses:null,
+    notes:[
+      '< 30 kg: 5 mg una vez al día (5 ml).',
+      '≥ 30 kg: 10 mg una vez al día (10 ml).',
+    ],
+    warnings:['No recomendado en menores de 2 años (aprox. < 10 kg).'],
+  },
+
+  // ── Corticoides ──────────────────────────────────────────────────────────
+  {
+    id:'dexametasona', name:'Dexametasona',
+    icon:'emergency', cat:'cort',
+    color:'var(--cat-cort)', bg:'var(--cat-cort-bg)',
+    indication:'Laringitis y croup',
+    minWeightKg:3,
+    presentations:[
+      {name:'Solución 1 mg/ml', mgPerMl:1},
+    ],
+    dosePerKgMin:0.15, dosePerKgMax:0.6,
+    frequency:'Dosis única (repetir si lo prescribe el médico)', maxDailyDoses:1,
+    maxDailyMgAbs:10,
+    notes:[
+      'Habitualmente dosis única.',
+      'En croup grave puede repetirse a las 12-24 h si lo indica el médico.',
+      'Dosis máxima: 10 mg por toma.',
+    ],
+    warnings:[
+      'Solo para episodios agudos de laringitis/croup.',
+      'Uso bajo supervisión médica.',
+    ],
+  },
+];
+
+// Category metadata
+const CATEGORIES = [
+  { key:'pain', label:'Fiebre y Dolor',     colorVar:'--cat-pain' },
+  { key:'anti', label:'Antibióticos',        colorVar:'--cat-anti' },
+  { key:'hist', label:'Antihistamínicos',    colorVar:'--cat-hist' },
+  { key:'cort', label:'Corticoides',         colorVar:'--cat-cort' },
+];
+
+// ═══════════════════════════════════════════════════════════════════════════
+// ESTADO
+// ═══════════════════════════════════════════════════════════════════════════
+let currentMed = null;
+let currentSchemeIdx = 0;
+
+// ═══════════════════════════════════════════════════════════════════════════
+// UTILIDADES
+// ═══════════════════════════════════════════════════════════════════════════
+function fmt(val, dec=1) {
+  if (val===null||val===undefined||isNaN(val)) return '?';
+  return (Math.round(val*Math.pow(10,dec))/Math.pow(10,dec))
+    .toLocaleString('es-ES',{minimumFractionDigits:0,maximumFractionDigits:dec});
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// INICIO
+// ═══════════════════════════════════════════════════════════════════════════
+function init() {
+  renderGrid();
+  const saved = localStorage.getItem('pediatric_weight');
+  if (saved) document.getElementById('weight-inp').value = saved;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// REJILLA DE MEDICAMENTOS (agrupada por categoría)
+// ═══════════════════════════════════════════════════════════════════════════
+function renderGrid() {
+  const container = document.getElementById('med-grid-container');
+  let html = '';
+
+  CATEGORIES.forEach(cat => {
+    const meds = MEDS.filter(m => m.cat === cat.key);
+    if (!meds.length) return;
+
+    const color = `var(${cat.colorVar})`;
+    html += `
+      <div class="cat-group">
+        <div class="cat-header">
+          <div class="cat-header-dot" style="background:${color}"></div>
+          <span class="cat-header-label" style="color:${color}">${cat.label}</span>
+        </div>
+        <div class="med-grid">
+          ${meds.map(m => `
+            <div class="med-card" data-cat="${m.cat}" onclick="selectMed('${m.id}')"
+                 role="button" tabindex="0"
+                 onkeydown="if(event.key==='Enter')selectMed('${m.id}')">
+              <div class="med-icon">
+                <span class="ms">${m.icon}</span>
+              </div>
+              <div>
+                <div class="med-name">${m.name}</div>
+                <div class="med-indication">${m.indication}</div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  });
+
+  container.innerHTML = html;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// NAVEGACIÓN
+// ═══════════════════════════════════════════════════════════════════════════
+function selectMed(id) {
+  currentMed = MEDS.find(m => m.id === id);
+  currentSchemeIdx = 0;
+
+  document.getElementById('calc-title').textContent = currentMed.name;
+  document.getElementById('calc-indication').textContent = currentMed.indication;
+
+  // Color accent on calc screen app bar (subtle tint via inline is handled by brand color)
+  const schemeSection = document.getElementById('scheme-section');
+  if (currentMed.schemes) {
+    document.getElementById('scheme-chips').innerHTML = currentMed.schemes.map((s, i) => `
+      <button class="filter-chip ${i===0?'sel':''}"
+              data-idx="${i}" onclick="selectScheme(this)">${s.label}</button>
+    `).join('');
+    schemeSection.style.display = 'block';
+  } else {
+    schemeSection.style.display = 'none';
+  }
+
+  const r = document.getElementById('results');
+  r.style.display = 'none';
+  r.innerHTML = '';
+
+  document.getElementById('screen-sel').classList.remove('active');
+  document.getElementById('screen-calc').classList.add('active');
+  window.scrollTo(0,0);
+}
+
+function goBack() {
+  document.getElementById('screen-calc').classList.remove('active');
+  document.getElementById('screen-sel').classList.add('active');
+  window.scrollTo(0,0);
+}
+
+function selectScheme(btn) {
+  document.querySelectorAll('.filter-chip').forEach(c=>c.classList.remove('sel'));
+  btn.classList.add('sel');
+  currentSchemeIdx = parseInt(btn.dataset.idx);
+  if (document.getElementById('results').style.display !== 'none') calculate(false);
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// CÁLCULO DE DOSIS
+// ═══════════════════════════════════════════════════════════════════════════
+function calcStandard(med, weight, schIdx) {
+  let dMin = med.dosePerKgMin;
+  let dMax = med.dosePerKgMax;
+  let detail = null;
+  let maxAbs = med.maxDailyMgAbs;
+  const doses = med.maxDailyDoses;
+
+  if (med.schemes) {
+    const s = med.schemes[schIdx];
+    dMin = s.dosePerKgMin;
+    dMax = s.dosePerKgMax;
+    detail = s.detail;
+    maxAbs = s.maxDailyMgAbs;
+  }
+
+  let mgMin = weight * dMin;
+  let mgMax = weight * dMax;
+
+  if (maxAbs && doses) {
+    const cap = maxAbs / doses;
+    if (mgMin > cap) mgMin = cap;
+    if (mgMax > cap) mgMax = cap;
+  }
+  if (mgMin > mgMax) mgMin = mgMax;
+
+  return {
+    mgDoseMin: Math.round(mgMin*10)/10,
+    mgDoseMax: Math.round(mgMax*10)/10,
+    detail, freq: med.frequency, maxDailyDoses: doses,
+  };
+}
+
+function calcCetirizina(weight) {
+  let mg, freq, doses, detail;
+  if (weight < 10) {
+    mg = Math.min(Math.round(weight*0.25*10)/10, 2.5);
+    freq = 'Cada 12 horas';
+    doses = 2;
+    detail = `0,25 mg/kg/dosis · máx. 2,5 mg/dosis`;
+  } else if (weight < 30) {
+    mg = 5;
+    freq = 'Una vez al día';
+    doses = 1;
+    detail = 'Dosis fija 5 mg/día (10–30 kg)';
+  } else {
+    mg = 10;
+    freq = 'Una vez al día';
+    doses = 1;
+    detail = 'Dosis fija 10 mg/día (> 30 kg)';
+  }
+  return {mgDoseMin:mg, mgDoseMax:mg, freq, maxDailyDoses:doses, detail};
+}
+
+function calcLoratadina(weight) {
+  const mg = weight < 30 ? 5 : 10;
+  const detail = weight < 30 ? 'Dosis fija 5 mg/día (< 30 kg)' : 'Dosis fija 10 mg/día (≥ 30 kg)';
+  return {mgDoseMin:mg, mgDoseMax:mg, freq:'Una vez al día', maxDailyDoses:1, detail};
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// ACCIÓN PRINCIPAL: CALCULAR
+// ═══════════════════════════════════════════════════════════════════════════
+function calculate(scroll=true) {
+  const inp  = document.getElementById('weight-inp');
+  const hint = document.getElementById('weight-hint');
+  const weight = parseFloat(inp.value);
+
+  if (!weight || weight<=0 || weight>200) {
+    inp.classList.add('error');
+    hint.classList.add('show');
+    inp.focus();
+    return;
+  }
+  inp.classList.remove('error');
+  hint.classList.remove('show');
+  localStorage.setItem('pediatric_weight', inp.value);
+
+  const med = currentMed;
+
+  const minWarn = (med.minWeightKg && weight < med.minWeightKg)
+    ? `Este medicamento no se recomienda para niños con un peso inferior a ${med.minWeightKg} kg. Consulta a tu pediatra.`
+    : null;
+
+  let dose;
+  if      (med.specialDosing==='cetirizina')  dose = calcCetirizina(weight);
+  else if (med.specialDosing==='loratadina')  dose = calcLoratadina(weight);
+  else                                         dose = calcStandard(med, weight, currentSchemeIdx);
+
+  const presResults = med.presentations.map(p => {
+    const mgMin = dose.mgDoseMin;
+    const mgMax = dose.mgDoseMax;
+    let aMin, aMax, unit, extra;
+
+    if (p.dropsPerMl) {
+      const mgPerDrop = p.mgPerMl / p.dropsPerMl;
+      aMin = Math.round(mgMin / mgPerDrop);
+      aMax = Math.round(mgMax / mgPerDrop);
+      unit = 'gotas';
+      const mlMin = fmt(mgMin / p.mgPerMl);
+      const mlMax = fmt(mgMax / p.mgPerMl);
+      extra = (aMin===aMax) ? `equivale a ${mlMin} ml` : `equivale a ${mlMin} – ${mlMax} ml`;
+    } else {
+      aMin = fmt(mgMin / p.mgPerMl);
+      aMax = fmt(mgMax / p.mgPerMl);
+      unit = 'ml';
+    }
+    const same = (String(aMin)===String(aMax));
+    return {name:p.name, noteLabel:p.noteLabel, dropLabel:p.dropLabel, aMin, aMax, unit, extra, same};
+  });
+
+  renderResults(dose, presResults, weight, minWarn);
+
+  if (scroll) {
+    setTimeout(()=>{
+      document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+    },120);
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// RENDERIZAR RESULTADOS
+// ═══════════════════════════════════════════════════════════════════════════
+function renderResults(dose, presResults, weight, minWarn) {
+  const med = currentMed;
+  const sameRange = dose.mgDoseMin === dose.mgDoseMax;
+  const doseText = sameRange
+    ? `${fmt(dose.mgDoseMin)} mg`
+    : `${fmt(dose.mgDoseMin)} – ${fmt(dose.mgDoseMax)} mg`;
+
+  // Resolve CSS variable to actual hex for inline styles
+  const catColors = {
+    pain: '#E8640A',
+    anti: '#0E7C5A',
+    hist: '#6845A6',
+    cort: '#C0222A',
+  };
+  const catBgs = {
+    pain: '#FFF4EC',
+    anti: '#F0FAF5',
+    hist: '#F5F0FF',
+    cort: '#FFF0F0',
+  };
+
+  const resolvedColor = catColors[med.cat] || '#1A6FAA';
+  const resolvedBg    = catBgs[med.cat]    || '#EAF4FF';
+
+  let html = '<div class="results-anim">';
+
+  if (minWarn) {
+    html += `<div class="warning-box">
+      <span class="ms">warning</span>
+      <p class="warning-text">${minWarn}</p>
+    </div>`;
+  }
+
+  html += `
+    <div class="res-section-title">
+      <span class="ms" style="color:${resolvedColor}">medication</span>Dosis por toma
+    </div>
+    <div class="dose-card" style="background:${resolvedBg}">
+      <div class="dose-card-eyebrow" style="color:${resolvedColor}">Para ${fmt(weight,1)} kg</div>
+      <div class="dose-card-value" style="color:${resolvedColor}">${doseText}</div>
+      ${dose.detail?`<div class="dose-card-detail" style="color:${resolvedColor}">${dose.detail}</div>`:''}
+    </div>
+  `;
+
+  html += `<div class="res-section-title"><span class="ms" style="color:${resolvedColor}">science</span>Por presentación</div>`;
+  presResults.forEach(p => {
+    const amtText = p.same ? `${p.aMin}` : `${p.aMin} – ${p.aMax}`;
+    html += `
+      <div class="pres-card">
+        <div class="pres-name">${p.name}</div>
+        ${p.noteLabel ? `<div class="pres-note">${p.noteLabel}</div>` : ''}
+        ${p.dropLabel  ? `<div class="pres-note">${p.dropLabel}</div>`  : ''}
+        <span class="pres-amount" style="color:${resolvedColor}">${amtText}</span>
+        <span class="pres-unit">${p.unit}</span>
+        ${p.extra ? `<span class="pres-extra">${p.extra}</span>` : ''}
+      </div>
+    `;
+  });
+
+  if (dose.freq) {
+    html += `<div class="res-section-title"><span class="ms" style="color:${resolvedColor}">schedule</span>Posología</div>
+    <div class="info-card">
+      <div class="info-row">
+        <span class="ms info-row-icon" style="color:${resolvedColor}">schedule</span>
+        <div>
+          <div class="info-row-label">Frecuencia</div>
+          <div class="info-row-val">${dose.freq}</div>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="ms info-row-icon" style="color:${resolvedColor}">event_repeat</span>
+        <div>
+          <div class="info-row-label">Máximo al día</div>
+          <div class="info-row-val">${dose.maxDailyDoses} ${dose.maxDailyDoses===1?'toma':'tomas'}</div>
+        </div>
+      </div>
+    </div>`;
+  }
+
+  if (med.warnings && med.warnings.length) {
+    html += `<div class="res-section-title"><span class="ms">warning</span>Advertencias</div>`;
+    med.warnings.forEach(w => {
+      html += `<div class="warning-box">
+        <span class="ms">warning</span>
+        <p class="warning-text">${w}</p>
+      </div>`;
+    });
+  }
+
+  if (med.notes && med.notes.length) {
+    html += `<div class="notes-box">
+      <div class="notes-title">Notas</div>
+      ${med.notes.map(n=>`<p class="note-item">${n}</p>`).join('')}
+    </div>`;
+  }
+
+  html += '</div>';
+
+  const r = document.getElementById('results');
+  r.innerHTML = html;
+  r.style.display = 'block';
+}
+
+// ─────────────────────────────────────────────────────────────────────
+init();
+</script>
+</body>
+</html>
