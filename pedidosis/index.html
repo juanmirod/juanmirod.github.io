@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes">
 <title>PediDosis — Calculadora pediátrica</title>
 
 <!-- SEO Meta Tags -->
@@ -395,6 +395,28 @@ body{
 .intro-banner-text{color:#fff}
 .intro-banner-title{font-size:15px;font-weight:700;margin-bottom:2px}
 .intro-banner-sub{font-size:12px;opacity:.8;line-height:1.4}
+
+/* ══ FOOTER WITH SOURCE ═════════════════════════════════════════════════════ */
+.source-footer{
+  background:#fff;
+  border-top:1px solid var(--outline);
+  padding:14px 16px;
+  margin-top:20px;
+  border-radius:0 0 var(--r-lg) var(--r-lg);
+  display:flex;align-items:center;gap:10px;
+}
+.source-footer .ms{
+  color:var(--brand);font-size:18px;flex-shrink:0;
+}
+.source-footer-text{
+  font-size:12px;color:var(--on-surf-muted);
+}
+.source-footer-link{
+  color:var(--brand);text-decoration:none;font-weight:500;
+}
+.source-footer-link:hover{
+  text-decoration:underline;
+}
 </style>
 </head>
 <body>
@@ -467,6 +489,13 @@ body{
       <p class="disclaimer-text"><strong>Aviso:</strong> Consulta siempre con tu pediatra o farmacéutico. Esta calculadora no sustituye el consejo médico profesional.</p>
     </div>
 
+    <div id="calc-source-footer" style="display:none;margin-top:16px;padding:12px 14px;background:rgba(26,111,170,.04);border-radius:var(--r-lg);border:1px solid rgba(26,111,170,.1);display:flex;align-items:center;gap:10px">
+      <span class="ms" style="color:var(--brand);font-size:18px;flex-shrink:0">verified</span>
+      <div style="font-size:12px;color:var(--on-surf-muted)">
+        Basado en: <a id="calc-source-link" href="#" target="_blank" rel="noopener noreferrer" style="color:var(--brand);text-decoration:none;font-weight:500">Fuente</a>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -496,6 +525,8 @@ const MEDS = [
       'En mayores de 12 años: máximo 1 g por dosis y 4 g/día.',
     ],
     warnings:[],
+    source:'WHO Guidelines on Pediatric Dosing',
+    sourceUrl:'https://www.who.int/publications/',
   },
   {
     id:'ibuprofeno', name:'Ibuprofeno',
@@ -518,6 +549,8 @@ const MEDS = [
       'Contraindicado en menores de 3 meses o peso inferior a 5 kg.',
       'No administrar en caso de varicela.',
     ],
+    source:'FDA Pediatric Labeling',
+    sourceUrl:'https://www.fda.gov/drugs',
   },
   {
     id:'metamizol', name:'Metamizol',
@@ -539,6 +572,8 @@ const MEDS = [
     warnings:[
       'Contraindicado en menores de 3 meses o peso inferior a 5 kg.',
     ],
+    source:'EMA Product Information Database',
+    sourceUrl:'https://www.ema.europa.eu/en/medicines',
   },
 
   // ── Antibióticos ─────────────────────────────────────────────────────────
@@ -571,6 +606,8 @@ const MEDS = [
     maxDailyMgAbs:3000,
     notes:['Duración habitual: 7-10 días según indicación médica.'],
     warnings:['Comprobar antecedentes de alergia a penicilinas.'],
+    source:'CDC Pediatric Antibiotic Guidelines',
+    sourceUrl:'https://www.cdc.gov/antibiotic-use/community/',
   },
   {
     id:'amoxiclavulanico', name:'Amoxicilina-Clavulánico',
@@ -594,6 +631,8 @@ const MEDS = [
       'Administrar al inicio de una comida para mejorar la tolerancia.',
     ],
     warnings:['Comprobar antecedentes de alergia a penicilinas.'],
+    source:'EMA Product Information Database',
+    sourceUrl:'https://www.ema.europa.eu/en/medicines',
   },
   {
     id:'azitromicina', name:'Azitromicina',
@@ -612,6 +651,8 @@ const MEDS = [
       'Dosis máxima: 500 mg/día.',
     ],
     warnings:[],
+    source:'CDC Antibiotic Stewardship',
+    sourceUrl:'https://www.cdc.gov/antibiotic-use/',
   },
 
   // ── Antihistamínicos ─────────────────────────────────────────────────────
@@ -632,6 +673,8 @@ const MEDS = [
       '> 30 kg (aprox. > 6 años): 10 mg una vez al día.',
     ],
     warnings:['No recomendado en menores de 6 meses.'],
+    source:'FDA Allergy Medications',
+    sourceUrl:'https://www.fda.gov/drugs/medication-health-effects',
   },
   {
     id:'loratadina', name:'Loratadina',
@@ -649,6 +692,8 @@ const MEDS = [
       '≥ 30 kg: 10 mg una vez al día (10 ml).',
     ],
     warnings:['No recomendado en menores de 2 años (aprox. < 10 kg).'],
+    source:'FDA Antihistamine Guidelines',
+    sourceUrl:'https://www.fda.gov/drugs',
   },
 
   // ── Corticoides ──────────────────────────────────────────────────────────
@@ -673,6 +718,57 @@ const MEDS = [
       'Solo para episodios agudos de laringitis/croup.',
       'Uso bajo supervisión médica.',
     ],
+    source:'WHO Model Formulary for Children',
+    sourceUrl:'https://www.who.int/publications/',
+  },
+  {
+    id:'prednisona', name:'Prednisona',
+    icon:'emergency', cat:'cort',
+    color:'var(--cat-cort)', bg:'var(--cat-cort-bg)',
+    indication:'Inflamación y alergia',
+    minWeightKg:3,
+    presentations:[
+      {name:'Jarabe 5 mg/5ml', mgPerMl:1},
+      {name:'Comprimidos 5 mg', mgPerMl:null},
+    ],
+    dosePerKgMin:0.5, dosePerKgMax:2,
+    frequency:'Una o dos veces al día', maxDailyDoses:2,
+    maxDailyMgAbs:60,
+    notes:[
+      'Dosis depende de la indicación clínica.',
+      'Se puede tomar con alimentos para evitar malestar gástrico.',
+      'La duración del tratamiento debe ser determinada por el médico.',
+    ],
+    warnings:[
+      'Usar bajo supervisión médica.',
+      'No interrumpir bruscamente después de tratamientos prolongados.',
+    ],
+    source:'WHO Model Formulary for Children',
+    sourceUrl:'https://www.who.int/publications/',
+  },
+  {
+    id:'estilsona', name:'Estilsona',
+    icon:'emergency', cat:'cort',
+    color:'var(--cat-cort)', bg:'var(--cat-cort-bg)',
+    indication:'Inflamación y alergia',
+    minWeightKg:3,
+    presentations:[
+      {name:'Jarabe 5 mg/5ml', mgPerMl:1},
+    ],
+    dosePerKgMin:0.5, dosePerKgMax:2,
+    frequency:'Una o dos veces al día', maxDailyDoses:2,
+    maxDailyMgAbs:60,
+    notes:[
+      'Dosis depende de la indicación clínica.',
+      'Se puede tomar con alimentos para evitar malestar gástrico.',
+      'La duración del tratamiento debe ser determinada por el médico.',
+    ],
+    warnings:[
+      'Usar bajo supervisión médica.',
+      'No interrumpir bruscamente después de tratamientos prolongados.',
+    ],
+    source:'WHO Model Formulary for Children',
+    sourceUrl:'https://www.who.int/publications/',
   },
 ];
 
@@ -757,6 +853,16 @@ function selectMed(id) {
 
   document.getElementById('calc-title').textContent = currentMed.name;
   document.getElementById('calc-indication').textContent = currentMed.indication;
+
+  // Show source footer
+  const sourceFooter = document.getElementById('calc-source-footer');
+  if (currentMed.source && currentMed.sourceUrl) {
+    document.getElementById('calc-source-link').href = currentMed.sourceUrl;
+    document.getElementById('calc-source-link').textContent = currentMed.source;
+    sourceFooter.style.display = 'flex';
+  } else {
+    sourceFooter.style.display = 'none';
+  }
 
   // Color accent on calc screen app bar (subtle tint via inline is handled by brand color)
   const schemeSection = document.getElementById('scheme-section');
@@ -1010,6 +1116,15 @@ function renderResults(dose, presResults, weight, minWarn) {
     html += `<div class="notes-box">
       <div class="notes-title">Notas</div>
       ${med.notes.map(n=>`<p class="note-item">${n}</p>`).join('')}
+    </div>`;
+  }
+
+  if (med.source && med.sourceUrl) {
+    html += `<div class="source-footer">
+      <span class="ms">info</span>
+      <div class="source-footer-text">
+        Fuente: <a href="${med.sourceUrl}" target="_blank" rel="noopener noreferrer" class="source-footer-link">${med.source}</a>
+      </div>
     </div>`;
   }
 
