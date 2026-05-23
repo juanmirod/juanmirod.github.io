@@ -24,11 +24,11 @@ Aya pulled up the demographic data. Participation by income bracket told the sto
 
 Killian took a long sip. "So the revolution just created new elites."
 
-"Faster than the old system did. At least before, there was some pretense of representation. Now everyone just assumes if you care enough, you'll participate. But caring isn't the problem. Time is the problem. Energy is the problem."
+"Faster than the old system did. At least before, there was some pretense of representation. Now everyone just assumes if you care enough, you'll participate. But people don't have the time or energy."
 
-Her screen pinged. Another minority rights bill had failed—54% against. She pulled up the demographic breakdown of who voted which way. The pattern was crystal clear: the majority had simply voted their interests. No malice, no conspiracy. Just mathematics.
+Her screen pinged. Another minority rights bill had failed—54% against. She pulled up the demographic breakdown of who voted which way. The pattern was crystal clear: the majority had simply voted their interests. Just mathematics, no malice or conspiracy required.
 
-"We fixed corruption," Aya said quietly. "We didn't fix cruelty."
+"We fixed corruption," Aya said. "The easy one."
 
 ## Act Two: The Reform
 
@@ -48,7 +48,7 @@ Killian had been quiet, sketching something on his tablet. "What if people could
 
 He turned the tablet around. A game interface: two democracy simulations running side-by-side.
 
-"You play through the same scenarios in both systems. In the current one, you watch your voice get drowned out or clustered into positions you don't quite agree with. You watch minorities lose, complexity spiral, participation drop. In the reformed system—statistical sampling, values-based input, protection algorithms—you see it work better. Not perfectly, but better."
+"You play through the same scenarios in both systems. In the current one, you watch your voice get drowned out or clustered into positions you don't quite agree with. You watch minorities lose, complexity spiral, participation drop. In the reformed system—statistical sampling, values-based input, protection algorithms—you see it work better, with room to improve."
 
 Aya leaned forward. "Make it."
 
@@ -92,7 +92,7 @@ The community center in Detroit was not where Aya expected to spend her Thursday
 
 They sat in a room that had probably hosted a thousand union meetings, drinking coffee from a machine that had seen better decades.
 
-"So you want to make democracy more complicated," Teresa said. Not a question. A challenge.
+"So you want to make democracy more complicated," Teresa said. She wasn't asking a question. She was issuing a challenge.
 
 "I want to make it more fair."
 
@@ -180,7 +180,7 @@ Aya pulled up the vote timeline. "We have six days before the reform package goe
 
 Jin stood up, pacing. "Look, I know I'm the cynical ex-politician here, but this is how change actually happens. You take the wins you can get. Perfect is the enemy of good."
 
-"Perfect isn't the issue," Dr. Okonkwo said quietly. "Legitimacy is. If we win through a corrupted process, what have we won? The reforms only work if people trust them. And they'll only trust them if the process is clean."
+"Perfect isn't the issue," Dr. Okonkwo said. "Legitimacy is. If we win through a corrupted process, what have we won? The reforms only work if people trust them. And they'll only trust them if the process is clean."
 
 Aya looked at each of them. "We need to decide. Now."
 
@@ -198,7 +198,7 @@ They didn't sleep for two days.
 
 Killian traced server patterns. Yuki pulled legal records on shell companies. Dr. Okonkwo analyzed the behavioral signatures. Jin called in favors from former colleagues, journalists who'd gone independent, data scientists working for civic transparency organizations.
 
-The pattern emerged slowly, then all at once.
+The pattern took two days to surface.
 
 Three "civic consulting" firms, all run by former political operatives. Shell company funding traced back to lobbying groups. A sophisticated bot network using purchased access to real identity credentials. Not enough to swing the vote by themselves, but enough to shift the discourse, create artificial controversy, exhaust real participants.
 
@@ -242,6 +242,4 @@ Dr. Okonkwo was already working on the next challenge: how to handle emergency l
 
 And Killian was building a simulation of what democracy might look like in another decade, with new tools, new challenges, new solutions they hadn't imagined yet.
 
-The work was never finished.
-
-But for the first time in a long time, it felt like they were building something that might last.
+Democracy was never something you finished. But for the first time in a long time, it felt like they were building something that might last.
