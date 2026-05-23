@@ -8,9 +8,9 @@ tags: [ficción, relato]
 
 ## Act One: The Cracks
 
-Aya stared at the participation graphs, watching the lines slope downward like a slow-motion collapse. Four years into the grand experiment—direct digital democracy, no politicians, no parties, just citizens and algorithms—and already the system was eating itself.
+Aya stared at the participation graphs. The lines were sloping downward, and had been for months. Four years into the grand experiment—direct digital democracy, no politicians, no parties, just citizens and algorithms—and already the system was eating itself.
 
-She scrolled through the forums. The same names appeared again and again. Maria Castellanos, former speechwriter, now running "Civic Clarity Consulting." Her comments were architectural marvels of persuasion, perfectly structured to become cluster representatives. One of her arguments could carry the weight of a million less polished voices.
+She scrolled through the forums. The same names appeared again and again. Maria Castellanos, former speechwriter, now running "Civic Clarity Consulting." Her comments were well-written and persuasive. They often became cluster representatives during the aggregation process.
 
 Aya pulled up the demographic data. Participation by income bracket told the story clearly: the wealthy dominated. Not through fraud—the AI caught that perfectly. But through time. Through energy. Through the luxury of caring about everything.
 
@@ -32,13 +32,13 @@ Her screen pinged. Another minority rights bill had failed—54% against. She pu
 
 ## Act Two: The Reform
 
-Dr. Okonkwo's office was chaos—whiteboards covered in equations, printouts of algorithm flowcharts, coffee cups in various states of archaeology. He was explaining the minority protection algorithm for the third time, and Aya was finally starting to understand it.
+Dr. Okonkwo's office was chaotic. Whiteboards were covered in equations, printouts of algorithm flowcharts piled up on every surface, and old coffee cups sat forgotten on the desk. He was explaining the minority protection algorithm for the third time, and Aya was finally starting to understand it.
 
 "It's not about overriding majority will," he said, gesturing at a particularly complex diagram. "It's about detecting patterns. If the same group consistently loses on issues that specifically affect them, the algorithm flags it. Then we apply different decision rules—weighted input, supermajority requirements, automatic sunset clauses."
 
 "And people will accept this?" Jin asked. He was sitting in the corner, the only former politician in their group, which made him both invaluable and slightly suspect. "You're telling a majority that sometimes their vote counts less?"
 
-"We're telling them that democracy isn't just tyranny by majority vote," Yuki countered. She had the legal scholar's gift for making principles sound inevitable. "That was never what it was supposed to be."
+"We're telling them that democracy isn't just tyranny by majority vote," Yuki countered. She was a legal scholar and knew how to make principles sound like common sense. "That was never what it was supposed to be."
 
 "I know that. You know that. But try explaining it in a forum comment." Jin shook his head. "The Regressives are going to tear this apart. 'Unequal votes! Algorithmic discrimination!' They'll make it sound like we're rigging the system."
 
@@ -230,13 +230,13 @@ Implementation would take years. There would be problems, new challenges, people
 
 Teresa was selected in the first random jury pool. She served on a labor rights reform panel, bringing perspectives the experts had missed, pushing back on assumptions, making the policy better.
 
-Killian's game became mandatory civic education, played by millions. Other designers created competitors, each trying to explain policy more clearly, more engagingly. Policy became popular culture.
+Killian's game became mandatory civic education, played by millions. Other designers created competitors, each trying to explain policy more clearly and engagingly. Policy discussions started appearing in places where people normally looked for entertainment.
 
 The forums still existed, but they were different now. Values mapping instead of essay contests. Simulations instead of speeches. And when complex technical questions arose, random juries deliberated with real resources, real time, real power.
 
-The articulate elite didn't disappear. Maria Castellanos pivoted, teaching people how to clarify their own thinking rather than writing their arguments for them. Some of the civic consulting firms closed. Others adapted.
+The articulate elite didn't disappear. Maria Castellanos changed her business. She started teaching people how to clarify their own thinking instead of writing their arguments for them. Some of the civic consulting firms closed. Others adapted.
 
-Aya watched the participation numbers stabilize, then slowly climb. Not everyone, not all the time. But representative. Fair. Enough.
+Aya watched the participation numbers stabilize, then slowly climb. Not everyone participated all the time, but the numbers were representative and the process felt fair.
 
 Dr. Okonkwo was already working on the next challenge: how to handle emergency legislation when there wasn't time for full deliberation. Yuki was drafting constitutional frameworks that could evolve with changing needs. Jin was training the first cohort of professional facilitators for the jury system.
 
