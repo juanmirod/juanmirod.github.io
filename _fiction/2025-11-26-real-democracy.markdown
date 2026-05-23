@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: "Real democracy"
 layout: fiction
 image: /public/img/democracy.png
