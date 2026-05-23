@@ -28,7 +28,7 @@ Killian took a long sip. "So the revolution just created new elites."
 
 Her screen pinged. Another minority rights bill had failed—54% against. She pulled up the demographic breakdown of who voted which way. The pattern was crystal clear: the majority had simply voted their interests. Just mathematics, no malice or conspiracy required.
 
-"We fixed corruption," Aya said. "The easy one."
+"We fixed corruption," Aya said. "But that was the easy one."
 
 ## Act Two: The Reform
 
@@ -66,13 +66,13 @@ Killian grinned. "Challenge accepted."
 
 The game went viral in three weeks.
 
-_Democratic Futures_ wasn't preachy. It didn't lecture. It just let you play through scenarios under different systems and drew no conclusions—you drew them yourself. And what people concluded was that the current system was frustrating as hell while the reformed version felt... fair.
+_Democratic Futures_ let you play through scenarios under different systems and come to conclusions yourself. And what people concluded was that the current system was frustrating as hell while the reformed version felt... fair.
 
 Aya watched the metrics obsessively. Downloads, playtime, completion rates, sentiment analysis of player discussions. All trending positive.
 
 But the backlash was building too.
 
-"Protect Simple Democracy" rallies were sprouting in major cities. The messaging was smart: "Don't let algorithms replace your voice!" "Every citizen equal—no weighted votes!" "Keep democracy human!"
+"Protect Simple Democracy" rallies were sprouting in major cities. The messaging was simple and effective: "Don't let algorithms replace your voice!" "Every citizen equal—no weighted votes!" "Keep democracy human!"
 
 Teresa Okafor was their most prominent speaker. Factory worker, union organizer, powerful orator. Aya had watched her speeches. They were good. Really good.
 
@@ -84,7 +84,7 @@ Teresa Okafor was their most prominent speaker. Factory worker, union organizer,
 
 "She won't take a meeting with me."
 
-"She will if you ask the right way."
+"I think she will if you ask the right way."
 
 ## Act Four: The Coalition
 
@@ -92,7 +92,7 @@ The community center in Detroit was not where Aya expected to spend her Thursday
 
 They sat in a room that had probably hosted a thousand union meetings, drinking coffee from a machine that had seen better decades.
 
-"So you want to make democracy more complicated," Teresa said. She wasn't asking a question. She was issuing a challenge.
+"So you want to make democracy more complicated," Teresa said.
 
 "I want to make it more fair."
 
@@ -108,15 +108,15 @@ Teresa looked. Said nothing.
 
 "Twelve people. Out of eight thousand adults. You know why? Because by the time they get home from work, the debate is already framed. The professional advocates have already set the terms. And people are tired."
 
-"So your random sampling—how's that better?"
+"So your random sampling thingy.. how's that better?"
 
-"When you're randomly selected, you get paid. You get time off work, mandated by law. You get briefings from multiple experts. You deliberate with a statistically representative group. You don't have to compete with people who do this professionally—you _are_ the decision-maker."
+"When you're randomly selected, you get paid. You get time off work, mandated by law. You get briefings from multiple experts. You deliberate with a statistically representative group. You don't have to compete with people who do this professionally, you _are_ the decision-maker."
 
 Teresa was quiet for a long moment. "And if I don't trust that the selection is random?"
 
-"You audit it. We build citizen oversight into the code. Every selection is verifiable, traceable. We need people like you watching us. We need you to not trust us—to check our work."
+"Everything can be audited. We build citizen oversight into the code. Every selection is verifiable, traceable. We need people like you watching us. We need you to not trust us, to check our work."
 
-"You're asking me to trust the system to not need trust."
+"You're asking me to trust the system."
 
 "I'm asking you to help build a system worth trusting."
 
@@ -128,7 +128,7 @@ It was enough. The suspicious Conservatives started to fracture.
 
 ## Act Five: The Attack
 
-The forum traffic looked normal. That was the first warning sign—it looked _too_ normal.
+The forum traffic looked normal. It looked _too_ normal.
 
 Aya had been tracking patterns for months, and she knew what organic engagement looked like. It had rhythms, clusters, weird spikes when someone said something controversial. This was smooth. Perfectly distributed. Like white noise.
 
@@ -212,11 +212,11 @@ The reform vote was postponed. Emergency patches were deployed to the fraud dete
 
 And the public conversation shifted.
 
-The abstract fears about "algorithmic tyranny" suddenly mattered less than the concrete evidence of _actual_ manipulation. People could see how the current system had been gamed, how their voices had been drowned out not by honest disagreement but by manufactured consensus.
+The abstract fears about "algorithmic tyranny" suddenly mattered less than the concrete evidence of _actual_ manipulation. People could see how the current system had been gamed, how their voices had been drowned out by manufactured consensus.
 
 Teresa went on livestream: "I was skeptical of these reforms. I'm still skeptical of putting too much trust in algorithms. But you know what I'm more skeptical of? The people who tried to steal our voices entirely. At least Aya's group showed us their work."
 
-The "Good Enough" Conservatives split. Some remained suspicious of any change. But many shifted, joining the Reformers not out of faith in technocratic solutions, but out of recognition that the status quo was already corrupt.
+The "Good Enough" Conservatives split. Some remained suspicious of any change. But many shifted, joining the Reformers out of recognition that the status quo was already corrupt.
 
 ## Act Seven: The Re-Vote
 
