@@ -39,3 +39,9 @@ The first two chapters are about the basic principles that are desirable in soft
 **13. Hard to Describe** If a method or variable describes a long comment, it is a red flag that you don't have a good abstraction.
 
 **14. Nonobvious Code** If the meaning and behavior of code cannot be understood with a quick reading, it is a red flag. Often this means that there is important information that is not immediately clear to someone reading the code.
+
+I think it's very revealing that Ousterhout says at the same time that TDD doesn't leave room for design and that you should write comments first...
+
+This man is old school (he created TCL) and hasn't fully grasped the power of tests. Tests can be like those comments you have to write beforehand, but with the advantage that they are executable and verify that what they say is actually being fulfilled. If you tell people to write comments first to clarify the design and tests could replace those comments and also serve as runnable specification of the problem... You are telling people to do TDD!
+
+It is eve paradoxical that he doesn't notice...
