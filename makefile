@@ -7,3 +7,9 @@ new-microblog:
 	@cat $(MICROBLOG_TEMPLATE) | \
 	sed "s/%CURRENT_DATE%/$(POST_DATE)/g" > ${POST_FILE} && \
 	nano ${POST_FILE}
+.PHONY: push-micro
+push-microblog:
+	git add _microblog/
+	git commit -m "micro"
+	git push
+
