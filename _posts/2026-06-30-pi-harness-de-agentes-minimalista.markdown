@@ -129,7 +129,7 @@ Otra posibilidad es correr el modelo **en tu propia máquina**, sin enviar nada 
 
 Usar un modelo en Ollama para tareas agénticas no es del todo inmediato: hay que crear una variante con la configuración adecuada mediante un `Modelfile`. La clave es **bajar la temperatura y ajustar la ventana de contexto y los tokens de salida**. Los modelos Gemma4 tienen su propia recomendación para estos parámetros en tareas agénticas, para qwen he probado con:
 
-```Modelfile
+```Dockerfile
 FROM qwen3.5:9b
 
 # Config para tareas de código: temperatura baja, contexto contenido
