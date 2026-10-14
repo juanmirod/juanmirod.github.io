@@ -6,13 +6,15 @@ description: "Si los agentes han hecho que escribir código sea barato, el lími
 tags: [ai, Inteligencia Artificial, desarrollo de software, producto, opinión]
 ---
 
-Llevo unos cuantos posts contando trucos para exprimir agentes y hacer que escriban código por mí ([Claude Code](/2026/06/23/usos-avanzados-de-claude-code.html), [Pi](/2026/06/30/pi-harness-de-agentes-minimalista.html)). En todos ellos late la misma conclusión: **escribir código se ha vuelto barato**. Una funcionalidad que antes era una semana de trabajo hoy es una tarde de prompts, un plan y unas cuantas iteraciones. Los tests pasan, el build está en verde y la PR queda lista para revisar.
+Llevo unos cuantos posts contando trucos para exprimir agentes y hacer que escriban código por mí ([Claude Code](/2026/06/23/usos-avanzados-de-claude-code.html), [Pi](/2026/06/30/pi-harness-de-agentes-minimalista.html)). En todos ellos late la misma conclusión: **escribir código se ha vuelto barato**. Una funcionalidad que antes era una semana de trabajo hoy es una tarde de prompts, un plan y unas cuantas iteraciones.
 
-El problema es que si el código era el cuello de botella del desarrollo, toca preguntarse dónde está el siguiente. Yo no lo tengo claro, pero llevo un tiempo dándole vueltas y tengo la sensación de que hay una jerarquía: cada nivel tapa al siguiente hasta que lo eliminas.
+El problema es que si el código era el cuello de botella del desarrollo, toca preguntarse dónde está el siguiente.
 
 ## La review de PR
 
-Para cualquier equipo que mantenga un repo compartido, el cuello de botella es la review. Da igual que generes diez cambios al día si solo hay dos personas revisando: la cola crece igual, y crece más rápido que antes precisamente porque el código es más fácil de producir. La review necesita contexto, criterio y tiempo, y ninguna de esas cosas se paraleliza bien. Un agente puede hacer una primera pasada, señalar lo obvio y resumir el diff, pero la decisión de si ese cambio debería existir y cómo encaja en el sistema sigue siendo de una persona.
+Para cualquier equipo que mantenga un repo compartido, el cuello de botella es la review. Da igual que generes diez cambios al día si solo hay dos personas revisando: la cola crece y las PRs se quedan anticuadas y hay que revisarlas... Al final si la velocidad de las reviews no acompaña estás haciendo mas trabajo y entregando lo mismo. 
+
+La review necesita contexto, criterio y tiempo, y ninguna de esas cosas se paraleliza bien. Un agente puede hacer una primera pasada, señalar lo obvio y resumir el diff, pero la decisión de si ese cambio debería existir y cómo encaja en el sistema sigue siendo de una persona.
 
 Esto no es nuevo. Lo nuevo es la proporción: antes la mayor parte del esfuerzo se iba en escribir y una parte menor en revisar. Ahora se ha dado la vuelta. Escribir es el paso rápido; revisar, el lento.
 
